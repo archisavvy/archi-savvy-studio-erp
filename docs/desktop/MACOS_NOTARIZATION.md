@@ -1,6 +1,6 @@
 # macOS notarization for the desktop app
 
-This guide explains how to turn on Apple notarization for the OpenBusinessERP desktop app. Today the macOS build ships ad-hoc signed but not notarized, so users have to clear quarantine once by hand. Everything described here is ready to activate. The moment a real Apple Developer ID certificate and credentials exist, notarization can be switched on with a small, well-defined diff. Nothing in this document is active yet. It is the plan and the artifacts, not the live configuration.
+This guide explains how to turn on Apple notarization for the Archi Savvy Studio ERP desktop app. Today the macOS build ships ad-hoc signed but not notarized, so users have to clear quarantine once by hand. Everything described here is ready to activate. The moment a real Apple Developer ID certificate and credentials exist, notarization can be switched on with a small, well-defined diff. Nothing in this document is active yet. It is the plan and the artifacts, not the live configuration.
 
 This is a developer and maintainer document. If you are a user trying to open the app, read `docs/desktop/INSTALL.md` instead.
 
@@ -139,7 +139,7 @@ These two edits are the entire activation. The macOS runner already builds the d
 
 ## The sidecar and nested binaries
 
-This is the part that is easy to miss. A Developer ID signature with hardened runtime is only valid if every executable inside the app bundle is also signed the same way, with hardened runtime enabled and a secure timestamp. Our app is not a single binary. It ships the backend as a sidecar (the `externalBin` entry `binaries/openbusinesserp-server` in `tauri.conf.json`), and that sidecar in turn carries nested Mach-O binaries, including the embedded PostgreSQL executables and the bundled converters. Apple's notary service will reject the submission if any nested binary lacks hardened runtime or a timestamp.
+This is the part that is easy to miss. A Developer ID signature with hardened runtime is only valid if every executable inside the app bundle is also signed the same way, with hardened runtime enabled and a secure timestamp. Our app is not a single binary. It ships the backend as a sidecar (the `externalBin` entry `binaries/archisavvy-erp-server` in `tauri.conf.json`), and that sidecar in turn carries nested Mach-O binaries, including the embedded PostgreSQL executables and the bundled converters. Apple's notary service will reject the submission if any nested binary lacks hardened runtime or a timestamp.
 
 The good news is that Tauri signs the bundle and the binaries it knows about during `tauri build` when a signing identity is set, applying the hardened runtime options and a secure timestamp as it goes. So for the binaries Tauri places in the bundle, the existing build does the right thing once the identity is real.
 
@@ -156,7 +156,7 @@ After a release build with notarization on, two checks confirm it worked. Run th
 First, ask Gatekeeper to assess it.
 
 ```
-spctl -a -t exec -vvv /path/to/OpenBusinessERP.app
+spctl -a -t exec -vvv /path/to/ArchiSavvyStudioERP.app
 ```
 
 On a correctly notarized build this prints `accepted` and a source line reading `source=Notarized Developer ID`. Today, before activation, this same command reports the app as rejected and unnotarized, which is expected for the ad-hoc build. The diagnostic step at the end of the release workflow already runs this command and prints the result into the build log, so the change from rejected to accepted is visible at release time.
@@ -164,12 +164,12 @@ On a correctly notarized build this prints `accepted` and a source line reading 
 Second, confirm the notarization ticket is stapled to the bundle so it validates offline.
 
 ```
-xcrun stapler validate /path/to/OpenBusinessERP.app
+xcrun stapler validate /path/to/ArchiSavvyStudioERP.app
 ```
 
 This should report that the validate action worked and the ticket is present. Stapling attaches the notary ticket to the app itself, so Gatekeeper can confirm notarization even without a network connection. Tauri staples automatically after a successful notarization. If `stapler validate` passes and `spctl` says accepted with source Notarized Developer ID, the build is good and the dmg will open cleanly on a fresh download with no quarantine workaround.
 
-It is also worth confirming the signature carries hardened runtime, which you can read from `codesign -dvvv /path/to/OpenBusinessERP.app` in the build log. The flags line should show `runtime` among the code-signing flags.
+It is also worth confirming the signature carries hardened runtime, which you can read from `codesign -dvvv /path/to/ArchiSavvyStudioERP.app` in the build log. The flags line should show `runtime` among the code-signing flags.
 
 ## References
 

@@ -84,11 +84,11 @@ def test_resolve_data_dir_default_is_package_relative(monkeypatch) -> None:
 def test_resolve_data_dir_wheel_install_uses_persistent_home(tmp_path, monkeypatch) -> None:
     """A site-packages (wheel) install must NOT default to the ephemeral
     package dir (wiped on ``pip install -U``); it uses persistent
-    ``~/.openestimate`` instead. This is the standalone-install failure mode."""
+    ``~/.archisavvy-erp`` instead. This is the standalone-install failure mode."""
     _clear_data_env(monkeypatch)
     fake = tmp_path / "venv" / "Lib" / "site-packages" / "app" / "core" / "storage.py"
     monkeypatch.setattr(storage_mod, "__file__", str(fake))
-    assert resolve_data_dir() == Path.home() / ".openestimate"
+    assert resolve_data_dir() == Path.home() / ".archisavvy-erp"
 
 
 def test_resolve_data_dir_dist_packages_also_persistent(tmp_path, monkeypatch) -> None:
@@ -96,15 +96,15 @@ def test_resolve_data_dir_dist_packages_also_persistent(tmp_path, monkeypatch) -
     _clear_data_env(monkeypatch)
     fake = tmp_path / "usr" / "lib" / "python3" / "dist-packages" / "app" / "core" / "storage.py"
     monkeypatch.setattr(storage_mod, "__file__", str(fake))
-    assert resolve_data_dir() == Path.home() / ".openestimate"
+    assert resolve_data_dir() == Path.home() / ".archisavvy-erp"
 
 
 def test_resolve_data_dir_source_checkout_keeps_repo_data(tmp_path, monkeypatch) -> None:
     """A git/source checkout (the demo VPS) keeps the persistent ``<repo>/data``."""
     _clear_data_env(monkeypatch)
-    fake = tmp_path / "OpenBusinessERP" / "backend" / "app" / "core" / "storage.py"
+    fake = tmp_path / "Archi Savvy Studio ERP" / "backend" / "app" / "core" / "storage.py"
     monkeypatch.setattr(storage_mod, "__file__", str(fake))
-    assert resolve_data_dir() == (tmp_path / "OpenBusinessERP" / "data").resolve()
+    assert resolve_data_dir() == (tmp_path / "Archi Savvy Studio ERP" / "data").resolve()
 
 
 def test_default_local_base_dir_is_alias(tmp_path, monkeypatch) -> None:

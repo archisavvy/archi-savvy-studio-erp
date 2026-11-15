@@ -428,7 +428,7 @@ import pytest  # noqa: E402
 
 # ── Keep the developer's own install out of the suite ──────────────────────
 # The applied country pack, the installed packs and the module on/off states
-# fall back to ``~/.openestimate`` when no data dir is named, and that is the
+# fall back to ``~/.archisavvy-erp`` when no data dir is named, and that is the
 # directory a developer's desktop install writes. A machine whose own install
 # had the Hungarian pack applied ran every project created in the suite under
 # that pack: an Indian test project carried the ``hungary`` rule set and the
@@ -441,7 +441,7 @@ import app.core.module_state as _module_state  # noqa: E402
 import app.core.partner_pack.discovery as _pack_discovery  # noqa: E402
 import app.core.partner_pack.state as _pack_state  # noqa: E402
 
-_REAL_HOME_STATE_DIR = Path.home() / ".openestimate"
+_REAL_HOME_STATE_DIR = Path.home() / ".archisavvy-erp"
 _SUITE_STATE_DIR = Path(tempfile.mkdtemp(prefix="oe-tests-home-state-"))
 _resolve_data_dir_unisolated = _module_state._resolve_data_dir
 

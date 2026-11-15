@@ -124,7 +124,7 @@ async function settle() {
   });
 }
 
-const LINK = 'https://github.com/datadrivenconstruction/OpenBusinessERP#readme';
+const LINK = 'https://github.com/Fabsye/archi-savvy-studio-erp#readme';
 
 describe('a link that the shell refuses to open', () => {
   it('reaches the user instead of dying on the console', async () => {
@@ -193,7 +193,7 @@ describe('a link that the shell refuses to open', () => {
   });
 });
 
-const FILE_PATH = 'C:\\Users\\someone\\.openestimate\\files\\project\\drawing.pdf';
+const FILE_PATH = 'C:\\Users\\someone\\.archisavvy-erp\\files\\project\\drawing.pdf';
 
 /**
  * The file manager's "Open in OS" button, which was refused and said nothing.

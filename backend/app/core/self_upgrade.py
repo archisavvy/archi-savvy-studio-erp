@@ -53,7 +53,7 @@ from typing import Any
 
 logger = logging.getLogger(__name__)
 
-RELEASES_URL = "https://github.com/datadrivenconstruction/OpenBusinessERP/releases/latest"
+RELEASES_URL = "https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest"
 
 #: Shown verbatim to the user when a frozen build is asked to upgrade itself.
 FROZEN_REFUSAL = (
@@ -289,7 +289,7 @@ def _move_windows_launchers_aside(job: UpgradeJob) -> None:
             pass  # a leftover still locked by an older process - skip
     for exe_name in (
         "openbusinesserp.exe",
-        "openbusinesserp-server.exe",
+        "archisavvy-erp-server.exe",
         "openestimate.exe",
         "openestimate-server.exe",
     ):

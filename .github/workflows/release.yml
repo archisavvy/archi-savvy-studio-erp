@@ -1,4 +1,4 @@
-# OpenBusinessERP Release Pipeline
+# Archi Savvy Studio ERP Release Pipeline
 #
 # Triggered on version tag push (e.g., v0.1.0).
 # Creates the GitHub Release; docker-publish.yml pushes the image.
@@ -64,7 +64,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
-          name: "OpenBusinessERP ${{ github.ref_name }}"
+          name: "Archi Savvy Studio ERP ${{ github.ref_name }}"
           body_path: /tmp/release-notes.md
           draft: false
           prerelease: ${{ contains(github.ref_name, '-rc') || contains(github.ref_name, '-beta') || contains(github.ref_name, '-alpha') }}

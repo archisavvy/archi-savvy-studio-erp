@@ -210,7 +210,7 @@ class CompanyPreset:
 
 
 # ── Business (non-construction) industries ───────────────────────────────────
-# OpenBusinessERP profiles. Every company sells, books and files, so the base is
+# Archi Savvy Studio ERP profiles. Every company sells, books and files, so the base is
 # on everywhere; each industry adds what its day-to-day work needs (recommended)
 # and offers the rest as add-ons (optional). sales depends on gl.
 _BUSINESS_BASE = [

@@ -1,6 +1,6 @@
-# Build on OpenBusinessERP
+# Build on Archi Savvy Studio ERP
 
-OpenBusinessERP is an open platform for building business software. The
+Archi Savvy Studio ERP is an open platform for building business software. The
 same modular core that runs the shipped product, sales, CRM, stock, purchasing,
 accounting, banking and the rest, is the core you build on. Adding a capability means writing a module, not
 editing the platform.

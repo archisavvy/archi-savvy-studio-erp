@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 CHOICE_FILENAME = "demo_seed_choice.json"
 
 #: Default data dir - must match ``app.cli.DEFAULT_DATA_DIR``.
-DEFAULT_DATA_DIR = Path.home() / ".openestimate"
+DEFAULT_DATA_DIR = Path.home() / ".archisavvy-erp"
 
 
 def resolve_data_dir() -> Path:
@@ -43,7 +43,7 @@ def resolve_data_dir() -> Path:
     Mirrors the resolution order used by ``app.core.storage``: an
     operator-supplied ``OE_DATA_DIR`` / ``DATA_DIR`` wins, then the CLI's
     ``OE_CLI_DATA_DIR`` (set by ``_setup_env``), then the default
-    ``~/.openestimate``.
+    ``~/.archisavvy-erp``.
     """
     for env_name in ("OE_DATA_DIR", "DATA_DIR", "OE_CLI_DATA_DIR"):
         raw = os.environ.get(env_name)

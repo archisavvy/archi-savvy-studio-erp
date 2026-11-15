@@ -20,7 +20,7 @@ manifest = ModuleManifest(
         "US construction standards: progress payment applications with a continuation sheet, "
         "CSI MasterFormat divisions, imperial units, USD, and state sales-tax examples."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="regional",
     depends=[],
     auto_install=False,

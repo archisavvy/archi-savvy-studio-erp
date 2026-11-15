@@ -15,7 +15,7 @@ manifest = ModuleManifest(
     description=(
         "Russian construction standards: GESN/FER/TER cost databases, NDS rates, and Russian contract templates."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="regional",
     depends=[],
     auto_install=False,

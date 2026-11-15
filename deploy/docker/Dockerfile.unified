@@ -1,4 +1,4 @@
-# OpenBusinessERP container images.
+# Archi Savvy Studio ERP container images.
 #
 # This one file builds both shipped layouts, as two targets over a shared base:
 #
@@ -64,7 +64,7 @@ ARG OE_EXTRAS=server,semantic-clients
 # OE_EXTRAS, which is the part that actually drifted.
 FROM python:3.12-slim AS backend-base
 LABEL org.opencontainers.image.licenses="AGPL-3.0-or-later" \
-      org.opencontainers.image.source="https://github.com/datadrivenconstruction/OpenBusinessERP"
+      org.opencontainers.image.source="https://github.com/Fabsye/archi-savvy-studio-erp"
 
 # libpq for PostgreSQL support.
 RUN apt-get update \
@@ -110,7 +110,7 @@ COPY data/match/ data/match/
 # Persistent data volume. OE_DATA_DIR pins the unified data-dir resolver
 # (app.core.storage.resolve_data_dir) at /data so BIM geometry and other
 # artifacts land on the mounted volume, not the ephemeral container layer
-# (where the wheel/site-packages default ~/.openestimate would put them,
+# (where the wheel/site-packages default ~/.archisavvy-erp would put them,
 # leaving the DB row "ready" but the geometry endpoint 404 after a container
 # recreate). Operators can override OE_DATA_DIR at run time.
 RUN mkdir -p /data && chown oe:oe /data

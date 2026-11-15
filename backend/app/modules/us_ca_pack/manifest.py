@@ -17,7 +17,7 @@ manifest = ModuleManifest(
         "between materials the contractor consumes and fixtures it sells, the state prevailing wage regime "
         "and its thresholds, the public and private retention caps, and the statutory payment and lien clocks."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="regional",
     depends=["oe_us_pack"],
     auto_install=False,

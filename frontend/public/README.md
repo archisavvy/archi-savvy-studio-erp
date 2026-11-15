@@ -1,7 +1,7 @@
 # Animated Construction Background Package
 
 Reusable animated background with estimation tables, dashboard charts, and construction blueprints.
-Originally designed for OpenBusinessERP landing page.
+Originally designed for Archi Savvy Studio ERP landing page.
 
 ## What's Inside
 

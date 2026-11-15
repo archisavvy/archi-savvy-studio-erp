@@ -17,7 +17,7 @@ Storage root reality check (audited 2026-05-05):
 * DWG/DXF    : ``<data dir>/dwg_uploads/{drawing_id}.{ext}`` (flat)
 
 Note the documents service uses ``~/.openestimator`` (with ``r``) while
-the CLI canonical data dir is ``~/.openestimate`` (no ``r``). The file
+the CLI canonical data dir is ``~/.archisavvy-erp`` (no ``r``). The file
 manager honestly surfaces whichever path the row was actually written to,
 plus a ``notes`` flag when the mismatch is detected, instead of papering
 over it.
@@ -942,15 +942,15 @@ def resolve_storage_locations(
         photos_root = str(PHOTO_BASE / project_id)
         sheets_root = str(SHEET_THUMB_BASE / project_id)
 
-        # Detect the .openestimator-vs-.openestimate typo and warn so users
+        # Detect the .openestimator-vs-.archisavvy-erp typo and warn so users
         # who land in the file manager understand why their attachments are
         # split between two folders. We do not "fix" it here - that lives in
         # a dedicated migration ticket.
-        canonical = Path.home() / ".openestimate"
+        canonical = Path.home() / ".archisavvy-erp"
         if "openestimator" in str(UPLOAD_BASE) and canonical.exists():
             notes.append(
                 "Attachments live under ~/.openestimator (with 'r') while the "
-                "CLI canonical data dir is ~/.openestimate. Both are real on "
+                "CLI canonical data dir is ~/.archisavvy-erp. Both are real on "
                 "disk; the file manager surfaces whichever each row was "
                 "written to.",
             )

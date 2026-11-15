@@ -76,7 +76,7 @@ def anchored(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> Path:
     """
     data_dir = tmp_path / "data"
     data_dir.mkdir()
-    started_from = tmp_path / "program files" / "OpenBusinessERP"
+    started_from = tmp_path / "program files" / "Archi Savvy Studio ERP"
     started_from.mkdir(parents=True)
     monkeypatch.setattr(cli, "DEFAULT_DATA_DIR", data_dir)
     monkeypatch.chdir(started_from)
@@ -224,7 +224,7 @@ def test_the_only_relative_default_is_the_documented_no_home_fallback(monkeypatc
 
     monkeypatch.setattr(Path, "home", staticmethod(_no_home))
 
-    assert cli._default_data_dir() == Path(".openestimate")
+    assert cli._default_data_dir() == Path(".archisavvy-erp")
 
 
 def test_the_config_probe_reads_the_data_directory_it_was_given(tmp_path: Path) -> None:

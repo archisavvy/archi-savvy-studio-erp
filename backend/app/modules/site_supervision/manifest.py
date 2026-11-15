@@ -20,7 +20,7 @@ manifest = ModuleManifest(
         "(author supervision / contract administration / construction "
         "administration / Objektüberwachung)."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=["oe_users", "oe_projects"],
     auto_install=True,

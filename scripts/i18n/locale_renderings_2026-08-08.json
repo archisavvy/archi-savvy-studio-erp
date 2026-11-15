@@ -1,6 +1,6 @@
 {
   "what": "English sentences that a locale renders more than one way, as the files contain them. Nothing here was written by this process; it is a reading.",
-  "product": "OpenBusinessERP / OpenEstimate",
+  "product": "Archi Savvy Studio ERP / OpenEstimate",
   "holder": "DataDrivenConstruction",
   "recorded": "2026-08-08",
   "tree": "20de3d9346ca5a832f8d3b577419b870b1afbf66",
@@ -4960,17 +4960,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to OpenBusinessERP",
+        "english": "Welcome to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "مرحباً بك في OpenBusinessERP",
+            "value": "مرحباً بك في Archi Savvy Studio ERP",
             "keys": [
               "dashboard.welcome_title"
             ]
           },
           {
-            "value": "مرحبًا بك في OpenBusinessERP",
+            "value": "مرحبًا بك في Archi Savvy Studio ERP",
             "keys": [
               "onboarding.welcome_title"
             ]
@@ -11866,17 +11866,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to OpenBusinessERP",
+        "english": "Back to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Zpět do OpenBusinessERP",
+            "value": "Zpět do Archi Savvy Studio ERP",
             "keys": [
               "payportal.back_to_app"
             ]
           },
           {
-            "value": "Zpět na OpenBusinessERP",
+            "value": "Zpět na Archi Savvy Studio ERP",
             "keys": [
               "homeportal.back_to_app"
             ]
@@ -31218,17 +31218,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to OpenBusinessERP",
+        "english": "Back to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Tagasi OpenBusinessERP juurde",
+            "value": "Tagasi Archi Savvy Studio ERP juurde",
             "keys": [
               "homeportal.back_to_app"
             ]
           },
           {
-            "value": "Tagasi OpenBusinessERP-sse",
+            "value": "Tagasi Archi Savvy Studio ERP-sse",
             "keys": [
               "payportal.back_to_app"
             ]
@@ -33702,17 +33702,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to OpenBusinessERP",
+        "english": "Back to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Takaisin OpenBusinessERP:hen",
+            "value": "Takaisin Archi Savvy Studio ERP:hen",
             "keys": [
               "payportal.back_to_app"
             ]
           },
           {
-            "value": "Takaisin OpenBusinessERP:ään",
+            "value": "Takaisin Archi Savvy Studio ERP:ään",
             "keys": [
               "homeportal.back_to_app"
             ]
@@ -37522,17 +37522,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to OpenBusinessERP",
+        "english": "Welcome to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Tervetuloa OpenBusinessERP-alustaan",
+            "value": "Tervetuloa Archi Savvy Studio ERP-alustaan",
             "keys": [
               "onboarding.welcome_title"
             ]
           },
           {
-            "value": "Tervetuloa OpenBusinessERP:iin",
+            "value": "Tervetuloa Archi Savvy Studio ERP:iin",
             "keys": [
               "dashboard.welcome_title"
             ]
@@ -41336,17 +41336,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to OpenBusinessERP",
+        "english": "Welcome to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Bienvenue dans OpenBusinessERP",
+            "value": "Bienvenue dans Archi Savvy Studio ERP",
             "keys": [
               "dashboard.welcome_title"
             ]
           },
           {
-            "value": "Bienvenue sur OpenBusinessERP",
+            "value": "Bienvenue sur Archi Savvy Studio ERP",
             "keys": [
               "onboarding.welcome_title"
             ]
@@ -41809,17 +41809,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to OpenBusinessERP",
+        "english": "Back to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "OpenBusinessERP पर वापस जाएँ",
+            "value": "Archi Savvy Studio ERP पर वापस जाएँ",
             "keys": [
               "payportal.back_to_app"
             ]
           },
           {
-            "value": "OpenBusinessERP पर वापस जाएं",
+            "value": "Archi Savvy Studio ERP पर वापस जाएं",
             "keys": [
               "homeportal.back_to_app"
             ]
@@ -58713,17 +58713,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to OpenBusinessERP",
+        "english": "Welcome to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Benvenuto in OpenBusinessERP",
+            "value": "Benvenuto in Archi Savvy Studio ERP",
             "keys": [
               "dashboard.welcome_title"
             ]
           },
           {
-            "value": "Benvenuto su OpenBusinessERP",
+            "value": "Benvenuto su Archi Savvy Studio ERP",
             "keys": [
               "onboarding.welcome_title"
             ]
@@ -69025,17 +69025,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to OpenBusinessERP",
+        "english": "Back to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "OpenBusinessERP'ке кайтуу",
+            "value": "Archi Savvy Studio ERP'ке кайтуу",
             "keys": [
               "payportal.back_to_app"
             ]
           },
           {
-            "value": "OpenBusinessERPге кайтуу",
+            "value": "Archi Savvy Studio ERPге кайтуу",
             "keys": [
               "homeportal.back_to_app"
             ]
@@ -74200,17 +74200,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to OpenBusinessERP",
+        "english": "Welcome to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "OpenBusinessERP'ге кош келиңиз",
+            "value": "Archi Savvy Studio ERP'ге кош келиңиз",
             "keys": [
               "dashboard.welcome_title"
             ]
           },
           {
-            "value": "OpenBusinessERP'ке кош келиңиз",
+            "value": "Archi Savvy Studio ERP'ке кош келиңиз",
             "keys": [
               "onboarding.welcome_title"
             ]
@@ -93137,17 +93137,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to OpenBusinessERP",
+        "english": "Welcome to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Witaj w OpenBusinessERP",
+            "value": "Witaj w Archi Savvy Studio ERP",
             "keys": [
               "onboarding.welcome_title"
             ]
           },
           {
-            "value": "Witamy w OpenBusinessERP",
+            "value": "Witamy w Archi Savvy Studio ERP",
             "keys": [
               "dashboard.welcome_title"
             ]
@@ -93364,17 +93364,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to OpenBusinessERP",
+        "english": "Back to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Voltar ao OpenBusinessERP",
+            "value": "Voltar ao Archi Savvy Studio ERP",
             "keys": [
               "payportal.back_to_app"
             ]
           },
           {
-            "value": "Voltar para OpenBusinessERP",
+            "value": "Voltar para Archi Savvy Studio ERP",
             "keys": [
               "homeportal.back_to_app"
             ]
@@ -102776,17 +102776,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to OpenBusinessERP",
+        "english": "Welcome to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Bine ați venit în OpenBusinessERP",
+            "value": "Bine ați venit în Archi Savvy Studio ERP",
             "keys": [
               "dashboard.welcome_title"
             ]
           },
           {
-            "value": "Bun venit în OpenBusinessERP",
+            "value": "Bun venit în Archi Savvy Studio ERP",
             "keys": [
               "onboarding.welcome_title"
             ]
@@ -103185,17 +103185,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to OpenBusinessERP",
+        "english": "Back to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Вернуться в OpenBusinessERP",
+            "value": "Вернуться в Archi Savvy Studio ERP",
             "keys": [
               "homeportal.back_to_app"
             ]
           },
           {
-            "value": "Назад в OpenBusinessERP",
+            "value": "Назад в Archi Savvy Studio ERP",
             "keys": [
               "payportal.back_to_app"
             ]
@@ -112274,17 +112274,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to OpenBusinessERP",
+        "english": "Back to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "กลับไปที่ OpenBusinessERP",
+            "value": "กลับไปที่ Archi Savvy Studio ERP",
             "keys": [
               "homeportal.back_to_app"
             ]
           },
           {
-            "value": "กลับไปยัง OpenBusinessERP",
+            "value": "กลับไปยัง Archi Savvy Studio ERP",
             "keys": [
               "payportal.back_to_app"
             ]
@@ -117791,17 +117791,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to OpenBusinessERP",
+        "english": "Back to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "OpenBusinessERP'ye dön",
+            "value": "Archi Savvy Studio ERP'ye dön",
             "keys": [
               "payportal.back_to_app"
             ]
           },
           {
-            "value": "OpenBusinessERP'ye geri dön",
+            "value": "Archi Savvy Studio ERP'ye geri dön",
             "keys": [
               "homeportal.back_to_app"
             ]
@@ -121904,17 +121904,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to OpenBusinessERP",
+        "english": "Welcome to Archi Savvy Studio ERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "OpenBusinessERP'ya Hoş Geldiniz",
+            "value": "Archi Savvy Studio ERP'ya Hoş Geldiniz",
             "keys": [
               "onboarding.welcome_title"
             ]
           },
           {
-            "value": "OpenBusinessERP'ye Hoş Geldiniz",
+            "value": "Archi Savvy Studio ERP'ye Hoş Geldiniz",
             "keys": [
               "dashboard.welcome_title"
             ]

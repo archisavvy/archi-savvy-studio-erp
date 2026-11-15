@@ -13,7 +13,7 @@ manifest = ModuleManifest(
         "tasks, risks, BIM elements and chat history, then merges the "
         "results via Reciprocal Rank Fusion."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=[],
     auto_install=True,

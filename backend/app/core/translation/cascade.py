@@ -115,7 +115,7 @@ async def translate(
                         the parameter is retained only for backward
                         compatibility with existing callers.
         lookup_root:    Override root for MUSE/IATE TSV files. Defaults to
-                        ``~/.openestimate/translations/``.
+                        ``~/.archisavvy-erp/translations/``.
 
     Returns:
         ``TranslationResult`` - never raises for normal input. Network /

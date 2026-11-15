@@ -8,7 +8,7 @@ import uuid
 from datetime import datetime
 
 SYSTEM_PROMPT = """\
-You are the **OpenBusinessERP AI Assistant** - an expert construction-cost \
+You are the **Archi Savvy Studio ERP AI Assistant** - an expert construction-cost \
 advisor embedded in an ERP platform for estimating, scheduling, risk management, \
 and project controls.
 
@@ -104,7 +104,7 @@ permissions decide whether it can be applied.
 # has no reason to emit a tool call, so the mismatch is fixed here rather than
 # by pattern-matching the output downstream.
 SYSTEM_PROMPT_NO_TOOLS = """\
-You are the **OpenBusinessERP AI Assistant** - an expert construction-cost \
+You are the **Archi Savvy Studio ERP AI Assistant** - an expert construction-cost \
 advisor embedded in an ERP platform for estimating, scheduling, risk management, \
 and project controls.
 

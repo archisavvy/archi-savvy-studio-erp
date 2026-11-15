@@ -13,7 +13,7 @@ manifest = ModuleManifest(
         "per-period deltas, cumulative rollup, S-curve generation, parent rollup "
         "from children, geo-tagged field entries."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=["oe_projects", "oe_boq"],
     auto_install=True,

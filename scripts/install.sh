@@ -1,8 +1,8 @@
 #!/bin/bash
-# OpenBusinessERP - One-Line Installer for Linux / macOS
+# Archi Savvy Studio ERP - One-Line Installer for Linux / macOS
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/datadrivenconstruction/OpenBusinessERP/main/scripts/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/Fabsye/archi-savvy-studio-erp/main/scripts/install.sh | bash
 #
 # What it does:
 #   1. If Docker is installed → runs via docker compose
@@ -22,7 +22,7 @@ OE_VERSION="${OE_VERSION:-latest}"
 OE_INSTALL_DIR="${OE_INSTALL_DIR:-$HOME/.openbusinesserp}"
 OE_METHOD="${OE_METHOD:-auto}"
 OE_PORT="${OE_PORT:-8080}"
-OE_REPO="https://github.com/datadrivenconstruction/OpenBusinessERP"
+OE_REPO="https://github.com/Fabsye/archi-savvy-studio-erp"
 
 # ── Colors ───────────────────────────────────────────────────────────
 RED='\033[0;31m'
@@ -209,7 +209,7 @@ install_docker() {
     info "Pulling the published image..."
     docker compose pull app
 
-    info "Starting OpenBusinessERP..."
+    info "Starting Archi Savvy Studio ERP..."
     docker compose up -d
 
     # Wait for the application to answer, rather than announcing that it runs
@@ -254,18 +254,18 @@ install_docker() {
 
     case "$health" in
         *'"status":"healthy"'*)
-            ok "OpenBusinessERP is running at http://localhost:${OE_PORT}"
+            ok "Archi Savvy Studio ERP is running at http://localhost:${OE_PORT}"
             ;;
         *'"status":"degraded"'*)
             # The same word covers a missing module, where the product works,
             # and a database the process cannot reach, where it does not.
             if printf '%s' "$health" | grep -q '"database":"ok"'; then
-                ok "OpenBusinessERP is running at http://localhost:${OE_PORT}"
+                ok "Archi Savvy Studio ERP is running at http://localhost:${OE_PORT}"
                 warn "Reporting degraded: not every enabled module loaded"
                 echo "  The application is usable. A restart usually loads the rest."
                 echo "  Which module is missing is in the log: cd ${OE_INSTALL_DIR} && docker compose logs -f"
             else
-                warn "OpenBusinessERP started but cannot reach its database"
+                warn "Archi Savvy Studio ERP started but cannot reach its database"
                 echo "  Check logs: cd ${OE_INSTALL_DIR} && docker compose logs -f"
             fi
             ;;
@@ -291,14 +291,14 @@ install_uv() {
         export PATH="$HOME/.local/bin:$PATH"
     fi
 
-    # Install OpenBusinessERP (PyPI package name — see pyproject.toml).
+    # Install Archi Savvy Studio ERP (PyPI package name — see pyproject.toml).
     # Honour OE_VERSION env var (advertised in file header).
     if [ "$OE_VERSION" = "latest" ]; then
         uv tool install openbusinesserp
     else
         uv tool install "openbusinesserp==$OE_VERSION"
     fi
-    ok "OpenBusinessERP installed!"
+    ok "Archi Savvy Studio ERP installed!"
 
     # Create systemd service if on Linux
     if [ "$(uname -s)" = "Linux" ] && command -v systemctl &>/dev/null; then
@@ -352,7 +352,7 @@ install_pip() {
         pip install --upgrade "openbusinesserp==$OE_VERSION"
     fi
 
-    ok "OpenBusinessERP installed in $OE_INSTALL_DIR/venv"
+    ok "Archi Savvy Studio ERP installed in $OE_INSTALL_DIR/venv"
 
     # Convenience launcher.
     cat > "$OE_INSTALL_DIR/start.sh" << 'SCRIPT'
@@ -369,7 +369,7 @@ SCRIPT
 
     echo ""
     echo "  +-------------------------------------------------+"
-    echo "  |  OpenBusinessERP is installed               |"
+    echo "  |  Archi Savvy Studio ERP is installed               |"
     echo "  +-------------------------------------------------+"
     echo ""
     if echo "$PATH" | tr ':' '\n' | grep -qx "$HOME/.local/bin"; then
@@ -397,7 +397,7 @@ create_systemd_service() {
 
     cat > "$service_file" << EOF
 [Unit]
-Description=OpenBusinessERP Server
+Description=Archi Savvy Studio ERP Server
 After=network.target
 
 [Service]
@@ -418,7 +418,7 @@ EOF
 main() {
     echo ""
     echo "  ╔═══════════════════════════════════════════════╗"
-    echo "  ║      OpenBusinessERP Installer            ║"
+    echo "  ║      Archi Savvy Studio ERP Installer            ║"
     echo "  ║      Construction Cost Estimation Platform    ║"
     echo "  ╚═══════════════════════════════════════════════╝"
     echo ""

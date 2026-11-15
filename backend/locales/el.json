@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Αυτό το όνομα δεν μπορεί να χρησιμοποιηθεί για νέο κατάλογο. Επιλέξτε άλλο όνομα.",
   "app": {
-    "name": "OpenBusinessERP",
+    "name": "Archi Savvy Studio ERP",
     "tagline": "Εκτίμηση κόστους κατασκευής ανοιχτού κώδικα"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Ενημέρωση"
   },
   "dashboard": {
-    "welcome": "Καλώς ήρθατε στο OpenBusinessERP",
+    "welcome": "Καλώς ήρθατε στο Archi Savvy Studio ERP",
     "subtitle": "Ο χώρος εργασίας εκτίμησης κατασκευής σας",
     "recent_projects": "Πρόσφατα Έργα",
     "system_status": "Κατάσταση Συστήματος",

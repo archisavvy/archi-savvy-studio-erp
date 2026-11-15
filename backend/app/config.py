@@ -246,7 +246,7 @@ def _userinfo_split_at_the_wrong_at_sign(url: str) -> bool:
 
 
 class Settings(BaseSettings):
-    """OpenBusinessERP application settings."""
+    """Archi Savvy Studio ERP application settings."""
 
     model_config = SettingsConfigDict(
         env_file=_find_env_file() or ".env",
@@ -295,7 +295,7 @@ class Settings(BaseSettings):
         )
 
     # ── App ──────────────────────────────────────────────────────────────
-    app_name: str = "OpenBusinessERP"
+    app_name: str = "Archi Savvy Studio ERP"
     app_version: str = Field(default_factory=_detect_version)
     app_env: Literal["development", "staging", "production"] = "development"
     # Off unless asked for. Debug switches on verbose 422 bodies (the raw
@@ -925,7 +925,7 @@ class Settings(BaseSettings):
                     f"Refusing to start: JWT_SECRET is a well-known weak default "
                     f"({secret!r}) but APP_ENV is {self.app_env!r}. Known-weak "
                     f"secrets are admin-forgeable by anyone who reads the public "
-                    f"OpenBusinessERP source. Set OE_JWT_SECRET to a fresh "
+                    f"Archi Savvy Studio ERP source. Set OE_JWT_SECRET to a fresh "
                     f"random value of at least {_JWT_SECRET_MIN_LENGTH} "
                     f"characters, e.g.\n"
                     f'  python -c "import secrets;print(secrets.token_urlsafe(32))"\n'
@@ -984,7 +984,7 @@ def _jwt_secret_persist_dir() -> Path:
     Honours the platform data-dir overrides (``OE_DATA_DIR`` > ``DATA_DIR`` >
     ``OE_CLI_DATA_DIR``) so a container that mounts a volume at ``/data`` keeps
     one stable secret across redeploys. With no override it falls back to the
-    persistent per-user ``~/.openestimate`` - the location the CLI and desktop
+    persistent per-user ``~/.archisavvy-erp`` - the location the CLI and desktop
     already use - so the secret never lands inside a source checkout's tracked
     ``data`` tree.
 
@@ -995,13 +995,13 @@ def _jwt_secret_persist_dir() -> Path:
     if override and override.strip():
         return Path(override.strip())
     try:
-        return Path.home() / ".openestimate"
+        return Path.home() / ".archisavvy-erp"
     except RuntimeError:
         # Path.home() raises when no home directory can be resolved (a minimal
         # container with HOME unset and no passwd entry). Fall back to a
         # relative dir rather than aborting boot; the caller tolerates a failed
         # persist by falling back to a per-process secret.
-        return Path(".openestimate")
+        return Path(".archisavvy-erp")
 
 
 def _operator_supplied_jwt_secret() -> str | None:
@@ -1157,7 +1157,7 @@ def load_or_create_dev_jwt_secret(
     provisioning above uses, so the secret follows ``--data-dir`` (which the
     CLI exports as ``OE_CLI_DATA_DIR``), ``OE_DATA_DIR`` and ``DATA_DIR``
     exactly as the embedded cluster, the uploads and the demo credentials do.
-    Until it did, ``main.py`` spelled its own path, ``~/.openestimate``, which
+    Until it did, ``main.py`` spelled its own path, ``~/.archisavvy-erp``, which
     is the CLI's default and therefore right for a default install and wrong
     for every other one: two instances started from two data directories on
     one machine signed with one key, and a data directory carried to another

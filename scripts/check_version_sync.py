@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """‌⁠‍Verify backend and frontend​‌‍⁠​‌‍⁠​‌‍⁠​‌‍⁠ version literals are in sync.
 
-The OpenBusinessERP frontend (``frontend/package.json``) and the
+The Archi Savvy Studio ERP frontend (``frontend/package.json``) and the
 Python package (``backend/pyproject.toml``) MUST report the same version
 because the running app reads its version from the installed Python
 package via ``importlib.metadata.version("openbusinesserp")``.

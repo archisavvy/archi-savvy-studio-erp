@@ -1,6 +1,6 @@
 # DDC-CWICR-OE: DataDrivenConstruction · OpenBusinessERP
 # Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
-"""OpenBusinessERP CLI - run the platform from the command line.
+"""Archi Savvy Studio ERP CLI - run the platform from the command line.
 
 The happy path for a new user is two commands:
 
@@ -171,11 +171,11 @@ def _default_data_dir() -> Path:
     if override and override.strip():
         return Path(override.strip())
     try:
-        return Path.home() / ".openestimate"
+        return Path.home() / ".archisavvy-erp"
     except RuntimeError:
         # No home directory can be resolved (a minimal container with HOME
         # unset and no passwd entry). A relative path beats aborting the CLI.
-        return Path(".openestimate")
+        return Path(".archisavvy-erp")
 
 
 DEFAULT_DATA_DIR = _default_data_dir()
@@ -183,11 +183,11 @@ DEFAULT_HOST = "127.0.0.1"
 DEFAULT_PORT = 8080
 MIN_PYTHON = (3, 12)
 
-DOCS_URL = "https://github.com/datadrivenconstruction/OpenBusinessERP#readme"
-TROUBLESHOOTING_URL = "https://github.com/datadrivenconstruction/OpenBusinessERP#readme"
-ISSUES_URL = "https://github.com/datadrivenconstruction/OpenBusinessERP/issues"
+DOCS_URL = "https://github.com/Fabsye/archi-savvy-studio-erp#readme"
+TROUBLESHOOTING_URL = "https://github.com/Fabsye/archi-savvy-studio-erp#readme"
+ISSUES_URL = "https://github.com/Fabsye/archi-savvy-studio-erp/issues"
 COMMUNITY_URL = "https://t.me/datadrivenconstruction"
-GITHUB_URL = "https://github.com/datadrivenconstruction/OpenBusinessERP"
+GITHUB_URL = "https://github.com/Fabsye/archi-savvy-studio-erp"
 
 logger = logging.getLogger("openestimate.cli")
 
@@ -305,7 +305,7 @@ def _bar() -> str:
 
 
 # ── Banner ────────────────────────────────────────────────────────────────
-# "OpenBusinessERP" rendered in the figlet "small" font (82 cols × 5
+# "Archi Savvy Studio ERP" rendered in the figlet "small" font (82 cols × 5
 # rows). The previous "Standard" font wrapped the 19-character name onto
 # multiple visual rows on a typical 80-col terminal, which looked crooked;
 # the "small" font fits the full name on one row with the trailing "ERP"
@@ -344,7 +344,7 @@ def print_startup_banner(
     print()
     print(_amber(_BANNER_ART))
     print()
-    print(f"  {bar}  {_bold('OpenBusinessERP is starting')}  {_dim('v' + version)}")
+    print(f"  {bar}  {_bold('Archi Savvy Studio ERP is starting')}  {_dim('v' + version)}")
     print(f"  {bar}")
     print(f"  {bar}  {_bold('Open in your browser')}")
     print(f"  {bar}     {_amber(url)}")
@@ -425,7 +425,7 @@ def _setup_env(data_dir: Path, host: str, port: int) -> None:
                     "  The underlying error is in the log at "
                     + str(data_dir / "pgdata" / "log")
                     + " (and "
-                    + str(Path.home() / ".openestimate" / "desktop-launcher.log")
+                    + str(Path.home() / ".archisavvy-erp" / "desktop-launcher.log")
                     + "). If it keeps happening, send those logs to info@datadrivenconstruction.io."
                 )
             )
@@ -788,7 +788,7 @@ def check_env_overrides() -> Check:
             "DATABASE_URL",
             "warn",
             f"unsupported scheme: {db.split(':', 1)[0]}",
-            "OpenBusinessERP runs only on PostgreSQL. Use postgresql+asyncpg://... "
+            "Archi Savvy Studio ERP runs only on PostgreSQL. Use postgresql+asyncpg://... "
             "or leave DATABASE_URL unset to use the embedded PostgreSQL.",
         )
     if db.startswith("postgresql"):
@@ -1276,8 +1276,8 @@ def _run_fatal_preflight(data_dir: Path, host: str, port: int) -> None:
         _red(
             _bold(
                 _u(
-                    "Cannot start OpenBusinessERP — pre-flight checks failed:",
-                    "Cannot start OpenBusinessERP - pre-flight checks failed:",
+                    "Cannot start Archi Savvy Studio ERP — pre-flight checks failed:",
+                    "Cannot start Archi Savvy Studio ERP - pre-flight checks failed:",
                 )
             )
         )
@@ -1292,7 +1292,7 @@ def _run_fatal_preflight(data_dir: Path, host: str, port: int) -> None:
 
 
 def cmd_serve(args: argparse.Namespace) -> None:
-    """Start the OpenBusinessERP server."""
+    """Start the Archi Savvy Studio ERP server."""
     data_dir = _data_dir_from_args(args)
 
     # ``serve --no-demo``: skip demo accounts / showcase projects for this
@@ -1688,7 +1688,7 @@ def cmd_doctor(args: argparse.Namespace) -> None:
     data_dir = _data_dir_from_args(args)
 
     print()
-    print(_bold(_u("OpenBusinessERP \u2014 doctor", "OpenBusinessERP - doctor")))
+    print(_bold(_u("Archi Savvy Studio ERP \u2014 doctor", "Archi Savvy Studio ERP - doctor")))
     print(_dim(f"Checking install at {data_dir}"))
     print()
 
@@ -1723,7 +1723,7 @@ def cmd_version(_args: argparse.Namespace) -> None:
     """Print version information."""
     version = _resolve_version()
 
-    print(f"OpenBusinessERP v{version}")
+    print(f"Archi Savvy Studio ERP v{version}")
     print(f"Python {sys.version.split()[0]} ({sys.platform})")
     # This is the line people paste when something is wrong with an install, so
     # each label has to name what it actually shows. "Site-packages" used to be
@@ -1743,7 +1743,7 @@ def cmd_upgrade(args: argparse.Namespace) -> None:
 
     Issue #96: users who installed via the Windows installer get a launcher
     (``start.bat``) that points at a private venv under
-    ``%LOCALAPPDATA%\\OpenBusinessERP\\venv``. Running ``pip install
+    ``%LOCALAPPDATA%\\ArchiSavvyStudioERP\\venv``. Running ``pip install
     --upgrade openbusinesserp`` in any other shell upgrades the user's
     GLOBAL Python - the venv keeps its old wheel, and the launcher keeps
     reporting the old version even though pip claims success. This command
@@ -1757,7 +1757,7 @@ def cmd_upgrade(args: argparse.Namespace) -> None:
     from app.core.self_upgrade import RELEASES_URL, is_frozen_build
 
     print()
-    print(_bold(_u("OpenBusinessERP \u2014 upgrade", "OpenBusinessERP - upgrade")))
+    print(_bold(_u("Archi Savvy Studio ERP \u2014 upgrade", "Archi Savvy Studio ERP - upgrade")))
 
     # In the PyInstaller desktop build ``sys.executable`` is the frozen binary,
     # not an interpreter, so the tokens below would come straight back into this
@@ -1851,7 +1851,7 @@ def _resolve_version() -> str:
     that way has no ``default``: pydantic stores the ``PydanticUndefined``
     sentinel there. That sentinel has a ``__str__``, so the old code did not
     raise and did not fall through to "unknown" either. It printed
-    ``OpenBusinessERP vPydanticUndefined`` at the one moment that path
+    ``Archi Savvy Studio ERP vPydanticUndefined`` at the one moment that path
     exists for. Both branches are kept because either declaration is
     legitimate and this function must not break the next time somebody changes
     which one is used.
@@ -1891,7 +1891,7 @@ def print_welcome(*, next_command_hint: bool = True) -> None:
     print()
     print(_amber(_BANNER_ART))
     print()
-    print(f"  {_bold('OpenBusinessERP')} {_dim('v' + version)}")
+    print(f"  {_bold('Archi Savvy Studio ERP')} {_dim('v' + version)}")
     print(f"  {_dim('Open-source construction cost estimation platform')}")
     print()
     if next_command_hint:
@@ -2547,7 +2547,7 @@ steps:
     title_i18n:
       en: "Welcome"
     body_i18n:
-      en: "This OpenBusinessERP install is pre-configured by {partner}. Replace these placeholder steps with your own onboarding flow."
+      en: "This Archi Savvy Studio ERP install is pre-configured by {partner}. Replace these placeholder steps with your own onboarding flow."
 
   - id: done
     kind: summary
@@ -2559,7 +2559,7 @@ steps:
 """
 
 _PACK_README = """\
-# {slug} - OpenBusinessERP partner pack
+# {slug} - Archi Savvy Studio ERP partner pack
 
 This is a declarative partner pack (Shape A). It carries only presets:
 branding, default locale, currency/tax defaults, module visibility and an
@@ -2581,7 +2581,7 @@ under `packs/`:
 
 Then in the app go to the Modules page, Partner Packs tab, click Rescan and
 Apply, or upload the `.zip` via the in-app installer. The default data dir is
-`~/.openestimate` (or wherever your database lives).
+`~/.archisavvy-erp` (or wherever your database lives).
 
 Edit the placeholders in `manifest.json` (partner name, colours, locale,
 currency, CWICR regions, validation rule packs) before shipping.
@@ -2724,7 +2724,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="openbusinesserp",
         description=(
-            "OpenBusinessERP, open-source construction cost estimation platform.\n\n"
+            "Archi Savvy Studio ERP, open-source construction cost estimation platform.\n\n"
             "Quick start, one command does everything:\n"
             "    openbusinesserp\n\n"
             "It creates the local database, loads the demo data, starts the server\n"
@@ -2755,7 +2755,7 @@ def _build_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command")
 
     # serve
-    serve_p = subparsers.add_parser("serve", help="Start the OpenBusinessERP server")
+    serve_p = subparsers.add_parser("serve", help="Start the Archi Savvy Studio ERP server")
     _add_common_server_args(serve_p)
     serve_p.add_argument("--open", action="store_true", help="Open browser after startup")
     serve_p.add_argument("--quiet", action="store_true", help="Suppress banner and info logs")
@@ -2883,7 +2883,7 @@ def _build_parser() -> argparse.ArgumentParser:
         "module",
         help="Install, list, or uninstall modules",
         description=(
-            "Manage OpenBusinessERP modules.\n\n"
+            "Manage Archi Savvy Studio ERP modules.\n\n"
             "    openbusinesserp module install <archive.zip> [--force]\n"
             "    openbusinesserp module list\n"
             "    openbusinesserp module uninstall <name> [--force]\n\n"
@@ -2917,7 +2917,7 @@ def _build_parser() -> argparse.ArgumentParser:
         "pack",
         help="Scaffold and manage partner packs",
         description=(
-            "Manage OpenBusinessERP partner packs (declarative preset bundles).\n\n"
+            "Manage Archi Savvy Studio ERP partner packs (declarative preset bundles).\n\n"
             "    openbusinesserp pack new <slug> [--out DIR] [--force]\n\n"
             "Emits a minimal, valid pack folder (manifest.json + logo + onboarding\n"
             "+ README). Drop the folder (or a .zip of it) into <data-dir>/packs/ and\n"

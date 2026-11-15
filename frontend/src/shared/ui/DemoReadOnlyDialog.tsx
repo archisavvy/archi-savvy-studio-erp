@@ -25,7 +25,7 @@ import { useFocusTrap } from '@/shared/hooks/useFocusTrap';
 import { useDemoReadOnlyStore } from '@/stores/useDemoReadOnlyStore';
 
 /** Where the real builds live. Already the download link used elsewhere in the app. */
-const DOWNLOAD_URL = 'https://github.com/datadrivenconstruction/OpenBusinessERP/releases/latest';
+const DOWNLOAD_URL = 'https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest';
 
 /**
  * The install options, in the order a visitor is likely to want them.

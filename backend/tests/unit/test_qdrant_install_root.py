@@ -94,7 +94,7 @@ def test_an_unconfigured_install_still_follows_the_platform(tmp_path, monkeypatc
 
     Absent a legacy install there is nothing to migrate, so the resolver has to
     land wherever the rest of the platform writes: ``<repo>/data`` from a source
-    checkout, ``~/.openestimate`` from an installed wheel. Note that neither of
+    checkout, ``~/.archisavvy-erp`` from an installed wheel. Note that neither of
     those is the old ``~/.openestimator`` this module used to pick - the two
     names differ by one letter and were never the same directory, which is part
     of why the divergence went unnoticed for so long.

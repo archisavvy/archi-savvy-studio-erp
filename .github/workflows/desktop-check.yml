@@ -1,4 +1,4 @@
-# OpenBusinessERP Desktop, compile check.
+# Archi Savvy Studio ERP Desktop, compile check.
 #
 # Compiles desktop/src-tauri on Windows, macOS and Linux on every push to main
 # that touches it. It packages nothing, signs nothing and publishes nothing.
@@ -136,7 +136,7 @@ jobs:
         # minutes to a lane whose value is being quick, and the bytes it embeds
         # cannot change whether our Rust type checks.
         #
-        # externalBin points at binaries/openbusinesserp-server. tauri-build
+        # externalBin points at binaries/archisavvy-erp-server. tauri-build
         # appends the target triple, and a missing file is ResourcePathNotFound
         # and a failed build script. The real sidecar is a PyInstaller binary
         # built by an earlier job of the release workflow and is not committed,
@@ -159,7 +159,7 @@ jobs:
             *windows*) ext=".exe" ;;
             *) ext="" ;;
           esac
-          sidecar="desktop/src-tauri/binaries/openbusinesserp-server-${triple}${ext}"
+          sidecar="desktop/src-tauri/binaries/archisavvy-erp-server-${triple}${ext}"
           if [ ! -e "$sidecar" ]; then
             mkdir -p desktop/src-tauri/binaries
             : > "$sidecar"

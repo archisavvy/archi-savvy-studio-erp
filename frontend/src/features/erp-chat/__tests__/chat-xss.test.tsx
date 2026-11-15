@@ -1,6 +1,6 @@
 // DDC-CWICR-OE: DataDrivenConstruction · OpenBusinessERP
 // Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
-// OpenBusinessERP — chat XSS regression suite.
+// Archi Savvy Studio ERP — chat XSS regression suite.
 //
 // Security audit 2026-05-24 finding #1: the chat surfaces
 // (FloatingChatPanel + full-page MessageBubble) render assistant

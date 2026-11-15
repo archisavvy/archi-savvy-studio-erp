@@ -14,7 +14,7 @@ manifest = ModuleManifest(
         "items, and rolls them up per category into a preliminaries total that adds "
         "to the estimate alongside the measured work."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=["oe_projects"],
     auto_install=True,

@@ -76,7 +76,7 @@ def _csv() -> list[str]:
 def test_datev_header_golden():
     head = _csv()[0]
     assert head == (
-        '"EXTF";700;21;"Buchungsstapel";13;20260331140509123;;"OB";"OpenBusinessERP";"";29098;55003;20260101;4;'
+        '"EXTF";700;21;"Buchungsstapel";13;20260331140509123;;"OB";"Archi Savvy Studio ERP";"";29098;55003;20260101;4;'
         '20260301;20260331;"OBERP 2026-03 - 2026-03";"";1;0;0;"EUR";;"";;;"03";;;"";""'
     )
     assert len(head.split(";")) == 31

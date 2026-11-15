@@ -49,13 +49,13 @@ class DDCFingerprintMiddleware(BaseHTTPMiddleware):
 
     async def dispatch(self, request: Request, call_next) -> Response:
         response = await call_next(request)
-        response.headers["X-Powered-By"] = "OpenBusinessERP"
+        response.headers["X-Powered-By"] = "Archi Savvy Studio ERP"
         response.headers["X-DDC-Engine"] = "CWICR/1.0"
         # Authorship markers - always present, production-safe.
         # Useful when investigating an unauthorised deployment: a
         # `curl -I` of any endpoint will surface the DDC origin and
         # author e-mail without requiring source-code access.
-        response.headers["X-DDC-Origin"] = "DataDrivenConstruction/OpenBusinessERP/CWICR"
+        response.headers["X-DDC-Origin"] = "DataDrivenConstruction/ArchiSavvyStudioERP/CWICR"
         response.headers["X-DDC-Author"] = "Artem Boiko <info@datadrivenconstruction.io>"
         # ASCII-only value: HTTP header values are latin-1/ASCII, and
         # Starlette's TestClient decodes them as UTF-8. A non-ASCII byte

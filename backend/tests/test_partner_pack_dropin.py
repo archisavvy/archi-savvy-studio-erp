@@ -7,7 +7,7 @@ Covers the three new capabilities:
   * the ``pack new`` scaffolder produces a folder ``discover_packs()`` then finds.
 
 All filesystem state is confined to ``tmp_path``; the runtime data dir is
-monkeypatched so no test ever touches the real ``~/.openestimate`` or the
+monkeypatched so no test ever touches the real ``~/.archisavvy-erp`` or the
 session DB dir.
 """
 

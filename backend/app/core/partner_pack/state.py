@@ -57,7 +57,7 @@ def _resolve_state_dir(data_dir: Path | None = None) -> Path:
          never inherits (or gets hijacked by) the default install's state.
       3. Legacy fallback (no CLI env, e.g. bare uvicorn): the shared
          ``module_state._resolve_data_dir`` resolution, which ends at
-         ``~/.openestimate`` - unchanged for existing default installs.
+         ``~/.archisavvy-erp`` - unchanged for existing default installs.
     """
     if data_dir is not None:
         return data_dir

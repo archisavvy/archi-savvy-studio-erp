@@ -1,6 +1,6 @@
 // DDC-CWICR-OE: DataDrivenConstruction · OpenBusinessERP
 // Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
-// OpenBusinessERP — property-dev document-template preview XSS suite.
+// Archi Savvy Studio ERP — property-dev document-template preview XSS suite.
 //
 // Security audit 2026-06-22 finding #2: the custom document-template
 // editor renders the template body into ``dangerouslySetInnerHTML`` in a

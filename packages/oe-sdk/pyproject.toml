@@ -1,7 +1,7 @@
 [project]
 name = "oe-sdk"
 version = "0.1.0"
-description = "Module SDK for OpenBusinessERP. One clean import surface for building construction modules on the platform core."
+description = "Module SDK for Archi Savvy Studio ERP. One clean import surface for building construction modules on the platform core."
 license = "AGPL-3.0-or-later"
 requires-python = ">=3.12"
 authors = [
@@ -49,9 +49,9 @@ oe-sdk = "oe_sdk.cli:main"
 
 [project.urls]
 Homepage = "https://datadrivenconstruction.io/erp"
-Documentation = "https://github.com/datadrivenconstruction/OpenBusinessERP/blob/main/docs/platform/how-it-works-for-builders.md"
-Repository = "https://github.com/datadrivenconstruction/OpenBusinessERP"
-Issues = "https://github.com/datadrivenconstruction/OpenBusinessERP/issues"
+Documentation = "https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/docs/platform/how-it-works-for-builders.md"
+Repository = "https://github.com/Fabsye/archi-savvy-studio-erp"
+Issues = "https://github.com/Fabsye/archi-savvy-studio-erp/issues"
 
 [build-system]
 requires = ["hatchling"]

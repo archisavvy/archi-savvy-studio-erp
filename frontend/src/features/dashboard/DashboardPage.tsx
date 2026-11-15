@@ -2872,7 +2872,7 @@ function DashboardPageInner() {
 
         {/* Open-source pill - slimmer (was a heavy gradient card) */}
         <a
-          href="https://github.com/datadrivenconstruction/OpenBusinessERP"
+          href="https://github.com/Fabsye/archi-savvy-studio-erp"
           target="_blank"
           rel="noopener noreferrer"
           className="group/oss inline-flex items-center gap-2 text-xs font-medium text-content-secondary hover:text-content-primary transition-colors"

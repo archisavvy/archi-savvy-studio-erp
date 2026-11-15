@@ -1,6 +1,6 @@
 # Build your own module
 
-OpenBusinessERP is built entirely from modules. Every business feature you see (BOQ, BIM Hub, Schedule, CDE, regional packs, AI tooling) is a self-contained module that the platform discovers, loads and mounts on its own. This guide is a practical, ten-minute walkthrough for adding your own.
+Archi Savvy Studio ERP is built entirely from modules. Every business feature you see (BOQ, BIM Hub, Schedule, CDE, regional packs, AI tooling) is a self-contained module that the platform discovers, loads and mounts on its own. This guide is a practical, ten-minute walkthrough for adding your own.
 
 There are two ways to extend the platform. A **partner pack** is a code-free preset bundle (branding, locale, currency, which modules to show) that anyone can build and share. A **module** is real code: new screens, endpoints, tables, validation rules. Start with the part you need.
 
@@ -66,11 +66,11 @@ Prefer to author it by hand? Just create a folder with a `manifest.json`. The mi
 
 ### 3. Install it (two ways)
 
-Drop the folder (or a `.zip` of it) into your install's data directory under `packs/`, by default `~/.openestimate/packs/` next to the database, then open the Partner Packs tab and click Rescan. No restart needed.
+Drop the folder (or a `.zip` of it) into your install's data directory under `packs/`, by default `~/.archisavvy-erp/packs/` next to the database, then open the Partner Packs tab and click Rescan. No restart needed.
 
 ```bash
 # Drop-in: place the pack beside the database, then Rescan in the app
-~/.openestimate/packs/acme-co/manifest.json
+~/.archisavvy-erp/packs/acme-co/manifest.json
 ```
 
 Or zip the folder and upload the `.zip` directly on the Partner Packs tab using the in-app installer (admins only). It is extracted into the same `packs/` directory and appears immediately.
@@ -113,8 +113,8 @@ Have these ready before starting. If you can run the app locally, you already ha
 - **A clone of the repo** to hack on the module
 
 ```bash
-git clone https://github.com/datadrivenconstruction/OpenBusinessERP.git
-cd OpenBusinessERP
+git clone https://github.com/Fabsye/archi-savvy-studio-erp.git
+cd Archi Savvy Studio ERP
 # Backend
 cd backend && pip install -e ".[dev]"
 uvicorn app.main:create_app --factory --reload --port 8000
@@ -549,7 +549,7 @@ zip -r ~/my-module-0.1.0.zip my_module
 openbusinesserp module install ~/my-module-0.1.0.zip
 
 # 3. Optional - publish on the marketplace by opening a PR against
-#    github.com/datadrivenconstruction/OpenBusinessERP-modules
+#    github.com/Fabsye/archi-savvy-studio-erp-modules
 #    adding your zip URL + manifest summary
 ```
 
@@ -559,5 +559,5 @@ Always bump `manifest.version` on every release; the installer uses it to decide
 
 ## Further reading
 
-- [MODULES.md on GitHub](https://github.com/datadrivenconstruction/OpenBusinessERP/blob/main/MODULES.md): single source of truth
-- [CONTRIBUTING.md](https://github.com/datadrivenconstruction/OpenBusinessERP/blob/main/CONTRIBUTING.md): style, commits, PR process
+- [MODULES.md on GitHub](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/MODULES.md): single source of truth
+- [CONTRIBUTING.md](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/CONTRIBUTING.md): style, commits, PR process

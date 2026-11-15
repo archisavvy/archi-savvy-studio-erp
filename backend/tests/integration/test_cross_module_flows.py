@@ -1,4 +1,4 @@
-"""Cross-module integration tests for OpenBusinessERP.
+"""Cross-module integration tests for Archi Savvy Studio ERP.
 
 Tests the CONNECTIONS between modules -- not individual module CRUD,
 but the workflows where one module's action triggers side-effects

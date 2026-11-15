@@ -5,7 +5,7 @@
 Used by BIM geometry files, CAD uploads, takeoff PDFs, and generated
 reports - anything that today lives under ``data/`` on the local
 filesystem should eventually flow through this abstraction so operators
-can point OpenBusinessERP at an S3-compatible bucket instead.
+can point Archi Savvy Studio ERP at an S3-compatible bucket instead.
 
 Two implementations ship in-tree:
 
@@ -1491,7 +1491,7 @@ def resolve_data_dir() -> Path:
         OE_DATA_DIR  >  DATA_DIR  >  OE_CLI_DATA_DIR  >  default
 
     where ``default`` is the package-relative ``<package>/data`` for a
-    source/git checkout, but a PERSISTENT per-user ``~/.openestimate`` when the
+    source/git checkout, but a PERSISTENT per-user ``~/.archisavvy-erp`` when the
     package is installed under ``site-packages`` (see below).
 
     ``OE_DATA_DIR`` is honoured FIRST so an operator who points the platform
@@ -1505,7 +1505,7 @@ def resolve_data_dir() -> Path:
        was always ``<package>/data``. Inside ``site-packages`` that directory
        is EPHEMERAL: a later ``pip install -U`` replaces the package tree and
        the BIM blobs vanish, while the DB row still says ``ready``. We now
-       default such installs to ``~/.openestimate`` (the same persistent dir
+       default such installs to ``~/.archisavvy-erp`` (the same persistent dir
        the CLI/desktop already use) so geometry survives upgrades. A source or
        git checkout (e.g. the demo VPS, which runs from a working tree) keeps
        ``<repo>/data`` because that is genuinely persistent.
@@ -1535,7 +1535,7 @@ def resolve_data_dir() -> Path:
         # Installed wheel: package dir is wiped on upgrade -> use a persistent
         # per-user location instead. Works identically on Windows, macOS, Linux
         # (``Path.home()`` is cross-platform).
-        return Path.home() / ".openestimate"
+        return Path.home() / ".archisavvy-erp"
     return here.parents[3] / "data"
 
 
@@ -1730,7 +1730,7 @@ def safe_data_roots() -> list[Path]:
       not set the env vars) physically wrote blobs there. Without this a model
       written under the old default and then read under a newly-honoured
       ``OE_DATA_DIR`` would 404,
-    * both brand-namespace home dirs ``~/.openestimate`` and
+    * both brand-namespace home dirs ``~/.archisavvy-erp`` and
       ``~/.openestimator`` - takeoff PDFs and document uploads land here,
     * any operator-supplied ``OE_DATA_DIR`` / ``DATA_DIR`` / ``OE_CLI_DATA_DIR``.
 
@@ -1754,7 +1754,7 @@ def safe_data_roots() -> list[Path]:
     # Historical package-relative default, always a back-compat READ root.
     _add(Path(__file__).resolve().parents[3] / "data")
     home = Path.home()
-    _add(home / ".openestimate")
+    _add(home / ".archisavvy-erp")
     _add(home / ".openestimator")
     for env_name in ("OE_DATA_DIR", "DATA_DIR", "OE_CLI_DATA_DIR"):
         value = os.environ.get(env_name)

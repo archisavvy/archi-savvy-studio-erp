@@ -13,7 +13,7 @@ manifest = ModuleManifest(
         "at a watched folder and a sync brings each new file in as a first-class, searchable "
         "project document, deduplicated so the same file is never imported twice"
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=["oe_users", "oe_projects", "oe_documents"],
     auto_install=True,

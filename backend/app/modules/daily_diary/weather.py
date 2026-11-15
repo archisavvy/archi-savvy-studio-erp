@@ -108,7 +108,7 @@ def _do_get(url: str) -> dict[str, Any] | None:
     try:
         req = urllib.request.Request(
             url,
-            headers={"User-Agent": "OpenBusinessERP/daily-diary"},
+            headers={"User-Agent": "ArchiSavvyStudioERP/daily-diary"},
         )
         with urllib.request.urlopen(req, timeout=_HTTP_TIMEOUT_SECONDS) as resp:
             charset = resp.headers.get_content_charset() or "utf-8"

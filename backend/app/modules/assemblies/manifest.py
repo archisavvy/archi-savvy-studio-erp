@@ -12,7 +12,7 @@ manifest = ModuleManifest(
         "Composite cost items built from cost database entries with factors. "
         "Supports templates, regional factors, and BOQ integration."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     # ``oe_fx`` prices an assembly whose currency differs from the target
     # project's; without it the only rate source is the project's hand-typed

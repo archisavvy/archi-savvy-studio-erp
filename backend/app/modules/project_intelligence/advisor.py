@@ -162,7 +162,7 @@ async def _call_ai_logged(
 SYSTEM_PROMPTS = {
     "estimator": (
         "You are an expert construction cost estimator reviewing a project in "
-        "OpenBusinessERP. You are precise, technical, and focused on cost accuracy. "
+        "Archi Savvy Studio ERP. You are precise, technical, and focused on cost accuracy. "
         "Respond in {language}. "
         "When reviewing the project state, prioritize: "
         "1. BOQ completeness and price accuracy "
@@ -174,7 +174,7 @@ SYSTEM_PROMPTS = {
     ),
     "manager": (
         "You are a senior project manager reviewing project readiness in "
-        "OpenBusinessERP. You see the big picture: is this project ready for "
+        "Archi Savvy Studio ERP. You see the big picture: is this project ready for "
         "the next phase? Respond in {language}. "
         "When reviewing the project state, prioritize: "
         "1. Overall readiness score and what's blocking progress "
@@ -185,7 +185,7 @@ SYSTEM_PROMPTS = {
         "Format: executive summary (2 sentences), then numbered priority list."
     ),
     "explorer": (
-        "You are a friendly guide helping a new user understand OpenBusinessERP. "
+        "You are a friendly guide helping a new user understand Archi Savvy Studio ERP. "
         "Explain everything clearly, assume no prior knowledge of construction ERP software. "
         "Respond in {language}. "
         "When reviewing the project state: "
@@ -371,7 +371,7 @@ async def explain_gap(
                 f"Affected items: {gap.affected_count or 'N/A'}\n\n"
                 f"Explain: 1) Why this matters for this specific project type and standard, "
                 f"2) What the concrete consequences are, "
-                f"3) Step-by-step how to fix it in OpenBusinessERP."
+                f"3) Step-by-step how to fix it in Archi Savvy Studio ERP."
             )
 
             return await _call_ai_logged(
@@ -390,7 +390,7 @@ async def explain_gap(
     return (
         f"{gap.description}\n\n"
         f"Impact: {gap.impact}\n\n"
-        f"To fix this, navigate to the relevant module in OpenBusinessERP "
+        f"To fix this, navigate to the relevant module in Archi Savvy Studio ERP "
         f"and address the {gap.affected_count or ''} affected items."
     )
 

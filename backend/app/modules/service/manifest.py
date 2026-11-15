@@ -12,7 +12,7 @@ manifest = ModuleManifest(
         "Service contracts, tickets, work orders, SLA tracking, and "
         "preventive-maintenance scheduling for MEP and facility service teams."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="business",
     depends=["oe_users", "oe_projects", "oe_contacts"],
     auto_install=True,

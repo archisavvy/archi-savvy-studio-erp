@@ -216,7 +216,7 @@ export function RegisterPage() {
                 {t('auth.create_account', 'Create account')}
               </h2>
               <p className="text-xs text-content-secondary mb-4">
-                {t('auth.biz_register_subtitle', { defaultValue: 'Create your OpenBusinessERP account' })}
+                {t('auth.biz_register_subtitle', { defaultValue: 'Create your Archi Savvy Studio ERP account' })}
               </p>
             </div>
 
@@ -449,7 +449,7 @@ export function RegisterPage() {
           {/* Mobile footer */}
           <div className="lg:hidden mt-3 text-center text-2xs text-content-quaternary">
             <div className="flex items-center justify-center gap-3">
-              <a href="https://github.com/datadrivenconstruction/OpenBusinessERP" target="_blank" rel="noopener noreferrer" className="hover:text-content-secondary transition-colors">GitHub</a>
+              <a href="https://github.com/Fabsye/archi-savvy-studio-erp" target="_blank" rel="noopener noreferrer" className="hover:text-content-secondary transition-colors">GitHub</a>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ manifest = ModuleManifest(
         "(statutory charges, insurance, leave, overtime, supervision, small tools), "
         "and composite crew rates blending several trades."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=["oe_users"],
     auto_install=True,

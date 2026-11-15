@@ -47,7 +47,7 @@ services:
       ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost}
       # Persistent data dir - pins the unified resolver (resolve_data_dir) at
       # the /data volume below. Without it the resolver defaults to
-      # ~/.openestimate inside the container (ephemeral): BIM geometry is
+      # ~/.archisavvy-erp inside the container (ephemeral): BIM geometry is
       # written there, the DB row stays "ready", and a container recreate
       # makes the geometry endpoint 404.
       OE_DATA_DIR: ${OE_DATA_DIR:-/data}

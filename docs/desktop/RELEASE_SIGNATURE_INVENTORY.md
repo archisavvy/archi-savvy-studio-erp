@@ -1,6 +1,6 @@
 # Which releases are signed, and what "signed" means
 
-This page states plainly what cryptographic guarantees an OpenBusinessERP
+This page states plainly what cryptographic guarantees an Archi Savvy Studio ERP
 download does and does not carry. It exists because "is it signed?" has four
 different answers here and they do not agree with each other, so a single yes or
 no would be misleading whichever way it went.
@@ -127,7 +127,7 @@ For a release that carries the three files:
 cosign verify-blob \
   --certificate SHA256SUMS.pem \
   --signature SHA256SUMS.sig \
-  --certificate-identity-regexp 'https://github.com/datadrivenconstruction/OpenBusinessERP/.*' \
+  --certificate-identity-regexp 'https://github.com/Fabsye/archi-savvy-studio-erp/.*' \
   --certificate-oidc-issuer https://token.actions.githubusercontent.com \
   SHA256SUMS
 
@@ -141,14 +141,14 @@ says nothing about the file you downloaded.
 To look at a platform signature directly, on macOS:
 
 ```
-codesign -dv --verbose=4 /Applications/OpenBusinessERP.app
-spctl --assess --type execute -vv /Applications/OpenBusinessERP.app
+codesign -dv --verbose=4 /Applications/ArchiSavvyStudioERP.app
+spctl --assess --type execute -vv /Applications/ArchiSavvyStudioERP.app
 ```
 
 and on Windows, with the SDK's `signtool`:
 
 ```
-signtool verify /pa /v OpenBusinessERP_x64-setup.exe
+signtool verify /pa /v ArchiSavvyStudioERP_x64-setup.exe
 ```
 
 Today both of those report the absence described above. That is the expected

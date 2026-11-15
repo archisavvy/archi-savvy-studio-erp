@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Dette navn kan ikke bruges til en ny katalog. Vælg et andet navn.",
   "app": {
-    "name": "OpenBusinessERP",
+    "name": "Archi Savvy Studio ERP",
     "tagline": "Byggekalkulation med åben kildekode"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Opdater"
   },
   "dashboard": {
-    "welcome": "Velkommen til OpenBusinessERP",
+    "welcome": "Velkommen til Archi Savvy Studio ERP",
     "subtitle": "Byggekalkulation med åben kildekode",
     "recent_projects": "Seneste projekter",
     "system_status": "Systemstatus",

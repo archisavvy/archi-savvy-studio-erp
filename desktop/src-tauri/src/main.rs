@@ -1,4 +1,4 @@
-// OpenBusinessERP Desktop, Tauri v2 application.
+// Archi Savvy Studio ERP Desktop, Tauri v2 application.
 //
 // Manages the FastAPI backend as a sidecar process.
 // The React frontend loads in a native webview window.
@@ -11,7 +11,7 @@
 //   failure. So setup() must NEVER panic: every fallible step is handled, the
 //   splash window is kept open, a human-readable error is shown via setError(),
 //   and a full diagnostic log is always written to
-//   ~/.openestimate/desktop-launcher.log (alongside the backend's own data).
+//   ~/.archisavvy-erp/desktop-launcher.log (alongside the backend's own data).
 
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
@@ -623,7 +623,7 @@ fn home_dir() -> Option<PathBuf> {
 
 /// Path of the launcher diagnostic log (same folder the backend uses for data).
 fn log_path() -> Option<PathBuf> {
-    home_dir().map(|h| h.join(".openestimate").join("desktop-launcher.log"))
+    home_dir().map(|h| h.join(".archisavvy-erp").join("desktop-launcher.log"))
 }
 
 /// Append one line to the diagnostic log (best effort) and to stderr.
@@ -924,7 +924,7 @@ fn set_backend_silent_notice(handle: &tauri::AppHandle, shown: bool) {
         let text = js_escape(
             "The application backend has not answered for about two minutes. It may be working \
 through a long operation, such as a large import, and this notice will disappear as soon as it \
-responds. If the window stays unusable, close it and start OpenBusinessERP again.",
+responds. If the window stays unusable, close it and start Archi Savvy Studio ERP again.",
         );
         format!(
             "(function(){{\
@@ -974,7 +974,7 @@ const LIVENESS_SILENT_STRIKES: u32 = 12;
 /// What to say when a server this machine was running has gone.
 const LOCAL_BACKEND_LOST_DETAIL: &str =
     "Nothing is listening on the local address any more, so this window can no longer load or \
-save anything. Please close it and start OpenBusinessERP again. If this keeps happening, \
+save anything. Please close it and start Archi Savvy Studio ERP again. If this keeps happening, \
 send the log file to info@datadrivenconstruction.io.";
 
 /// What to say when a server somewhere else has gone.
@@ -987,7 +987,7 @@ fn remote_backend_lost_detail(url: &str) -> String {
     format!(
         "The server at {url} is no longer answering, so this window can no longer load or save \
 anything. Check that the server is running and that this computer can still reach it, then \
-start OpenBusinessERP again. You can also switch back to a server on this computer from \
+start Archi Savvy Studio ERP again. You can also switch back to a server on this computer from \
 the tray icon menu."
     )
 }
@@ -1234,13 +1234,13 @@ fn show_main_window(handle: &tauri::AppHandle) {
     }
 }
 
-/// Ports an already-running OpenBusinessERP backend is likely to be on.
+/// Ports an already-running Archi Savvy Studio ERP backend is likely to be on.
 ///
 /// Checked in order before we spawn our own sidecar. This is what lets the
 /// desktop app coexist with a developer backend or a CLI ``openbusinesserp
 /// serve`` already running on the same machine: rather than booting a SECOND
 /// backend that fights the first one over the shared embedded-PostgreSQL cluster
-/// at ``~/.openestimate/pgdata`` (a real founder-machine failure mode), we
+/// at ``~/.archisavvy-erp/pgdata`` (a real founder-machine failure mode), we
 /// simply attach to the healthy instance that is already there.
 const ATTACH_CANDIDATE_PORTS: [u16; 4] = [8000, 8080, 8732, 8765];
 
@@ -1259,7 +1259,7 @@ const WORKSPACE_ID_FILENAME: &str = "workspace_id.json";
 /// and inherits this process's environment, so the CLI's `_default_data_dir`
 /// runs there with these same variables and the same precedence:
 /// `OE_DATA_DIR`, then `DATA_DIR`, then `OE_CLI_DATA_DIR`, then
-/// `~/.openestimate`. Reading only the last of those would be wrong on any
+/// `~/.archisavvy-erp`. Reading only the last of those would be wrong on any
 /// machine that sets one of the first three: this launcher would compute one
 /// folder, its own backend another, and the two would refuse to recognise each
 /// other and start a second server on the first one's database.
@@ -1271,7 +1271,7 @@ fn workspace_data_dir() -> Option<PathBuf> {
             }
         }
     }
-    home_dir().map(|h| h.join(".openestimate"))
+    home_dir().map(|h| h.join(".archisavvy-erp"))
 }
 
 /// Pull a usable workspace id out of a health body, if it carries one.
@@ -1375,7 +1375,7 @@ fn id_prefix(id: &str) -> String {
 /// a real problem the user can see and act on from inside the app.
 /// `is_our_backend_healthy` refused to attach to that same backend, which sent
 /// the launcher off to start a SECOND backend against the same
-/// `~/.openestimate/pgdata` - the precise accident the attach path exists to
+/// `~/.archisavvy-erp/pgdata` - the precise accident the attach path exists to
 /// avoid. One running backend was simultaneously fit to be used and unfit to be
 /// used, on one field, because the two judgements were written apart.
 ///
@@ -1655,7 +1655,7 @@ enum BackendSource {
 ///
 /// If a developer backend or a CLI `openbusinesserp serve` is already
 /// running on this machine, it already owns the embedded PostgreSQL cluster at
-/// ~/.openestimate/pgdata. Spawning our own sidecar against the SAME default
+/// ~/.archisavvy-erp/pgdata. Spawning our own sidecar against the SAME default
 /// data dir makes two processes share one cluster; when the desktop app later
 /// exits it tells pixeltable-pgserver to clean up, which can stop the postmaster
 /// out from under the still-running developer backend. Attaching instead is both
@@ -1735,7 +1735,7 @@ recognised as its own; starting a server instead",
     match attached_port {
         Some(existing) => {
             log_line(&format!(
-                "found an existing OpenBusinessERP backend on port {existing}; attaching instead of starting a second one"
+                "found an existing Archi Savvy Studio ERP backend on port {existing}; attaching instead of starting a second one"
             ));
             BackendSource::AlreadyRunning {
                 base_url: format!("http://127.0.0.1:{existing}/"),
@@ -2247,7 +2247,7 @@ server is running and reachable from here."
         // because the address is almost right and the user is about to stare at
         // it looking for a typo that is not there.
         return Err(
-            "Something answered at that address, but it is not an OpenBusinessERP server. \
+            "Something answered at that address, but it is not an Archi Savvy Studio ERP server. \
 Check that the address is complete, including any folder the server is published under."
                 .to_string(),
         );
@@ -2391,7 +2391,7 @@ fn report_remote_unreachable(
     reason: &str,
 ) {
     let message = format!(
-        "Could not reach the OpenBusinessERP server at {base_url}, which is configured in \
+        "Could not reach the Archi Savvy Studio ERP server at {base_url}, which is configured in \
 {}. {reason} Use the button below to run a server on this computer instead.",
         source.describe()
     );
@@ -2459,7 +2459,7 @@ const EXTRACTION_PREFIX: &str = "_MEI";
 /// It is a Windows path carrying a Windows environment variable because Windows
 /// is the only platform whose bootloader expands one. See the spec for why POSIX
 /// keeps the system temporary folder instead.
-const EXTRACTION_ROOT_SPEC_LITERAL: &str = r"%LOCALAPPDATA%\OpenBusinessERP\extract";
+const EXTRACTION_ROOT_SPEC_LITERAL: &str = r"%LOCALAPPDATA%\ArchiSavvyStudioERP\extract";
 
 /// How long a directory must have been untouched before the sweep considers it.
 ///
@@ -3379,7 +3379,7 @@ fn legacy_leftovers_sentence(root: &str, found: &LegacyLeftovers) -> String {
         " Earlier versions of this application unpacked themselves into {root} and did not \
 clear up after themselves, leaving {floor}{} folders there that hold {floor}{}. Their names \
 begin with {EXTRACTION_PREFIX}, no program is running out of the ones counted here, and \
-deleting them with OpenBusinessERP closed frees that space. This version unpacks into a \
+deleting them with Archi Savvy Studio ERP closed frees that space. This version unpacks into a \
 folder it clears up on its own, so they will not come back.",
         found.directories,
         human_bytes(found.bytes)
@@ -3465,7 +3465,7 @@ fn cause_is_a_full_disk(cause: &str) -> bool {
 fn full_disk_message(notes: &str) -> String {
     format!(
         "The drive ran out of space while the application was starting, so its backend could \
-not finish. Free some space and start OpenBusinessERP again.{notes}"
+not finish. Free some space and start Archi Savvy Studio ERP again.{notes}"
     )
 }
 
@@ -3500,7 +3500,7 @@ fn out_of_space_message(dir: &str, free: u64) -> String {
     format!(
         "There is not enough free space to start the application. It unpacks itself into \
 {dir} every time it starts, which needs about {}, and the drive holding that folder has \
-{} free. Free some space on that drive and start OpenBusinessERP again.",
+{} free. Free some space on that drive and start Archi Savvy Studio ERP again.",
         human_bytes(EXTRACTION_ESTIMATED_BYTES),
         human_bytes(free)
     )
@@ -3617,10 +3617,10 @@ fn start_local_backend(
     // fall back to defaults, and on first run block on an interactive
     // "open in browser?" stdin prompt that a sidecar has no terminal
     // for. With --data-dir left unset the sidecar uses its default
-    // (~/.openestimate), which stays writable even for a per-machine
+    // (~/.archisavvy-erp), which stays writable even for a per-machine
     // install under Program Files.
     let shell = handle.shell();
-    let sidecar_cmd = match shell.sidecar("openbusinesserp-server") {
+    let sidecar_cmd = match shell.sidecar("archisavvy-erp-server") {
         Ok(cmd) => {
             // OE_DESKTOP=1 marks this backend as one we spawned from the
             // desktop shell (so the backend can run desktop-only
@@ -3683,7 +3683,7 @@ fn start_local_backend(
             // whose home directory cannot be read is left no worse off
             // than it is today.
             if let Some(home) = home_dir() {
-                let workdir = home.join(".openestimate");
+                let workdir = home.join(".archisavvy-erp");
                 if std::fs::create_dir_all(&workdir).is_ok() {
                     cmd = cmd.current_dir(&workdir);
                 }
@@ -3730,7 +3730,7 @@ the application."
                     "sidecar",
                     &format!(
                         "The backend component could not be started ({e}). Some antivirus \
-tools block newly installed programs; allow OpenBusinessERP and try again."
+tools block newly installed programs; allow Archi Savvy Studio ERP and try again."
                     ),
                 );
                 return;
@@ -4006,7 +4006,7 @@ this keeps happening send it to info@datadrivenconstruction.io."
                                 &format!(
                                     "The backend exited unexpectedly (exit code {:?}), so \
 this window can no longer load or save anything. Please close it and start \
-OpenBusinessERP again. If this keeps happening, send the log file to \
+Archi Savvy Studio ERP again. If this keeps happening, send the log file to \
 info@datadrivenconstruction.io.",
                                     payload.code
                                 ),
@@ -4033,7 +4033,7 @@ info@datadrivenconstruction.io.",
                     &lost_flag,
                     "The connection to the application backend was lost",
                     "The launcher can no longer see the backend it started, so this \
-window may stop working. Please close it and start OpenBusinessERP again. If this keeps \
+window may stop working. Please close it and start Archi Savvy Studio ERP again. If this keeps \
 happening, send the log file to info@datadrivenconstruction.io.",
                 );
             }
@@ -4193,7 +4193,7 @@ fn main() {
     // even if building the Tauri app itself (WebView2 missing, etc.) blows up
     // before any window appears.
     log_line(&format!(
-        "=== OpenBusinessERP desktop launcher starting (v{}) ===",
+        "=== Archi Savvy Studio ERP desktop launcher starting (v{}) ===",
         env!("CARGO_PKG_VERSION")
     ));
 
@@ -4321,7 +4321,7 @@ fn main() {
                         // panic, keeping the no-panic startup contract.
                         tauri::image::Image::new_owned(vec![0, 0, 0, 0], 1, 1)
                     }))
-                    .tooltip("OpenBusinessERP")
+                    .tooltip("Archi Savvy Studio ERP")
                     .menu(&menu)
                     // Keep the existing left-click-to-show behaviour. The menu
                     // shows on right-click; suppressing menu-on-left-click means
@@ -4357,7 +4357,7 @@ fn main() {
                     log_line(&format!("warning: tray menu build failed (non-fatal): {e}"));
                     // Fall back to the plain icon-only tray (left-click shows).
                     TrayIconBuilder::new()
-                        .tooltip("OpenBusinessERP")
+                        .tooltip("Archi Savvy Studio ERP")
                         .on_tray_icon_event(|tray, event| {
                             if let TrayIconEvent::Click {
                                 button: MouseButton::Left,
@@ -4437,7 +4437,7 @@ fn main() {
                             "sidecar",
                             &format!(
                                 "The backend could not be started ({e}). Close anything else \
-that is running and start OpenBusinessERP again."
+that is running and start Archi Savvy Studio ERP again."
                             ),
                         );
                     }
@@ -4784,7 +4784,7 @@ fn show_startup_failure_dialog(message: &str) {
         .map(|p| format!("\n\nA full diagnostic log was written to:\n{}", p.display()))
         .unwrap_or_default();
     let body = format!(
-        "OpenBusinessERP could not start.\n\n{message}{log_hint}\n\n\
+        "Archi Savvy Studio ERP could not start.\n\n{message}{log_hint}\n\n\
 If this keeps happening, please send the log file to info@datadrivenconstruction.io."
     );
 
@@ -4792,7 +4792,7 @@ If this keeps happening, please send the log file to info@datadrivenconstruction
         s.encode_utf16().chain(std::iter::once(0)).collect::<Vec<u16>>()
     };
     let body_w = to_wide(&body);
-    let title_w = to_wide("OpenBusinessERP failed to start");
+    let title_w = to_wide("Archi Savvy Studio ERP failed to start");
 
     // SAFETY: both buffers are valid, NUL-terminated UTF-16; a null HWND is the
     // documented way to show an owner-less message box.
@@ -5142,7 +5142,7 @@ RuntimeError: locale catalogue missing",
             server_config::ChoiceSource::AdminFile,
         ] {
             let message = format!(
-                "Could not reach the OpenBusinessERP server at {}, which is configured in \
+                "Could not reach the Archi Savvy Studio ERP server at {}, which is configured in \
 {}. {} Use the button below to run a server on this computer instead.",
                 "https://erp.example.com/",
                 source.describe(),
@@ -6533,10 +6533,10 @@ walking the directory rather than taking the held files first"
             assert!(!cause_is_a_full_disk(innocent), "{innocent}");
         }
 
-        let message = full_disk_message(" It keeps its database in C:\\Users\\a\\.openestimate.");
+        let message = full_disk_message(" It keeps its database in C:\\Users\\a\\.archisavvy-erp.");
         assert!(message.contains("ran out of space"), "{message}");
         assert!(message.contains("Free some space"), "{message}");
-        assert!(message.contains(".openestimate"), "{message}");
+        assert!(message.contains(".archisavvy-erp"), "{message}");
         assert!(
             !message.to_ascii_lowercase().contains("errno"),
             "the raw code has no business on the screen: {message}"
@@ -6677,7 +6677,7 @@ somewhere this launcher does not sweep"
 
         assert_eq!(
             expand_windows_env(EXTRACTION_ROOT_SPEC_LITERAL, &known).as_deref(),
-            Some(r"C:\Users\somebody\AppData\Local\OpenBusinessERP\extract")
+            Some(r"C:\Users\somebody\AppData\Local\ArchiSavvyStudioERP\extract")
         );
         assert_eq!(expand_windows_env(r"%NOT_SET%\extract", &known), None);
         assert_eq!(expand_windows_env(r"%EMPTY%\extract", &known), None);
@@ -6695,8 +6695,8 @@ somewhere this launcher does not sweep"
         let root = extraction_root().expect("Windows always has LOCALAPPDATA");
         assert!(root.is_absolute(), "{}", root.display());
         assert!(
-            root.ends_with("OpenBusinessERP/extract")
-                || root.ends_with(r"OpenBusinessERP\extract"),
+            root.ends_with("ArchiSavvyStudioERP/extract")
+                || root.ends_with(r"ArchiSavvyStudioERP\extract"),
             "the root must be the one we own: {}",
             root.display()
         );

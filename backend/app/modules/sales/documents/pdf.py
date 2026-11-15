@@ -960,7 +960,7 @@ def _render(
         pagesize=A4,
         title=f"{title} {number}",
         author=company.get("company_name", ""),
-        creator="OpenBusinessERP",
+        creator="Archi Savvy Studio ERP",
         lang=lg,
     )
     template.addPageTemplates(

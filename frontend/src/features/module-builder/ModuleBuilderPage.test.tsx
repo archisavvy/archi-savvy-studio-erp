@@ -63,7 +63,7 @@ const LIST: InstalledList = {
     },
   ],
   total: 1,
-  runtime_root: '/home/oe/.openestimate/modules',
+  runtime_root: '/home/oe/.archisavvy-erp/modules',
 };
 
 function renderPage() {
@@ -101,7 +101,7 @@ describe('the register', () => {
 
   it('keeps the server directory out of the explainer prose, folded away for an administrator', async () => {
     renderPage();
-    const path = await screen.findByText('/home/oe/.openestimate/modules');
+    const path = await screen.findByText('/home/oe/.archisavvy-erp/modules');
     const folded = path.closest('details');
     expect(folded).toBeTruthy();
     expect(folded?.hasAttribute('open')).toBe(false);

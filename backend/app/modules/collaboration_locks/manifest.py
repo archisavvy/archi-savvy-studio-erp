@@ -19,7 +19,7 @@ manifest = ModuleManifest(
         "Pessimistic soft locks with live presence broadcast. "
         "Prevents two estimators from overwriting each other on the same BOQ row."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=["oe_users"],
     auto_install=True,

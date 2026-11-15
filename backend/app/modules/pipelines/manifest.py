@@ -13,7 +13,7 @@ manifest = ModuleManifest(
         "runner, validation engine and per-module services as draggable, "
         "gate-able pipeline nodes"
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=["oe_users", "oe_projects", "oe_validation"],
     auto_install=False,

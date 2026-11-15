@@ -496,7 +496,7 @@ _OPENAI_COMPAT_CONFIG = {
     "openrouter": {
         "url": "https://openrouter.ai/api/v1/chat/completions",
         "model": OPENROUTER_MODEL,
-        "extra_headers": {"HTTP-Referer": "https://github.com/datadrivenconstruction/OpenBusinessERP"},
+        "extra_headers": {"HTTP-Referer": "https://github.com/Fabsye/archi-savvy-studio-erp"},
     },
     "mistral": {
         "url": "https://api.mistral.ai/v1/chat/completions",
@@ -1398,14 +1398,14 @@ _ENV_KEY_NAMES: list[tuple[str, list[str]]] = [
 
 
 def _key_from_env_and_config(provider: str | None) -> tuple[str, str] | None:
-    """Find an AI key in env vars / ``~/.openestimate/config.json``.
+    """Find an AI key in env vars / ``~/.archisavvy-erp/config.json``.
 
     This is the fallback used when no usable key is stored in the DB. It mirrors
     the two locations `app/cli.py check_ai_provider_keys()` reports on:
 
     1. Environment variables (e.g. ``ANTHROPIC_API_KEY``) - see
        :data:`_ENV_KEY_NAMES`.
-    2. ``~/.openestimate/config.json`` (CLI-managed): a flat JSON object whose
+    2. ``~/.archisavvy-erp/config.json`` (CLI-managed): a flat JSON object whose
        ``*_api_key`` entries hold provider keys (key name ``<provider>_api_key``).
 
     Args:
@@ -1428,9 +1428,9 @@ def _key_from_env_and_config(provider: str | None) -> tuple[str, str] | None:
             if val and val.strip():
                 return prov, val.strip()
 
-    # 2. CLI config file (~/.openestimate/config.json). Map the flat
+    # 2. CLI config file (~/.archisavvy-erp/config.json). Map the flat
     #    ``<provider>_api_key`` entries back to a provider id.
-    config_path = os.path.join(os.path.expanduser("~"), ".openestimate", "config.json")
+    config_path = os.path.join(os.path.expanduser("~"), ".archisavvy-erp", "config.json")
     if os.path.exists(config_path):
         try:
             with open(config_path, encoding="utf-8") as fh:
@@ -1590,7 +1590,7 @@ def _resolve_provider_and_key(settings: Any, preferred_model: str | None) -> tup
             if local_provider in configured:
                 return local_provider, self_hosted_api_key(settings, local_provider)
 
-    # Fallback to environment variables / ~/.openestimate/config.json. Tried
+    # Fallback to environment variables / ~/.archisavvy-erp/config.json. Tried
     # AFTER the DB (an explicitly-saved key wins) but BEFORE raising - a working
     # env/config key should take effect even if a stale, undecryptable DB key
     # exists (telling the user to "re-enter your key" would be wrong when a
@@ -1611,7 +1611,7 @@ def _resolve_provider_and_key(settings: Any, preferred_model: str | None) -> tup
     msg = (
         "No AI API key configured. Please add your API key in Settings > AI, or "
         "set an environment variable such as ANTHROPIC_API_KEY / OPENAI_API_KEY "
-        "(or add it to ~/.openestimate/config.json). "
+        "(or add it to ~/.archisavvy-erp/config.json). "
         "Supported: Anthropic, OpenAI, Gemini, OpenRouter, Mistral, Groq, "
         "DeepSeek, Together, Fireworks, Perplexity, Cohere, AI21, xAI, Ollama, Kimi, vLLM."
     )

@@ -1,4 +1,4 @@
-// OpenBusinessERP Desktop, choosing which application server this window
+// Archi Savvy Studio ERP Desktop, choosing which application server this window
 // talks to.
 //
 // The launcher has always answered that question the same way: probe loopback,
@@ -6,7 +6,7 @@
 // on a machine where nobody has said otherwise, and this file changes nothing
 // about it. What it adds is the "otherwise": a place for an answer that names a
 // server somewhere else, so an office that already runs one central
-// OpenBusinessERP does not have to run a second copy on every desk.
+// Archi Savvy Studio ERP does not have to run a second copy on every desk.
 //
 // The default is untouched on purpose. A first run asks no question and shows
 // no chooser; a user who never goes looking for this will never learn it
@@ -24,7 +24,7 @@
 use std::path::PathBuf;
 
 // The launcher's own answer to "where is this user's home", not a second copy
-// of it. The setting written here has to land in the same `.openestimate` folder
+// of it. The setting written here has to land in the same `.archisavvy-erp` folder
 // as the embedded database, the update opt-out and the declined version, and two
 // independent implementations of that question are two chances to disagree about
 // it on the one machine where the environment is unusual.
@@ -79,7 +79,7 @@ pub enum ServerChoice {
 /// Carried so that every log line and every failure message can name the thing
 /// a person would have to change. "Could not reach the server" is a support
 /// ticket; "could not reach the server your administrator configured in
-/// C:\ProgramData\OpenBusinessERP\config.json" is a fix.
+/// C:\ProgramData\ArchiSavvyStudioERP\config.json" is a fix.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum ChoiceSource {
     /// A choice this user made in the application.
@@ -395,13 +395,13 @@ pub fn read_layers() -> RawLayers {
 
 /// Where this user's own choice is stored.
 ///
-/// Beside the launcher's other per-user state (`~/.openestimate/pgdata`, the
+/// Beside the launcher's other per-user state (`~/.archisavvy-erp/pgdata`, the
 /// update opt-out, the declined version) rather than in a platform config
-/// directory, because a user who is told "delete the .openestimate folder to
+/// directory, because a user who is told "delete the .archisavvy-erp folder to
 /// start over" should get a complete start over, and a setting that survives
 /// that instruction would be a support call nobody could diagnose.
 pub fn setting_path() -> Option<PathBuf> {
-    home_dir().map(|h| h.join(".openestimate").join(SETTING_FILE))
+    home_dir().map(|h| h.join(".archisavvy-erp").join(SETTING_FILE))
 }
 
 /// Where an administrator deploys a choice for every user of a machine.
@@ -418,13 +418,13 @@ pub fn admin_config_path() -> Option<PathBuf> {
             .unwrap_or_else(|| "C:\\ProgramData".to_string());
         Some(
             PathBuf::from(base)
-                .join("OpenBusinessERP")
+                .join("Archi Savvy Studio ERP")
                 .join(ADMIN_FILE),
         )
     }
     #[cfg(target_os = "macos")]
     {
-        Some(PathBuf::from("/Library/Application Support/OpenBusinessERP").join(ADMIN_FILE))
+        Some(PathBuf::from("/Library/Application Support/ArchiSavvyStudioERP").join(ADMIN_FILE))
     }
     #[cfg(all(unix, not(target_os = "macos")))]
     {

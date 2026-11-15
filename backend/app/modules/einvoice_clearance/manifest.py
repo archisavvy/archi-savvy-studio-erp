@@ -19,7 +19,7 @@ manifest = ModuleManifest(
         "behind it. The document itself is built by the EN 16931 engine; the "
         "platforms are adapters behind an interface."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=["oe_finance", "oe_projects"],
     auto_install=True,

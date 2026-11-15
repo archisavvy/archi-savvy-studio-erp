@@ -4,20 +4,20 @@
 //
 // Renders the user's company logo / name when they have customised
 // the platform via the edit modal; otherwise renders the default
-// OpenBusinessERP wordmark. Clicking the brand area (or the
+// Archi Savvy Studio ERP wordmark. Clicking the brand area (or the
 // "Customise" pencil that appears on hover) opens the editor.
 //
 // Layout rules:
-//   * No customisation → full OpenBusinessERP logo+wordmark, as
+//   * No customisation → full Archi Savvy Studio ERP logo+wordmark, as
 //     before (visual parity with v3.0.5).
 //   * Logo set        → user's logo fills the header width;
-//                       "OpenBusinessERP" subtitle is rendered at
+//                       "Archi Savvy Studio ERP" subtitle is rendered at
 //                       roughly 1/3 of the original size beneath it
 //                       as a "powered by" attribution (required by
 //                       the AGPL-3.0 licence).
 //   * Name only       → company name in Plus Jakarta Sans 800, sized
 //                       to match the default wordmark; same small
-//                       OpenBusinessERP subtitle below.
+//                       Archi Savvy Studio ERP subtitle below.
 //
 // The editor is a lightweight inline form (not WideModal) so the
 // sidebar can keep working on narrow viewports. The logo upload
@@ -119,11 +119,11 @@ export function CustomBranding({ iconified }: CustomBrandingProps) {
     }
     return (
       <a
-        href="https://github.com/datadrivenconstruction/OpenBusinessERP?utm_source=app"
+        href="https://github.com/Fabsye/archi-savvy-studio-erp?utm_source=app"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-80 transition-opacity"
-        title="OpenBusinessERP"
+        title="Archi Savvy Studio ERP"
       >
         <Logo size="sm" />
       </a>
@@ -170,7 +170,7 @@ export function CustomBranding({ iconified }: CustomBrandingProps) {
                   {companyName}
                 </span>
               )}
-              {/* "by OpenBusinessERP" — minimal subordinate attribution
+              {/* "by Archi Savvy Studio ERP" — minimal subordinate attribution
                   under the user's brand. AGPL-3.0 attribution requirement
                   is satisfied while the user's logo stays the dominant
                   visual; font is small + muted on purpose. */}
@@ -190,11 +190,11 @@ export function CustomBranding({ iconified }: CustomBrandingProps) {
             </button>
           ) : (
             <a
-              href="https://github.com/datadrivenconstruction/OpenBusinessERP?utm_source=app"
+              href="https://github.com/Fabsye/archi-savvy-studio-erp?utm_source=app"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 hover:opacity-80 transition-opacity"
-              title="OpenBusinessERP"
+              title="Archi Savvy Studio ERP"
             >
               {/* Compact wordmark — 13px text + smaller gap to fit
                   the 248px sidebar minus the 32px edit button without

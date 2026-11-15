@@ -195,10 +195,10 @@ openconstructionerp = "app.cli:legacy_main"
 
 [project.urls]
 Homepage = "https://datadrivenconstruction.io/erp"
-Documentation = "https://github.com/datadrivenconstruction/OpenBusinessERP#readme"
-Repository = "https://github.com/datadrivenconstruction/OpenBusinessERP"
-Issues = "https://github.com/datadrivenconstruction/OpenBusinessERP/issues"
-Changelog = "https://github.com/datadrivenconstruction/OpenBusinessERP/blob/main/CHANGELOG.md"
+Documentation = "https://github.com/Fabsye/archi-savvy-studio-erp#readme"
+Repository = "https://github.com/Fabsye/archi-savvy-studio-erp"
+Issues = "https://github.com/Fabsye/archi-savvy-studio-erp/issues"
+Changelog = "https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 # Production add-ons: background tasks (Redis/Celery) + S3 storage. The
@@ -301,7 +301,7 @@ semantic-encoder = [
 # NOT listed here. `app/modules/ai/ai_client.py` calls those providers'
 # REST APIs directly via `httpx`, so the vendor SDKs would just be ~800 MB
 # of dead wheels on the user's disk. API keys live in the database and
-# `~/.openestimate/config.json`, not in SDK clients.
+# `~/.archisavvy-erp/config.json`, not in SDK clients.
 semantic = [
     "openbusinesserp[semantic-encoder]",
     # BAAI/bge-m3 multilingual encoder — 1024-dim dense + sparse + colbert

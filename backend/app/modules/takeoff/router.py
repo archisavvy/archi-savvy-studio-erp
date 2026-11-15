@@ -565,7 +565,7 @@ def _fetch_apt_index(arch: str) -> dict[str, dict[str, str]] | None:
         url = f"{base}/{name}"
         try:
             _check_apt_url_allowed(url)
-            req = urllib.request.Request(url, headers={"User-Agent": "OpenBusinessERP-converter-installer"})
+            req = urllib.request.Request(url, headers={"User-Agent": "Archi Savvy Studio ERP-converter-installer"})
             with urllib.request.urlopen(req, timeout=30) as resp:  # noqa: S310 - host allow-listed
                 raw = resp.read(_MAX_DOWNLOAD_BYTES + 1)
         except (urllib.error.URLError, TimeoutError, OSError) as exc:
@@ -621,7 +621,7 @@ def _download_one_deb(
     last_exc: Exception | None = None
     for attempt in range(1, _DEB_DOWNLOAD_ATTEMPTS + 1):
         have = dest.stat().st_size if dest.exists() else 0
-        headers = {"User-Agent": "OpenBusinessERP-converter-installer"}
+        headers = {"User-Agent": "Archi Savvy Studio ERP-converter-installer"}
         if have > 0:
             headers["Range"] = f"bytes={have}-"
         req = urllib.request.Request(deb_url, headers=headers)
@@ -1052,7 +1052,7 @@ def _github_list_directory(repo_path: str) -> list[dict[str, Any]]:
         api_url,
         headers={
             "Accept": "application/vnd.github+json",
-            "User-Agent": "OpenBusinessERP-converter-installer",
+            "User-Agent": "Archi Savvy Studio ERP-converter-installer",
         },
     )
     try:
@@ -1149,7 +1149,7 @@ def _download_one_file(download_url: str, target: Path) -> int:
 
     req = urllib.request.Request(
         download_url,
-        headers={"User-Agent": "OpenBusinessERP-converter-installer"},
+        headers={"User-Agent": "Archi Savvy Studio ERP-converter-installer"},
     )
     bytes_written = 0
     # POSIX gets O_NOFOLLOW. Windows doesn't expose it but `is_symlink`
@@ -1844,7 +1844,7 @@ async def install_converter(
             "platform_unsupported": True,
             "message": (
                 f"{meta['name']} has no native build for {platform}. Run "
-                f"OpenBusinessERP in Docker (Linux container - the converter "
+                f"Archi Savvy Studio ERP in Docker (Linux container - the converter "
                 f"downloads automatically there) or on a Linux host, or convert the "
                 f"file to IFC first and upload the IFC - IFC has a built-in text "
                 f"fallback parser that works on every platform."
@@ -2154,7 +2154,7 @@ async def _install_converter_impl(converter_id: str, force: bool, app: Any) -> d
             "platform_unsupported": True,
             "message": (
                 f"{meta['name']} has no native build for {platform}. Run "
-                f"OpenBusinessERP in Docker (Linux container - the converter "
+                f"Archi Savvy Studio ERP in Docker (Linux container - the converter "
                 f"downloads automatically there) or on a Linux host, or convert the "
                 f"file to IFC first and upload the IFC - IFC has a built-in text "
                 f"fallback parser that works on every platform."

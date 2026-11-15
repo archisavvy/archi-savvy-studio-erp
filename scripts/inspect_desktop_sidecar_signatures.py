@@ -92,10 +92,10 @@ real Developer ID is the correct end state described in docs/desktop/MACOS_NOTAR
 and a check that fired on it would be switched off exactly when it is most useful.
 
 Usage:
-    python scripts/inspect_desktop_sidecar_signatures.py desktop/dist/openbusinesserp-server
+    python scripts/inspect_desktop_sidecar_signatures.py desktop/dist/archisavvy-erp-server
 
 The path may be the raw PyInstaller output or the same binary sitting inside a bundle, for
-example OpenBusinessERP.app/Contents/MacOS/openbusinesserp-server. Nothing here
+example ArchiSavvyStudioERP.app/Contents/MacOS/archisavvy-erp-server. Nothing here
 treats a bundle specially: the member census reads the archive appended to the file, and
 codesign reports the file's own signature, both of which are the same questions wherever
 the file lives.

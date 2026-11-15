@@ -16,8 +16,8 @@ from __future__ import annotations
 
 from functools import lru_cache
 
-_LOGO_URL = "https://github.com/datadrivenconstruction/OpenBusinessERP"
-_APP_NAME = "OpenBusinessERP"
+_LOGO_URL = "https://github.com/Fabsye/archi-savvy-studio-erp"
+_APP_NAME = "Archi Savvy Studio ERP"
 
 
 @lru_cache(maxsize=1)
@@ -149,7 +149,7 @@ def template_password_reset(
     to copy-paste or forwarded-email attack paths.
     """
     greeting = f"Hi {recipient_name}," if recipient_name else "Hello,"
-    subject = "Reset your OpenBusinessERP password"
+    subject = "Reset your Archi Savvy Studio ERP password"
     body = (
         f"<p>{greeting}</p>"
         f"<p>We received a request to reset the password on your "

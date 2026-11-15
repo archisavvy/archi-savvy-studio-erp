@@ -23,7 +23,7 @@ class TestSettingsDefaults:
         )
 
     def test_app_name_default(self, settings):
-        assert settings.app_name == "OpenBusinessERP"
+        assert settings.app_name == "Archi Savvy Studio ERP"
 
     def test_app_version_default(self, settings):
         # app_version is read from installed package metadata via

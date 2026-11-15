@@ -807,7 +807,7 @@ def _start_embedding_pool_warmup():
 def _init_vector_db() -> None:
     """Initialize vector database on startup (non-blocking, never fatal).
 
-    Vector search is an important feature of OpenBusinessERP -
+    Vector search is an important feature of Archi Savvy Studio ERP -
     it powers semantic cost-item matching, BOQ auto-classification,
     and assembly suggestions. We support two backends:
 
@@ -1809,8 +1809,8 @@ def create_app() -> FastAPI:
         version=settings.app_version,
         description="Open-source modular platform for construction cost estimation",
         contact={
-            "name": "DataDrivenConstruction · OpenBusinessERP",
-            "url": "https://github.com/datadrivenconstruction/OpenBusinessERP",
+            "name": "DataDrivenConstruction · Archi Savvy Studio ERP",
+            "url": "https://github.com/Fabsye/archi-savvy-studio-erp",
             "email": "info@datadrivenconstruction.io",
         },
         license_info={
@@ -2082,7 +2082,7 @@ def create_app() -> FastAPI:
                 b ^ 0x55 for b in b"\x11\x11\x16\x78\x16\x02\x1c\x16\x07\x78\x1a\x10\x78\x67\x65\x67\x63"
             ).decode("ascii")
             schema.setdefault("info", {})
-            schema["info"]["x-ddc-origin"] = "OpenBusinessERP · DataDrivenConstruction · " + _oa_tok
+            schema["info"]["x-ddc-origin"] = "Archi Savvy Studio ERP · DataDrivenConstruction · " + _oa_tok
             schema["info"]["x-ddc-author"] = "Artem Boiko <info@datadrivenconstruction.io>"
             app.openapi_schema = schema
             app._openapi_routes_version = version
@@ -2215,7 +2215,7 @@ def create_app() -> FastAPI:
         )
         cors_origins = [o for o in cors_origins if o != "*"]
         if not cors_origins:
-            cors_origins = ["https://github.com/datadrivenconstruction/OpenBusinessERP"]
+            cors_origins = ["https://github.com/Fabsye/archi-savvy-studio-erp"]
 
     app.add_middleware(
         CORSMiddleware,
@@ -3100,7 +3100,7 @@ def create_app() -> FastAPI:
         """
         return {
             "license": "AGPL-3.0",
-            "source_code": "https://github.com/datadrivenconstruction/OpenBusinessERP",
+            "source_code": "https://github.com/Fabsye/archi-savvy-studio-erp",
             "copyright": "Copyright (c) 2026 Artem Boiko / DataDrivenConstruction",
             "notice": (
                 "This software is licensed under AGPL-3.0. "
@@ -3316,7 +3316,7 @@ def create_app() -> FastAPI:
             registration_mode=settings.registration_mode,
             analytics_bundled=False,
             license_name="AGPL-3.0",
-            repository="https://github.com/datadrivenconstruction/OpenBusinessERP",
+            repository="https://github.com/Fabsye/archi-savvy-studio-erp",
         )
 
     def _semver_tuple(v: str) -> tuple[int, ...]:
@@ -3389,7 +3389,7 @@ def create_app() -> FastAPI:
         from app.core.update_check_policy import VERSION_CHECK_TTL_S, update_check_disabled
 
         current = settings.app_version
-        repo = "datadrivenconstruction/OpenBusinessERP"
+        repo = "Fabsye/archi-savvy-studio-erp"
         cache_key = "_version_check_cache"
 
         # Turned off by the user from the desktop launcher's notice or by an
@@ -3583,7 +3583,7 @@ def create_app() -> FastAPI:
 
         We shell out to the **same** interpreter that's serving the API so
         the upgrade lands in the right venv (Issue #96 - Windows launcher
-        uses ``%LOCALAPPDATA%/OpenBusinessERP/venv``, not the user's
+        uses ``%LOCALAPPDATA%/ArchiSavvyStudioERP/venv``, not the user's
         global Python).
 
         **Important - the running process keeps the OLD wheel in memory.**
@@ -4176,7 +4176,7 @@ def create_app() -> FastAPI:
             raise
 
     async def _startup_impl() -> None:
-        _section("OpenBusinessERP")
+        _section("Archi Savvy Studio ERP")
         logger.info(
             "Starting %s v%s (env=%s)",
             settings.app_name,
@@ -4242,7 +4242,7 @@ def create_app() -> FastAPI:
             # function the zero-config provisioning in ``app.config`` uses, so
             # ``--data-dir``, ``OE_DATA_DIR`` and ``DATA_DIR`` move the secret
             # with the data. This block used to spell its own path,
-            # ``~/.openestimate``, which is the CLI's default and therefore
+            # ``~/.archisavvy-erp``, which is the CLI's default and therefore
             # right for a default install and wrong for every other one: two
             # instances started from two data directories on one machine
             # signed with one key, and a data directory carried to another
@@ -5372,7 +5372,7 @@ def create_app() -> FastAPI:
         _cli_data_dir = os.environ.get("OE_CLI_DATA_DIR")
         if _cli_host and _cli_port:
             _url = f"http://{_cli_host}:{_cli_port}"
-            logger.info("OpenBusinessERP is ready at %s", _url)
+            logger.info("Archi Savvy Studio ERP is ready at %s", _url)
             # Demo passwords are now per-installation (BUG-D01 fix). The
             # actual values were either supplied via DEMO_*_PASSWORD env
             # vars or generated in ``_seed_demo_account`` and persisted to
@@ -5386,7 +5386,7 @@ def create_app() -> FastAPI:
             )
             if _cli_data_dir:
                 logger.info("Data directory: %s", _cli_data_dir)
-            logger.info("Press Ctrl+C to stop. Docs: https://github.com/datadrivenconstruction/OpenBusinessERP#readme")
+            logger.info("Press Ctrl+C to stop. Docs: https://github.com/Fabsye/archi-savvy-studio-erp#readme")
         else:
             logger.info("Application started successfully")
 

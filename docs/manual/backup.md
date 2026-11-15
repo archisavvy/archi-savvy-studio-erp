@@ -46,13 +46,13 @@ Test a restore on a spare machine before you need it. A backup you never restore
 
 ## pip and source installs
 
-The embedded database lives in the data directory, in the folder `pgdata`. The default data directory is `.openestimate` in your home directory, or the folder in `OE_DATA_DIR`.
+The embedded database lives in the data directory, in the folder `pgdata`. The default data directory is `.archisavvy-erp` in your home directory, or the folder in `OE_DATA_DIR`.
 
 Stop the program, then copy the whole data directory. Copying the database folder while the program runs gives a broken copy. The copy is only valid when the program and its database are stopped.
 
 Restore by putting the folder back while the program is stopped.
 
-The desktop app keeps its data in the same kind of folder: `.openestimate` in your home directory (on Windows, under `C:\Users\<your name>`). Close the app before you copy it.
+The desktop app keeps its data in the same kind of folder: `.archisavvy-erp` in your home directory (on Windows, under `C:\Users\<your name>`). Close the app before you copy it.
 
 ## Your own PostgreSQL server
 
@@ -73,7 +73,7 @@ Use it to move one user's records between machines. Do not use it as your only b
 
 ## Is the backup still running?
 
-A backup job that stops does not raise an error. The repository includes `scripts/check_backup_freshness.py`. It complains when the newest dump is too old, too small or missing. See the [backup monitoring note](https://github.com/datadrivenconstruction/OpenBusinessERP/blob/main/docs/backup-monitoring.md).
+A backup job that stops does not raise an error. The repository includes `scripts/check_backup_freshness.py`. It complains when the newest dump is too old, too small or missing. See the [backup monitoring note](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/docs/backup-monitoring.md).
 
 ## A simple routine
 

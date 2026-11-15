@@ -13,7 +13,7 @@ manifest = ModuleManifest(
         "material matching, targets, sustainability reporting "
         "(GHG Protocol / GRI / ISSB)"
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="business",
     depends=["oe_users", "oe_projects"],
     auto_install=True,

@@ -14,7 +14,7 @@ manifest = ModuleManifest(
         "geometry has been re-imported - and the same view can be "
         "applied to any model that exposes the right properties."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=["oe_projects", "oe_users"],
     auto_install=True,

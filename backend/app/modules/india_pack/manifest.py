@@ -16,7 +16,7 @@ manifest = ModuleManifest(
         "Indian construction standards: IS codes, CPWD/MES rate references, "
         "multi-rate GST (28/18/12/5/0%), INR, and Indian contract forms."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="regional",
     depends=[],
     auto_install=False,

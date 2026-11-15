@@ -1,6 +1,6 @@
 # Install
 
-There are three ways to run OpenBusinessERP. Pick one.
+There are three ways to run Archi Savvy Studio ERP. Pick one.
 
 | Way | Good for | Status |
 |---|---|---|
@@ -13,8 +13,8 @@ There are three ways to run OpenBusinessERP. Pick one.
 You need Docker with Compose v2, Git and `make`.
 
 ```bash
-git clone https://github.com/datadrivenconstruction/OpenBusinessERP.git
-cd OpenBusinessERP
+git clone https://github.com/Fabsye/archi-savvy-studio-erp.git
+cd Archi Savvy Studio ERP
 echo "POSTGRES_PASSWORD=$(openssl rand -base64 24)" >  .env
 echo "JWT_SECRET=$(openssl rand -hex 32)"           >> .env
 make quickstart
@@ -45,12 +45,12 @@ make quickstart-image
 
 ## Desktop app
 
-Download the installer from the [releases page](https://github.com/datadrivenconstruction/OpenBusinessERP/releases): `.exe` for Windows, `.dmg` for Apple Silicon Macs, `.deb` or `.AppImage` for Linux.
+Download the installer from the [releases page](https://github.com/Fabsye/archi-savvy-studio-erp/releases): `.exe` for Windows, `.dmg` for Apple Silicon Macs, `.deb` or `.AppImage` for Linux.
 
 The first start takes about a minute while the local database is set up. You need no Python, Docker or terminal.
 
 !!! warning "Unsigned installers"
-    The Windows installer is not code signed yet, and the macOS app is not notarized. Windows and macOS may warn you. The [desktop install guide](https://github.com/datadrivenconstruction/OpenBusinessERP/blob/main/docs/desktop/INSTALL.md) explains each warning.
+    The Windows installer is not code signed yet, and the macOS app is not notarized. Windows and macOS may warn you. The [desktop install guide](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/docs/desktop/INSTALL.md) explains each warning.
 
 ## pip (coming with the first release)
 
@@ -66,8 +66,8 @@ It starts an embedded PostgreSQL database and opens <http://localhost:8080>. You
 Until then, install from the source tree:
 
 ```bash
-git clone https://github.com/datadrivenconstruction/OpenBusinessERP.git
-cd OpenBusinessERP
+git clone https://github.com/Fabsye/archi-savvy-studio-erp.git
+cd Archi Savvy Studio ERP
 pip install -e "./backend[server]"
 openbusinesserp serve --embedded-pg --port 8080
 ```
@@ -84,7 +84,7 @@ The command prints OK, WARN or ERROR for each check.
 
 ## Where the data is
 
-With the pip or source install, the program keeps its data (embedded database, settings, uploads) in your home directory under `.openestimate`. Set `OE_DATA_DIR` to use another folder. With Docker, the data is in the two volumes above.
+With the pip or source install, the program keeps its data (embedded database, settings, uploads) in your home directory under `.archisavvy-erp`. Set `OE_DATA_DIR` to use another folder. With Docker, the data is in the two volumes above.
 
 ## First sign-in
 

@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Seda nime ei saa uue kataloogi jaoks kasutada. Valige teine nimi.",
   "app": {
-    "name": "OpenBusinessERP",
+    "name": "Archi Savvy Studio ERP",
     "tagline": "Avatud lähtekoodiga ehituskulude kalkulatsioon"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Uuenda"
   },
   "dashboard": {
-    "welcome": "Tere tulemast OpenBusinessERP-i",
+    "welcome": "Tere tulemast Archi Savvy Studio ERP-i",
     "subtitle": "Sinu ehituskalkulatsiooni töökeskkond",
     "recent_projects": "Hiljutised projektid",
     "system_status": "Süsteemi olek",

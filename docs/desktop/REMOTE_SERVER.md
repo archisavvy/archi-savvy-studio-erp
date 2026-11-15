@@ -1,12 +1,12 @@
 # Pointing the desktop app at a server you already run
 
-By default the OpenBusinessERP desktop application runs its own server and its own
+By default the Archi Savvy Studio ERP desktop application runs its own server and its own
 database on the computer it is installed on. Nothing about that changes, and on a machine
 where nobody has followed this document, nothing in it applies: the first run asks no
 question and offers no chooser.
 
 This document is for the other case. If your organisation already runs one
-OpenBusinessERP server, you can point desktop installations at it, so that everybody
+Archi Savvy Studio ERP server, you can point desktop installations at it, so that everybody
 works in the same projects instead of in a separate database per desk.
 
 ## The four places the answer can come from
@@ -63,8 +63,8 @@ One file per machine, in a conventional location that an unprivileged user canno
 
 | Platform | Path |
 |---|---|
-| Windows | `%ProgramData%\OpenBusinessERP\config.json` |
-| macOS | `/Library/Application Support/OpenBusinessERP/config.json` |
+| Windows | `%ProgramData%\ArchiSavvyStudioERP\config.json` |
+| macOS | `/Library/Application Support/ArchiSavvyStudioERP/config.json` |
 | Linux | `/etc/openbusinesserp/config.json` |
 
 ```json
@@ -124,7 +124,7 @@ in the clear. Use `https` wherever you can terminate it.
 
 The application does not open a blank window. The startup screen names the server that was
 tried, names which of the four layers configured it, says what went wrong (refused,
-timed out, answered but is not an OpenBusinessERP server, answered with an HTTP
+timed out, answered but is not an Archi Savvy Studio ERP server, answered with an HTTP
 error), and offers a button that starts a server on this computer instead. That button
 records the choice before restarting, so the restart does not come straight back to the
 same screen.
@@ -169,12 +169,12 @@ chose could never return.
 
 ## Where the user's own choice is stored
 
-`~/.openestimate/server-choice.json`, beside the launcher's other per-user state. It does
+`~/.archisavvy-erp/server-choice.json`, beside the launcher's other per-user state. It does
 not exist until somebody makes a choice, and its absence is what lets the layers below it
 be reached. Deleting it is equivalent to pressing **Use the default for this computer**.
 
 Every write of that file from inside the application is recorded in
-`~/.openestimate/desktop-launcher.log`, naming the address that was stored. The setting
+`~/.archisavvy-erp/desktop-launcher.log`, naming the address that was stored. The setting
 decides where the next start sends this user's password, so if you are ever asked to
 explain why a machine is talking to a server nobody chose, that log is where the answer
 is. It is a record and not a permission check: it tells you afterwards, it does not ask

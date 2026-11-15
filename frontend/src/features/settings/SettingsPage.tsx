@@ -1766,7 +1766,7 @@ export function SettingsPage() {
               to="/about"
               className="inline-flex items-center gap-1 text-xs text-content-tertiary hover:text-oe-blue transition-colors"
             >
-              {t('settings.about_link', { defaultValue: 'About OpenBusinessERP' })}
+              {t('settings.about_link', { defaultValue: 'About Archi Savvy Studio ERP' })}
               <ChevronRight size={11} />
             </Link>
           </div>
@@ -1936,7 +1936,7 @@ export function SettingsPage() {
                         {t('settings.sign_out_title', { defaultValue: 'Sign out of all sessions' })}
                       </p>
                       <p className="text-xs text-content-secondary mt-0.5">
-                        {t('settings.sign_out_desc', { defaultValue: 'You will need to enter your credentials to access OpenBusinessERP again.' })}
+                        {t('settings.sign_out_desc', { defaultValue: 'You will need to enter your credentials to access Archi Savvy Studio ERP again.' })}
                       </p>
                     </div>
                     <Button
@@ -2298,7 +2298,7 @@ export function SettingsPage() {
               to="/about"
               className="inline-flex items-center gap-1 text-sm text-content-tertiary hover:text-oe-blue transition-colors"
             >
-              {t('settings.about_link', { defaultValue: 'About OpenBusinessERP' })}
+              {t('settings.about_link', { defaultValue: 'About Archi Savvy Studio ERP' })}
               <ChevronRight size={12} />
             </Link>
           </div>

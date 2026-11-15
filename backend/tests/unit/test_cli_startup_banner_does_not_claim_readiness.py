@@ -8,7 +8,7 @@ process that has not bound its socket yet. On a first run that gap is not
 notional: the boot this was measured on answered ``GET /`` after 50.55s and
 ``/api/health`` after about 490s, most of the latter being the demo seed.
 
-The banner used to head that with a green tick over "OpenBusinessERP is
+The banner used to head that with a green tick over "Archi Savvy Studio ERP is
 running", directly above the address to open. Beside an address, a tick is an
 instruction, and a stranger who followed it got a browser error from an install
 that was working perfectly.

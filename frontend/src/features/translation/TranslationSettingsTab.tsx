@@ -140,7 +140,7 @@ function formatRelative(epochSeconds: number, t: (k: string, o?: Record<string, 
 export interface TranslationSettingsTabProps {
   /** Project id is reserved for project-scoped translation overrides
    *  (Phase 4) — the dictionaries themselves are user-scoped and live
-   *  under ``~/.openestimate``. */
+   *  under ``~/.archisavvy-erp``. */
   readonly projectId?: string;
   /** Optional anchor id for the deep-link / pulse effect.  Defaults to
    *  ``"translation"`` so ``/projects/:id/settings#translation`` works. */

@@ -25,7 +25,7 @@ manifest = ModuleManifest(
         "alerts, scheduled digests. Module 20 of the 18-module extension "
         "wave - pure consumer of cross-module data."
     ),
-    author="OpenBusinessERP",
+    author="Archi Savvy Studio ERP",
     category="extension",
     depends=["oe_projects", "oe_users"],
     auto_install=True,

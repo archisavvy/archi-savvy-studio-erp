@@ -2296,18 +2296,18 @@ function DataPackagesTab() {
                 </h2>
               </div>
               <p className="text-sm text-content-secondary leading-relaxed mb-4">
-                {t('modules.community_desc', { defaultValue: 'OpenBusinessERP has a modular plugin architecture. Anyone can create custom modules - cost databases, regional standards, CAD converters, analytics dashboards, integrations with external systems, or any other functionality.' })}
+                {t('modules.community_desc', { defaultValue: 'Archi Savvy Studio ERP has a modular plugin architecture. Anyone can create custom modules - cost databases, regional standards, CAD converters, analytics dashboards, integrations with external systems, or any other functionality.' })}
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="mailto:info@datadrivenconstruction.io?subject=OpenBusinessERP%20Module%20Proposal"
+                  href="mailto:info@datadrivenconstruction.io?subject=Archi Savvy Studio ERP%20Module%20Proposal"
                   className="inline-flex items-center gap-2 rounded-lg bg-purple-600 px-4 py-2 text-sm font-medium text-white hover:bg-purple-700 transition-colors"
                 >
                   <Package size={16} />
                   {t('modules.community_submit_email', { defaultValue: 'Submit Module via Email' })}
                 </a>
                 <a
-                  href="https://github.com/datadrivenconstruction/OpenBusinessERP/issues/new?title=Module%20Proposal:%20&labels=module-proposal"
+                  href="https://github.com/Fabsye/archi-savvy-studio-erp/issues/new?title=Module%20Proposal:%20&labels=module-proposal"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-lg border border-border-light bg-surface-secondary px-4 py-2 text-sm font-medium text-content-primary hover:bg-surface-secondary/80 transition-colors"

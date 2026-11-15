@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Цю назву не можна використати для нового каталогу. Виберіть іншу назву.",
   "app": {
-    "name": "OpenBusinessERP",
+    "name": "Archi Savvy Studio ERP",
     "tagline": "Кошторисна справа з відкритим кодом"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Оновити"
   },
   "dashboard": {
-    "welcome": "Ласкаво просимо до OpenBusinessERP",
+    "welcome": "Ласкаво просимо до Archi Savvy Studio ERP",
     "subtitle": "Ваш робочий простір кошторисної справи",
     "recent_projects": "Останні проєкти",
     "system_status": "Стан системи",

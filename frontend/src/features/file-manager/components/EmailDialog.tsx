@@ -100,7 +100,7 @@ export function EmailDialog({ open, row, onClose }: EmailDialogProps) {
   const sampleBody = link
     ? t('files.email.sample_body', {
         defaultValue:
-          'Hi,\n\nHere is the file you asked about - {{name}} ({{size}}).\nDownload link (expires {{expires}}):\n{{url}}\n\n- sent from OpenBusinessERP',
+          'Hi,\n\nHere is the file you asked about - {{name}} ({{size}}).\nDownload link (expires {{expires}}):\n{{url}}\n\n- sent from Archi Savvy Studio ERP',
         name: row.name,
         size: fmtBytes(link.size_bytes),
         expires: new Date(link.expires_at).toLocaleString(getIntlLocale()),

@@ -3,7 +3,7 @@
 ## Before every upgrade
 
 1. Take a database dump and a copy of the data directory. See [Backup and restore](backup.md).
-2. Read the [changelog](https://github.com/datadrivenconstruction/OpenBusinessERP/blob/main/CHANGELOG.md) for the versions in between.
+2. Read the [changelog](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/CHANGELOG.md) for the versions in between.
 3. Choose a quiet time. Users are interrupted while the app restarts.
 
 On start, the app brings the database schema up to date by itself. You do not run migrations by hand. This is why the dump in step 1 matters: there is no automatic way back to the old schema.
@@ -11,7 +11,7 @@ On start, the app brings the database schema up to date by itself. You do not ru
 ## Docker Compose, built from source
 
 ```bash
-cd OpenBusinessERP
+cd Archi Savvy Studio ERP
 git pull
 make quickstart
 ```
@@ -39,7 +39,7 @@ The package is not on PyPI yet. This works from the first release on.
 
 ## Desktop app
 
-Download the new installer from the [releases page](https://github.com/datadrivenconstruction/OpenBusinessERP/releases) and run it over the existing installation. Your data stays where it is. The desktop build cannot upgrade itself with pip.
+Download the new installer from the [releases page](https://github.com/Fabsye/archi-savvy-studio-erp/releases) and run it over the existing installation. Your data stays where it is. The desktop build cannot upgrade itself with pip.
 
 ## After the upgrade
 

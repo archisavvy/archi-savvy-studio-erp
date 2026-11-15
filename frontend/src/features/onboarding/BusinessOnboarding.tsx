@@ -1,5 +1,5 @@
 /**
- * OpenBusinessERP onboarding: language -> company -> industry -> apps -> launch.
+ * Archi Savvy Studio ERP onboarding: language -> company -> industry -> apps -> launch.
  *
  * Writes the workspace business settings (country, currency, fiscal year,
  * industry, size), the user's currency preference and the module profile, then
@@ -307,7 +307,7 @@ function StepLanguage({ onNext }: { onNext: () => void }) {
       <Logo size="md" className="mb-8" />
       <StepHeader
         eyebrow={t('bizonb.step_language', { defaultValue: 'Language' })}
-        title={t('bizonb.welcome_title', { defaultValue: 'Welcome to OpenBusinessERP' })}
+        title={t('bizonb.welcome_title', { defaultValue: 'Welcome to Archi Savvy Studio ERP' })}
         subtitle={t('bizonb.welcome_subtitle', {
           defaultValue:
             'Sales, purchasing, stock, finance and people in one place. Five short steps and your workspace is ready.',

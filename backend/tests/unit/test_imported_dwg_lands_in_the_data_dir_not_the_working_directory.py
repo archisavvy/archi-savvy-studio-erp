@@ -38,7 +38,7 @@ PROJECT_ID = "22222222-2222-2222-2222-222222222222"
 @pytest.fixture
 def two_foreign_directories(tmp_path: Path) -> tuple[Path, Path]:
     """A desktop install's program directory, and a service's state directory."""
-    started_from = tmp_path / "program files" / "OpenBusinessERP"
+    started_from = tmp_path / "program files" / "Archi Savvy Studio ERP"
     service_cwd = tmp_path / "var" / "lib" / "openestimate"
     started_from.mkdir(parents=True)
     service_cwd.mkdir(parents=True)

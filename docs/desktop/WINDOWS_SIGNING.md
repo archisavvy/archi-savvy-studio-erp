@@ -1,6 +1,6 @@
 # Windows code signing for the desktop app
 
-This guide explains how to turn on Authenticode code signing for the OpenBusinessERP Windows installers. Today the `.exe` ships unsigned, and Windows SmartScreen warns every person who runs it. The pipeline for signing is already written and already in the release workflow. Nothing in this document is active yet, because none of the credentials it needs exist. The only remaining step is a human creating one certificate and pasting five secrets and one variable into the repository settings. There is no code change to make afterwards.
+This guide explains how to turn on Authenticode code signing for the Archi Savvy Studio ERP Windows installers. Today the `.exe` ships unsigned, and Windows SmartScreen warns every person who runs it. The pipeline for signing is already written and already in the release workflow. Nothing in this document is active yet, because none of the credentials it needs exist. The only remaining step is a human creating one certificate and pasting five secrets and one variable into the repository settings. There is no code change to make afterwards.
 
 This is a developer and maintainer document. If you are a user trying to install the app, read `docs/desktop/INSTALL.md` instead.
 
@@ -12,12 +12,12 @@ For where every published release actually stands across all four signature mech
 
 Windows 11 Smart App Control checks every executable file as the loader maps it, not only the file that was downloaded, and it offers no per-app exception. A file runs when Microsoft's cloud reputation service knows it, or when it carries a valid signature that chains to a CA in the Microsoft Trusted Root Program. Everything else is blocked. Smart App Control starts in an evaluation mode after a clean Windows install and later switches itself on, which is how a tester can run the app once and find it blocked on later starts with nothing changed on our side.
 
-The desktop sidecar is a PyInstaller onefile build that unpacks about 490 `.exe`, `.dll` and `.pyd` files at every start and runs them from `%LOCALAPPDATA%\OpenBusinessERP\extract`. Measured on a 17.x install, 409 of those 492 files carried no signature: every PostgreSQL program (`postgres.exe`, `initdb.exe`, `pg_ctl.exe` and the rest), and most of the native modules of scipy, scikit-learn, pandas, pyarrow and numpy. The launcher, the sidecar and the uninstaller were unsigned too. Signing only the installer, which is all the Key Vault job further down does, leaves every one of them blocked.
+The desktop sidecar is a PyInstaller onefile build that unpacks about 490 `.exe`, `.dll` and `.pyd` files at every start and runs them from `%LOCALAPPDATA%\ArchiSavvyStudioERP\extract`. Measured on a 17.x install, 409 of those 492 files carried no signature: every PostgreSQL program (`postgres.exe`, `initdb.exe`, `pg_ctl.exe` and the rest), and most of the native modules of scipy, scikit-learn, pandas, pyarrow and numpy. The launcher, the sidecar and the uninstaller were unsigned too. Signing only the installer, which is all the Key Vault job further down does, leaves every one of them blocked.
 
 So the release workflow signs from the inside out, in three places, all skipped unless the Artifact Signing secrets below are set:
 
 1. In `build-sidecar`, before PyInstaller runs, `scripts/sign_windows_binaries.py` signs every unsigned PE file in the Python environment the sidecar is built from. Files that already carry their publisher's signature (the Python Software Foundation, Microsoft, Intel) keep it. This has to happen before packing, because the onefile archive seals its members and no later pass can reach them.
-2. Right after PyInstaller, the onefile `openbusinesserp-server.exe` itself is signed, and the existing sidecar checks then run the signed file.
+2. Right after PyInstaller, the onefile `archisavvy-erp-server.exe` itself is signed, and the existing sidecar checks then run the signed file.
 3. In `build-tauri`, the bundled converters are signed, and Tauri receives `bundle.windows.signCommand` through `--config`, so it signs the launcher, its copy of the sidecar, the NSIS plugins, the uninstaller and the installer.
 
 `scripts/setup_windows_signing.py` decides whether any of this runs. With no secrets it writes a notice and changes nothing. With some but not all it fails the run and names the missing ones. It signs only when the run releases a version tag, so a branch build is never signed.
@@ -38,7 +38,7 @@ Create these six repository secrets under Settings, Secrets and variables, Actio
 
 The timestamp authority is `http://timestamp.acs.microsoft.com`. Do not remove it: the certificates are valid for three days, and the timestamp is what keeps a signature valid after that.
 
-To check a release, install it on a test machine and run, in PowerShell, `Get-ChildItem "$env:LOCALAPPDATA\OpenBusinessERP\extract" -Recurse -Include *.exe,*.dll,*.pyd | Get-AuthenticodeSignature | Group-Object Status`. Every file should report `Valid`.
+To check a release, install it on a test machine and run, in PowerShell, `Get-ChildItem "$env:LOCALAPPDATA\ArchiSavvyStudioERP\extract" -Recurse -Include *.exe,*.dll,*.pyd | Get-AuthenticodeSignature | Group-Object Status`. Every file should report `Valid`.
 
 The Key Vault path described in the rest of this document signs only the installers after they are published. It is kept for a certificate bought from a CA, but on its own it does not satisfy Smart App Control.
 

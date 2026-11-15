@@ -1,6 +1,6 @@
-# OpenBusinessERP
+# Archi Savvy Studio ERP
 
-OpenBusinessERP is a free ERP system that you run yourself. It covers quotes and invoices, customers, stock, purchasing, bank reconciliation and double-entry accounting. It is licensed under the AGPL-3.0.
+Archi Savvy Studio ERP is a free ERP system that you run yourself. It covers quotes and invoices, customers, stock, purchasing, bank reconciliation and double-entry accounting. It is licensed under the AGPL-3.0.
 
 This manual is for the owner of a small business and for the accountant who works with them. It explains tasks, one at a time, using screens from the bundled demo company.
 
@@ -27,6 +27,6 @@ This manual is for the owner of a small business and for the accountant who work
 
 ## Getting help
 
-- Questions and ideas: [GitHub Discussions](https://github.com/datadrivenconstruction/OpenBusinessERP/discussions)
-- Bugs: [GitHub Issues](https://github.com/datadrivenconstruction/OpenBusinessERP/issues)
-- Security problems: see [SECURITY.md](https://github.com/datadrivenconstruction/OpenBusinessERP/blob/main/SECURITY.md)
+- Questions and ideas: [GitHub Discussions](https://github.com/Fabsye/archi-savvy-studio-erp/discussions)
+- Bugs: [GitHub Issues](https://github.com/Fabsye/archi-savvy-studio-erp/issues)
+- Security problems: see [SECURITY.md](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/SECURITY.md)

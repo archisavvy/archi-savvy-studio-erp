@@ -1,26 +1,26 @@
-<h1 align="center">OpenBusinessERP</h1>
+<h1 align="center">Archi Savvy Studio ERP</h1>
 
 <p align="center">Self-hosted, open-source ERP for businesses in any country: quotes, invoices, stock, purchasing, bank reconciliation and double-entry bookkeeping, in 44 languages.</p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPL--3.0-blue.svg" alt="License: AGPL-3.0"></a>
-  <a href="https://github.com/datadrivenconstruction/OpenBusinessERP/tags"><img src="https://img.shields.io/github/v/tag/datadrivenconstruction/OpenBusinessERP?label=version" alt="Latest version"></a>
-  <a href="https://github.com/datadrivenconstruction/OpenBusinessERP/actions/workflows/ci.yml"><img src="https://github.com/datadrivenconstruction/OpenBusinessERP/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI"></a>
-  <a href="https://github.com/datadrivenconstruction/OpenBusinessERP/releases"><img src="https://img.shields.io/github/downloads/datadrivenconstruction/OpenBusinessERP/total?label=downloads&color=brightgreen" alt="Downloads"></a>
-  <a href="https://github.com/datadrivenconstruction/OpenBusinessERP/stargazers"><img src="https://img.shields.io/github/stars/datadrivenconstruction/OpenBusinessERP?style=flat&logo=github&color=f5b301" alt="GitHub stars"></a>
+  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/tags"><img src="https://img.shields.io/github/v/tag/Fabsye/archi-savvy-studio-erp?label=version" alt="Latest version"></a>
+  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/actions/workflows/ci.yml"><img src="https://github.com/Fabsye/archi-savvy-studio-erp/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI"></a>
+  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/releases"><img src="https://img.shields.io/github/downloads/Fabsye/archi-savvy-studio-erp/total?label=downloads&color=brightgreen" alt="Downloads"></a>
+  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/stargazers"><img src="https://img.shields.io/github/stars/Fabsye/archi-savvy-studio-erp?style=flat&logo=github&color=f5b301" alt="GitHub stars"></a>
 </p>
 
 <p align="center">
   <a href="https://openbusinesserp.com">Website</a> ·
   <a href="https://demo.openbusinesserp.com/">Live demo</a> ·
-  <a href="https://datadrivenconstruction.github.io/OpenBusinessERP/">Documentation</a> ·
+  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/">Documentation</a> ·
   <a href="#quick-start">Quick start</a> ·
   <a href="#limits">Limits</a> ·
   <a href="ROADMAP.md">Roadmap</a>
 </p>
 
 <p align="center">
-  <img src="docs/images/hero.png" alt="OpenBusinessERP dashboard with cash, receivables, payables and revenue of the demo company" width="100%">
+  <img src="docs/images/hero.png" alt="Archi Savvy Studio ERP dashboard with cash, receivables, payables and revenue of the demo company" width="100%">
 </p>
 
 <h3 align="center">Download the desktop app</h3>
@@ -28,9 +28,9 @@
 <p align="center">Embedded database included. No Docker, no server.</p>
 
 <p align="center">
-  <a href="https://github.com/datadrivenconstruction/OpenBusinessERP/releases/latest"><img src="https://img.shields.io/badge/Windows-.exe-0078D6?style=for-the-badge&logo=windows11&logoColor=white" alt="Download for Windows" height="40"></a>&nbsp;
-  <a href="https://github.com/datadrivenconstruction/OpenBusinessERP/releases/latest"><img src="https://img.shields.io/badge/macOS-Apple%20Silicon%20.dmg-111111?style=for-the-badge&logo=apple&logoColor=white" alt="Download for macOS (Apple Silicon)" height="40"></a>&nbsp;
-  <a href="https://github.com/datadrivenconstruction/OpenBusinessERP/releases/latest"><img src="https://img.shields.io/badge/Linux-.deb%20·%20.rpm%20·%20.AppImage-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Download for Linux" height="40"></a>
+  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest"><img src="https://img.shields.io/badge/Windows-.exe-0078D6?style=for-the-badge&logo=windows11&logoColor=white" alt="Download for Windows" height="40"></a>&nbsp;
+  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest"><img src="https://img.shields.io/badge/macOS-Apple%20Silicon%20.dmg-111111?style=for-the-badge&logo=apple&logoColor=white" alt="Download for macOS (Apple Silicon)" height="40"></a>&nbsp;
+  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest"><img src="https://img.shields.io/badge/Linux-.deb%20·%20.rpm%20·%20.AppImage-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Download for Linux" height="40"></a>
 </p>
 
 <p align="center"><sub>The installers are not code-signed yet, so Windows and macOS warn on first launch. Every release ships <code>SHA256SUMS</code> with a Sigstore signature. Server install: <a href="#quick-start">Quick start</a>.</sub></p>
@@ -39,13 +39,13 @@
 
 ### ⭐ A star means a lot to us
 
-OpenBusinessERP is free and built by a small team at DataDrivenConstruction.<br>
+Archi Savvy Studio ERP is free and built by a small team at DataDrivenConstruction.<br>
 Stars are how other companies find out that an open-source project is alive and worth trying.<br>
 **If the project is useful to you, please star it. It takes one click and helps us more than anything else.**
 
 **How:** sign in to GitHub → scroll to the top of this page → click **☆ Star** in the top right.
 
-<a href="https://github.com/datadrivenconstruction/OpenBusinessERP/stargazers"><img src="https://img.shields.io/github/stars/datadrivenconstruction/OpenBusinessERP?style=for-the-badge&logo=github&label=Star%20OpenBusinessERP&color=f5b301" alt="Star OpenBusinessERP on GitHub" height="36"></a>
+<a href="https://github.com/Fabsye/archi-savvy-studio-erp/stargazers"><img src="https://img.shields.io/github/stars/Fabsye/archi-savvy-studio-erp?style=for-the-badge&logo=github&label=Star%20ArchiSavvyStudioERP&color=f5b301" alt="Star Archi Savvy Studio ERP on GitHub" height="36"></a>
 
 </td></tr></table>
 
@@ -118,8 +118,8 @@ The demo company is a wholesale trader. A typical month:
 You need Docker with Compose v2, Git and `make`.
 
 ```bash
-git clone https://github.com/datadrivenconstruction/OpenBusinessERP.git
-cd OpenBusinessERP
+git clone https://github.com/Fabsye/archi-savvy-studio-erp.git
+cd Archi Savvy Studio ERP
 echo "POSTGRES_PASSWORD=$(openssl rand -base64 24)" >  .env
 echo "JWT_SECRET=$(openssl rand -hex 32)"           >> .env
 make quickstart
@@ -151,7 +151,7 @@ Read these before you rely on the software for your books.
 - **Test the accountant export** (SAF-T or DATEV) with your accountant before the first real import. Columns without a data source stay empty. The full list is in [DATEV and SAF-T export](docs/manual/accountant-export.md).
 - **ZUGFeRD PDFs are not strict PDF/A-3b.** The embedded XML is complete; a receiver that demands PDF/A-3b needs a post-processing step.
 - **No payroll, no tax filing.** There is no payroll, no electronic submission of tax returns and no year-end financial statement workflow. Your accountant files.
-- **Installers are not code-signed.** Desktop installers for Windows, macOS and Linux are on the [releases page](https://github.com/datadrivenconstruction/OpenBusinessERP/releases/latest); Windows and macOS warn on first launch. The PyPI package is not published.
+- **Installers are not code-signed.** Desktop installers for Windows, macOS and Linux are on the [releases page](https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest); Windows and macOS warn on first launch. The PyPI package is not published.
 - **Bank connection is file-based.** Statements are imported as files; there is no live bank connection (PSD2, EBICS, FinTS or similar).
 
 ## Architecture
@@ -164,23 +164,23 @@ The interface is translated into 44 languages from 45 locale bundles, including 
 
 The easiest way to help is a ⭐ on GitHub: it is how other companies discover the project.
 
-Bug reports, translations and pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first; contributors sign the [CLA](CLA.md) once, through a bot comment on the first pull request. For anything larger than a bug fix, open a [discussion](https://github.com/datadrivenconstruction/OpenBusinessERP/discussions) about the approach before you start. Report security issues privately as described in [SECURITY.md](SECURITY.md).
+Bug reports, translations and pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first; contributors sign the [CLA](CLA.md) once, through a bot comment on the first pull request. For anything larger than a bug fix, open a [discussion](https://github.com/Fabsye/archi-savvy-studio-erp/discussions) about the approach before you start. Report security issues privately as described in [SECURITY.md](SECURITY.md).
 
 ## License
 
-OpenBusinessERP is licensed under the [GNU Affero General Public License v3.0](LICENSE). You can use, modify and self-host it freely. If you offer a modified version to users over a network, you must make its source code available to them under the same license. A commercial license is available on request. See also [NOTICE](NOTICE), [TRADEMARK.md](TRADEMARK.md) and [PRIVACY.md](PRIVACY.md).
+Archi Savvy Studio ERP is licensed under the [GNU Affero General Public License v3.0](LICENSE). You can use, modify and self-host it freely. If you offer a modified version to users over a network, you must make its source code available to them under the same license. A commercial license is available on request. See also [NOTICE](NOTICE), [TRADEMARK.md](TRADEMARK.md) and [PRIVACY.md](PRIVACY.md).
 
 ## Disclaimer
 
-OpenBusinessERP is provided **"AS IS", without warranty of any kind**, express or implied, and without liability for damages, to the extent permitted by law (see sections 15 and 16 of the [AGPL-3.0](LICENSE)).
+Archi Savvy Studio ERP is provided **"AS IS", without warranty of any kind**, express or implied, and without liability for damages, to the extent permitted by law (see sections 15 and 16 of the [AGPL-3.0](LICENSE)).
 
 - **Not professional advice.** Nothing in the software or its documentation is tax, legal or accounting advice. Consult a qualified adviser for your situation.
 - **You verify the rules.** Tax rates, VAT logic, e-invoice formats, statutory reports and retention rules are shipped as a starting point and change over time. You are responsible for checking them against current law and the official specifications before relying on them, and for any filing or invoice you issue.
-- **Schema-validated is not certified.** Where the software validates documents against a published schema, that confirms the structure only. No part of OpenBusinessERP is certified by a tax authority or standards body unless explicitly stated.
+- **Schema-validated is not certified.** Where the software validates documents against a published schema, that confirms the structure only. No part of Archi Savvy Studio ERP is certified by a tax authority or standards body unless explicitly stated.
 - **Fictional demo data.** All demo companies, people, addresses, bank details and tax numbers are invented. Any resemblance to real organisations or persons is coincidental.
 
 <p align="center"><sub>Made by <a href="https://datadrivenconstruction.io">Data Driven Construction</a>.</sub></p>
 
 ---
 
-<p align="center"><b>Found OpenBusinessERP useful?</b> <a href="https://github.com/datadrivenconstruction/OpenBusinessERP">⭐ Star it on GitHub</a> so more companies can find it. Thank you!</p>
+<p align="center"><b>Found Archi Savvy Studio ERP useful?</b> <a href="https://github.com/Fabsye/archi-savvy-studio-erp">⭐ Star it on GitHub</a> so more companies can find it. Thank you!</p>

@@ -1,5 +1,5 @@
 [Unit]
-Description=OpenBusinessERP - open-source construction cost estimation
+Description=Archi Savvy Studio ERP - open-source construction cost estimation
 After=network.target
 
 [Service]
@@ -36,8 +36,8 @@ StartLimitIntervalSec=60
 NoNewPrivileges=true
 ProtectSystem=strict
 ProtectHome=read-only
-# The data directory keeps its historical name ~/.openestimate on every install.
-ReadWritePaths=/home/openbusinesserp/.openestimate
+# The data directory keeps its historical name ~/.archisavvy-erp on every install.
+ReadWritePaths=/home/openbusinesserp/.archisavvy-erp
 PrivateTmp=true
 PrivateDevices=true
 ProtectKernelModules=true

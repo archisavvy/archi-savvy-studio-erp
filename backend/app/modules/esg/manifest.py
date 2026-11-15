@@ -13,7 +13,7 @@ manifest = ModuleManifest(
         "local labour, training and safety recorded per period against targets, "
         "with direction-aware KPIs and trends (distinct from embodied carbon)"
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="business",
     depends=["oe_users", "oe_projects"],
     auto_install=True,

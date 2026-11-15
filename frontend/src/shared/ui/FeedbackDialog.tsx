@@ -23,7 +23,7 @@ const CATEGORIES: { key: FeedbackCategory; icon: typeof Bug; labelKey: string; d
 ];
 
 const GITHUB_ISSUES_URL =
-  'https://github.com/datadrivenconstruction/OpenBusinessERP/issues/new';
+  'https://github.com/Fabsye/archi-savvy-studio-erp/issues/new';
 
 export function FeedbackDialog({ open, onClose }: FeedbackDialogProps) {
   const { t } = useTranslation();

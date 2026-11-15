@@ -15,7 +15,7 @@ manifest = ModuleManifest(
         "Consumed by markup/submittal/change-order/RFI/contract modules "
         "instead of every module hard-coding its own approve/reject."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=["oe_projects", "oe_users"],
     auto_install=True,

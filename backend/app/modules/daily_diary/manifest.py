@@ -12,7 +12,7 @@ manifest = ModuleManifest(
         "Legally significant daily site diary: weather, entries, photos, videos, "
         "drone surveys, reality capture, immutable signed archive"
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="business",
     depends=["oe_users", "oe_projects"],
     auto_install=True,

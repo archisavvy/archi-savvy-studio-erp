@@ -75,12 +75,12 @@ def test_a_blank_override_is_not_an_override(monkeypatch: pytest.MonkeyPatch, bl
     """An empty variable is how a compose file spells "unset", not a path to the root."""
     monkeypatch.setenv("OE_DATA_DIR", blank)
 
-    assert cli._default_data_dir() == Path.home() / ".openestimate"
+    assert cli._default_data_dir() == Path.home() / ".archisavvy-erp"
 
 
 def test_the_default_is_still_the_per_user_directory() -> None:
     """With nothing set, nothing changes for the ordinary desktop install."""
-    assert cli._default_data_dir() == Path.home() / ".openestimate"
+    assert cli._default_data_dir() == Path.home() / ".archisavvy-erp"
 
 
 def test_a_surrounding_space_is_trimmed(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
@@ -126,7 +126,7 @@ def test_both_resolvers_treat_a_blank_override_as_unset(monkeypatch: pytest.Monk
     """
     monkeypatch.setenv("OE_DATA_DIR", value)
 
-    assert cli._default_data_dir() == Path.home() / ".openestimate"
+    assert cli._default_data_dir() == Path.home() / ".archisavvy-erp"
     assert storage.resolve_data_dir() != Path(value)
 
 

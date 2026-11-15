@@ -127,7 +127,7 @@ export function BusinessSetup() {
 
   useEffect(() => {
     const key = SETUP_STEPS[step] ?? 'company';
-    document.title = `${t(`bizsetup.${key}_title`)} | OpenBusinessERP`;
+    document.title = `${t(`bizsetup.${key}_title`)} | Archi Savvy Studio ERP`;
   }, [step, t]);
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 # Privacy and Data Flows
 
-This page describes what the OpenBusinessERP **software** does with data. It is
+This page describes what the Archi Savvy Studio ERP **software** does with data. It is
 not a privacy policy for your organisation: when you self-host, you are the
 controller of the data you put into it and you are responsible for your own
 privacy notices, legal basis and data-protection obligations. For an instance
@@ -9,7 +9,7 @@ operated by DataDrivenConstruction, see also
 
 ## No telemetry
 
-OpenBusinessERP contains no analytics, usage tracking, crash reporting or
+Archi Savvy Studio ERP contains no analytics, usage tracking, crash reporting or
 "phone home" telemetry. There is no Sentry, PostHog, Google Analytics or similar
 SDK in the backend or the frontend. Your business data stays in your database
 and file storage.

@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Бұл атауды жаңа анықтамалық үшін пайдалануға болмайды. Басқа атау таңдаңыз.",
   "app": {
-    "name": "OpenBusinessERP",
+    "name": "Archi Savvy Studio ERP",
     "tagline": "Ашық бастапқы кодты құрылыс сметасын есептеу"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Жаңарту"
   },
   "dashboard": {
-    "welcome": "OpenBusinessERP-ке қош келдіңіз",
+    "welcome": "Archi Savvy Studio ERP-ке қош келдіңіз",
     "subtitle": "Сіздің құрылыс сметалау жұмыс кеңістігіңіз",
     "recent_projects": "Соңғы Жобалар",
     "system_status": "Жүйе Мәртебесі",

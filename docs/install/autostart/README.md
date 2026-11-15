@@ -1,4 +1,4 @@
-# Autostart OpenBusinessERP on system boot
+# Autostart Archi Savvy Studio ERP on system boot
 
 Three ready-to-use templates for the three major OSes. Pick yours.
 
@@ -56,8 +56,8 @@ python3 -m venv ~/.venv
 sed -i '' "s|USERNAME|$USER|g" macos-com.openbusinesserp.plist
 
 # 3. Drop into LaunchAgents (per-user, runs at login)
-#    (~/.openestimate is the data directory - it keeps its historical name)
-mkdir -p ~/.openestimate/logs ~/Library/LaunchAgents
+#    (~/.archisavvy-erp is the data directory - it keeps its historical name)
+mkdir -p ~/.archisavvy-erp/logs ~/Library/LaunchAgents
 cp macos-com.openbusinesserp.plist ~/Library/LaunchAgents/
 
 # 4. Load it
@@ -87,18 +87,18 @@ those before running if you used a non-default install location.
 
 Verify:
 ```powershell
-schtasks /Query /TN OpenBusinessERP
+schtasks /Query /TN Archi Savvy Studio ERP
 curl http://localhost:8000/api/health
 ```
 
 To remove:
 ```powershell
-schtasks /Delete /TN OpenBusinessERP /F
+schtasks /Delete /TN Archi Savvy Studio ERP /F
 ```
 
 For LAN access on Windows, also open the firewall:
 ```powershell
-New-NetFirewallRule -DisplayName "OpenBusinessERP 8000" -Direction Inbound -Protocol TCP -LocalPort 8000 -Action Allow
+New-NetFirewallRule -DisplayName "Archi Savvy Studio ERP 8000" -Direction Inbound -Protocol TCP -LocalPort 8000 -Action Allow
 ```
 
 ---

@@ -9,7 +9,7 @@ administrator says so.
 
 Until this module existed only the launcher listened. The notice the launcher
 paints offers "Turn off update checks" and records the answer in
-``~/.openestimate/no-update-check``, a file whose own text says the app "does
+``~/.archisavvy-erp/no-update-check``, a file whose own text says the app "does
 not check for a newer version while this file exists". The backend never read
 it, so the next sign-in sent the same two requests anyway. An administrator
 setting ``OE_DISABLE_UPDATE_CHECK`` was ignored by the backend the same way.
@@ -46,7 +46,7 @@ def _env_flag_is_on(raw: str | None) -> bool:
 
 def opt_out_path(home: Path | None = None) -> Path:
     """Where the launcher records the user's "Turn off update checks"."""
-    return (home if home is not None else Path.home()) / ".openestimate" / OPT_OUT_FILE
+    return (home if home is not None else Path.home()) / ".archisavvy-erp" / OPT_OUT_FILE
 
 
 def update_check_disabled(home: Path | None = None) -> bool:

@@ -1,7 +1,7 @@
 """Partner-pack state must live in the ACTIVE data dir (FA-0003).
 
 Before the fix, ``partner_pack_state.json`` was always resolved to the
-DEFAULT ``~/.openestimate`` regardless of ``serve --data-dir``, so a stale
+DEFAULT ``~/.archisavvy-erp`` regardless of ``serve --data-dir``, so a stale
 pack applied on the default install silently hijacked seeding, branding and
 locale of ANY custom ``--data-dir`` instance. These tests pin the contract:
 
@@ -53,20 +53,20 @@ class TestDefaultDirUnchanged:
     """Without OE_CLI_DATA_DIR the legacy default resolution still applies."""
 
     def test_resolves_to_legacy_default(self) -> None:
-        assert _resolve_state_dir() == Path.home() / ".openestimate"
+        assert _resolve_state_dir() == Path.home() / ".archisavvy-erp"
 
     def test_explicit_data_dir_argument_wins(self, tmp_path: Path) -> None:
         explicit = tmp_path / "explicit"
         assert _resolve_state_dir(explicit) == explicit
 
     def test_default_install_roundtrip(self) -> None:
-        _write_state("legacy-pack", Path.home() / ".openestimate")
-        assert (Path.home() / ".openestimate" / STATE_FILENAME).is_file()
+        _write_state("legacy-pack", Path.home() / ".archisavvy-erp")
+        assert (Path.home() / ".archisavvy-erp" / STATE_FILENAME).is_file()
         # No env, no argument: reads from the default dir, as before.
         assert get_applied_slug() == "legacy-pack"
 
     def test_cli_data_dir_pointing_at_default_keeps_working(self, monkeypatch: pytest.MonkeyPatch) -> None:
-        default_dir = Path.home() / ".openestimate"
+        default_dir = Path.home() / ".archisavvy-erp"
         _write_state("legacy-pack", default_dir)
         monkeypatch.setenv("OE_CLI_DATA_DIR", str(default_dir))
         assert get_applied_slug() == "legacy-pack"
@@ -80,7 +80,7 @@ class TestCustomDataDirIsolated:
         monkeypatch.setenv("OE_CLI_DATA_DIR", str(custom))
         _write_state("custom-pack", custom)
         assert (custom / STATE_FILENAME).is_file()
-        assert not (Path.home() / ".openestimate" / STATE_FILENAME).exists()
+        assert not (Path.home() / ".archisavvy-erp" / STATE_FILENAME).exists()
         assert get_applied_slug() == "custom-pack"
 
     def test_save_with_no_argument_targets_active_dir(self, monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
@@ -88,11 +88,11 @@ class TestCustomDataDirIsolated:
         monkeypatch.setenv("OE_CLI_DATA_DIR", str(custom))
         save_applied_state(AppliedPackState(slug="custom-pack"))
         assert (custom / STATE_FILENAME).is_file()
-        assert not (Path.home() / ".openestimate" / STATE_FILENAME).exists()
+        assert not (Path.home() / ".archisavvy-erp" / STATE_FILENAME).exists()
 
     def test_custom_dir_does_not_inherit_default_pack(self, monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
         """FA-0003 regression: stale default-install pack must not leak in."""
-        _write_state("stale-pack", Path.home() / ".openestimate")
+        _write_state("stale-pack", Path.home() / ".archisavvy-erp")
         custom = tmp_path / "fresh-data"
         custom.mkdir()
         monkeypatch.setenv("OE_CLI_DATA_DIR", str(custom))

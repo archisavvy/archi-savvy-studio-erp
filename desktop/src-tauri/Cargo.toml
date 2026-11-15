@@ -1,9 +1,9 @@
 [package]
 name = "openbusinesserp-desktop"
 version = "18.5.0"
-description = "OpenBusinessERP Desktop, open-source ERP for small businesses"
+description = "Archi Savvy Studio ERP Desktop, open-source ERP for small businesses"
 license = "AGPL-3.0-or-later"
-repository = "https://github.com/datadrivenconstruction/OpenBusinessERP"
+repository = "https://github.com/Fabsye/archi-savvy-studio-erp"
 authors = ["DataDrivenConstruction <info@datadrivenconstruction.io>"]
 edition = "2021"
 

@@ -7,7 +7,7 @@ The program sends invoices, quotes and reminders by SMTP. Set it up once under *
 Send yourself a test mail first.
 
 !!! warning "Server settings win"
-    If the server is configured with `EMAIL_BACKEND=smtp` and `SMTP_HOST` in the environment, those values override what you enter in Settings. Without `EMAIL_BACKEND=smtp`, the default `console` transport only writes messages to the log. Nothing leaves the machine and nothing reports an error. The [email setup note](https://github.com/datadrivenconstruction/OpenBusinessERP/blob/main/docs/email-setup.md) lists every setting.
+    If the server is configured with `EMAIL_BACKEND=smtp` and `SMTP_HOST` in the environment, those values override what you enter in Settings. Without `EMAIL_BACKEND=smtp`, the default `console` transport only writes messages to the log. Nothing leaves the machine and nothing reports an error. The [email setup note](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/docs/email-setup.md) lists every setting.
 
 ## Email text
 

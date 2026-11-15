@@ -1,7 +1,7 @@
 // DDC-CWICR-OE: DataDrivenConstruction · OpenBusinessERP
 // Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
 /**
- * Community acknowledgments - the people who shaped OpenBusinessERP by
+ * Community acknowledgments - the people who shaped Archi Savvy Studio ERP by
  * reporting issues, asking questions and funding the work.
  *
  * Keep this file in sync with /docs/legal/ACKNOWLEDGMENTS.md. When a new

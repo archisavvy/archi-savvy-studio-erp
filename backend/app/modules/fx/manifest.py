@@ -13,7 +13,7 @@ manifest = ModuleManifest(
         "per-project currency policy with pinning, and revaluation that separates scope movement "
         "from rate movement"
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=[],
     auto_install=True,

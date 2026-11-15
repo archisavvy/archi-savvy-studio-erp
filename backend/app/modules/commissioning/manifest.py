@@ -12,7 +12,7 @@ manifest = ModuleManifest(
         "Systems commissioning - prefunctional and functional checklists, "
         "issue log, system-readiness scoring and a gated commission action"
     ),
-    author="OpenBusinessERP",
+    author="Archi Savvy Studio ERP",
     category="business",
     depends=["oe_projects", "oe_users"],
     auto_install=True,

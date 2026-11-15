@@ -13,7 +13,7 @@ manifest = ModuleManifest(
         "on top of the AI module. Tool registry, per-run history, mock-friendly "
         "LLM bridge. Slice 1: sample BOQ-drafter agent."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=["oe_ai", "oe_projects"],
     auto_install=True,

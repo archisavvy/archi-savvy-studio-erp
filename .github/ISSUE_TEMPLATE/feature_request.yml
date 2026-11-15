@@ -1,5 +1,5 @@
 name: Feature Request
-description: Suggest a new feature or improvement for OpenBusinessERP
+description: Suggest a new feature or improvement for Archi Savvy Studio ERP
 title: "[FEATURE] "
 labels: ["enhancement"]
 body:
@@ -68,7 +68,7 @@ body:
       options:
         - Nice to have
         - Important for my workflow
-        - Blocking my adoption of OpenBusinessERP
+        - Blocking my adoption of Archi Savvy Studio ERP
 
   - type: textarea
     id: context

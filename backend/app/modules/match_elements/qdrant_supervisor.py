@@ -11,7 +11,7 @@ plain subprocess whenever a feature that needs it (currently only
 Why no Docker?
 --------------
 
-Every other heavy dependency in OpenBusinessERP degrades gracefully
+Every other heavy dependency in Archi Savvy Studio ERP degrades gracefully
 to a local-only path: PostgreSQL → SQLite, Redis → in-memory cache,
 MinIO → local filesystem. Qdrant used to require a docker-compose
 profile (``--profile ai up -d qdrant``) which made it the only thing
@@ -486,7 +486,7 @@ def _resolve_release_asset() -> tuple[str, str]:
         _PINNED_RELEASE_URL,
         headers={
             "Accept": "application/vnd.github+json",
-            "User-Agent": "OpenBusinessERP-qdrant-installer",
+            "User-Agent": "Archi Savvy Studio ERP-qdrant-installer",
         },
     )
     try:

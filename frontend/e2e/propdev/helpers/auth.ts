@@ -10,7 +10,7 @@
  *
  * The /auth/demo-login/ endpoint hands out tokens against those whitelisted
  * emails without a password — so the suite never has to know the random
- * generated password persisted in /root/.openestimate/demo-credentials.
+ * generated password persisted in /root/.archisavvy-erp/demo-credentials.
  *
  * VIEWER is not seeded by default; we synthesize a viewer-only context by
  * stripping the admin's claims down to ``role=viewer`` inside the JWT

@@ -167,7 +167,7 @@ CURRENT_PUBKEY_HEX: str = "00000000000000000000000000000000000000000000000000000
 # which is hosted on a separate origin from the package CDN so a
 # single-CDN compromise doesn't take both down.
 DEFAULT_MANIFEST_URL: str = "https://pkg.datadrivenconstruction.io/oe/manifest.json"
-FALLBACK_MANIFEST_URL: str = "https://github.com/datadrivenconstruction/OpenBusinessERP"
+FALLBACK_MANIFEST_URL: str = "https://github.com/Fabsye/archi-savvy-studio-erp"
 
 # Signature is fetched from <manifest_url>.sig - the same convention
 # Debian uses for InRelease/Release.gpg. Keeping it as a sibling URL
@@ -287,7 +287,7 @@ class ComponentEntry:
                 f"{platform_key!r}. Available platforms: {available}. "
                 f"Please file an issue at "
                 f"https://github.com/datadrivenconstruction/"
-                f"OpenBusinessERP/issues if you need this platform."
+                f"ArchiSavvyStudioERP/issues if you need this platform."
             )
         return entry
 
@@ -375,7 +375,7 @@ def _fetch_bytes(url: str, max_bytes: int) -> bytes:
     """
     req = urllib.request.Request(
         url,
-        headers={"User-Agent": "OpenBusinessERP-manifest-verifier"},
+        headers={"User-Agent": "Archi Savvy Studio ERP-manifest-verifier"},
     )
     try:
         with urllib.request.urlopen(req, timeout=_FETCH_TIMEOUT_S) as resp:

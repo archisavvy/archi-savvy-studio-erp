@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Tento název nelze použít pro nový katalog. Vyberte jiný název.",
   "app": {
-    "name": "OpenBusinessERP",
+    "name": "Archi Savvy Studio ERP",
     "tagline": "Open-source rozpočtování staveb"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Aktualizovat"
   },
   "dashboard": {
-    "welcome": "Vítejte v OpenBusinessERP",
+    "welcome": "Vítejte v Archi Savvy Studio ERP",
     "subtitle": "Open-source platforma pro rozpočtování staveb",
     "recent_projects": "Nedávné projekty",
     "system_status": "Stav systému",

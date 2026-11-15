@@ -1,6 +1,6 @@
-# OpenBusinessERP Desktop
+# Archi Savvy Studio ERP Desktop
 
-This folder holds the desktop build of OpenBusinessERP by DataDrivenConstruction. The desktop app is a native shell built with Tauri that bundles the full backend and an embedded PostgreSQL database into a single installer. People who install it do not need Python, pip, Docker, or any database setup. They download one file, run it, and the app takes care of the rest.
+This folder holds the desktop build of Archi Savvy Studio ERP by DataDrivenConstruction. The desktop app is a native shell built with Tauri that bundles the full backend and an embedded PostgreSQL database into a single installer. People who install it do not need Python, pip, Docker, or any database setup. They download one file, run it, and the app takes care of the rest.
 
 This README is for developers who build the installers. If you are a user looking to install and run the app, read `docs/desktop/INSTALL.md` instead.
 
@@ -40,7 +40,7 @@ The script detects your platform's Rust target triple automatically. You can als
 
 The supported target triples are `x86_64-pc-windows-msvc` (Windows), `x86_64-apple-darwin` and `aarch64-apple-darwin` (macOS Intel and Apple Silicon), and `x86_64-unknown-linux-gnu` (Linux).
 
-Tauri requires the sidecar to be named with the target triple appended, for example `openbusinesserp-server-x86_64-pc-windows-msvc.exe` on Windows or `openbusinesserp-server-aarch64-apple-darwin` on Apple Silicon. The script handles that naming and the `.exe` extension on Windows, and drops the file in `desktop/src-tauri/binaries/`. That path matches the `externalBin` entry in `tauri.conf.json`.
+Tauri requires the sidecar to be named with the target triple appended, for example `archisavvy-erp-server-x86_64-pc-windows-msvc.exe` on Windows or `archisavvy-erp-server-aarch64-apple-darwin` on Apple Silicon. The script handles that naming and the `.exe` extension on Windows, and drops the file in `desktop/src-tauri/binaries/`. That path matches the `externalBin` entry in `tauri.conf.json`.
 
 A few notes on what the spec does, so the output is correct. It freezes `backend/app/cli.py` as the entry point into a single self-contained build, with all backend modules auto-discovered as hidden imports. It explicitly keeps `asyncpg`, `psycopg2`, and `pixeltable_pgserver` because SQLAlchemy chooses its driver from the database URL at runtime, so PyInstaller's static analysis would otherwise miss them and the frozen sidecar could not reach its own database. A local hook under `desktop/hooks/` collects the embedded PostgreSQL binaries (postgres, initdb, pg_ctl, and the runtime libraries) so the cluster can actually start. The build ships `pyproject.toml` next to the bundled app so the sidecar reports the real product version rather than whatever happens to be pip-installed on the build machine. Heavy unused stacks like Torch, TensorFlow, SciPy, Matplotlib, and the Qt bindings are excluded to keep the binary lean, while numpy, pandas, openpyxl, and pyarrow stay in because the cost-database import path needs them.
 

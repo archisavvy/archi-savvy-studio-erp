@@ -1,7 +1,7 @@
-; OpenBusinessERP - NSIS installer hooks
+; Archi Savvy Studio ERP - NSIS installer hooks
 ;
 ; Windows keeps an exclusive lock on a running .exe. If the backend sidecar
-; (openbusinesserp-server.exe) is still running when the installer tries to
+; (archisavvy-erp-server.exe) is still running when the installer tries to
 ; overwrite it, or when the uninstaller tries to delete it, the operation fails
 ; with "file in use by another process". That is the reinstall error users hit:
 ; after the app is closed or uninstalled the sidecar can linger in the
@@ -78,7 +78,7 @@
 ;
 ; The data directory is resolved through the same three environment variables,
 ; in the same order, that the backend itself uses (OE_DATA_DIR, then DATA_DIR,
-; then OE_CLI_DATA_DIR, then ~/.openestimate). A test asserts that order
+; then OE_CLI_DATA_DIR, then ~/.archisavvy-erp). A test asserts that order
 ; against the backend's own resolver rather than against a copy of it, so the
 ; two cannot drift apart quietly.
 ;
@@ -93,7 +93,7 @@
 ; /TIMEOUT, and the uninstaller waits for nsExec, and the installer waits for
 ; the uninstaller. So a PowerShell that never returns - a wedged host, an
 ; antivirus holding the image, a console that never gets a handle - stops the
-; upgrade dead on the line "Closing OpenBusinessERP..." with no way out but
+; upgrade dead on the line "Closing Archi Savvy Studio ERP..." with no way out but
 ; the task manager. That is exactly what a user saw. On expiry nsExec pushes
 ; the string "timeout" rather than an exit code, which the caller below already
 ; reads as "not zero" and answers with the by-name fallback, so a timed-out
@@ -125,7 +125,7 @@
   ${If} ${RunningX64}
     ${DisableX64FSRedirection}
   ${EndIf}
-  nsExec::Exec /TIMEOUT=30000 `powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "$$r = @($$env:OE_DATA_DIR,$$env:DATA_DIR,$$env:OE_CLI_DATA_DIR,(Join-Path $$env:USERPROFILE '.openestimate')) | Where-Object { $$_ } | Select-Object -First 1; $$f = Join-Path $$r 'pgdata\postmaster.pid'; if (Test-Path -LiteralPath $$f) { $$l = @(Get-Content -LiteralPath $$f -TotalCount 3); $$n = $$l[0] -as [int]; $$t = $$l[2] -as [int]; if ($$n) { $$p = Get-Process -Id $$n -ErrorAction SilentlyContinue; if ($$p -and $$p.ProcessName -eq 'postgres') { $$s = $$null; try { $$s = ([DateTimeOffset]$$p.StartTime).ToUnixTimeSeconds() } catch { }; if (-not $$t -or -not $$s -or [Math]::Abs($$s - $$t) -le 5) { Stop-Process -Id $$n -Force -ErrorAction SilentlyContinue } } } }"`
+  nsExec::Exec /TIMEOUT=30000 `powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "$$r = @($$env:OE_DATA_DIR,$$env:DATA_DIR,$$env:OE_CLI_DATA_DIR,(Join-Path $$env:USERPROFILE '.archisavvy-erp')) | Where-Object { $$_ } | Select-Object -First 1; $$f = Join-Path $$r 'pgdata\postmaster.pid'; if (Test-Path -LiteralPath $$f) { $$l = @(Get-Content -LiteralPath $$f -TotalCount 3); $$n = $$l[0] -as [int]; $$t = $$l[2] -as [int]; if ($$n) { $$p = Get-Process -Id $$n -ErrorAction SilentlyContinue; if ($$p -and $$p.ProcessName -eq 'postgres') { $$s = $$null; try { $$s = ([DateTimeOffset]$$p.StartTime).ToUnixTimeSeconds() } catch { }; if (-not $$t -or -not $$s -or [Math]::Abs($$s - $$t) -le 5) { Stop-Process -Id $$n -Force -ErrorAction SilentlyContinue } } } }"`
   Pop $0
   ${If} ${RunningX64}
     ${EnableX64FSRedirection}
@@ -135,7 +135,7 @@
 
 !macro OE_STOP_THIS_INSTALL
   Push $0
-  DetailPrint "Closing OpenBusinessERP..."
+  DetailPrint "Closing Archi Savvy Studio ERP..."
   ; Hand the install directory to the script below without quoting it.
   System::Call 'kernel32::SetEnvironmentVariable(t "OE_STOP_DIR", t "$INSTDIR")'
   ; Close the app window (which stops its backend cleanly), give it a bounded
@@ -155,7 +155,7 @@
     ; former product name is here too, because an upgrade from it is the one
     ; case a path match can miss: that install may live in another directory.
     DetailPrint "Falling back to stopping the processes by name..."
-    nsExec::Exec /TIMEOUT=90000 `cmd /c taskkill /F /T /FI "IMAGENAME eq openbusinesserp-server.exe" /FI "USERNAME eq %USERNAME%"`
+    nsExec::Exec /TIMEOUT=90000 `cmd /c taskkill /F /T /FI "IMAGENAME eq archisavvy-erp-server.exe" /FI "USERNAME eq %USERNAME%"`
     Pop $0
     nsExec::Exec /TIMEOUT=90000 `cmd /c taskkill /F /T /FI "IMAGENAME eq openestimate-server.exe" /FI "USERNAME eq %USERNAME%"`
     Pop $0

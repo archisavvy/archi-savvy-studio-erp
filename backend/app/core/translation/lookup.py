@@ -2,7 +2,7 @@
 # Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
 """MUSE + IATE lookup tables - phrase-aware matching against TSV files.
 
-Files live under ``~/.openestimate/translations/{muse,iate}/{src}-{tgt}.tsv``
+Files live under ``~/.archisavvy-erp/translations/{muse,iate}/{src}-{tgt}.tsv``
 in the format ``source_word<TAB>target_word<TAB>weight``. Header lines
 starting with ``#`` are ignored. The user downloads these on demand via the
 ``downloader`` module - this file never touches the network.

@@ -34,11 +34,11 @@
     <key>ThrottleInterval</key>
     <integer>10</integer>
 
-    <!-- Logs. The data directory keeps its historical name ~/.openestimate. -->
+    <!-- Logs. The data directory keeps its historical name ~/.archisavvy-erp. -->
     <key>StandardOutPath</key>
-    <string>/Users/USERNAME/.openestimate/logs/serve.log</string>
+    <string>/Users/USERNAME/.archisavvy-erp/logs/serve.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/USERNAME/.openestimate/logs/serve-err.log</string>
+    <string>/Users/USERNAME/.archisavvy-erp/logs/serve-err.log</string>
 
     <!-- Optional: environment overrides -->
     <key>EnvironmentVariables</key>

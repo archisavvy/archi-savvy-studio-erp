@@ -76,7 +76,7 @@ export function LoginPage() {
   const setTokens = useAuthStore((s) => s.setTokens);
   // White-label brand (same localStorage store the in-app sidebar editor
   // writes to). When a tenant has set a logo / company name we show it
-  // on the login card instead of the default OpenBusinessERP wordmark.
+  // on the login card instead of the default Archi Savvy Studio ERP wordmark.
   const { mode: brandMode, logoDataUrl: brandLogo, companyName: brandName } =
     useBrandingStore();
   const brandCustomised = brandMode === 'logo' || brandMode === 'text';
@@ -441,7 +441,7 @@ export function LoginPage() {
         <div className="w-full max-w-[380px] relative z-10">
           {/* Logo - tenant white-label (logo / company name) when set via
               the in-app sidebar editor; otherwise the default brand. The
-              small "by OpenBusinessERP" attribution stays visible in
+              small "by Archi Savvy Studio ERP" attribution stays visible in
               customised modes (AGPL-3.0 requirement). */}
           <div className="relative mb-5 flex flex-col items-center">
             {/* Brand + edit-pencil row - grouped together and visually
@@ -467,7 +467,7 @@ export function LoginPage() {
                       {brandName}
                     </span>
                   )}
-                  {/* "by OpenBusinessERP" - subordinate attribution that
+                  {/* "by Archi Savvy Studio ERP" - subordinate attribution that
                       stays visible (AGPL-3.0). Mirrors CustomBranding.tsx. */}
                   <span
                     className="mt-2 block text-[11px] leading-none text-content-tertiary"
@@ -671,7 +671,7 @@ export function LoginPage() {
 
           <p className="mt-5 text-center text-2xs text-content-tertiary">
             <a
-              href="https://github.com/datadrivenconstruction/OpenBusinessERP"
+              href="https://github.com/Fabsye/archi-savvy-studio-erp"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-content-secondary"
@@ -707,10 +707,10 @@ export function LoginPage() {
                 {t('about.title', 'The open-source ERP for every kind of business')}
               </h3>
               <p className="text-[13px] text-content-secondary leading-relaxed">
-                {t('about.intro', 'OpenBusinessERP is a modern, open-source ERP platform for running a business. It brings projects, sales, purchasing, finance, inventory, documents and reporting into one workspace, with industry modules for estimation, tendering and more. Designed for teams worldwide, it supports international standards and works in 20 languages.')}
+                {t('about.intro', 'Archi Savvy Studio ERP is a modern, open-source ERP platform for running a business. It brings projects, sales, purchasing, finance, inventory, documents and reporting into one workspace, with industry modules for estimation, tendering and more. Designed for teams worldwide, it supports international standards and works in 20 languages.')}
               </p>
               <p className="mt-2 text-[13px] text-content-secondary leading-relaxed">
-                {t('about.intro2', 'Unlike traditional commercial solutions, OpenBusinessERP runs entirely on your computer. Your project data never leaves your machine - you have full ownership and control. The source code is open and auditable, so you always know exactly what the software does.')}
+                {t('about.intro2', 'Unlike traditional commercial solutions, Archi Savvy Studio ERP runs entirely on your computer. Your project data never leaves your machine - you have full ownership and control. The source code is open and auditable, so you always know exactly what the software does.')}
               </p>
             </div>
 
@@ -753,7 +753,7 @@ export function LoginPage() {
               </h3>
               <div className="space-y-2 text-[13px] text-content-secondary leading-relaxed">
                 <p>{t('about.why_1', 'Business data is one of the most valuable assets a company owns. With proprietary software, your data is often locked inside formats you cannot control. If the vendor raises prices, changes terms, or discontinues the product, you may lose access to years of work.')}</p>
-                <p>{t('about.why_2', 'OpenBusinessERP takes a different approach. Your data is stored in open formats (SQLite, JSON, CSV) on your own hardware. You can export everything at any time. The source code is publicly auditable under AGPL-3.0, so there are no hidden data transfers, no telemetry, and no surprises.')}</p>
+                <p>{t('about.why_2', 'Archi Savvy Studio ERP takes a different approach. Your data is stored in open formats (SQLite, JSON, CSV) on your own hardware. You can export everything at any time. The source code is publicly auditable under AGPL-3.0, so there are no hidden data transfers, no telemetry, and no surprises.')}</p>
                 <p>{t('about.why_3', 'The platform is modular - install only what you need. Community modules extend functionality without bloating the core. And because it runs locally, it works offline and performs fast even with large projects.')}</p>
               </div>
             </div>
@@ -764,7 +764,7 @@ export function LoginPage() {
                 {t('about.who_title', 'Who is it for')}
               </h3>
               <p className="text-[13px] text-content-secondary leading-relaxed mb-3">
-                {t('about.who_desc', 'OpenBusinessERP is designed for anyone who runs or supports a business, whether you trade, provide services, manufacture or build, in-house or as a consultant.')}
+                {t('about.who_desc', 'Archi Savvy Studio ERP is designed for anyone who runs or supports a business, whether you trade, provide services, manufacture or build, in-house or as a consultant.')}
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {[
@@ -812,7 +812,7 @@ export function LoginPage() {
                 {t('about.ai_title', 'About AI features')}
               </h3>
               <p className="text-[13px] text-content-secondary leading-relaxed">
-                {t('about.ai_desc', 'OpenBusinessERP includes optional AI-powered tools - quick estimation from text descriptions, smart cost suggestions, and BOQ chat assistant. These features require an API key from a provider of your choice (Anthropic, OpenAI, Google). AI is always opt-in: it only activates when you configure it, and you decide what data to send. Without an API key, all other features work fully offline.')}
+                {t('about.ai_desc', 'Archi Savvy Studio ERP includes optional AI-powered tools - quick estimation from text descriptions, smart cost suggestions, and BOQ chat assistant. These features require an API key from a provider of your choice (Anthropic, OpenAI, Google). AI is always opt-in: it only activates when you configure it, and you decide what data to send. Without an API key, all other features work fully offline.')}
               </p>
             </div>
 
@@ -820,8 +820,8 @@ export function LoginPage() {
             <div className="px-6 py-4 border-t border-border-light flex items-center justify-between">
               <div className="flex items-center gap-3 text-2xs text-content-quaternary">
                 <a href="/api/source" target="_blank" rel="noopener noreferrer" className="hover:text-content-secondary transition-colors">AGPL-3.0</a>
-                <a href="https://github.com/datadrivenconstruction/OpenBusinessERP" target="_blank" rel="noopener noreferrer" className="hover:text-content-secondary transition-colors">https://github.com/datadrivenconstruction/OpenBusinessERP</a>
-                <a href="https://github.com/datadrivenconstruction/OpenBusinessERP" target="_blank" rel="noopener noreferrer" className="hover:text-content-secondary transition-colors">GitHub</a>
+                <a href="https://github.com/Fabsye/archi-savvy-studio-erp" target="_blank" rel="noopener noreferrer" className="hover:text-content-secondary transition-colors">https://github.com/Fabsye/archi-savvy-studio-erp</a>
+                <a href="https://github.com/Fabsye/archi-savvy-studio-erp" target="_blank" rel="noopener noreferrer" className="hover:text-content-secondary transition-colors">GitHub</a>
               </div>
               <Button variant="primary" size="sm" onClick={() => setShowInfo(false)}>
                 {t('about.close', 'Got it')}

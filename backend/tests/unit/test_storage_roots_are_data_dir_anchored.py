@@ -253,7 +253,7 @@ def test_scanner_ignores_an_absolute_or_home_anchored_root() -> None:
     source = (
         "from pathlib import Path\n\n"
         'ABS = Path("/var/lib/openestimate/uploads")\n'
-        'HOME = Path("~/.openestimate/uploads").expanduser()\n'
+        'HOME = Path("~/.archisavvy-erp/uploads").expanduser()\n'
     )
     assert scan_source(source, path="fake.py") == []
 

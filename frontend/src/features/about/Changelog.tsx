@@ -77,7 +77,7 @@ const CHANGELOG: ChangelogEntry[] = [
     date: '2026-11-02',
     tag: 'NEW',
     summary:
-      'First release as OpenBusinessERP. A setup wizard for new workspaces, DIN 5008 PDF templates, a full DATEV Buchungsstapel, Stripe and Mollie payment links with the provider fee booked, foreign currency revaluation, business roles with an audit trail, a Docker image on ghcr.io and a locale-aware date field.',
+      'First release as Archi Savvy Studio ERP. A setup wizard for new workspaces, DIN 5008 PDF templates, a full DATEV Buchungsstapel, Stripe and Mollie payment links with the provider fee booked, foreign currency revaluation, business roles with an audit trail, a Docker image on ghcr.io and a locale-aware date field.',
   },
   {
     version: '18.4.0',
@@ -686,7 +686,7 @@ const CHANGELOG: ChangelogEntry[] = [
     date: '2026-07-14',
     tag: 'FIX',
     summary:
-      'The Windows desktop app now stops its background service before installing or uninstalling, so a reinstall no longer fails because the old backend process was still running and locking the file. That service is also renamed to openbusinesserp-server so the app carries one name, and your data and settings are untouched.',
+      'The Windows desktop app now stops its background service before installing or uninstalling, so a reinstall no longer fails because the old backend process was still running and locking the file. That service is also renamed to archisavvy-erp-server so the app carries one name, and your data and settings are untouched.',
   },
   {
     version: '11.7.0',

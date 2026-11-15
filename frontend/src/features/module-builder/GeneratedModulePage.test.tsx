@@ -89,7 +89,7 @@ const INSTALLED: InstalledList = {
     },
   ],
   total: 1,
-  runtime_root: '/home/oe/.openestimate/modules',
+  runtime_root: '/home/oe/.archisavvy-erp/modules',
 };
 
 const SPEC: ModuleUiSpec = {

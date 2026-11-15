@@ -12,7 +12,7 @@ manifest = ModuleManifest(
         "Resources (people/crews/equipment/subs) with skills, certifications, "
         "availability, assignments, conflict detection, skill-based matching"
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="business",
     depends=["oe_users", "oe_projects"],
     auto_install=True,

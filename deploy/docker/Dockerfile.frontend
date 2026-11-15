@@ -36,7 +36,7 @@ RUN NODE_OPTIONS=--max-old-space-size=12288 npm run build
 
 FROM nginx:alpine
 LABEL org.opencontainers.image.licenses="AGPL-3.0-or-later" \
-      org.opencontainers.image.source="https://github.com/datadrivenconstruction/OpenBusinessERP"
+      org.opencontainers.image.source="https://github.com/Fabsye/archi-savvy-studio-erp"
 
 RUN rm /etc/nginx/conf.d/default.conf
 

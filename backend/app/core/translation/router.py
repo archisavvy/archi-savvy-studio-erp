@@ -11,7 +11,7 @@ Mounted at ``/api/v1/translation``. Three endpoints:
                                                in-flight download tasks
 
 Auth: requires a logged-in user (the LLM tier needs the user's AISettings;
-the download endpoints touch the user's ``~/.openestimate`` directory).
+the download endpoints touch the user's ``~/.archisavvy-erp`` directory).
 """
 
 from __future__ import annotations

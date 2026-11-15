@@ -1,6 +1,6 @@
 """A data directory with a live postmaster must not get a second one.
 
-Two OpenBusinessERP processes on one machine share ``~/.openestimate``, and
+Two Archi Savvy Studio ERP processes on one machine share ``~/.archisavvy-erp``, and
 the desktop launcher can decide to start a backend while another one is already
 running. Whether that is survivable comes down to a single property of
 :mod:`app.core.embedded_pg`: a bring-up aimed at an occupied data directory

@@ -24,7 +24,7 @@ manifest = ModuleManifest(
         "alerts. Reads the BIM-sourced asset register; persists nothing of "
         "its own (state rides the existing asset_info JSON)."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=["oe_users", "oe_projects"],
     optional_depends=["oe_notifications"],

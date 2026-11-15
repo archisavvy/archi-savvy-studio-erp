@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Nama ini tidak dapat digunakan untuk katalog baru. Pilih nama lain.",
   "app": {
-    "name": "OpenBusinessERP",
+    "name": "Archi Savvy Studio ERP",
     "tagline": "Estimasi biaya konstruksi sumber terbuka"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Perbarui"
   },
   "dashboard": {
-    "welcome": "Selamat datang di OpenBusinessERP",
+    "welcome": "Selamat datang di Archi Savvy Studio ERP",
     "subtitle": "Ruang kerja estimasi konstruksi Anda",
     "recent_projects": "Proyek terbaru",
     "system_status": "Status sistem",

@@ -15,7 +15,7 @@ manifest = ModuleManifest(
         "back as bars, meshes, helices and lattice girders, summarise steel by "
         "bar diameter, and export the file the bending shop receives."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="business",
     depends=["oe_users", "oe_projects"],
     display_name_i18n={

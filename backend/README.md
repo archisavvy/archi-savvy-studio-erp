@@ -1,4 +1,4 @@
-# OpenBusinessERP
+# Archi Savvy Studio ERP
 
 Open-source construction cost estimation: BOQ, cost matching, CAD/BIM takeoff.
 
@@ -147,9 +147,9 @@ The lint rule set is `E, F, W, I, N, UP, B, A, C4, PT, RET, SIM`. The exact conf
 
 ## Links
 
-- Docs: https://github.com/datadrivenconstruction/OpenBusinessERP
-- Issues: https://github.com/datadrivenconstruction/OpenBusinessERP/issues
-- Source: https://github.com/datadrivenconstruction/OpenBusinessERP
+- Docs: https://github.com/Fabsye/archi-savvy-studio-erp
+- Issues: https://github.com/Fabsye/archi-savvy-studio-erp/issues
+- Source: https://github.com/Fabsye/archi-savvy-studio-erp
 
 ## License
 

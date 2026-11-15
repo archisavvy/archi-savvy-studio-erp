@@ -1,4 +1,4 @@
-# Installing OpenBusinessERP on Linux (Ubuntu / Debian)
+# Installing Archi Savvy Studio ERP on Linux (Ubuntu / Debian)
 
 This page covers the Linux-specific gotchas that the generic `pip install openbusinesserp` instruction does not. If you are on Ubuntu 23.04 or newer (including Ubuntu 26), read this first - `pip install` directly to system Python will fail.
 
@@ -115,7 +115,7 @@ Do **not** use `pip install --break-system-packages` - it can corrupt your syste
 
 ## 2. Python 3.12 vs 3.13 on Ubuntu 26
 
-OpenBusinessERP requires Python 3.12 or newer (`requires-python = ">=3.12"`). Ubuntu 26 ships with `python3.13` as the default `python3`, which works, but some heavy wheels (pyarrow, opencv-python-headless) may lag a release behind on 3.13. If `pip install` complains about missing wheels on 3.13, fall back to 3.12 explicitly:
+Archi Savvy Studio ERP requires Python 3.12 or newer (`requires-python = ">=3.12"`). Ubuntu 26 ships with `python3.13` as the default `python3`, which works, but some heavy wheels (pyarrow, opencv-python-headless) may lag a release behind on 3.13. If `pip install` complains about missing wheels on 3.13, fall back to 3.12 explicitly:
 
 ```bash
 sudo apt install -y python3.12 python3.12-venv
@@ -137,7 +137,7 @@ sudo apt install -y python3.12 python3.12-venv
 
 ## 3. System packages for source-build fallback
 
-OpenBusinessERP depends on pandas, pyarrow, opencv-python-headless, Pillow, asyncpg, psycopg2-binary, cryptography. All of these publish manylinux wheels, so a fresh `pip install` on a supported architecture downloads pre-built binaries - no compiler needed.
+Archi Savvy Studio ERP depends on pandas, pyarrow, opencv-python-headless, Pillow, asyncpg, psycopg2-binary, cryptography. All of these publish manylinux wheels, so a fresh `pip install` on a supported architecture downloads pre-built binaries - no compiler needed.
 
 If pip falls back to building from source (uncommon CPU architecture, very new Python, locked-down corporate mirror), install the development headers first:
 
@@ -213,7 +213,7 @@ For a long-running deployment, drop a unit file at `/etc/systemd/system/openbusi
 
 ```ini
 [Unit]
-Description=OpenBusinessERP
+Description=Archi Savvy Studio ERP
 After=network.target
 
 [Service]
@@ -254,4 +254,4 @@ Note: installs set up before the rename may still run under the legacy unit name
 | `openbusinesserp: command not found` after pipx | Path not refreshed | `pipx ensurepath` then open a new shell |
 | Opens with `curl` on the server, unreachable from any other machine | The default bind is `127.0.0.1` | Start it as `openbusinesserp serve --host 0.0.0.0 --port 8080` (section 6) |
 
-If you still cannot install, run `openbusinesserp doctor` (or `python -m openbusinesserp doctor`) and open an issue with the full output: https://github.com/datadrivenconstruction/OpenBusinessERP/issues
+If you still cannot install, run `openbusinesserp doctor` (or `python -m openbusinesserp doctor`) and open an issue with the full output: https://github.com/Fabsye/archi-savvy-studio-erp/issues

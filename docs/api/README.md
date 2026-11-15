@@ -1,6 +1,6 @@
-# OpenBusinessERP HTTP API
+# Archi Savvy Studio ERP HTTP API
 
-A practical guide to the OpenBusinessERP REST API. The backend is a Python 3.12+ FastAPI application (Pydantic v2, async). Every business module exposes its own router, and all of them are served from a single origin under one version prefix.
+A practical guide to the Archi Savvy Studio ERP REST API. The backend is a Python 3.12+ FastAPI application (Pydantic v2, async). Every business module exposes its own router, and all of them are served from a single origin under one version prefix.
 
 ## Base URL and version prefix
 

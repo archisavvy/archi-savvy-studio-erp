@@ -18,7 +18,7 @@ manifest = ModuleManifest(
         "the GB 50854-50862 measurement family, national and provincial quotas, "
         "VAT (13/9/6/3%), CNY, and Chinese model contract forms."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="regional",
     depends=[],
     auto_install=False,

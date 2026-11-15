@@ -1,9 +1,9 @@
 # Modules - Guide and Catalog
 
-How to build, install, and publish modules for OpenBusinessERP, plus a
+How to build, install, and publish modules for Archi Savvy Studio ERP, plus a
 map of every module that ships in the box.
 
-OpenBusinessERP is modular by design: every business feature (BOQ, BIM,
+Archi Savvy Studio ERP is modular by design: every business feature (BOQ, BIM,
 takeoff, schedule, CDE, regional BOQ packs and more) is a self-contained
 module that can be enabled, disabled, installed, or replaced without touching
 the core. The current build loads 193 modules. You enable only the parts you

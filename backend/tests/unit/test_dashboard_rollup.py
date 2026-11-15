@@ -356,7 +356,7 @@ class TestPermissionFiltering:
         ``accessible_projects`` calls ``scope_project_query``, which narrows the
         listing to the active pack's projects. Without this, the active pack is
         whatever the person running the tests last applied in the real app: the
-        record lives in ``~/.openestimate/pack_state.json`` and outlives any
+        record lives in ``~/.archisavvy-erp/pack_state.json`` and outlives any
         checkout. On a machine with a pack applied these three tests see an empty
         list and fail, while CI passes on a clean home directory. That is the
         worst shape for a test to have, because the failure follows the developer

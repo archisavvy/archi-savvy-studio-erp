@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "ไม่สามารถใช้ชื่อนี้สำหรับแคตตาล็อกใหม่ได้ กรุณาเลือกชื่ออื่น",
   "app": {
-    "name": "OpenBusinessERP",
+    "name": "Archi Savvy Studio ERP",
     "tagline": "การประมาณราคาก่อสร้างแบบโอเพนซอร์ส"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "อัปเดต"
   },
   "dashboard": {
-    "welcome": "ยินดีต้อนรับสู่ OpenBusinessERP",
+    "welcome": "ยินดีต้อนรับสู่ Archi Savvy Studio ERP",
     "subtitle": "พื้นที่ทำงานประมาณราคาก่อสร้างของคุณ",
     "recent_projects": "โครงการล่าสุด",
     "system_status": "สถานะระบบ",

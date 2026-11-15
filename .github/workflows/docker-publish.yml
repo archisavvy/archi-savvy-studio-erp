@@ -54,11 +54,11 @@ jobs:
             type=edge,branch=main
             type=sha,format=short,enable=${{ github.event_name == 'workflow_dispatch' }}
           labels: |
-            org.opencontainers.image.title=OpenBusinessERP
+            org.opencontainers.image.title=Archi Savvy Studio ERP
             org.opencontainers.image.description=Open-source ERP for small businesses: sales, purchasing, inventory, accounting
             org.opencontainers.image.vendor=DataDrivenConstruction
             org.opencontainers.image.licenses=AGPL-3.0-or-later
-            org.opencontainers.image.documentation=https://github.com/datadrivenconstruction/OpenBusinessERP/blob/main/docs/getting-started.md
+            org.opencontainers.image.documentation=https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/docs/getting-started.md
 
       - name: Decide whether to push
         id: push

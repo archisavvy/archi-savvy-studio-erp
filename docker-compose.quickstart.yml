@@ -1,4 +1,4 @@
-# OpenBusinessERP - Quickstart Docker Compose
+# Archi Savvy Studio ERP - Quickstart Docker Compose
 #
 # ⚠️  EVALUATION / LOCAL-DEMO ONLY - NOT FOR PRODUCTION
 #
@@ -102,7 +102,7 @@ services:
       ALLOWED_ORIGINS: "${OE_ALLOWED_ORIGINS:-http://localhost:8080,http://localhost}"
       # Persistent data dir - pins the unified resolver at the /data volume
       # below so BIM geometry survives container recreate (otherwise the
-      # resolver defaults to ~/.openestimate in the ephemeral container layer).
+      # resolver defaults to ~/.archisavvy-erp in the ephemeral container layer).
       OE_DATA_DIR: /data
       # Defaults
       APP_ENV: development

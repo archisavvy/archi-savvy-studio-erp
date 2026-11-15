@@ -7,7 +7,7 @@ state.
 
 Note that the standalone TranslationCache class (see
 ``app/core/translation/cache.py``) also creates the table at runtime in
-its own SQLite file (``~/.openestimate/translations/cache.db``). The
+its own SQLite file (``~/.archisavvy-erp/translations/cache.db``). The
 schemas are identical so the two stores can be merged later without a
 column reshuffle.
 

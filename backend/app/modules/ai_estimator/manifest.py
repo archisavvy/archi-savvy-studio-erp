@@ -14,7 +14,7 @@ manifest = ModuleManifest(
         "breakdowns, and assembles a validated estimate you confirm. Rates come "
         "only from the cost database, never invented by the LLM."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=[
         "oe_users",

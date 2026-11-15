@@ -1,5 +1,5 @@
 #!/bin/sh
-# Entrypoint for the unified OpenBusinessERP image.
+# Entrypoint for the unified Archi Savvy Studio ERP image.
 #
 # The backend is PostgreSQL-only (SQLite support was removed in v6.6.0)
 # and this image does not bundle a database server, so DATABASE_URL is
@@ -95,7 +95,7 @@ if [ "$db_from_parts" = 0 ]; then
         0 | false | no | off)
           echo "ERROR: DATABASE_URL is not set." >&2
           echo "" >&2
-          echo "OpenBusinessERP needs a PostgreSQL server. Either:" >&2
+          echo "Archi Savvy Studio ERP needs a PostgreSQL server. Either:" >&2
           echo "  - run the full stack from the repo root:" >&2
           echo "      docker compose -f docker-compose.quickstart.yml up" >&2
           echo "  - or point this container at your own PostgreSQL:" >&2
@@ -131,7 +131,7 @@ fi
 
 # Pin the unified data-dir resolver (app.core.storage.resolve_data_dir) at
 # the mounted /data volume. Without an explicit OE_DATA_DIR the resolver's
-# wheel/site-packages branch defaults to ~/.openestimate INSIDE the
+# wheel/site-packages branch defaults to ~/.archisavvy-erp INSIDE the
 # container - the ephemeral container layer - so BIM geometry is written
 # there, the DB row stays "ready", and a container recreate/redeploy makes
 # the geometry endpoint 404. Idempotent and operator-overridable: this only

@@ -32,7 +32,7 @@ import {
   CROSS_SURFACE_QUIET_MS,
 } from '@/stores/useReviewPromptStore';
 
-const REPO_URL = 'https://github.com/datadrivenconstruction/OpenBusinessERP';
+const REPO_URL = 'https://github.com/Fabsye/archi-savvy-studio-erp';
 const PAYPAL_DONATE_URL = 'https://www.paypal.com/donate/?hosted_button_id=DWBCLNLY2VWAA';
 const GITHUB_SPONSORS_URL = 'https://github.com/sponsors/datadrivenconstruction';
 // Clean product URL. The "?source=search" suffix this used to carry is G2's
@@ -40,13 +40,13 @@ const GITHUB_SPONSORS_URL = 'https://github.com/sponsors/datadrivenconstruction'
 const G2_REVIEWS_URL = 'https://www.g2.com/products/openbusinesserp/reviews';
 const CASE_STUDY_EMAIL = 'info@datadrivenconstruction.io';
 const CASE_STUDY_MAILTO = `mailto:${CASE_STUDY_EMAIL}?subject=${encodeURIComponent(
-  'Case study / article - OpenBusinessERP',
+  'Case study / article - Archi Savvy Studio ERP',
 )}&body=${encodeURIComponent(
-  'Hi DDC team,\n\nI have a case study / video / article about how we use OpenBusinessERP that you may want to share.\n\nLink / attachment:\n\nA few lines about the project:\n\n- ',
+  'Hi DDC team,\n\nI have a case study / video / article about how we use Archi Savvy Studio ERP that you may want to share.\n\nLink / attachment:\n\nA few lines about the project:\n\n- ',
 )}`;
 
 const SHARE_TEXT =
-  'OpenBusinessERP - free open-source business ERP (sales, purchasing, accounting, AI, 41 languages). Self-hosted. AGPL-3.0.';
+  'Archi Savvy Studio ERP - free open-source business ERP (sales, purchasing, accounting, AI, 41 languages). Self-hosted. AGPL-3.0.';
 
 const TWITTER_URL = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
   SHARE_TEXT,
@@ -355,13 +355,13 @@ function SupportUsModal({ onClose, copied, setCopied }: ModalProps) {
               className="text-xl sm:text-2xl font-bold text-content-primary leading-tight"
             >
               {t('support.modal_title', {
-                defaultValue: 'Help OpenBusinessERP grow',
+                defaultValue: 'Help Archi Savvy Studio ERP grow',
               })}
             </h2>
             <p className="mt-3 mx-auto max-w-[560px] text-sm text-content-secondary leading-relaxed">
               {t('support.modal_subtitle', {
                 defaultValue:
-                  'We build OpenBusinessERP in the open and ship every feature for free. If you share a video, case study or article about your work – there is a very high chance industry professionals will notice it: business owners, finance and operations leads follow DataDrivenConstruction across LinkedIn, X and our newsletter (tens of thousands of subscribers). One repost from us can put your project in front of the right people overnight.',
+                  'We build Archi Savvy Studio ERP in the open and ship every feature for free. If you share a video, case study or article about your work – there is a very high chance industry professionals will notice it: business owners, finance and operations leads follow DataDrivenConstruction across LinkedIn, X and our newsletter (tens of thousands of subscribers). One repost from us can put your project in front of the right people overnight.',
               })}
             </p>
           </div>
@@ -531,7 +531,7 @@ function SupportUsModal({ onClose, copied, setCopied }: ModalProps) {
               <p className="mt-1 text-xs text-content-secondary leading-relaxed">
                 {t('support.action_case_study_body', {
                   defaultValue:
-                    'Show us how you use OpenBusinessERP - a video, a case study, a LinkedIn write-up. You can send us the link directly, or just tag @DataDrivenConstruction in your post - we will spot it and re-share through our newsletter and social channels, where tens of thousands of professionals follow our work. Email for links: ',
+                    'Show us how you use Archi Savvy Studio ERP - a video, a case study, a LinkedIn write-up. You can send us the link directly, or just tag @DataDrivenConstruction in your post - we will spot it and re-share through our newsletter and social channels, where tens of thousands of professionals follow our work. Email for links: ',
                 })}
                 <span className="font-semibold text-purple-700 dark:text-purple-300">
                   {CASE_STUDY_EMAIL}
@@ -567,7 +567,7 @@ function SupportUsModal({ onClose, copied, setCopied }: ModalProps) {
                 <p className="mt-0.5 text-xs text-content-secondary leading-relaxed">
                   {t('support.action_donate_body', {
                     defaultValue:
-                      'Donations keep OpenBusinessERP free and open for everyone. They fund new regional cost data, AI estimation and support for more CAD and file formats.',
+                      'Donations keep Archi Savvy Studio ERP free and open for everyone. They fund new regional cost data, AI estimation and support for more CAD and file formats.',
                   })}
                 </p>
                 {/* Perk line - additive, inline-default only (do not fold into

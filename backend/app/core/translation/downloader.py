@@ -4,7 +4,7 @@
 
 The user triggers these from the UI - we never download anything at boot
 or at first use. Both targets land as TSVs in
-``~/.openestimate/translations/{muse,iate}/{src}-{tgt}.tsv`` so the
+``~/.archisavvy-erp/translations/{muse,iate}/{src}-{tgt}.tsv`` so the
 :mod:`app.core.translation.lookup` module finds them automatically.
 
 MUSE
@@ -61,7 +61,7 @@ _DOWNLOAD_TIMEOUT = httpx.Timeout(connect=10.0, read=300.0, write=30.0, pool=10.
 _IATE_ALLOWED_PREFIXES: tuple[str, ...] = (
     "https://iate.europa.eu/",
     "https://datadrivenconstruction.io/",
-    "https://github.com/datadrivenconstruction/OpenBusinessERP",
+    "https://github.com/Fabsye/archi-savvy-studio-erp",
     "https://github.com/datadrivenconstruction/",
     "https://raw.githubusercontent.com/datadrivenconstruction/",
 )
@@ -247,7 +247,7 @@ async def process_iate_tbx(
     For each ``<termEntry>`` we collect every ``<langSec xml:lang="…">``
     block, then for every ordered pair (src, tgt) of distinct languages
     we emit one row per (src_term, tgt_term) cross product. Output goes
-    to ``~/.openestimate/translations/iate/{src}-{tgt}.tsv``.
+    to ``~/.archisavvy-erp/translations/iate/{src}-{tgt}.tsv``.
 
     Args:
         tbx_path: Local path to the TBX file (already downloaded).

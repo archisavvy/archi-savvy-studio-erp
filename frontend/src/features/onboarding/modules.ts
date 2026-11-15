@@ -1,7 +1,7 @@
 // DDC-CWICR-OE: DataDrivenConstruction · OpenBusinessERP
 // Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
 /**
- * Module catalogue for the OpenBusinessERP onboarding wizard.
+ * Module catalogue for the Archi Savvy Studio ERP onboarding wizard.
  *
  * Each entry mirrors one of the 153 backend module manifests in
  * ``backend/app/modules/<mod>/manifest.py``. Keys follow the backend ``name``

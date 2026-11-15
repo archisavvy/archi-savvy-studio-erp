@@ -13,7 +13,7 @@ manifest = ModuleManifest(
         "bulk assign/unassign endpoints and an AECO seed-defaults helper "
         "(disciplines + phases)."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=["oe_projects"],
     auto_install=True,

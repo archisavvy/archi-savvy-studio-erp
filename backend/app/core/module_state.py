@@ -7,7 +7,7 @@ Stores state in a JSON file alongside the database.  Core modules cannot be disa
 File location resolution:
 1. Explicit ``data_dir`` argument
 2. Directory containing the SQLite database (from ``DATABASE_URL``)
-3. ``~/.openestimate/``
+3. ``~/.archisavvy-erp/``
 """
 
 from __future__ import annotations
@@ -51,7 +51,7 @@ def _resolve_data_dir(data_dir: Path | None = None) -> Path:
                 return db_path.parent
 
     # Fallback
-    fallback = Path.home() / ".openestimate"
+    fallback = Path.home() / ".archisavvy-erp"
     fallback.mkdir(parents=True, exist_ok=True)
     return fallback
 

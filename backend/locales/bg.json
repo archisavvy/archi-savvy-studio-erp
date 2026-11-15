@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Това име не може да се използва за нов каталог. Изберете друго име.",
   "app": {
-    "name": "OpenBusinessERP",
+    "name": "Archi Savvy Studio ERP",
     "tagline": "Остойностяване на строителството с отворен код"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Обновяване"
   },
   "dashboard": {
-    "welcome": "Добре дошли в OpenBusinessERP",
+    "welcome": "Добре дошли в Archi Savvy Studio ERP",
     "subtitle": "Вашето работно място за остойностяване",
     "recent_projects": "Последни проекти",
     "system_status": "Състояние на системата",

@@ -1,13 +1,13 @@
 # Getting Started
 
-Three ways to run OpenBusinessERP. Pick whichever fits your setup.
+Three ways to run Archi Savvy Studio ERP. Pick whichever fits your setup.
 
 ## Path A: Desktop App (easiest)
 
 Download the installer for your platform:
 
-- **[https://github.com/datadrivenconstruction/OpenBusinessERP/releases/latest](https://github.com/datadrivenconstruction/OpenBusinessERP/releases/latest)**
-- Or grab from the [latest GitHub release](https://github.com/datadrivenconstruction/OpenBusinessERP/releases/latest): Windows `.exe`, macOS `.dmg` (Apple Silicon), Linux `.deb` / `.AppImage`
+- **[https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest](https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest)**
+- Or grab from the [latest GitHub release](https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest): Windows `.exe`, macOS `.dmg` (Apple Silicon), Linux `.deb` / `.AppImage`
 
 Run the installer, launch the app. First launch takes about one minute to set up the local database. No Python, no Docker, no terminal required.
 
@@ -51,8 +51,8 @@ one is generated on the volume). `:edge` tracks `main`; `:X.Y.Z` pins a release.
 For a separate PostgreSQL container, download both Compose files and start the stack:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/datadrivenconstruction/OpenBusinessERP/main/docker-compose.quickstart.yml       -o docker-compose.yml
-curl -fsSL https://raw.githubusercontent.com/datadrivenconstruction/OpenBusinessERP/main/docker-compose.quickstart.image.yml -o docker-compose.override.yml
+curl -fsSL https://raw.githubusercontent.com/Fabsye/archi-savvy-studio-erp/main/docker-compose.quickstart.yml       -o docker-compose.yml
+curl -fsSL https://raw.githubusercontent.com/Fabsye/archi-savvy-studio-erp/main/docker-compose.quickstart.image.yml -o docker-compose.override.yml
 echo "POSTGRES_PASSWORD=$(openssl rand -base64 24)" >  .env
 echo "JWT_SECRET=$(openssl rand -hex 32)"           >> .env
 docker compose pull app

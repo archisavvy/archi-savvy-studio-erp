@@ -21,7 +21,7 @@ manifest = ModuleManifest(
         "Programme and portfolio tree: hierarchical nodes, project membership, "
         "cross-schedule links and portfolio-level CPM over a subtree"
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="business",
     depends=["oe_users", "oe_projects", "oe_schedule_advanced"],
     auto_install=True,

@@ -51,7 +51,7 @@ export interface LicenseTextDetail extends LicenseTextSummary {
   text: string;
 }
 
-const NOTICE_URL = 'https://github.com/datadrivenconstruction/OpenBusinessERP/blob/main/NOTICE';
+const NOTICE_URL = 'https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/NOTICE';
 
 /**
  * The bundled LGPL components and their licence texts.

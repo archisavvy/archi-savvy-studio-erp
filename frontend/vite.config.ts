@@ -236,7 +236,7 @@ export default defineConfig({
       devOptions: { enabled: false },
       includeAssets: ['favicon.svg', 'pwa/*.svg'],
       manifest: {
-        name: 'OpenBusinessERP',
+        name: 'Archi Savvy Studio ERP',
         short_name: 'OCERP',
         description:
           'Open-source construction cost estimation, BIM takeoff, BOQ, tendering and field operations.',

@@ -11,7 +11,7 @@ manifest = ModuleManifest(
     description=(
         "Subcontractor lifecycle: prequalification, certificates, agreements, payment applications, retention, rating"
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="business",
     # oe_contracts: a subcontract agreement can sit under the GC's prime
     # contract, and its pay applications roll up into that contract's claims.

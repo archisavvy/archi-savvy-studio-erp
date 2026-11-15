@@ -2,13 +2,13 @@
 
 Эта страница есть также на [English](WINDOWS_BLOCKED.md) и [Deutsch](WINDOWS_BLOCKED.de.md).
 
-Эта страница для вас, если Windows не даёт запустить OpenBusinessERP, называет его программой неизвестного или непроверенного издателя, или один раз запустила его, а с тех пор блокирует при каждом запуске.
+Эта страница для вас, если Windows не даёт запустить Archi Savvy Studio ERP, называет его программой неизвестного или непроверенного издателя, или один раз запустила его, а с тех пор блокирует при каждом запуске.
 
 Названия элементов Windows даны так, как их показывает русская Windows 11, с английским названием в скобках. В зависимости от версии Windows русская формулировка может немного отличаться.
 
 ## Почему так происходит
 
-Сборки OpenBusinessERP для Windows пока не подписаны цифровой подписью. По подписи Windows узнаёт, кто выпустил программу, и без неё считает приложение программой неизвестного издателя. На это реагируют две разные функции Windows, и для каждой нужны свои шаги:
+Сборки Archi Savvy Studio ERP для Windows пока не подписаны цифровой подписью. По подписи Windows узнаёт, кто выпустил программу, и без неё считает приложение программой неизвестного издателя. На это реагируют две разные функции Windows, и для каждой нужны свои шаги:
 
 - **Microsoft Defender SmartScreen** показывает синее окно "Система Windows защитила ваш компьютер" (Windows protected your PC), когда вы запускаете скачанную из интернета программу, которую Windows ещё не знает. SmartScreen предупреждает, но позволяет продолжить.
 - **Интеллектуальное управление приложениями** (Smart App Control) это более строгая функция Windows 11. Когда она включена, она блокирует любой программный файл, за который не может поручиться облачная служба Microsoft и у которого нет доверенной подписи. Кнопки "продолжить" и исключения для отдельного приложения у неё нет. Её сообщение называет Smart App Control и обычно говорит, что приложение или его часть заблокированы.
@@ -25,7 +25,7 @@
 
 Затем проверьте, включена ли Smart App Control: в "Безопасности Windows" откройте **Управление приложениями/браузером** (App & browser control), затем **Параметры интеллектуального управления приложениями** (Smart App Control settings). Там будет **Вкл.**, **Оценка** или **Выкл.**
 
-Какой именно файл был отклонён, видно в **Просмотре событий** (Event Viewer): **Журналы приложений и служб** > **Microsoft** > **Windows** > **CodeIntegrity** > **Operational**, событие **3077**. У настольного приложения этот файл обычно лежит в `%LOCALAPPDATA%\OpenBusinessERP\extract`, куда приложение при каждом запуске распаковывает вспомогательные файлы. Для неподписанной сборки такая блокировка ожидаема и не означает, что файл вирус.
+Какой именно файл был отклонён, видно в **Просмотре событий** (Event Viewer): **Журналы приложений и служб** > **Microsoft** > **Windows** > **CodeIntegrity** > **Operational**, событие **3077**. У настольного приложения этот файл обычно лежит в `%LOCALAPPDATA%\ArchiSavvyStudioERP\extract`, куда приложение при каждом запуске распаковывает вспомогательные файлы. Для неподписанной сборки такая блокировка ожидаема и не означает, что файл вирус.
 
 ## Шаг 2а: SmartScreen ("Система Windows защитила ваш компьютер")
 
@@ -40,13 +40,13 @@ SmartScreen спрашивает только о файлах, скачанны�
 
 Разрешить одно приложение, пока Smart App Control включена, нельзя. Сама Microsoft советует либо выключить функцию, либо попросить издателя подписать приложение, а наши сборки для Windows сейчас не подписаны. Остаются два честных варианта.
 
-**Вариант 1: оставить Smart App Control включённой и запускать приложение по-другому.** Его мы и советуем, если хотите сохранить защиту. Docker и WSL запускают OpenBusinessERP внутри небольшой среды Linux, а программы Linux Smart App Control не проверяет. Оба способа описаны ниже.
+**Вариант 1: оставить Smart App Control включённой и запускать приложение по-другому.** Его мы и советуем, если хотите сохранить защиту. Docker и WSL запускают Archi Savvy Studio ERP внутри небольшой среды Linux, а программы Linux Smart App Control не проверяет. Оба способа описаны ниже.
 
 **Вариант 2: выключить Smart App Control.** Это снижает защиту всего компьютера, а не только для нашего приложения, поэтому делайте так, только если вас это устраивает. В актуальных сборках Windows 11 функцию можно позже снова включить на той же странице, но в более старых сборках выключение окончательно до сброса или переустановки Windows. Если после выключения страница не даёт включить её обратно, у вас как раз такая сборка.
 
 1. Откройте **Безопасность Windows**, затем **Управление приложениями/браузером** и **Параметры интеллектуального управления приложениями**.
 2. Выберите **Выкл.** и подтвердите.
-3. Снова запустите OpenBusinessERP.
+3. Снова запустите Archi Savvy Studio ERP.
 
 Антивирус Microsoft Defender и SmartScreen в любом случае остаются включёнными.
 
@@ -55,11 +55,11 @@ SmartScreen спрашивает только о файлах, скачанны�
 ## Запуск через Docker (работает при включённой Smart App Control)
 
 1. Установите **Docker Desktop** с docker.com и один раз запустите его. Docker Desktop бесплатен для личного использования, обучения и небольших компаний; крупным компаниям нужна платная подписка Docker.
-2. Создайте папку, например `C:\OpenBusinessERP`, откройте в ней **Windows PowerShell** и выполните:
+2. Создайте папку, например `C:\ArchiSavvyStudioERP`, откройте в ней **Windows PowerShell** и выполните:
 
 ```powershell
-curl.exe -fsSL https://raw.githubusercontent.com/datadrivenconstruction/OpenBusinessERP/main/docker-compose.quickstart.yml -o docker-compose.yml
-curl.exe -fsSL https://raw.githubusercontent.com/datadrivenconstruction/OpenBusinessERP/main/docker-compose.quickstart.image.yml -o docker-compose.override.yml
+curl.exe -fsSL https://raw.githubusercontent.com/Fabsye/archi-savvy-studio-erp/main/docker-compose.quickstart.yml -o docker-compose.yml
+curl.exe -fsSL https://raw.githubusercontent.com/Fabsye/archi-savvy-studio-erp/main/docker-compose.quickstart.image.yml -o docker-compose.override.yml
 function New-Secret([int]$n) { $b = New-Object byte[] $n; [Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($b); -join ($b | ForEach-Object { $_.ToString("x2") }) }
 Set-Content -Path .env -Encoding ascii -Value @("POSTGRES_PASSWORD=$(New-Secret 24)", "JWT_SECRET=$(New-Secret 32)")
 docker compose pull app
@@ -105,12 +105,12 @@ py -3.12 -m openbusinesserp
 В каждом релизе рядом с установщиками лежит файл `SHA256SUMS`. Скачайте его в ту же папку, что и установщик, откройте там **Windows PowerShell** и выполните:
 
 ```powershell
-$exe = Get-ChildItem OpenBusinessERP_*_x64-setup.exe | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$exe = Get-ChildItem ArchiSavvyStudioERP_*_x64-setup.exe | Sort-Object LastWriteTime -Descending | Select-Object -First 1
 $line = Select-String -Path SHA256SUMS -Pattern $exe.Name -SimpleMatch
 (Get-FileHash $exe.FullName -Algorithm SHA256).Hash -eq $line.Line.Split(' ')[0]
 ```
 
-`True` значит, что файл в точности тот, который собрала наша релизная сборка. `False` значит, что по дороге он повреждён или изменён, и запускать его не надо. Красное сообщение об ошибке вместо `True` или `False` значит, что `SHA256SUMS` в папке из другого релиза, чем установщик: скачайте оба файла с одной и той же страницы релиза. Если остаётся `False`, скачайте файл заново со [страницы релиза на GitHub](https://github.com/datadrivenconstruction/OpenBusinessERP/releases/latest). Проверка подтверждает, что файл цел. На решение SmartScreen или Smart App Control она не влияет. Для более строгой проверки у самого `SHA256SUMS` есть подпись Sigstore, она описана в [RELEASE_SIGNATURE_INVENTORY.md](RELEASE_SIGNATURE_INVENTORY.md).
+`True` значит, что файл в точности тот, который собрала наша релизная сборка. `False` значит, что по дороге он повреждён или изменён, и запускать его не надо. Красное сообщение об ошибке вместо `True` или `False` значит, что `SHA256SUMS` в папке из другого релиза, чем установщик: скачайте оба файла с одной и той же страницы релиза. Если остаётся `False`, скачайте файл заново со [страницы релиза на GitHub](https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest). Проверка подтверждает, что файл цел. На решение SmartScreen или Smart App Control она не влияет. Для более строгой проверки у самого `SHA256SUMS` есть подпись Sigstore, она описана в [RELEASE_SIGNATURE_INVENTORY.md](RELEASE_SIGNATURE_INVENTORY.md).
 
 ## Если ничего не помогло
 

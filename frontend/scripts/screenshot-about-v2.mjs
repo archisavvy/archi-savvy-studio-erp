@@ -37,11 +37,11 @@ async function main() {
 
   // Anchor on the section H2 texts so it doesn't drift when content moves.
   const anchors = [
-    { name: 'header', selector: 'h1:has-text("OpenBusinessERP")' },
+    { name: 'header', selector: 'h1:has-text("Archi Savvy Studio ERP")' },
     { name: 'platform', selector: 'h2:has-text("Platform Capabilities")' },
     { name: 'about-project', selector: 'h2:has-text("About the project")' },
     { name: 'consulting', selector: 'h2:has-text("Consulting")' },
-    { name: 'support', selector: 'h2:has-text("Support OpenBusinessERP")' },
+    { name: 'support', selector: 'h2:has-text("Support Archi Savvy Studio ERP")' },
     { name: 'guidebook', selector: 'h2:has-text("Data-Driven Construction")' },
     { name: 'docs', selector: 'h2:has-text("Documentation")' },
     { name: 'license', selector: 'h2:has-text("License & Open Source")' },

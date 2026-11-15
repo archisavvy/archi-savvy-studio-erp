@@ -127,7 +127,7 @@ class TestPersistDir:
         home = tmp_path / "home"
         home.mkdir()
         monkeypatch.setattr(pathlib.Path, "home", classmethod(lambda _cls: home))
-        assert _jwt_secret_persist_dir() == home / ".openestimate"
+        assert _jwt_secret_persist_dir() == home / ".archisavvy-erp"
 
     def test_falls_back_when_home_unresolvable(self, monkeypatch: pytest.MonkeyPatch) -> None:
         # No data-dir override (the autouse fixture cleared them) and Path.home()
@@ -136,7 +136,7 @@ class TestPersistDir:
             raise RuntimeError("no home directory")
 
         monkeypatch.setattr(pathlib.Path, "home", classmethod(_boom))
-        assert _jwt_secret_persist_dir() == pathlib.Path(".openestimate")
+        assert _jwt_secret_persist_dir() == pathlib.Path(".archisavvy-erp")
 
 
 class TestEnsurePersistentJwtSecret:

@@ -44,7 +44,7 @@ def env(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> pytest.MonkeyPatch:
     """A clean environment whose data dir is a temporary one.
 
     ``OE_DATA_DIR`` is honoured by ``_jwt_secret_persist_dir``, so the secret
-    lands under tmp_path rather than in the developer's own ~/.openestimate.
+    lands under tmp_path rather than in the developer's own ~/.archisavvy-erp.
     """
     for name in ("APP_ENV", "OE_APP_ENV", "JWT_SECRET", "OE_JWT_SECRET", "OE_DESKTOP", "DATA_DIR", "OE_CLI_DATA_DIR"):
         monkeypatch.delenv(name, raising=False)

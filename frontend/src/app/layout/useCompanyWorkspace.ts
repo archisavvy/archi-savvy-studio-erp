@@ -118,7 +118,7 @@ export const CONSTRUCTION_PRESET_KEYS: ReadonlySet<string> = new Set([
   'sustainability_esg',
 ]);
 
-/** OpenBusinessERP defaults to business: only an explicit construction profile opts out. */
+/** Archi Savvy Studio ERP defaults to business: only an explicit construction profile opts out. */
 export function isBusinessPreset(key: string | null): boolean {
   return key === null || BUSINESS_PRESET_KEYS.has(key) || !CONSTRUCTION_PRESET_KEYS.has(key);
 }

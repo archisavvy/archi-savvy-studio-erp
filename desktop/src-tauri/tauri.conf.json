@@ -1,9 +1,9 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "OpenBusinessERP",
+  "productName": "Archi Savvy Studio ERP",
   "version": "18.5.0",
-  "identifier": "io.openbusinesserp.desktop",
-  "mainBinaryName": "OpenBusinessERP",
+  "identifier": "com.archisavvy.studioerp",
+  "mainBinaryName": "ArchiSavvyStudioERP",
   "build": {
     "frontendDist": "../../frontend/dist",
     "beforeBuildCommand": "",
@@ -15,7 +15,7 @@
       {
         "label": "main",
         "url": "splash.html",
-        "title": "OpenBusinessERP",
+        "title": "Archi Savvy Studio ERP",
         "width": 1280,
         "height": 800,
         "minWidth": 1024,
@@ -30,7 +30,7 @@
     "trayIcon": {
       "iconPath": "icons/icon.png",
       "iconAsTemplate": false,
-      "tooltip": "OpenBusinessERP"
+      "tooltip": "Archi Savvy Studio ERP"
     },
     "security": {
       "csp": null
@@ -40,11 +40,11 @@
     "active": true,
     "targets": "all",
     "createUpdaterArtifacts": false,
-    "publisher": "DataDrivenConstruction",
-    "copyright": "Copyright DataDrivenConstruction. Licensed under AGPL-3.0.",
+    "publisher": "Archi Savvy Studio",
+    "copyright": "Copyright Archi Savvy Studio (modifications). Based on OpenBusinessERP, Copyright Artem Boiko / DataDrivenConstruction. Licensed under AGPL-3.0-or-later.",
     "category": "Business",
-    "shortDescription": "Open-source construction cost estimation and BOQ platform.",
-    "longDescription": "OpenBusinessERP is an open-source platform for construction cost estimation, bills of quantities, and data validation, with CAD/BIM quantity takeoff and multi-currency support across 29 locales. It runs fully local on an embedded database, so there is no Python install or extra setup to manage. Import, validate, estimate, and report from a single desktop app that works offline.",
+    "shortDescription": "ERP for architecture and design practices.",
+    "longDescription": "Archi Savvy Studio ERP is practice-management and ERP software for architecture and design studios: projects, clients, quotes, invoices, accounting, documents, drawings and cost planning. It runs fully local on an embedded database and works offline. It is based on OpenBusinessERP (open source) and licensed under AGPL-3.0.",
     "licenseFile": "../../LICENSE",
     "icon": [
       "icons/32x32.png",
@@ -54,7 +54,7 @@
       "icons/icon.ico"
     ],
     "externalBin": [
-      "binaries/openbusinesserp-server"
+      "binaries/archisavvy-erp-server"
     ],
     "resources": {
       "resources/converters": "converters"
@@ -107,7 +107,9 @@
         "bundleMediaFramework": false
       },
       "deb": {
-        "depends": ["libwebkit2gtk-4.1-0"],
+        "depends": [
+          "libwebkit2gtk-4.1-0"
+        ],
         "section": "science"
       },
       "rpm": {

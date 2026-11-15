@@ -3,11 +3,11 @@
 ``openbusinesserp serve --data-dir X`` resolves every path through the
 data directory: the embedded cluster, the uploads, the demo credentials. The
 one thing that did not follow was the JWT signing secret. ``main.py`` computed
-its own location, ``~/.openestimate/.jwt-secret``, while ``app.config`` already
+its own location, ``~/.archisavvy-erp/.jwt-secret``, while ``app.config`` already
 had the resolver that honours ``OE_DATA_DIR``, ``DATA_DIR`` and
 ``OE_CLI_DATA_DIR``. Measured on a fresh 17.0.2 install started with
 ``--data-dir Q:\\data-a``: the boot log said "loaded persisted dev secret from
-C:\\Users\\<user>\\.openestimate\\.jwt-secret" and the data directory held no
+C:\\Users\\<user>\\.archisavvy-erp\\.jwt-secret" and the data directory held no
 secret at all. Two instances on one machine therefore signed with one key, and
 a data directory copied to another machine arrived without its secret.
 
@@ -72,7 +72,7 @@ def test_the_secret_is_created_in_the_data_directory_not_under_home(home: pathli
     assert path.read_text(encoding="utf-8") == secret
     assert len(secret.encode("utf-8")) >= _JWT_SECRET_MIN_LENGTH
     # The two places the old code wrote to or read from stay untouched.
-    assert not (home / ".openestimate").exists()
+    assert not (home / ".archisavvy-erp").exists()
     assert not (home / ".openestimator").exists()
 
 
@@ -135,7 +135,7 @@ def test_a_default_install_keeps_its_secret_where_it_always_was(home: pathlib.Pa
     """No override means the CLI's default data directory, so nobody is logged out by this change."""
     _, path, _ = load_or_create_dev_jwt_secret()
 
-    assert path == home / ".openestimate" / ".jwt-secret"
+    assert path == home / ".archisavvy-erp" / ".jwt-secret"
     assert path.is_file()
 
 

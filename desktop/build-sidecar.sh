@@ -4,7 +4,7 @@
 # Usage: ./desktop/build-sidecar.sh [target-triple]
 #
 # The output binary is placed in desktop/src-tauri/binaries/
-# with the Tauri-required naming: openbusinesserp-server-{target-triple}
+# with the Tauri-required naming: archisavvy-erp-server-{target-triple}
 #
 # Target triples:
 #   x86_64-pc-windows-msvc    (Windows)
@@ -43,7 +43,7 @@ detect_target() {
 }
 
 TARGET="${1:-$(detect_target)}"
-echo "=== Building OpenBusinessERP sidecar for $TARGET ==="
+echo "=== Building Archi Savvy Studio ERP sidecar for $TARGET ==="
 
 # Step 1: Build frontend
 echo "[1/3] Building frontend..."
@@ -70,8 +70,8 @@ fi
 
 # onefile build: PyInstaller writes a single executable directly into distpath,
 # not a onedir subfolder.
-SRC="$SCRIPT_DIR/dist/openbusinesserp-server${EXT}"
-DST="$BINARIES_DIR/openbusinesserp-server-${TARGET}${EXT}"
+SRC="$SCRIPT_DIR/dist/archisavvy-erp-server${EXT}"
+DST="$BINARIES_DIR/archisavvy-erp-server-${TARGET}${EXT}"
 
 if [ -f "$SRC" ]; then
     cp "$SRC" "$DST"

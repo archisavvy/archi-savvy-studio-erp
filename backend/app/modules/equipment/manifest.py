@@ -11,7 +11,7 @@ manifest = ModuleManifest(
     description=(
         "Owned/rented equipment fleet with telemetry, maintenance scheduling, inspections, internal rental billing"
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="business",
     depends=["oe_users", "oe_projects"],
     auto_install=True,

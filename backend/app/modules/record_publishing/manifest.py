@@ -15,7 +15,7 @@ manifest = ModuleManifest(
         "action. A thin orchestrator over the record renderers, the storage "
         "backend and the file-transmittals engine, so it adds no tables."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="core",
     depends=["oe_projects", "oe_users"],
     auto_install=True,

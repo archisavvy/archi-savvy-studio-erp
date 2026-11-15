@@ -1341,7 +1341,7 @@ exports[`Visual Regression - DashboardPage > renders loading/skeleton state 1`] 
       />
       <a
         class="group/oss inline-flex items-center gap-2 text-xs font-medium text-content-secondary hover:text-content-primary transition-colors"
-        href="https://github.com/datadrivenconstruction/OpenBusinessERP"
+        href="https://github.com/Fabsye/archi-savvy-studio-erp"
         rel="noopener noreferrer"
         target="_blank"
       >

@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in OpenBusinessERP,
+If you discover a security vulnerability in Archi Savvy Studio ERP,
 please report it responsibly.
 
 **DO NOT** open a public GitHub issue for security vulnerabilities.
@@ -11,7 +11,7 @@ Public disclosure before a fix is available puts users at risk.
 ### How to Report
 
 1. **GitHub Security Advisories** (preferred):
-   [Create a new advisory](https://github.com/datadrivenconstruction/OpenBusinessERP/security/advisories/new)
+   [Create a new advisory](https://github.com/Fabsye/archi-savvy-studio-erp/security/advisories/new)
 
 2. **Email:** `info@datadrivenconstruction.io`
 
@@ -83,7 +83,7 @@ pull request; report it privately first.
 
 ## Self-Hosting Security Checklist
 
-If you deploy OpenBusinessERP on your own infrastructure:
+If you deploy Archi Savvy Studio ERP on your own infrastructure:
 
 - [ ] Change `JWT_SECRET` from the default value
 - [ ] Use HTTPS (TLS 1.2+) in production - never expose HTTP

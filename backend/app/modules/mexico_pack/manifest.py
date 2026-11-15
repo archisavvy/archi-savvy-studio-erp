@@ -21,7 +21,7 @@ manifest = ModuleManifest(
         "invoicing fields, social-housing bodies (INFONAVIT, FOVISSSTE, CONAVI), "
         "IMSS and NOM-031-STPS site safety, 32 states and MXN."
     ),
-    author="OpenBusinessERP Core Team",
+    author="Archi Savvy Studio ERP Core Team",
     category="regional",
     depends=[],
     auto_install=False,

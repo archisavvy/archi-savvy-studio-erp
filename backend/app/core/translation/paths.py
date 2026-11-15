@@ -2,7 +2,7 @@
 # Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
 """Filesystem layout for downloaded dictionaries.
 
-All dictionary state lives under ``~/.openestimate/translations/``
+All dictionary state lives under ``~/.archisavvy-erp/translations/``
 unless overridden:
 
     translations/
@@ -31,7 +31,7 @@ def translations_root(root: str | None = None) -> Path:
     if root:
         path = Path(root).expanduser()
     else:
-        path = Path.home() / ".openestimate" / "translations"
+        path = Path.home() / ".archisavvy-erp" / "translations"
     path.mkdir(parents=True, exist_ok=True)
     return path
 

@@ -255,7 +255,7 @@ const CONNECTORS: ConnectorDef[] = [
     setupSteps: [
       { text: 'Open your Teams channel' },
       { text: 'Click "..." → "Connectors" → "Incoming Webhook"' },
-      { text: 'Name it "OpenBusinessERP" and click "Create"' },
+      { text: 'Name it "Archi Savvy Studio ERP" and click "Create"' },
       { text: 'Copy the webhook URL' },
       { text: 'Paste it below' },
     ],
