@@ -18,5 +18,6 @@ Archi Savvy Studio ERP is a modified version of OpenBusinessERP.
 | 2026-11-15 | The original project's own promotion (donations, newsletter, review requests, consulting, founder profile, book) switched off through `frontend/src/shared/lib/brand.ts`. The code is still present. |
 | 2026-11-15 | About page: added a notice naming this edition, its source code and the original work. |
 | 2026-11-15 | Upstream CI, publishing and docs workflows moved to `.github/workflows-disabled/`. The desktop build, desktop check, release signing and SBOM workflows stay. Added `windows-build.yml`. |
+| 2026-11-15 | Dependabot configuration moved to `.github/workflows-disabled/` so the new repository is not flooded with automated update requests. |
 
 The full, line-by-line record is the git history of this repository.
