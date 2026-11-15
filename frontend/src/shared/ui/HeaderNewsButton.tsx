@@ -4,7 +4,7 @@
  * HeaderNewsButton - a "What's new" entry point in the top app header.
  *
  * Clicking opens a small popup that links to the latest release news on the
- * marketing site (https://github.com/Fabsye/archi-savvy-studio-erp). We open the site in a
+ * marketing site (https://github.com/archisavvy/archi-savvy-studio-erp). We open the site in a
  * new tab rather than embedding it: the site sends X-Frame-Options SAMEORIGIN,
  * so a self-hosted or desktop build (a different origin) could not iframe it,
  * and a real navigation is what makes the visit count in the site's own
@@ -43,8 +43,8 @@ const LAST_SEEN_KEY = 'oe.last_seen_version';
  * (newest first), so it never needs a per-release URL bump.
  */
 const NEWS_URL =
-  'https://github.com/Fabsye/archi-savvy-studio-erp?utm_source=erp_app&utm_medium=news_button';
-const COOKIE_POLICY_URL = 'https://github.com/Fabsye/archi-savvy-studio-erp';
+  'https://github.com/archisavvy/archi-savvy-studio-erp?utm_source=erp_app&utm_medium=news_button';
+const COOKIE_POLICY_URL = 'https://github.com/archisavvy/archi-savvy-studio-erp';
 
 /**
  * True when the current release is a newer feature version (major.minor)
@@ -168,7 +168,7 @@ export function HeaderNewsButton({ className }: { className?: string }) {
                 <div className="min-w-0 flex-1">
                   <h2 className="text-sm font-semibold text-content-primary">{label}</h2>
                   <p className="mt-0.5 text-xs text-content-tertiary">
-                    {t('header.news.source', { defaultValue: 'From https://github.com/Fabsye/archi-savvy-studio-erp' })}
+                    {t('header.news.source', { defaultValue: 'From https://github.com/archisavvy/archi-savvy-studio-erp' })}
                   </p>
                 </div>
                 <button
@@ -192,7 +192,7 @@ export function HeaderNewsButton({ className }: { className?: string }) {
                 <p className="text-xs leading-relaxed text-content-tertiary">
                   {t('header.news.cookie_note', {
                     defaultValue:
-                      'This opens https://github.com/Fabsye/archi-savvy-studio-erp in a new tab. The site uses anonymised analytics cookies; you can accept or decline there.',
+                      'This opens https://github.com/archisavvy/archi-savvy-studio-erp in a new tab. The site uses anonymised analytics cookies; you can accept or decline there.',
                   })}{' '}
                   <a
                     href={COOKIE_POLICY_URL}

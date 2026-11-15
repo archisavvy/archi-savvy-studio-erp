@@ -41,7 +41,7 @@ function versionCheck(over: Record<string, unknown> = {}) {
     current_version: '15.0.0',
     latest_version: '15.1.0',
     update_available: true,
-    release_url: 'https://github.com/Fabsye/archi-savvy-studio-erp/releases/tag/v15.1.0',
+    release_url: 'https://github.com/archisavvy/archi-savvy-studio-erp/releases/tag/v15.1.0',
     release_notes: '',
     published_at: '2026-08-19T09:00:00Z',
     assets: [],
@@ -211,7 +211,7 @@ describe('the advice matches the build the reader is running', () => {
       answering(
         versionCheck({
           self_upgrade_supported: false,
-          release_url: 'https://github.com/Fabsye/archi-savvy-studio-erp/releases',
+          release_url: 'https://github.com/archisavvy/archi-savvy-studio-erp/releases',
         }),
       ),
     );
@@ -225,7 +225,7 @@ describe('the advice matches the build the reader is running', () => {
     const section = advice.closest('section');
     const link = section?.querySelector('a[href]');
     expect(link?.getAttribute('href')).toBe(
-      'https://github.com/Fabsye/archi-savvy-studio-erp/releases',
+      'https://github.com/archisavvy/archi-savvy-studio-erp/releases',
     );
   });
 
@@ -294,7 +294,7 @@ describe('the excerpt reads as prose', () => {
   // and falls through to the excerpt, which is where the raw line would be
   // read back to the user as if it were a sentence.
   const LONG_BULLET =
-    '* fix(gaeb): see https://github.com/Fabsye/archi-savvy-studio-erp/pull/1 - ' +
+    '* fix(gaeb): see https://github.com/archisavvy/archi-savvy-studio-erp/pull/1 - ' +
     'the export summary stops claiming prices a bill does not have. '.repeat(4);
 
   it('quotes the paragraph without the generated commit list', async () => {

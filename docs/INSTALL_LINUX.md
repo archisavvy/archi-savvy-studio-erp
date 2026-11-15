@@ -254,4 +254,4 @@ Note: installs set up before the rename may still run under the legacy unit name
 | `openbusinesserp: command not found` after pipx | Path not refreshed | `pipx ensurepath` then open a new shell |
 | Opens with `curl` on the server, unreachable from any other machine | The default bind is `127.0.0.1` | Start it as `openbusinesserp serve --host 0.0.0.0 --port 8080` (section 6) |
 
-If you still cannot install, run `openbusinesserp doctor` (or `python -m openbusinesserp doctor`) and open an issue with the full output: https://github.com/Fabsye/archi-savvy-studio-erp/issues
+If you still cannot install, run `openbusinesserp doctor` (or `python -m openbusinesserp doctor`) and open an issue with the full output: https://github.com/archisavvy/archi-savvy-studio-erp/issues

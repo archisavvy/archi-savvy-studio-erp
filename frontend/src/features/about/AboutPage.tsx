@@ -207,13 +207,13 @@ export function AboutPage() {
         <div className="text-center lg:text-left">
           {!isBusiness && (
           <a
-            href="https://github.com/Fabsye/archi-savvy-studio-erp?utm_source=app&utm_medium=about"
+            href="https://github.com/archisavvy/archi-savvy-studio-erp?utm_source=app&utm_medium=about"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-oe-blue hover:text-oe-blue-text transition-colors mb-4"
           >
             <Globe size={13} />
-            https://github.com/Fabsye/archi-savvy-studio-erp
+            https://github.com/archisavvy/archi-savvy-studio-erp
             <ExternalLink size={11} />
           </a>)}
           <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
@@ -638,7 +638,7 @@ export function AboutPage() {
 
           {/* ── Right column — DDC ecosystem (2 of 5 cols on wide screens) ──
               Three subsections, matching the "Built on DataDrivenConstruction"
-              band on https://github.com/Fabsye/archi-savvy-studio-erp:
+              band on https://github.com/archisavvy/archi-savvy-studio-erp:
                 1. Flagship products (datadrivenconstruction.io)
                 2. Open source on GitHub
                 3. Find us across the network (social) */}
@@ -752,7 +752,7 @@ export function AboutPage() {
       </Card>)}
 
       {/* Consulting Services — matches the "Build 01 / Workshops 02 / Consulting 03"
-          structure on https://github.com/Fabsye/archi-savvy-studio-erp so users coming from the marketing
+          structure on https://github.com/archisavvy/archi-savvy-studio-erp so users coming from the marketing
           page see the same offering shape inside the product. */}
       {SHOW_UPSTREAM_PROMOTION && (<Card>
         <div className="p-6">
@@ -922,7 +922,7 @@ export function AboutPage() {
               {/* 4 action cards, stacked vertically to keep the section dense */}
               <div className="space-y-2">
                 <a
-                  href="https://github.com/Fabsye/archi-savvy-studio-erp"
+                  href="https://github.com/archisavvy/archi-savvy-studio-erp"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-3 rounded-lg border border-border-light bg-surface-primary/80 backdrop-blur-sm px-3.5 py-3 hover:border-amber-400/60 hover:bg-amber-50/60 dark:hover:bg-amber-900/15 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-oe-blue focus-visible:ring-offset-1"
@@ -1190,12 +1190,12 @@ export function AboutPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {[
-                { id: 'quickstart', href: 'https://github.com/Fabsye/archi-savvy-studio-erp/tree/main/docs', label: t('about.docs_pop_quickstart', { defaultValue: 'Quick start - Docker compose' }) },
-                { id: 'bim', href: 'https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/docs/BIM-STORAGE-ARCHITECTURE.md', label: t('about.docs_pop_bim', { defaultValue: 'Import BIM (RVT/IFC) → BOQ' }) },
-                { id: 'gaeb', href: 'https://github.com/Fabsye/archi-savvy-studio-erp/tree/main/docs', label: t('about.docs_pop_gaeb', { defaultValue: 'GAEB X83/X84 import & export' }) },
-                { id: 'takeoff', href: 'https://github.com/Fabsye/archi-savvy-studio-erp/tree/main/docs', label: t('about.docs_pop_takeoff', { defaultValue: 'PDF takeoff with annotations' }) },
-                { id: 'sdk', href: 'https://github.com/Fabsye/archi-savvy-studio-erp/tree/main/docs/module-development', label: t('about.docs_pop_sdk', { defaultValue: 'Module SDK · write a plugin' }) },
-                { id: 'deploy', href: 'https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/docs/INSTALL_LINUX.md', label: t('about.docs_pop_deploy', { defaultValue: 'VPS deployment guide' }) },
+                { id: 'quickstart', href: 'https://github.com/archisavvy/archi-savvy-studio-erp/tree/main/docs', label: t('about.docs_pop_quickstart', { defaultValue: 'Quick start - Docker compose' }) },
+                { id: 'bim', href: 'https://github.com/archisavvy/archi-savvy-studio-erp/blob/main/docs/BIM-STORAGE-ARCHITECTURE.md', label: t('about.docs_pop_bim', { defaultValue: 'Import BIM (RVT/IFC) → BOQ' }) },
+                { id: 'gaeb', href: 'https://github.com/archisavvy/archi-savvy-studio-erp/tree/main/docs', label: t('about.docs_pop_gaeb', { defaultValue: 'GAEB X83/X84 import & export' }) },
+                { id: 'takeoff', href: 'https://github.com/archisavvy/archi-savvy-studio-erp/tree/main/docs', label: t('about.docs_pop_takeoff', { defaultValue: 'PDF takeoff with annotations' }) },
+                { id: 'sdk', href: 'https://github.com/archisavvy/archi-savvy-studio-erp/tree/main/docs/module-development', label: t('about.docs_pop_sdk', { defaultValue: 'Module SDK · write a plugin' }) },
+                { id: 'deploy', href: 'https://github.com/archisavvy/archi-savvy-studio-erp/blob/main/docs/INSTALL_LINUX.md', label: t('about.docs_pop_deploy', { defaultValue: 'VPS deployment guide' }) },
               ].map(topic => (
                 <a
                   key={topic.id}
@@ -1213,7 +1213,7 @@ export function AboutPage() {
             </div>
 
             <div className="mt-auto pt-4">
-              <a href="https://github.com/Fabsye/archi-savvy-studio-erp/tree/main/docs" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/archisavvy/archi-savvy-studio-erp/tree/main/docs" target="_blank" rel="noopener noreferrer">
                 <Button variant="primary" size="md" icon={<BookOpen size={15} />}>
                   {t('about.docs_open', { defaultValue: 'Open Docs' })}
                 </Button>

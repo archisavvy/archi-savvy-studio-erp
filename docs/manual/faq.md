@@ -57,10 +57,10 @@ You cannot edit it. Cancel it, or issue a credit note and a new invoice.
 Check that the invoice is issued and open, that the amount is right and that the bank account is the one you imported into. Book the line manually if needed.
 
 **Windows blocks the installer.**
-The installer is not signed yet. Follow the [desktop guide](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/docs/desktop/INSTALL.md).
+The installer is not signed yet. Follow the [desktop guide](https://github.com/archisavvy/archi-savvy-studio-erp/blob/main/docs/desktop/INSTALL.md).
 
 **I forgot the admin password.**
 On a pip or source install, an existing user can be promoted with `openbusinesserp promote-admin <email>` when no admin is left. The password reset uses email, so set up mail first.
 
 **Where do I report a bug?**
-On [GitHub Issues](https://github.com/Fabsye/archi-savvy-studio-erp/issues). Give the version, what you did, what you expected and what happened.
+On [GitHub Issues](https://github.com/archisavvy/archi-savvy-studio-erp/issues). Give the version, what you did, what you expected and what happened.

@@ -53,14 +53,14 @@ interface Props {
 // attribute conversions back to this in-app CTA so we can measure
 // whether the popup pays for itself.
 //
-// 2026-05-13: pointed at https://github.com/Fabsye/archi-savvy-studio-erp (the canonical
+// 2026-05-13: pointed at https://github.com/archisavvy/archi-savvy-studio-erp (the canonical
 // product marketing site, confirmed 200 with a real Contact page).
-// The earlier-tried https://github.com/Fabsye/archi-savvy-studio-erp / openestimate.io hosts are
+// The earlier-tried https://github.com/archisavvy/archi-savvy-studio-erp / openestimate.io hosts are
 // parked / 405 and dead-ended the buttons.
 const URL_COMMUNITY =
-  'https://github.com/Fabsye/archi-savvy-studio-erp/issues/new?topic=module_proposal_public&utm_source=oe_app&utm_medium=sidebar_cta&utm_campaign=request_module';
+  'https://github.com/archisavvy/archi-savvy-studio-erp/issues/new?topic=module_proposal_public&utm_source=oe_app&utm_medium=sidebar_cta&utm_campaign=request_module';
 const URL_PRIVATE =
-  'https://github.com/Fabsye/archi-savvy-studio-erp/issues/new?topic=module_proposal_private&utm_source=oe_app&utm_medium=sidebar_cta&utm_campaign=request_module_bespoke';
+  'https://github.com/archisavvy/archi-savvy-studio-erp/issues/new?topic=module_proposal_private&utm_source=oe_app&utm_medium=sidebar_cta&utm_campaign=request_module_bespoke';
 
 export function RequestCustomModuleDialog({ open, onClose }: Props) {
   const { t } = useTranslation();

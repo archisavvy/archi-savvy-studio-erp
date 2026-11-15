@@ -2,7 +2,7 @@
 // Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
 /**
  * DemoBanner — persistent warning banner shown only on the public hosted
- * demo (https://github.com/Fabsye/archi-savvy-studio-erp), driven by the backend's
+ * demo (https://github.com/archisavvy/archi-savvy-studio-erp), driven by the backend's
  * `OE_DEMO_MODE=true` env var. Tells visitors:
  *
  *   1. This is a demo. Do not upload real data or confidential documents.
@@ -79,7 +79,7 @@ export function DemoBanner() {
         <span className="flex items-center gap-2.5">
           <span className="opacity-80">{t('demo_banner.strip_or_download')}</span>
           <a
-            href="https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest"
+            href="https://github.com/archisavvy/archi-savvy-studio-erp/releases/latest"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 underline underline-offset-2 hover:text-amber-900 dark:hover:text-amber-50"
@@ -88,7 +88,7 @@ export function DemoBanner() {
             Windows
           </a>
           <a
-            href="https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest"
+            href="https://github.com/archisavvy/archi-savvy-studio-erp/releases/latest"
             target="_blank"
             rel="noopener noreferrer"
             className="underline underline-offset-2 hover:text-amber-900 dark:hover:text-amber-50"
@@ -96,7 +96,7 @@ export function DemoBanner() {
             macOS
           </a>
           <a
-            href="https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest"
+            href="https://github.com/archisavvy/archi-savvy-studio-erp/releases/latest"
             target="_blank"
             rel="noopener noreferrer"
             className="underline underline-offset-2 hover:text-amber-900 dark:hover:text-amber-50"
@@ -220,7 +220,7 @@ export function DemoBanner() {
             {/* Footer */}
             <div className="flex items-center justify-end gap-2 px-6 py-4 border-t border-border-light">
               <a
-                href="https://github.com/Fabsye/archi-savvy-studio-erp"
+                href="https://github.com/archisavvy/archi-savvy-studio-erp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-content-secondary hover:text-content-primary border border-border-light rounded-lg hover:bg-surface-secondary transition-colors"

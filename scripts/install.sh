@@ -2,7 +2,7 @@
 # Archi Savvy Studio ERP - One-Line Installer for Linux / macOS
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/Fabsye/archi-savvy-studio-erp/main/scripts/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/archisavvy/archi-savvy-studio-erp/main/scripts/install.sh | bash
 #
 # What it does:
 #   1. If Docker is installed → runs via docker compose
@@ -22,7 +22,7 @@ OE_VERSION="${OE_VERSION:-latest}"
 OE_INSTALL_DIR="${OE_INSTALL_DIR:-$HOME/.openbusinesserp}"
 OE_METHOD="${OE_METHOD:-auto}"
 OE_PORT="${OE_PORT:-8080}"
-OE_REPO="https://github.com/Fabsye/archi-savvy-studio-erp"
+OE_REPO="https://github.com/archisavvy/archi-savvy-studio-erp"
 
 # ── Colors ───────────────────────────────────────────────────────────
 RED='\033[0;31m'

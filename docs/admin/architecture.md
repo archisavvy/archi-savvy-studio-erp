@@ -1,6 +1,6 @@
 # Architecture
 
-A short map for administrators and developers. For the full developer guide, read [DEVELOPING.md](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/DEVELOPING.md) in the repository.
+A short map for administrators and developers. For the full developer guide, read [DEVELOPING.md](https://github.com/archisavvy/archi-savvy-studio-erp/blob/main/DEVELOPING.md) in the repository.
 
 ## Parts
 

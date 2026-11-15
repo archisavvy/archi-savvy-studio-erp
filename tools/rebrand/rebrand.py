@@ -27,7 +27,7 @@ from pathlib import Path
 PRODUCT = "Archi Savvy Studio ERP"      # shown to people
 COMPACT = "ArchiSavvyStudioERP"         # file names, paths, identifiers
 PUBLISHER = "Archi Savvy Studio"
-NEW_REPO = "Fabsye/archi-savvy-studio-erp"
+NEW_REPO = "archisavvy/archi-savvy-studio-erp"
 SIDECAR = "archisavvy-erp-server"
 APP_ID = "com.archisavvy.studioerp"
 DATA_DIR = ".archisavvy-erp"

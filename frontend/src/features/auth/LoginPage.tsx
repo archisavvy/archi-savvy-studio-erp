@@ -671,7 +671,7 @@ export function LoginPage() {
 
           <p className="mt-5 text-center text-2xs text-content-tertiary">
             <a
-              href="https://github.com/Fabsye/archi-savvy-studio-erp"
+              href="https://github.com/archisavvy/archi-savvy-studio-erp"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-content-secondary"
@@ -820,8 +820,8 @@ export function LoginPage() {
             <div className="px-6 py-4 border-t border-border-light flex items-center justify-between">
               <div className="flex items-center gap-3 text-2xs text-content-quaternary">
                 <a href="/api/source" target="_blank" rel="noopener noreferrer" className="hover:text-content-secondary transition-colors">AGPL-3.0</a>
-                <a href="https://github.com/Fabsye/archi-savvy-studio-erp" target="_blank" rel="noopener noreferrer" className="hover:text-content-secondary transition-colors">https://github.com/Fabsye/archi-savvy-studio-erp</a>
-                <a href="https://github.com/Fabsye/archi-savvy-studio-erp" target="_blank" rel="noopener noreferrer" className="hover:text-content-secondary transition-colors">GitHub</a>
+                <a href="https://github.com/archisavvy/archi-savvy-studio-erp" target="_blank" rel="noopener noreferrer" className="hover:text-content-secondary transition-colors">https://github.com/archisavvy/archi-savvy-studio-erp</a>
+                <a href="https://github.com/archisavvy/archi-savvy-studio-erp" target="_blank" rel="noopener noreferrer" className="hover:text-content-secondary transition-colors">GitHub</a>
               </div>
               <Button variant="primary" size="sm" onClick={() => setShowInfo(false)}>
                 {t('about.close', 'Got it')}

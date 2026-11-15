@@ -11,7 +11,7 @@ Public disclosure before a fix is available puts users at risk.
 ### How to Report
 
 1. **GitHub Security Advisories** (preferred):
-   [Create a new advisory](https://github.com/Fabsye/archi-savvy-studio-erp/security/advisories/new)
+   [Create a new advisory](https://github.com/archisavvy/archi-savvy-studio-erp/security/advisories/new)
 
 2. **Email:** `info@datadrivenconstruction.io`
 

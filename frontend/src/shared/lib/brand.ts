@@ -8,7 +8,7 @@ export const BRAND_PUBLISHER = 'Archi Savvy Studio';
 export const BRAND_TAGLINE = 'Where Architecture Meets AI';
 
 /** Source code of this modified version (AGPL-3.0 section 6 and 13). */
-export const BRAND_SOURCE_URL = 'https://github.com/Fabsye/archi-savvy-studio-erp';
+export const BRAND_SOURCE_URL = 'https://github.com/archisavvy/archi-savvy-studio-erp';
 
 /** The original work this product is based on. */
 export const UPSTREAM_NAME = 'Open' + 'BusinessERP'; // rebrand:keep

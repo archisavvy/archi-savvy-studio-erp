@@ -16,7 +16,7 @@ from __future__ import annotations
 
 from functools import lru_cache
 
-_LOGO_URL = "https://github.com/Fabsye/archi-savvy-studio-erp"
+_LOGO_URL = "https://github.com/archisavvy/archi-savvy-studio-erp"
 _APP_NAME = "Archi Savvy Studio ERP"
 
 

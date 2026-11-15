@@ -18,7 +18,7 @@ export function BetaBanner({
   moduleKey,
   title,
   description,
-  feedbackUrl = 'https://github.com/Fabsye/archi-savvy-studio-erp/issues/new',
+  feedbackUrl = 'https://github.com/archisavvy/archi-savvy-studio-erp/issues/new',
   className = '',
 }: BetaBannerProps) {
   const { t } = useTranslation();

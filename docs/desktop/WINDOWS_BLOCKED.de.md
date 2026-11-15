@@ -58,8 +58,8 @@ Zeigt der Schutzverlauf stattdessen eine Erkennung durch Microsoft Defender Anti
 2. Legen Sie einen Ordner an, zum Beispiel `C:\ArchiSavvyStudioERP`, öffnen Sie darin **Windows PowerShell** und führen Sie aus:
 
 ```powershell
-curl.exe -fsSL https://raw.githubusercontent.com/Fabsye/archi-savvy-studio-erp/main/docker-compose.quickstart.yml -o docker-compose.yml
-curl.exe -fsSL https://raw.githubusercontent.com/Fabsye/archi-savvy-studio-erp/main/docker-compose.quickstart.image.yml -o docker-compose.override.yml
+curl.exe -fsSL https://raw.githubusercontent.com/archisavvy/archi-savvy-studio-erp/main/docker-compose.quickstart.yml -o docker-compose.yml
+curl.exe -fsSL https://raw.githubusercontent.com/archisavvy/archi-savvy-studio-erp/main/docker-compose.quickstart.image.yml -o docker-compose.override.yml
 function New-Secret([int]$n) { $b = New-Object byte[] $n; [Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($b); -join ($b | ForEach-Object { $_.ToString("x2") }) }
 Set-Content -Path .env -Encoding ascii -Value @("POSTGRES_PASSWORD=$(New-Secret 24)", "JWT_SECRET=$(New-Secret 32)")
 docker compose pull app
@@ -110,7 +110,7 @@ $line = Select-String -Path SHA256SUMS -Pattern $exe.Name -SimpleMatch
 (Get-FileHash $exe.FullName -Algorithm SHA256).Hash -eq $line.Line.Split(' ')[0]
 ```
 
-`True` bedeutet, dass die Datei genau die ist, die unser Release-Build erzeugt hat. `False` bedeutet, dass sie unterwegs beschädigt oder verändert wurde. Starten Sie sie dann nicht. Eine rote Fehlermeldung statt `True` oder `False` bedeutet, dass im Ordner eine `SHA256SUMS` aus einem anderen Release als der Installer liegt; laden Sie dann beide von derselben Release-Seite. Bleibt es bei `False`, laden Sie die Datei erneut von der [GitHub-Release-Seite](https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest). Die Prüfung belegt, dass die Datei unverändert ist. An der Entscheidung von SmartScreen oder Smart App Control ändert sie nichts. Für eine stärkere Prüfung trägt `SHA256SUMS` selbst eine Sigstore-Signatur, beschrieben in [RELEASE_SIGNATURE_INVENTORY.md](RELEASE_SIGNATURE_INVENTORY.md).
+`True` bedeutet, dass die Datei genau die ist, die unser Release-Build erzeugt hat. `False` bedeutet, dass sie unterwegs beschädigt oder verändert wurde. Starten Sie sie dann nicht. Eine rote Fehlermeldung statt `True` oder `False` bedeutet, dass im Ordner eine `SHA256SUMS` aus einem anderen Release als der Installer liegt; laden Sie dann beide von derselben Release-Seite. Bleibt es bei `False`, laden Sie die Datei erneut von der [GitHub-Release-Seite](https://github.com/archisavvy/archi-savvy-studio-erp/releases/latest). Die Prüfung belegt, dass die Datei unverändert ist. An der Entscheidung von SmartScreen oder Smart App Control ändert sie nichts. Für eine stärkere Prüfung trägt `SHA256SUMS` selbst eine Sigstore-Signatur, beschrieben in [RELEASE_SIGNATURE_INVENTORY.md](RELEASE_SIGNATURE_INVENTORY.md).
 
 ## Es klappt immer noch nicht
 

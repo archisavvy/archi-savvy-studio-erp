@@ -127,7 +127,7 @@ For a release that carries the three files:
 cosign verify-blob \
   --certificate SHA256SUMS.pem \
   --signature SHA256SUMS.sig \
-  --certificate-identity-regexp 'https://github.com/Fabsye/archi-savvy-studio-erp/.*' \
+  --certificate-identity-regexp 'https://github.com/archisavvy/archi-savvy-studio-erp/.*' \
   --certificate-oidc-issuer https://token.actions.githubusercontent.com \
   SHA256SUMS
 

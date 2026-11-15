@@ -449,7 +449,7 @@ export function RegisterPage() {
           {/* Mobile footer */}
           <div className="lg:hidden mt-3 text-center text-2xs text-content-quaternary">
             <div className="flex items-center justify-center gap-3">
-              <a href="https://github.com/Fabsye/archi-savvy-studio-erp" target="_blank" rel="noopener noreferrer" className="hover:text-content-secondary transition-colors">GitHub</a>
+              <a href="https://github.com/archisavvy/archi-savvy-studio-erp" target="_blank" rel="noopener noreferrer" className="hover:text-content-secondary transition-colors">GitHub</a>
             </div>
           </div>
         </div>
