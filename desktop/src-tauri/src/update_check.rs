@@ -1007,7 +1007,7 @@ mod tests {
             "html_url":"https://example.invalid/please-run-this.exe"}"#;
         let offer = update_from_response(200, body, "15.0.0").expect("a newer version was offered");
         assert!(
-            offer.url.starts_with("https://github.com/datadrivenconstruction/"),
+            offer.url.starts_with("https://github.com/archisavvy/"),
             "the button must not be able to point off github, got {}",
             offer.url
         );
