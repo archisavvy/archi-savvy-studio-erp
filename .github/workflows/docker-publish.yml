@@ -96,7 +96,7 @@ jobs:
 
       - name: Attest build provenance
         if: steps.push.outputs.push == 'true'
-        uses: actions/attest-build-provenance@v2
+        uses: actions/attest-build-provenance@v4
         with:
           subject-name: ${{ env.IMAGE }}
           subject-digest: ${{ steps.build.outputs.digest }}
