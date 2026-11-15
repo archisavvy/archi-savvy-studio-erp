@@ -496,7 +496,7 @@ _OPENAI_COMPAT_CONFIG = {
     "openrouter": {
         "url": "https://openrouter.ai/api/v1/chat/completions",
         "model": OPENROUTER_MODEL,
-        "extra_headers": {"HTTP-Referer": "https://github.com/Fabsye/archi-savvy-studio-erp"},
+        "extra_headers": {"HTTP-Referer": "https://github.com/archisavvy/archi-savvy-studio-erp"},
     },
     "mistral": {
         "url": "https://api.mistral.ai/v1/chat/completions",

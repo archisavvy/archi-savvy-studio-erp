@@ -183,11 +183,11 @@ DEFAULT_HOST = "127.0.0.1"
 DEFAULT_PORT = 8080
 MIN_PYTHON = (3, 12)
 
-DOCS_URL = "https://github.com/Fabsye/archi-savvy-studio-erp#readme"
-TROUBLESHOOTING_URL = "https://github.com/Fabsye/archi-savvy-studio-erp#readme"
-ISSUES_URL = "https://github.com/Fabsye/archi-savvy-studio-erp/issues"
+DOCS_URL = "https://github.com/archisavvy/archi-savvy-studio-erp#readme"
+TROUBLESHOOTING_URL = "https://github.com/archisavvy/archi-savvy-studio-erp#readme"
+ISSUES_URL = "https://github.com/archisavvy/archi-savvy-studio-erp/issues"
 COMMUNITY_URL = "https://t.me/datadrivenconstruction"
-GITHUB_URL = "https://github.com/Fabsye/archi-savvy-studio-erp"
+GITHUB_URL = "https://github.com/archisavvy/archi-savvy-studio-erp"
 
 logger = logging.getLogger("openestimate.cli")
 

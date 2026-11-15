@@ -58,8 +58,8 @@ SmartScreen спрашивает только о файлах, скачанны�
 2. Создайте папку, например `C:\ArchiSavvyStudioERP`, откройте в ней **Windows PowerShell** и выполните:
 
 ```powershell
-curl.exe -fsSL https://raw.githubusercontent.com/Fabsye/archi-savvy-studio-erp/main/docker-compose.quickstart.yml -o docker-compose.yml
-curl.exe -fsSL https://raw.githubusercontent.com/Fabsye/archi-savvy-studio-erp/main/docker-compose.quickstart.image.yml -o docker-compose.override.yml
+curl.exe -fsSL https://raw.githubusercontent.com/archisavvy/archi-savvy-studio-erp/main/docker-compose.quickstart.yml -o docker-compose.yml
+curl.exe -fsSL https://raw.githubusercontent.com/archisavvy/archi-savvy-studio-erp/main/docker-compose.quickstart.image.yml -o docker-compose.override.yml
 function New-Secret([int]$n) { $b = New-Object byte[] $n; [Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($b); -join ($b | ForEach-Object { $_.ToString("x2") }) }
 Set-Content -Path .env -Encoding ascii -Value @("POSTGRES_PASSWORD=$(New-Secret 24)", "JWT_SECRET=$(New-Secret 32)")
 docker compose pull app
@@ -110,7 +110,7 @@ $line = Select-String -Path SHA256SUMS -Pattern $exe.Name -SimpleMatch
 (Get-FileHash $exe.FullName -Algorithm SHA256).Hash -eq $line.Line.Split(' ')[0]
 ```
 
-`True` значит, что файл в точности тот, который собрала наша релизная сборка. `False` значит, что по дороге он повреждён или изменён, и запускать его не надо. Красное сообщение об ошибке вместо `True` или `False` значит, что `SHA256SUMS` в папке из другого релиза, чем установщик: скачайте оба файла с одной и той же страницы релиза. Если остаётся `False`, скачайте файл заново со [страницы релиза на GitHub](https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest). Проверка подтверждает, что файл цел. На решение SmartScreen или Smart App Control она не влияет. Для более строгой проверки у самого `SHA256SUMS` есть подпись Sigstore, она описана в [RELEASE_SIGNATURE_INVENTORY.md](RELEASE_SIGNATURE_INVENTORY.md).
+`True` значит, что файл в точности тот, который собрала наша релизная сборка. `False` значит, что по дороге он повреждён или изменён, и запускать его не надо. Красное сообщение об ошибке вместо `True` или `False` значит, что `SHA256SUMS` в папке из другого релиза, чем установщик: скачайте оба файла с одной и той же страницы релиза. Если остаётся `False`, скачайте файл заново со [страницы релиза на GitHub](https://github.com/archisavvy/archi-savvy-studio-erp/releases/latest). Проверка подтверждает, что файл цел. На решение SmartScreen или Smart App Control она не влияет. Для более строгой проверки у самого `SHA256SUMS` есть подпись Sigstore, она описана в [RELEASE_SIGNATURE_INVENTORY.md](RELEASE_SIGNATURE_INVENTORY.md).
 
 ## Если ничего не помогло
 

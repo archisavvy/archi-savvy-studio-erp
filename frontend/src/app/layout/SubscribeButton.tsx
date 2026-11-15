@@ -10,7 +10,7 @@ import { openLink } from '@/shared/lib/desktop';
  * Newsletter Subscribe trigger in the header.
  *
  * Clicking opens the canonical newsletter form on the marketing site
- * (https://github.com/Fabsye/archi-savvy-studio-erp) in a new tab. We do not
+ * (https://github.com/archisavvy/archi-savvy-studio-erp) in a new tab. We do not
  * embed an inline form anymore — the site is the single source of
  * truth for subscriptions, runs its own SMTP-backed pipeline, and
  * carries the up-to-date privacy copy.
@@ -24,7 +24,7 @@ import { openLink } from '@/shared/lib/desktop';
  */
 
 const STORAGE_KEY = 'oe.newsletter_subscribed';
-const SUBSCRIBE_URL = 'https://github.com/Fabsye/archi-savvy-studio-erp';
+const SUBSCRIBE_URL = 'https://github.com/archisavvy/archi-savvy-studio-erp';
 
 function getInitialSubscribed(): boolean {
   if (typeof window === 'undefined') return false;
@@ -46,7 +46,7 @@ export function SubscribeButton() {
   useEffect(() => {
     function handler(ev: MessageEvent) {
       if (
-        ev.origin === 'https://github.com/Fabsye/archi-savvy-studio-erp' &&
+        ev.origin === 'https://github.com/archisavvy/archi-savvy-studio-erp' &&
         ev.data?.type === 'newsletter:subscribed'
       ) {
         try {
@@ -86,10 +86,10 @@ export function SubscribeButton() {
         type="button"
         onClick={handleClick}
         aria-label={t('header.subscribe.button_aria', {
-          defaultValue: 'Get release notes by email - opens the newsletter form on https://github.com/Fabsye/archi-savvy-studio-erp',
+          defaultValue: 'Get release notes by email - opens the newsletter form on https://github.com/archisavvy/archi-savvy-studio-erp',
         })}
         title={subscribed ? buttonLabel : t('header.subscribe.button_title', {
-          defaultValue: 'Get release notes by email (opens https://github.com/Fabsye/archi-savvy-studio-erp)',
+          defaultValue: 'Get release notes by email (opens https://github.com/archisavvy/archi-savvy-studio-erp)',
         })}
         className={clsx(
           'inline-flex h-8 w-8 items-center justify-center rounded-lg',

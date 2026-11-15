@@ -27,6 +27,6 @@ This manual is for the owner of a small business and for the accountant who work
 
 ## Getting help
 
-- Questions and ideas: [GitHub Discussions](https://github.com/Fabsye/archi-savvy-studio-erp/discussions)
-- Bugs: [GitHub Issues](https://github.com/Fabsye/archi-savvy-studio-erp/issues)
-- Security problems: see [SECURITY.md](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/SECURITY.md)
+- Questions and ideas: [GitHub Discussions](https://github.com/archisavvy/archi-savvy-studio-erp/discussions)
+- Bugs: [GitHub Issues](https://github.com/archisavvy/archi-savvy-studio-erp/issues)
+- Security problems: see [SECURITY.md](https://github.com/archisavvy/archi-savvy-studio-erp/blob/main/SECURITY.md)

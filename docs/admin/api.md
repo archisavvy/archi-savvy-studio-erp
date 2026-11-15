@@ -65,4 +65,4 @@ Check exact paths in `/api/docs`. Collection paths end with a slash.
 
 Generate a typed client from the schema with any OpenAPI generator. The frontend does it this way with `openapi-typescript`.
 
-More detail is in [docs/api/README.md](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/docs/api/README.md) in the repository.
+More detail is in [docs/api/README.md](https://github.com/archisavvy/archi-savvy-studio-erp/blob/main/docs/api/README.md) in the repository.

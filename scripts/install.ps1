@@ -1,7 +1,7 @@
 # Archi Savvy Studio ERP - One-Line Installer for Windows
 #
 # Usage:
-#   irm https://raw.githubusercontent.com/Fabsye/archi-savvy-studio-erp/main/scripts/install.ps1 | iex
+#   irm https://raw.githubusercontent.com/archisavvy/archi-savvy-studio-erp/main/scripts/install.ps1 | iex
 #
 # What it does:
 #   1. If Docker Desktop is running → runs via docker compose
@@ -25,7 +25,7 @@ if ($PSVersionTable.PSVersion.Major -ge 7) {
 $OE_VERSION = if ($env:OE_VERSION) { $env:OE_VERSION } else { "latest" }
 $OE_INSTALL_DIR = if ($env:OE_INSTALL_DIR) { $env:OE_INSTALL_DIR } else { "$env:LOCALAPPDATA\ArchiSavvyStudioERP" }
 $OE_PORT = if ($env:OE_PORT) { $env:OE_PORT } else { "8080" }
-$OE_REPO = "https://github.com/Fabsye/archi-savvy-studio-erp"
+$OE_REPO = "https://github.com/archisavvy/archi-savvy-studio-erp"
 
 # Helper: run a native command, suppress PS's stderr-as-error wrapping,
 # and check $LASTEXITCODE explicitly. Returns the merged stdout+stderr

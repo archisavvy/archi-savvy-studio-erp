@@ -119,7 +119,7 @@ export function CustomBranding({ iconified }: CustomBrandingProps) {
     }
     return (
       <a
-        href="https://github.com/Fabsye/archi-savvy-studio-erp?utm_source=app"
+        href="https://github.com/archisavvy/archi-savvy-studio-erp?utm_source=app"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-80 transition-opacity"
@@ -190,7 +190,7 @@ export function CustomBranding({ iconified }: CustomBrandingProps) {
             </button>
           ) : (
             <a
-              href="https://github.com/Fabsye/archi-savvy-studio-erp?utm_source=app"
+              href="https://github.com/archisavvy/archi-savvy-studio-erp?utm_source=app"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 hover:opacity-80 transition-opacity"

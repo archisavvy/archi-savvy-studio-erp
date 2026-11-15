@@ -73,7 +73,7 @@ Use it to move one user's records between machines. Do not use it as your only b
 
 ## Is the backup still running?
 
-A backup job that stops does not raise an error. The repository includes `scripts/check_backup_freshness.py`. It complains when the newest dump is too old, too small or missing. See the [backup monitoring note](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/docs/backup-monitoring.md).
+A backup job that stops does not raise an error. The repository includes `scripts/check_backup_freshness.py`. It complains when the newest dump is too old, too small or missing. See the [backup monitoring note](https://github.com/archisavvy/archi-savvy-studio-erp/blob/main/docs/backup-monitoring.md).
 
 ## A simple routine
 

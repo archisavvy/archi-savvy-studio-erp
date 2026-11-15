@@ -124,7 +124,7 @@ async function settle() {
   });
 }
 
-const LINK = 'https://github.com/Fabsye/archi-savvy-studio-erp#readme';
+const LINK = 'https://github.com/archisavvy/archi-savvy-studio-erp#readme';
 
 describe('a link that the shell refuses to open', () => {
   it('reaches the user instead of dying on the console', async () => {

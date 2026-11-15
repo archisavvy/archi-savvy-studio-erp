@@ -113,7 +113,7 @@ Have these ready before starting. If you can run the app locally, you already ha
 - **A clone of the repo** to hack on the module
 
 ```bash
-git clone https://github.com/Fabsye/archi-savvy-studio-erp.git
+git clone https://github.com/archisavvy/archi-savvy-studio-erp.git
 cd Archi Savvy Studio ERP
 # Backend
 cd backend && pip install -e ".[dev]"
@@ -549,7 +549,7 @@ zip -r ~/my-module-0.1.0.zip my_module
 openbusinesserp module install ~/my-module-0.1.0.zip
 
 # 3. Optional - publish on the marketplace by opening a PR against
-#    github.com/Fabsye/archi-savvy-studio-erp-modules
+#    github.com/archisavvy/archi-savvy-studio-erp-modules
 #    adding your zip URL + manifest summary
 ```
 
@@ -559,5 +559,5 @@ Always bump `manifest.version` on every release; the installer uses it to decide
 
 ## Further reading
 
-- [MODULES.md on GitHub](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/MODULES.md): single source of truth
-- [CONTRIBUTING.md](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/CONTRIBUTING.md): style, commits, PR process
+- [MODULES.md on GitHub](https://github.com/archisavvy/archi-savvy-studio-erp/blob/main/MODULES.md): single source of truth
+- [CONTRIBUTING.md](https://github.com/archisavvy/archi-savvy-studio-erp/blob/main/CONTRIBUTING.md): style, commits, PR process

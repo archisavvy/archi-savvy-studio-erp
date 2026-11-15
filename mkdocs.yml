@@ -1,8 +1,8 @@
 site_name: Archi Savvy Studio ERP documentation
 site_description: User and administrator documentation for Archi Savvy Studio ERP, a self-hosted ERP for small businesses.
-site_url: https://github.com/Fabsye/archi-savvy-studio-erp/
-repo_url: https://github.com/Fabsye/archi-savvy-studio-erp
-repo_name: Fabsye/archi-savvy-studio-erp
+site_url: https://github.com/archisavvy/archi-savvy-studio-erp/
+repo_url: https://github.com/archisavvy/archi-savvy-studio-erp
+repo_name: archisavvy/archi-savvy-studio-erp
 edit_uri: edit/main/docs/
 
 docs_dir: docs

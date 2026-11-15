@@ -4,16 +4,16 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPL--3.0-blue.svg" alt="License: AGPL-3.0"></a>
-  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/tags"><img src="https://img.shields.io/github/v/tag/Fabsye/archi-savvy-studio-erp?label=version" alt="Latest version"></a>
-  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/actions/workflows/ci.yml"><img src="https://github.com/Fabsye/archi-savvy-studio-erp/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI"></a>
-  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/releases"><img src="https://img.shields.io/github/downloads/Fabsye/archi-savvy-studio-erp/total?label=downloads&color=brightgreen" alt="Downloads"></a>
-  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/stargazers"><img src="https://img.shields.io/github/stars/Fabsye/archi-savvy-studio-erp?style=flat&logo=github&color=f5b301" alt="GitHub stars"></a>
+  <a href="https://github.com/archisavvy/archi-savvy-studio-erp/tags"><img src="https://img.shields.io/github/v/tag/archisavvy/archi-savvy-studio-erp?label=version" alt="Latest version"></a>
+  <a href="https://github.com/archisavvy/archi-savvy-studio-erp/actions/workflows/ci.yml"><img src="https://github.com/archisavvy/archi-savvy-studio-erp/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI"></a>
+  <a href="https://github.com/archisavvy/archi-savvy-studio-erp/releases"><img src="https://img.shields.io/github/downloads/archisavvy/archi-savvy-studio-erp/total?label=downloads&color=brightgreen" alt="Downloads"></a>
+  <a href="https://github.com/archisavvy/archi-savvy-studio-erp/stargazers"><img src="https://img.shields.io/github/stars/archisavvy/archi-savvy-studio-erp?style=flat&logo=github&color=f5b301" alt="GitHub stars"></a>
 </p>
 
 <p align="center">
   <a href="https://openbusinesserp.com">Website</a> ·
   <a href="https://demo.openbusinesserp.com/">Live demo</a> ·
-  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/">Documentation</a> ·
+  <a href="https://github.com/archisavvy/archi-savvy-studio-erp/">Documentation</a> ·
   <a href="#quick-start">Quick start</a> ·
   <a href="#limits">Limits</a> ·
   <a href="ROADMAP.md">Roadmap</a>
@@ -28,9 +28,9 @@
 <p align="center">Embedded database included. No Docker, no server.</p>
 
 <p align="center">
-  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest"><img src="https://img.shields.io/badge/Windows-.exe-0078D6?style=for-the-badge&logo=windows11&logoColor=white" alt="Download for Windows" height="40"></a>&nbsp;
-  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest"><img src="https://img.shields.io/badge/macOS-Apple%20Silicon%20.dmg-111111?style=for-the-badge&logo=apple&logoColor=white" alt="Download for macOS (Apple Silicon)" height="40"></a>&nbsp;
-  <a href="https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest"><img src="https://img.shields.io/badge/Linux-.deb%20·%20.rpm%20·%20.AppImage-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Download for Linux" height="40"></a>
+  <a href="https://github.com/archisavvy/archi-savvy-studio-erp/releases/latest"><img src="https://img.shields.io/badge/Windows-.exe-0078D6?style=for-the-badge&logo=windows11&logoColor=white" alt="Download for Windows" height="40"></a>&nbsp;
+  <a href="https://github.com/archisavvy/archi-savvy-studio-erp/releases/latest"><img src="https://img.shields.io/badge/macOS-Apple%20Silicon%20.dmg-111111?style=for-the-badge&logo=apple&logoColor=white" alt="Download for macOS (Apple Silicon)" height="40"></a>&nbsp;
+  <a href="https://github.com/archisavvy/archi-savvy-studio-erp/releases/latest"><img src="https://img.shields.io/badge/Linux-.deb%20·%20.rpm%20·%20.AppImage-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Download for Linux" height="40"></a>
 </p>
 
 <p align="center"><sub>The installers are not code-signed yet, so Windows and macOS warn on first launch. Every release ships <code>SHA256SUMS</code> with a Sigstore signature. Server install: <a href="#quick-start">Quick start</a>.</sub></p>
@@ -45,7 +45,7 @@ Stars are how other companies find out that an open-source project is alive and 
 
 **How:** sign in to GitHub → scroll to the top of this page → click **☆ Star** in the top right.
 
-<a href="https://github.com/Fabsye/archi-savvy-studio-erp/stargazers"><img src="https://img.shields.io/github/stars/Fabsye/archi-savvy-studio-erp?style=for-the-badge&logo=github&label=Star%20ArchiSavvyStudioERP&color=f5b301" alt="Star Archi Savvy Studio ERP on GitHub" height="36"></a>
+<a href="https://github.com/archisavvy/archi-savvy-studio-erp/stargazers"><img src="https://img.shields.io/github/stars/archisavvy/archi-savvy-studio-erp?style=for-the-badge&logo=github&label=Star%20ArchiSavvyStudioERP&color=f5b301" alt="Star Archi Savvy Studio ERP on GitHub" height="36"></a>
 
 </td></tr></table>
 
@@ -118,7 +118,7 @@ The demo company is a wholesale trader. A typical month:
 You need Docker with Compose v2, Git and `make`.
 
 ```bash
-git clone https://github.com/Fabsye/archi-savvy-studio-erp.git
+git clone https://github.com/archisavvy/archi-savvy-studio-erp.git
 cd Archi Savvy Studio ERP
 echo "POSTGRES_PASSWORD=$(openssl rand -base64 24)" >  .env
 echo "JWT_SECRET=$(openssl rand -hex 32)"           >> .env
@@ -151,7 +151,7 @@ Read these before you rely on the software for your books.
 - **Test the accountant export** (SAF-T or DATEV) with your accountant before the first real import. Columns without a data source stay empty. The full list is in [DATEV and SAF-T export](docs/manual/accountant-export.md).
 - **ZUGFeRD PDFs are not strict PDF/A-3b.** The embedded XML is complete; a receiver that demands PDF/A-3b needs a post-processing step.
 - **No payroll, no tax filing.** There is no payroll, no electronic submission of tax returns and no year-end financial statement workflow. Your accountant files.
-- **Installers are not code-signed.** Desktop installers for Windows, macOS and Linux are on the [releases page](https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest); Windows and macOS warn on first launch. The PyPI package is not published.
+- **Installers are not code-signed.** Desktop installers for Windows, macOS and Linux are on the [releases page](https://github.com/archisavvy/archi-savvy-studio-erp/releases/latest); Windows and macOS warn on first launch. The PyPI package is not published.
 - **Bank connection is file-based.** Statements are imported as files; there is no live bank connection (PSD2, EBICS, FinTS or similar).
 
 ## Architecture
@@ -164,7 +164,7 @@ The interface is translated into 44 languages from 45 locale bundles, including 
 
 The easiest way to help is a ⭐ on GitHub: it is how other companies discover the project.
 
-Bug reports, translations and pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first; contributors sign the [CLA](CLA.md) once, through a bot comment on the first pull request. For anything larger than a bug fix, open a [discussion](https://github.com/Fabsye/archi-savvy-studio-erp/discussions) about the approach before you start. Report security issues privately as described in [SECURITY.md](SECURITY.md).
+Bug reports, translations and pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first; contributors sign the [CLA](CLA.md) once, through a bot comment on the first pull request. For anything larger than a bug fix, open a [discussion](https://github.com/archisavvy/archi-savvy-studio-erp/discussions) about the approach before you start. Report security issues privately as described in [SECURITY.md](SECURITY.md).
 
 ## License
 
@@ -183,4 +183,4 @@ Archi Savvy Studio ERP is provided **"AS IS", without warranty of any kind**, ex
 
 ---
 
-<p align="center"><b>Found Archi Savvy Studio ERP useful?</b> <a href="https://github.com/Fabsye/archi-savvy-studio-erp">⭐ Star it on GitHub</a> so more companies can find it. Thank you!</p>
+<p align="center"><b>Found Archi Savvy Studio ERP useful?</b> <a href="https://github.com/archisavvy/archi-savvy-studio-erp">⭐ Star it on GitHub</a> so more companies can find it. Thank you!</p>

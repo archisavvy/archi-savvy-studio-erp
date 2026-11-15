@@ -32,7 +32,7 @@ import {
   CROSS_SURFACE_QUIET_MS,
 } from '@/stores/useReviewPromptStore';
 
-const REPO_URL = 'https://github.com/Fabsye/archi-savvy-studio-erp';
+const REPO_URL = 'https://github.com/archisavvy/archi-savvy-studio-erp';
 const PAYPAL_DONATE_URL = 'https://www.paypal.com/donate/?hosted_button_id=DWBCLNLY2VWAA';
 const GITHUB_SPONSORS_URL = 'https://github.com/sponsors/datadrivenconstruction';
 // Clean product URL. The "?source=search" suffix this used to carry is G2's

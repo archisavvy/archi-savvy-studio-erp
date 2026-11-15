@@ -197,7 +197,7 @@ describe('a refused write on the public demonstration', () => {
 
     expect(screen.getByTestId('demo-read-only-download')).toHaveAttribute(
       'href',
-      'https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest',
+      'https://github.com/archisavvy/archi-savvy-studio-erp/releases/latest',
     );
   });
 

@@ -2307,7 +2307,7 @@ function DataPackagesTab() {
                   {t('modules.community_submit_email', { defaultValue: 'Submit Module via Email' })}
                 </a>
                 <a
-                  href="https://github.com/Fabsye/archi-savvy-studio-erp/issues/new?title=Module%20Proposal:%20&labels=module-proposal"
+                  href="https://github.com/archisavvy/archi-savvy-studio-erp/issues/new?title=Module%20Proposal:%20&labels=module-proposal"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-lg border border-border-light bg-surface-secondary px-4 py-2 text-sm font-medium text-content-primary hover:bg-surface-secondary/80 transition-colors"

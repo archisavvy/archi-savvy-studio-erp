@@ -1,6 +1,6 @@
 # Contributing
 
-Bug reports, translations, documentation and code are welcome. The rules are in [CONTRIBUTING.md](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/CONTRIBUTING.md). This page is the short version.
+Bug reports, translations, documentation and code are welcome. The rules are in [CONTRIBUTING.md](https://github.com/archisavvy/archi-savvy-studio-erp/blob/main/CONTRIBUTING.md). This page is the short version.
 
 ## Ways to help without code
 
@@ -9,7 +9,7 @@ Bug reports, translations, documentation and code are welcome. The rules are in 
 - Check a translation in your language.
 - Fix a mistake in this manual. Every page has an edit link.
 
-Look for issues labelled [good first issue](https://github.com/Fabsye/archi-savvy-studio-erp/labels/good%20first%20issue) and [help wanted](https://github.com/Fabsye/archi-savvy-studio-erp/labels/help%20wanted).
+Look for issues labelled [good first issue](https://github.com/archisavvy/archi-savvy-studio-erp/labels/good%20first%20issue) and [help wanted](https://github.com/archisavvy/archi-savvy-studio-erp/labels/help%20wanted).
 
 ## Workflow
 
@@ -23,7 +23,7 @@ Look for issues labelled [good first issue](https://github.com/Fabsye/archi-savv
 ## Run it locally
 
 ```bash
-git clone https://github.com/Fabsye/archi-savvy-studio-erp.git
+git clone https://github.com/archisavvy/archi-savvy-studio-erp.git
 cd Archi Savvy Studio ERP
 pip install -e "./backend[server,dev]"
 cd frontend && npm install && cd ..
@@ -45,7 +45,7 @@ cd backend && pytest -q -x tests/<path>/<file>.py
 cd frontend && npx vitest run <file>
 ```
 
-`make test` runs everything. The repository also has scripts in `scripts/` that guard translations, migrations and file hygiene. Read [DEVELOPING.md](https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/DEVELOPING.md) for the list.
+`make test` runs everything. The repository also has scripts in `scripts/` that guard translations, migrations and file hygiene. Read [DEVELOPING.md](https://github.com/archisavvy/archi-savvy-studio-erp/blob/main/DEVELOPING.md) for the list.
 
 ## Translations
 

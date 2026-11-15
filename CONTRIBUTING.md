@@ -29,7 +29,7 @@ including how to brief an AI coding assistant on it.
 
 ```bash
 # 1. Clone
-git clone https://github.com/Fabsye/archi-savvy-studio-erp.git
+git clone https://github.com/archisavvy/archi-savvy-studio-erp.git
 cd Archi Savvy Studio ERP
 
 # 2. Start dev environment
@@ -160,7 +160,7 @@ file-by-file walkthrough.
 
 ## Reporting Issues
 
-- Use [GitHub Issues](https://github.com/Fabsye/archi-savvy-studio-erp/issues)
+- Use [GitHub Issues](https://github.com/archisavvy/archi-savvy-studio-erp/issues)
 - Include: version, steps to reproduce, expected vs actual behavior
 - For security issues, see [SECURITY.md](SECURITY.md)
 
@@ -197,7 +197,7 @@ and name any third-party material, with its licence, in your PR description.
 
 ## Questions?
 
-- Open a [Discussion](https://github.com/Fabsye/archi-savvy-studio-erp/discussions)
+- Open a [Discussion](https://github.com/archisavvy/archi-savvy-studio-erp/discussions)
 - Join our community chat (coming soon)
 
 Thank you for helping make business software open and accessible!

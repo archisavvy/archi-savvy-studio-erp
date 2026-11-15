@@ -51,7 +51,7 @@ import { SettingsRolePresets } from './SettingsRolePresets';
 
 // Commercial license request page on the marketing site. The product is
 // AGPL-3.0; this is the honest upgrade path (no in-app payment flow).
-const LICENSE_REQUEST_URL = 'https://github.com/Fabsye/archi-savvy-studio-erp';
+const LICENSE_REQUEST_URL = 'https://github.com/archisavvy/archi-savvy-studio-erp';
 const AGPL_URL = 'https://www.gnu.org/licenses/agpl-3.0.html';
 
 // ── Role display config (icon + badge variant). The human labels are read

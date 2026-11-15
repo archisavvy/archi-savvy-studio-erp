@@ -1810,7 +1810,7 @@ def create_app() -> FastAPI:
         description="Open-source modular platform for construction cost estimation",
         contact={
             "name": "DataDrivenConstruction · Archi Savvy Studio ERP",
-            "url": "https://github.com/Fabsye/archi-savvy-studio-erp",
+            "url": "https://github.com/archisavvy/archi-savvy-studio-erp",
             "email": "info@datadrivenconstruction.io",
         },
         license_info={
@@ -2215,7 +2215,7 @@ def create_app() -> FastAPI:
         )
         cors_origins = [o for o in cors_origins if o != "*"]
         if not cors_origins:
-            cors_origins = ["https://github.com/Fabsye/archi-savvy-studio-erp"]
+            cors_origins = ["https://github.com/archisavvy/archi-savvy-studio-erp"]
 
     app.add_middleware(
         CORSMiddleware,
@@ -3100,7 +3100,7 @@ def create_app() -> FastAPI:
         """
         return {
             "license": "AGPL-3.0",
-            "source_code": "https://github.com/Fabsye/archi-savvy-studio-erp",
+            "source_code": "https://github.com/archisavvy/archi-savvy-studio-erp",
             "copyright": "Copyright (c) 2026 Artem Boiko / DataDrivenConstruction",
             "notice": (
                 "This software is licensed under AGPL-3.0. "
@@ -3316,7 +3316,7 @@ def create_app() -> FastAPI:
             registration_mode=settings.registration_mode,
             analytics_bundled=False,
             license_name="AGPL-3.0",
-            repository="https://github.com/Fabsye/archi-savvy-studio-erp",
+            repository="https://github.com/archisavvy/archi-savvy-studio-erp",
         )
 
     def _semver_tuple(v: str) -> tuple[int, ...]:
@@ -3389,7 +3389,7 @@ def create_app() -> FastAPI:
         from app.core.update_check_policy import VERSION_CHECK_TTL_S, update_check_disabled
 
         current = settings.app_version
-        repo = "Fabsye/archi-savvy-studio-erp"
+        repo = "archisavvy/archi-savvy-studio-erp"
         cache_key = "_version_check_cache"
 
         # Turned off by the user from the desktop launcher's notice or by an
@@ -5386,7 +5386,7 @@ def create_app() -> FastAPI:
             )
             if _cli_data_dir:
                 logger.info("Data directory: %s", _cli_data_dir)
-            logger.info("Press Ctrl+C to stop. Docs: https://github.com/Fabsye/archi-savvy-studio-erp#readme")
+            logger.info("Press Ctrl+C to stop. Docs: https://github.com/archisavvy/archi-savvy-studio-erp#readme")
         else:
             logger.info("Application started successfully")
 

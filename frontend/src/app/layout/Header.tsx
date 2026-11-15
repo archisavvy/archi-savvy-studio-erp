@@ -782,7 +782,7 @@ export function BugReportMenu() {
       app_version: APP_VERSION,
       platform: navigator.userAgent.includes('Win') ? 'Windows' : navigator.userAgent.includes('Mac') ? 'macOS' : 'Linux',
     });
-    openLink(`https://github.com/Fabsye/archi-savvy-studio-erp?${params}`);
+    openLink(`https://github.com/archisavvy/archi-savvy-studio-erp?${params}`);
   };
 
   const handleDownloadLog = () => {
@@ -841,7 +841,7 @@ export function BugReportMenu() {
       icon: MessageSquarePlus,
       iconColor: 'text-emerald-500',
       title: t('bug.channel_form', { defaultValue: 'Web feedback form' }),
-      desc: t('bug.channel_form_desc', { defaultValue: 'Richer fields and screenshots on https://github.com/Fabsye/archi-savvy-studio-erp.' }),
+      desc: t('bug.channel_form_desc', { defaultValue: 'Richer fields and screenshots on https://github.com/archisavvy/archi-savvy-studio-erp.' }),
       onClick: handleFeedbackForm,
       requiresDescription: false,
     },
@@ -1081,7 +1081,7 @@ function HelpMenu() {
       feedback: 'true',
       app_version: APP_VERSION,
     });
-    openLink(`https://github.com/Fabsye/archi-savvy-studio-erp?${params}`);
+    openLink(`https://github.com/archisavvy/archi-savvy-studio-erp?${params}`);
   };
 
   return (
@@ -1127,7 +1127,7 @@ function HelpMenu() {
               site so users land on the maintained guides, not the raw repo. */}
           <a
             role="menuitem"
-            href="https://github.com/Fabsye/archi-savvy-studio-erp#readme"
+            href="https://github.com/archisavvy/archi-savvy-studio-erp#readme"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
@@ -1139,7 +1139,7 @@ function HelpMenu() {
           </a>
           <a
             role="menuitem"
-            href="https://github.com/Fabsye/archi-savvy-studio-erp"
+            href="https://github.com/archisavvy/archi-savvy-studio-erp"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
@@ -1294,7 +1294,7 @@ function LanguageSwitcher({
 /* ── User Menu ─────────────────────────────────────────────────────────── */
 
 /** GitHub repo slug for "Report a bug". Empty string = clipboard fallback. */
-const GITHUB_REPO = 'Fabsye/archi-savvy-studio-erp';
+const GITHUB_REPO = 'archisavvy/archi-savvy-studio-erp';
 /** Hard ceiling for the GitHub issue body inside a URL. ~8KB is safe across browsers. */
 const MAX_BODY_BYTES = 7800;
 

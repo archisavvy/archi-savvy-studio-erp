@@ -53,7 +53,7 @@ from typing import Any
 
 logger = logging.getLogger(__name__)
 
-RELEASES_URL = "https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest"
+RELEASES_URL = "https://github.com/archisavvy/archi-savvy-studio-erp/releases/latest"
 
 #: Shown verbatim to the user when a frozen build is asked to upgrade itself.
 FROZEN_REFUSAL = (

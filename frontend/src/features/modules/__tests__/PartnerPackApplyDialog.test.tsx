@@ -196,7 +196,7 @@ describe('a failed install says what failed and why', () => {
     expect(within(alert).getByText(/Role 'admin' required/)).toBeTruthy();
     // Where to go instead: a copy of their own, where they are the admin.
     const link = within(alert).getByRole('link', { name: 'Download and install guide' });
-    expect(link.getAttribute('href')).toBe('https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest');
+    expect(link.getAttribute('href')).toBe('https://github.com/archisavvy/archi-savvy-studio-erp/releases/latest');
     // Not the partial-install view the 403 used to end on.
     expect(screen.queryByText('Finished with warnings')).toBeNull();
     expect(screen.queryByText(/Pack activated/)).toBeNull();

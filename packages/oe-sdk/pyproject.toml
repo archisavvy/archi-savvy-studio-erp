@@ -49,9 +49,9 @@ oe-sdk = "oe_sdk.cli:main"
 
 [project.urls]
 Homepage = "https://datadrivenconstruction.io/erp"
-Documentation = "https://github.com/Fabsye/archi-savvy-studio-erp/blob/main/docs/platform/how-it-works-for-builders.md"
-Repository = "https://github.com/Fabsye/archi-savvy-studio-erp"
-Issues = "https://github.com/Fabsye/archi-savvy-studio-erp/issues"
+Documentation = "https://github.com/archisavvy/archi-savvy-studio-erp/blob/main/docs/platform/how-it-works-for-builders.md"
+Repository = "https://github.com/archisavvy/archi-savvy-studio-erp"
+Issues = "https://github.com/archisavvy/archi-savvy-studio-erp/issues"
 
 [build-system]
 requires = ["hatchling"]

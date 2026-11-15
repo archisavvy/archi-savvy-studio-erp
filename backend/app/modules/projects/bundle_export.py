@@ -860,7 +860,7 @@ def _readme_md(manifest: BundleManifest, attachment_count: int) -> str:
         "",
         "## How to open",
         "",
-        "1. Install Archi Savvy Studio ERP - `pip install openbusinesserp` or download from https://github.com/Fabsye/archi-savvy-studio-erp.",
+        "1. Install Archi Savvy Studio ERP - `pip install openbusinesserp` or download from https://github.com/archisavvy/archi-savvy-studio-erp.",
         "2. Run `openbusinesserp serve` and sign in.",
         "3. Use **Files → Import project bundle** and select this `.ocep` file.",
         "",

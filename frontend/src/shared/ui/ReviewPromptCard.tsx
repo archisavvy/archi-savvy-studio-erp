@@ -27,7 +27,7 @@ import { useReviewPromptStore } from '@/stores/useReviewPromptStore';
 
 /* ── review destinations ──────────────────────────────────────────────── */
 
-const REPO_URL = 'https://github.com/Fabsye/archi-savvy-studio-erp';
+const REPO_URL = 'https://github.com/archisavvy/archi-savvy-studio-erp';
 
 const SHARE_TEXT =
   'Archi Savvy Studio ERP - free open-source construction cost estimation platform (BOQ, BIM takeoff, AI). Self-hosted. AGPL-3.0.';

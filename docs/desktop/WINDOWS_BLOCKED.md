@@ -56,8 +56,8 @@ If Protection history shows a Microsoft Defender Antivirus detection instead, an
 2. Create a folder, for example `C:\ArchiSavvyStudioERP`, open **Windows PowerShell** in it, and run:
 
 ```powershell
-curl.exe -fsSL https://raw.githubusercontent.com/Fabsye/archi-savvy-studio-erp/main/docker-compose.quickstart.yml -o docker-compose.yml
-curl.exe -fsSL https://raw.githubusercontent.com/Fabsye/archi-savvy-studio-erp/main/docker-compose.quickstart.image.yml -o docker-compose.override.yml
+curl.exe -fsSL https://raw.githubusercontent.com/archisavvy/archi-savvy-studio-erp/main/docker-compose.quickstart.yml -o docker-compose.yml
+curl.exe -fsSL https://raw.githubusercontent.com/archisavvy/archi-savvy-studio-erp/main/docker-compose.quickstart.image.yml -o docker-compose.override.yml
 function New-Secret([int]$n) { $b = New-Object byte[] $n; [Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($b); -join ($b | ForEach-Object { $_.ToString("x2") }) }
 Set-Content -Path .env -Encoding ascii -Value @("POSTGRES_PASSWORD=$(New-Secret 24)", "JWT_SECRET=$(New-Secret 32)")
 docker compose pull app
@@ -108,7 +108,7 @@ $line = Select-String -Path SHA256SUMS -Pattern $exe.Name -SimpleMatch
 (Get-FileHash $exe.FullName -Algorithm SHA256).Hash -eq $line.Line.Split(' ')[0]
 ```
 
-`True` means the file is exactly the one our release build produced. `False` means it was damaged or changed on the way, so do not run it. A red error instead of `True` or `False` means the folder holds a `SHA256SUMS` from a different release than the installer, so download both from the same release page. If `False` persists, download it again from the [GitHub release page](https://github.com/Fabsye/archi-savvy-studio-erp/releases/latest). The check proves the file is intact. It does not change what SmartScreen or Smart App Control decide. For a stronger check, `SHA256SUMS` itself carries a Sigstore signature, described in [RELEASE_SIGNATURE_INVENTORY.md](RELEASE_SIGNATURE_INVENTORY.md).
+`True` means the file is exactly the one our release build produced. `False` means it was damaged or changed on the way, so do not run it. A red error instead of `True` or `False` means the folder holds a `SHA256SUMS` from a different release than the installer, so download both from the same release page. If `False` persists, download it again from the [GitHub release page](https://github.com/archisavvy/archi-savvy-studio-erp/releases/latest). The check proves the file is intact. It does not change what SmartScreen or Smart App Control decide. For a stronger check, `SHA256SUMS` itself carries a Sigstore signature, described in [RELEASE_SIGNATURE_INVENTORY.md](RELEASE_SIGNATURE_INVENTORY.md).
 
 ## Still stuck
 
