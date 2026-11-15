@@ -76,6 +76,12 @@ def transform_line(line: str) -> str:
     out = line
     out = out.replace("datadrivenconstruction.github.io/OpenBusinessERP", f"github.com/{NEW_REPO}")
     out = out.replace(UPSTREAM_REPO, NEW_REPO)
+    # The desktop update check asserts that its link stays under the owner of
+    # the repository it checks, which is ours after the line above.
+    out = out.replace(
+        'offer.url.starts_with("https://github.com/datadrivenconstruction/")',
+        'offer.url.starts_with("https://github.com/%s/")' % NEW_REPO.split("/")[0],
+    )
     out = out.replace("io.openbusinesserp.desktop", APP_ID)
     out = re.sub(r"openbusinesserp-server(?!\.spec)", SIDECAR, out)
     out = re.sub(r"(?<![A-Za-z0-9_])\.openestimate\b", DATA_DIR, out)
