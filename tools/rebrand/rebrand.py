@@ -153,7 +153,8 @@ def main() -> int:
             enc = "latin-1"
             text = raw.decode(enc)
         if ("OpenBusinessERP" not in text and "openbusinesserp" not in text
-                and ".openestimate" not in text):
+                and ".openestimate" not in text
+                and "github.com/datadrivenconstruction/" not in text):
             continue
         new = "".join(transform_line(l) for l in text.splitlines(keepends=True))
         if new != text:
