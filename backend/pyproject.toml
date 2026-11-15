@@ -211,7 +211,7 @@ server = [
 # Embedded vector search (LanceDB)
 # pyarrow is now in base deps (was here before v1.3.13).
 vector = [
-    "lancedb>=0.17.0,<0.40",
+    "lancedb>=0.17.0,<0.42",
     "fastembed>=0.4.0,<0.9",
 ]
 # The vector-store client, without any embedding model. qdrant-client talks to
@@ -267,7 +267,7 @@ vector = [
 # moves the failure from build time to the user's first query.
 semantic-clients = [
     "qdrant-client>=1.12.0,<2",
-    "lancedb>=0.17.0,<0.40",
+    "lancedb>=0.17.0,<0.42",
 ]
 # The vector-store client plus a local encoder, and nothing else. This is what
 # the desktop build installs, and it exists because the encoder download became
