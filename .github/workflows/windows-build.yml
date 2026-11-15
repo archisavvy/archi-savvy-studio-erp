@@ -1,0 +1,41 @@
+# Archi Savvy Studio ERP - automated Windows installer build.
+#
+# Starts the Windows-only mode of desktop-release.yml whenever application code
+# lands on main, or on demand. That mode builds the backend sidecar and the NSIS
+# installer on a Windows runner, runs the start-up and restart checks, and
+# uploads the installer as an Actions artifact named windows-diagnostic-<SHA>.
+# It never publishes a GitHub release.
+name: Windows Build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "backend/**"
+      - "frontend/**"
+      - "desktop/**"
+      - ".github/workflows/desktop-release.yml"
+      - ".github/workflows/windows-build.yml"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: windows-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start the Windows installer build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run desktop-release.yml \
+            --repo "${{ github.repository }}" \
+            --ref "${{ github.ref_name }}" \
+            -f build_only_windows=true
+          echo "Started. Open the Actions tab and look for the run named 'Windows diagnostic <SHA>'." >> "$GITHUB_STEP_SUMMARY"

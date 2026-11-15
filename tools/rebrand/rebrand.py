@@ -38,7 +38,7 @@ UPSTREAM_REPO = "datadrivenconstruction/OpenBusinessERP"
 PROTECTED_FILES = {
     "LICENSE", "backend/LICENSE", "NOTICE", "backend/NOTICE", "COPYRIGHT",
     "CLA.md", "TRADEMARK.md", "AUTHORS.md", "CONTRIBUTORS.md", "CHANGELOG.md",
-    "CITATION.cff", ".github/CODEOWNERS",
+    "CITATION.cff", ".github/CODEOWNERS", "MODIFICATIONS.md",
 }
 PROTECTED_PREFIXES = ("docs/legal/", "tools/rebrand/", "docs/fork/")
 PROTECTED_SUFFIXES = (".lock", "package-lock.json")

@@ -1,5 +1,6 @@
 // DDC-CWICR-OE: DataDrivenConstruction · OpenBusinessERP
 // Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
+import { SHOW_UPSTREAM_PROMOTION } from '@/shared/lib/brand';
 import { useState, useCallback, useEffect } from 'react';
 import type { ReactNode } from 'react';
 import clsx from 'clsx';
@@ -194,7 +195,7 @@ export function AppLayout({ title, children }: AppLayoutProps) {
           once per signed-in session (App.tsx `AppShell`), and every piece of
           state the card needs lives in useReviewPromptStore anyway, not in
           the component. */}
-      <ReviewPromptCard />
+      {SHOW_UPSTREAM_PROMOTION && <ReviewPromptCard />}
 
       {/* Global onboarding tour (ProductTour) mounts once at App.tsx
           top level — moving it out of here was the fix for

@@ -1,5 +1,6 @@
 // DDC-CWICR-OE: DataDrivenConstruction · OpenBusinessERP
 // Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
+import { SHOW_UPSTREAM_PROMOTION } from '@/shared/lib/brand';
 import { useState, useCallback, useEffect, useMemo, useRef, Fragment } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
@@ -1648,6 +1649,7 @@ export function Sidebar({ onClose }: { onClose?: () => void }) {
              on purpose: contributors who want to build a module
              themselves use the guide; users who want us to build it
              for them use this dialog. */}
+        {SHOW_UPSTREAM_PROMOTION && (
         <div className={clsx('pt-1 pb-3', iconified ? 'px-0 flex justify-center' : 'px-3')}>
           <button
             type="button"
@@ -1686,6 +1688,7 @@ export function Sidebar({ onClose }: { onClose?: () => void }) {
             )}
           </button>
         </div>
+        )}
       </nav>
 
       {/* Admin / setup surfaces — rendered as a 2-column button grid

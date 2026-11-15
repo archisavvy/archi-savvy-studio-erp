@@ -207,7 +207,7 @@ describe('ReviewPromptCard - review destinations', () => {
     const hrefs = Array.from(screen.getByTestId(CARD).querySelectorAll('a')).map((a) =>
       a.getAttribute('href'),
     );
-    expect(hrefs.some((h) => h?.includes('github.com/datadrivenconstruction'))).toBe(true);
+    expect(hrefs.some((h) => h?.includes('github.com/Fabsye/archi-savvy-studio-erp'))).toBe(true);
     expect(hrefs.some((h) => h?.includes('linkedin.com'))).toBe(true);
 
     const g2 = hrefs.find((h) => h?.includes('g2.com'));

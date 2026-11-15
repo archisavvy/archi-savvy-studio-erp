@@ -1,5 +1,6 @@
 // DDC-CWICR-OE: DataDrivenConstruction · OpenBusinessERP
 // Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
+import { SHOW_UPSTREAM_PROMOTION } from '@/shared/lib/brand';
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
@@ -2851,6 +2852,7 @@ function DashboardPageInner() {
 
       {/* ─── 2. Hero · row B - thin meta-strip ───────────────────────── */}
       <div className="flex items-center flex-wrap gap-x-4 gap-y-2 pl-2 animate-stagger-in" style={{ animationDelay: '140ms' }}>
+        {SHOW_UPSTREAM_PROMOTION && (<>
         {/* DDC attribution - slim inline link with tiny logo */}
         <a
           href="https://datadrivenconstruction.io/?utm_source=erp"
@@ -2869,6 +2871,7 @@ function DashboardPageInner() {
         </a>
 
         <span aria-hidden className="h-3 w-px bg-border-light" />
+        </>)}
 
         {/* Open-source pill - slimmer (was a heavy gradient card) */}
         <a

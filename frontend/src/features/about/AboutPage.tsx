@@ -4,6 +4,7 @@
  * AboutPage — Application info, author, license, consulting services.
  */
 
+import { BRAND_NAME, BRAND_PUBLISHER, BRAND_SOURCE_URL, BRAND_TAGLINE, SHOW_UPSTREAM_PROMOTION, UPSTREAM_AUTHOR, UPSTREAM_NAME, UPSTREAM_URL } from '@/shared/lib/brand';
 import { PAGE_CONTAINER_CLS } from '@/shared/ui/PageContainer';
 import { useEffect, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
@@ -26,7 +27,7 @@ import { Changelog, getRecentReleases } from './Changelog';
 import { ThirdPartyLicenses } from './ThirdPartyLicenses';
 import { CONTRIBUTORS, SPONSORS, acknowledgedUrl, type Acknowledged } from './acknowledgments';
 
-const REPO_URL = 'https://github.com/Fabsye/archi-savvy-studio-erp';
+const REPO_URL = BRAND_SOURCE_URL;
 // Clean product URL - "?source=search" is G2's search-result tracking.
 const G2_REVIEWS_URL = 'https://www.g2.com/products/openbusinesserp/reviews';
 const PAYPAL_DONATE_URL = 'https://www.paypal.com/donate/?hosted_button_id=DWBCLNLY2VWAA';
@@ -296,6 +297,25 @@ export function AboutPage() {
         </div>
       </div>
 
+      {/* Fork notice: what this product is, where its source is, and what it is based on.
+          AGPL-3.0 section 5 asks a modified version to say so prominently. */}
+      <Card className="animate-card-in" data-testid="about-fork-notice">
+        <div className="p-6 text-sm text-content-secondary leading-relaxed space-y-2">
+          <h2 className="text-lg font-semibold text-content-primary">About this edition</h2>
+          <p>
+            {BRAND_NAME} is published by {BRAND_PUBLISHER}. It is a modified version of {UPSTREAM_NAME}, an
+            open-source ERP by {UPSTREAM_AUTHOR}, and is licensed under the GNU Affero General Public License
+            v3.0 or later. It is not affiliated with, endorsed by or supported by the original authors.
+          </p>
+          <p>
+            Source code of this edition:{' '}
+            <a href={BRAND_SOURCE_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-content-primary">{BRAND_SOURCE_URL}</a>
+            {' · '}Original project:{' '}
+            <a href={UPSTREAM_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-content-primary">{UPSTREAM_URL}</a>
+          </p>
+        </div>
+      </Card>
+
       {/* Two-card band: Platform Capabilities + Community.
           Each is its own Card so they visually read as separate blocks; both
           carry h-full + flex-col so the row stretches to the tallest sibling
@@ -341,7 +361,7 @@ export function AboutPage() {
       {/* ── Card 2: Community — feedback channels.
           Uses the same blue-tinted gradient the old embedded block had, so
           the visual identity carries over but as its own bordered Card. ── */}
-      <Card
+      {SHOW_UPSTREAM_PROMOTION && (<Card
         padding="none"
         className="animate-card-in h-full flex flex-col overflow-hidden border-oe-blue/20 bg-gradient-to-br from-oe-blue/5 via-transparent to-blue-50/40 dark:from-blue-950/20 dark:via-transparent dark:to-slate-900/30"
         style={{ animationDelay: '75ms' }}
@@ -480,7 +500,7 @@ export function AboutPage() {
               })}
             </p>
         </div>
-      </Card>
+      </Card>)}
 
       </div>
       {/* /Two-card band */}
@@ -488,7 +508,7 @@ export function AboutPage() {
       {/* About the project — founder's note (left) + DDC ecosystem (right).
           Two-column inside one Card so heights stay synced on wide screens.
           On narrow screens the right column stacks below. */}
-      {!isBusiness && (<Card className="animate-card-in" style={{ animationDelay: '150ms' }}>
+      {SHOW_UPSTREAM_PROMOTION && !isBusiness && (<Card className="animate-card-in" style={{ animationDelay: '150ms' }}>
         <div className="p-6 grid grid-cols-1 lg:grid-cols-5 gap-x-8 gap-y-6">
           {/* ── Left column — narrative (3 of 5 cols on wide screens) ── */}
           <div className="lg:col-span-3">
@@ -734,7 +754,7 @@ export function AboutPage() {
       {/* Consulting Services — matches the "Build 01 / Workshops 02 / Consulting 03"
           structure on https://github.com/Fabsye/archi-savvy-studio-erp so users coming from the marketing
           page see the same offering shape inside the product. */}
-      <Card>
+      {SHOW_UPSTREAM_PROMOTION && (<Card>
         <div className="p-6">
           <div className="flex items-center gap-2 mb-2">
             <Briefcase size={18} className="text-oe-blue" />
@@ -858,14 +878,14 @@ export function AboutPage() {
             </a>
           </div>
         </div>
-      </Card>
+      </Card>)}
 
       {/* Documentation block — moved down next to License (2-col reference band). */}
 
       {/* Support the Project — compact 2-col layout so the section doesn't
           stretch endlessly on wide screens. Hero+actions on the left, the
           "Your support enables" backlog list on the right. */}
-      <Card
+      {SHOW_UPSTREAM_PROMOTION && (<Card
         padding="none"
         className="animate-card-in overflow-hidden"
         style={{ animationDelay: '250ms' }}
@@ -1041,12 +1061,12 @@ export function AboutPage() {
             {/* /Right column */}
           </div>
         </div>
-      </Card>
+      </Card>)}
 
       {/* Free Guidebook — 5-col internal split: book cover gets 2/5 of the
           width so the cover image can render larger; the 10-part TOC keeps
           3/5 and its tiles read tighter and more uniform. */}
-      {!isBusiness && (<Card className="animate-card-in" style={{ animationDelay: '300ms' }}>
+      {SHOW_UPSTREAM_PROMOTION && !isBusiness && (<Card className="animate-card-in" style={{ animationDelay: '300ms' }}>
         <div className="p-6 grid grid-cols-1 lg:grid-cols-5 gap-6">
 
           {/* ── Left column — larger book cover + headline + download CTA ── */}
@@ -1477,16 +1497,12 @@ export function AboutPage() {
         </div>
       </Card>
 
-      {/* Credits */}
+      {/* Credits - fork notice plus the attribution the licence asks us to keep. */}
       <div className="text-center py-4 text-xs text-content-quaternary">
-        <p className="flex items-center justify-center gap-1">
-          {t('about.built_by', { defaultValue: 'Built by the DataDrivenConstruction team' })}
-          {' · '}
-          <a href="https://datadrivenconstruction.io" target="_blank" rel="noopener noreferrer" className="hover:text-oe-blue transition-colors">
-            datadrivenconstruction.io
-          </a>
+        <p>{BRAND_NAME} · {BRAND_PUBLISHER} · {BRAND_TAGLINE}</p>
+        <p className="mt-1">
+          Based on {UPSTREAM_NAME}, &copy; 2024-2026 {UPSTREAM_AUTHOR} and contributors. Licensed under AGPL-3.0-or-later.
         </p>
-        <p className="mt-1">&copy; 2026 Data Driven Construction. All rights reserved.</p>
       </div>
     </div>
   );

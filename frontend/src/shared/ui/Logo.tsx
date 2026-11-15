@@ -25,12 +25,7 @@ const sizeMap = {
 export function Logo({ size = 'md', className }: LogoProps) {
   return (
     <div className={clsx(sizeMap[size], 'relative shrink-0', className)}>
-      <svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-full" aria-hidden>
-        <rect x="16" y="16" width="480" height="480" rx="112" fill="#1747D6" />
-        <rect x="140" y="128" width="64" height="256" rx="10" fill="#fff" />
-        <path d="M204 128h96a60 60 0 0 1 0 120h-96z" fill="#fff" opacity=".78" />
-        <path d="M204 264h116a60 60 0 0 1 0 120H204z" fill="#fff" />
-      </svg>
+      <img src="/logo.svg" alt="" aria-hidden className="h-full w-full rounded-[22%] object-cover" draggable={false} />
     </div>
   );
 }
@@ -76,8 +71,8 @@ export function LogoWithText({ size = 'md', animate, showVersion = true, classNa
         )}
         style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif", letterSpacing: '-0.02em' }}
       >
-        Open<span className="font-semibold">Business</span>
-        {showVersion && <span className="text-content-tertiary">ERP</span>}
+        Archi <span className="font-semibold">Savvy</span>
+        {showVersion && <span className="text-content-tertiary"> Studio ERP</span>}
       </span>
     </div>
   );

@@ -1,5 +1,6 @@
 // DDC-CWICR-OE: DataDrivenConstruction · OpenBusinessERP
 // Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
+import { SHOW_UPSTREAM_PROMOTION } from '@/shared/lib/brand';
 import { useState, useRef, useEffect, useCallback, useId } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -566,7 +567,7 @@ export function Header({ title, onMenuClick }: HeaderProps) {
             at every width. */}
         {!isBusiness && <LearnTopBarButton />}
         <NotificationBell />
-        <HeaderNewsButton />
+        {SHOW_UPSTREAM_PROMOTION && <HeaderNewsButton />}
         {/* Building a module is something you do from wherever you noticed the
             platform was missing one, so it lives here rather than in the
             sidebar. Renders nothing for anyone who may not install one.
@@ -575,8 +576,8 @@ export function Header({ title, onMenuClick }: HeaderProps) {
             had no room for these three next to the project picker, and the
             right cluster ran off screen. */}
         <div className="hidden 2xl:block"><ModuleBuilderButton /></div>
-        <div className="hidden 2xl:block"><SupportUsButton /></div>
-        <div className="hidden 2xl:block"><SubscribeButton /></div>
+        {SHOW_UPSTREAM_PROMOTION && <div className="hidden 2xl:block"><SupportUsButton /></div>}
+        {SHOW_UPSTREAM_PROMOTION && <div className="hidden 2xl:block"><SubscribeButton /></div>}
         <BugReportMenu />
         <HelpMenu />
 
