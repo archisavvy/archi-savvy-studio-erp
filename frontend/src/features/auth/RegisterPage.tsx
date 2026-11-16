@@ -201,7 +201,7 @@ export function RegisterPage() {
               <div className="flex items-center gap-2.5">
               <Logo size="md" />
               <span className="text-2xl font-medium text-content-primary whitespace-nowrap" style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif", letterSpacing: '-0.02em' }}>
-                Open<span className="font-semibold">Business</span><span className="text-content-quaternary">ERP</span>
+                Archi <span className="font-semibold">Savvy</span><span className="text-content-quaternary"> Studio ERP</span>
               </span>
             </div>
             <p className="mt-1 text-xs text-content-tertiary">{t('login.workspace_tagline_biz', { defaultValue: 'Business management workspace' })}</p>

@@ -475,8 +475,8 @@ export function LoginPage() {
                   >
                     by{' '}
                     <span className="font-semibold tracking-tight">
-                      Open<span className="font-semibold">Business</span>
-                      <span className="text-content-quaternary">ERP</span>
+                      Archi <span className="font-semibold">Savvy</span>
+                      <span className="text-content-quaternary"> Studio ERP</span>
                     </span>
                   </span>
                 </div>
@@ -487,7 +487,7 @@ export function LoginPage() {
                     className="text-2xl font-medium text-content-primary whitespace-nowrap"
                     style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif", letterSpacing: '-0.02em' }}
                   >
-                    Open<span className="font-semibold">Business</span><span className="text-content-quaternary">ERP</span>
+                    Archi <span className="font-semibold">Savvy</span><span className="text-content-quaternary"> Studio ERP</span>
                   </span>
                 </div>
               )}

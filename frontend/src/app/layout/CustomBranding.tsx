@@ -183,8 +183,8 @@ export function CustomBranding({ iconified }: CustomBrandingProps) {
               >
                 by{' '}
                 <span className="font-semibold tracking-tight">
-                  Open<span className="font-semibold">Business</span>
-                  <span className="text-content-quaternary">ERP</span>
+                  Archi <span className="font-semibold">Savvy</span>
+                  <span className="text-content-quaternary"> Studio ERP</span>
                 </span>
               </span>
             </button>
@@ -208,8 +208,8 @@ export function CustomBranding({ iconified }: CustomBrandingProps) {
                   letterSpacing: '-0.02em',
                 }}
               >
-                Open<span className="font-semibold">Business</span>
-                <span className="text-content-quaternary">ERP</span>
+                Archi <span className="font-semibold">Savvy</span>
+                <span className="text-content-quaternary"> Studio ERP</span>
               </span>
             </a>
           )}
