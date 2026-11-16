@@ -46,8 +46,8 @@ export function PortalBrandHeader() {
       <span className="mt-2 block text-[11px] leading-none text-content-tertiary">
         by{' '}
         <span className="font-semibold tracking-tight">
-          Open<span className="font-semibold">Business</span>
-          <span className="text-content-quaternary">ERP</span>
+          Archi <span className="font-semibold">Savvy</span>
+          <span className="text-content-quaternary"> Studio ERP</span>
         </span>
       </span>
     </header>

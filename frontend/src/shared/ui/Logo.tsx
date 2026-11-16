@@ -76,7 +76,7 @@ export function LogoWithText({ size = 'md', animate, showVersion = true, classNa
         )}
         style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif", letterSpacing: '-0.02em' }}
       >
-        Open<span className="font-semibold">Business</span>
+        Archi <span className="font-semibold">Savvy</span>
         {showVersion && <span className="text-content-tertiary">ERP</span>}
       </span>
     </div>
