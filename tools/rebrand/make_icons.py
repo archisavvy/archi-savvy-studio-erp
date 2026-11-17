@@ -58,9 +58,12 @@ def main() -> None:
     master.save(ICONS / "icon.icns")
 
     # NSIS installer artwork (24-bit BMP, sizes fixed by NSIS).
-    header = Image.new("RGB", (150, 57), NIGHT)
-    small = master.resize((49, 49), Image.LANCZOS)
-    header.paste(small, (97, 4), small)
+    # The header strip sits on the installer's white title band, so its
+    # background must be white: only the rounded icon shows, at the right edge,
+    # next to the page title (same layout as the original artwork).
+    header = Image.new("RGB", (150, 57), (255, 255, 255))
+    small = master.resize((45, 45), Image.LANCZOS)
+    header.paste(small, (99, 6), small)
     header.save(ROOT / "desktop/src-tauri/installer/header.bmp")
     side = Image.new("RGB", (164, 314), NIGHT)
     fw = 164
