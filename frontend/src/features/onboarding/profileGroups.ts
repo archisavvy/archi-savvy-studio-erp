@@ -26,6 +26,7 @@ import { ALL_MODULES, CORE_MODULE_KEYS } from './modules';
 
 /** Business profiles, in the order the step shows them. */
 export const COMPANY_PROFILE_ORDER: readonly string[] = [
+  'architecture_practice',
   'general_contractor',
   'subcontractor',
   'mep_contractor',

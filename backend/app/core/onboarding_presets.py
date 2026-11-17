@@ -618,6 +618,62 @@ COMPANY_PRESETS: dict[str, CompanyPreset] = {
             "procurement",  # supplier_catalogs depends on it
         ],
     ),
+    # Archi Savvy Studio ERP: the default profile of this edition. Construction
+    # pack (projects, drawings, take-off) plus the business side a practice
+    # needs to win work, bill it and see whether a job made money.
+    "architecture_practice": CompanyPreset(
+        key="architecture_practice",
+        label="Architecture & Design Practice",
+        description=(
+            "We run a design studio - projects, drawings and design information, "
+            "plus clients, fee proposals, invoices and the practice's accounts."
+        ),
+        icon="Pencil",
+        tags=["Projects", "Drawings", "Fees", "Clients"],
+        enabled_modules=[
+            # Design information
+            "documents",
+            "markups",
+            "transmittals",
+            "rfi",
+            "submittals",
+            "correspondence",
+            "meetings",
+            "requirements",
+            "compliance_docs",
+            # Measuring and cost planning
+            "takeoff",
+            "dwg_takeoff",
+            "cad",  # takeoff depends on it
+            "boq",
+            "validation",
+            "carbon",
+            # Running the practice
+            "crm",
+            "sales",
+            "contracts",
+            "finance",
+            "gl",
+            "tasks",
+            "schedule",
+            "resources",
+            "reporting",
+            "bi_dashboards",
+            "portal",
+            # Assistance
+            "ai",
+            "erp_chat",
+            "collaboration",  # opencde_api depends on it
+        ],
+        optional_modules=[
+            "funding",
+            "risk",
+            "appointments",
+            "integrations",
+            "schedule_advanced",
+            "costmodel",
+        ],
+    ),
     "architecture_engineering": CompanyPreset(
         key="architecture_engineering",
         label="Architecture / Engineering Office",

@@ -94,6 +94,7 @@ export function useCompanyPresetKey(): string | null {
 /** True when the signed-in user's company chose a business-pack preset. */
 /** Construction-pack profiles (backend COMPANY_PRESETS minus the business pack). */
 export const CONSTRUCTION_PRESET_KEYS: ReadonlySet<string> = new Set([
+  'architecture_practice',
   'architecture_engineering',
   'bim_vdc',
   'civil_infrastructure',

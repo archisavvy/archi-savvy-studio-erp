@@ -50,3 +50,6 @@ Then push `main` and let the Windows build run before installing anything.
 - `frontend/src/shared/ui/ReviewPromptCard.test.tsx`
 - `backend/app/modules/users/schemas.py`, `router.py`, `service.py` (email change for administrators)
 - `frontend/src/features/users/UserManagementPage.tsx`, `api.ts`
+- `backend/app/core/onboarding_presets.py` (the practice profile), `backend/app/core/demo_seed.py` (default off), `backend/app/modules/users/repository.py` (default profile hook)
+- `backend/tests/unit/test_demo_seed_choice.py` (two assertions follow the new default)
+- `frontend/src/app/layout/useCompanyWorkspace.ts`, `frontend/src/features/onboarding/profileGroups.ts`, `frontend/src/app/locales/en.ts` (profile key and labels)

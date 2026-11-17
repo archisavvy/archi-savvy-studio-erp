@@ -33,9 +33,10 @@ def isolated_data_dir(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
     return tmp_path
 
 
-def test_defaults_to_enabled_when_nothing_is_set(isolated_data_dir: Path) -> None:
+def test_defaults_to_disabled_when_nothing_is_set(isolated_data_dir: Path) -> None:
+    # Archi Savvy Studio ERP: an install starts empty unless sample data is asked for.
     assert read_demo_seed_choice() is None
-    assert seed_demo_enabled() is True
+    assert seed_demo_enabled() is False
 
 
 def test_no_demo_choice_disables_seeding(isolated_data_dir: Path) -> None:
@@ -83,4 +84,4 @@ def test_explicit_data_dir_is_honoured(tmp_path: Path) -> None:
 def test_corrupt_choice_file_is_treated_as_unset(isolated_data_dir: Path) -> None:
     (isolated_data_dir / CHOICE_FILENAME).write_text("{ not json", encoding="utf-8")
     assert read_demo_seed_choice() is None
-    assert seed_demo_enabled() is True
+    assert seed_demo_enabled() is False  # unset means off in this edition

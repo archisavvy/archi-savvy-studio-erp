@@ -21,5 +21,7 @@ Archi Savvy Studio ERP is a modified version of OpenBusinessERP.
 | 2026-11-15 | Dependabot configuration moved to `.github/workflows-disabled/` so the new repository is not flooded with automated update requests. |
 | 2026-11-16 | Wordmarks drawn in pieces (sidebar, sign-in, registration, client portal) renamed through the rebrand script. |
 | 2026-11-17 | Users: an administrator can correct a user's email address (`admin_change_email` in the users service, `EditEmailButton.tsx` on the Users page). Built-in and sample accounts keep their fixed addresses. |
+| 2026-11-17 | New company profile "Architecture & Design Practice" (`architecture_practice` in `backend/app/core/onboarding_presets.py`): construction-pack menus with the practice's business modules on and contractor modules off. New users start on it (`backend/app/core/archisavvy_defaults.py`, hooked in the users repository). |
+| 2026-11-17 | Sample accounts and showcase projects are no longer created unless asked for (`seed_demo_enabled` defaults to off). |
 
 The full, line-by-line record is the git history of this repository.
