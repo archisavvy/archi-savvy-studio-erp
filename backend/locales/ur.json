@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "یہ نام نئے کیٹلاگ کے لیے استعمال نہیں ہو سکتا۔ کوئی اور نام منتخب کریں۔",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "اوپن سورس تعمیراتی لاگت تخمینہ"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "اپ ڈیٹ کریں"
   },
   "dashboard": {
-    "welcome": "Archi Savvy Studio ERP میں خوش آمدید",
+    "welcome": "ArchiSavvyERP میں خوش آمدید",
     "subtitle": "آپ کا تعمیراتی تخمینہ ورک اسپیس",
     "recent_projects": "حالیہ پروجیکٹس",
     "system_status": "سسٹم اسٹیٹس",

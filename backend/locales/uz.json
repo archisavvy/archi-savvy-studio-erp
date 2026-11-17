@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Bu nomdan yangi katalog uchun foydalanib boʻlmaydi. Boshqa nom tanlang.",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "Ochiq kodli qurilish smetasi"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Yangilash"
   },
   "dashboard": {
-    "welcome": "Archi Savvy Studio ERP tizimiga xush kelibsiz",
+    "welcome": "ArchiSavvyERP tizimiga xush kelibsiz",
     "subtitle": "Qurilish smetasi boʻyicha ish maydoningiz",
     "recent_projects": "Soʻnggi loyihalar",
     "system_status": "Tizim holati",

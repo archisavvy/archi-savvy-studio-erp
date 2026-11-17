@@ -1,4 +1,4 @@
-# Archi Savvy Studio ERP - Windows Defender fix for Qdrant snapshot restore.
+# ArchiSavvyERP - Windows Defender fix for Qdrant snapshot restore.
 #
 # Why this exists:
 # Qdrant 1.18+ writes a WAL clock file (newest_clocks.json) during snapshot
@@ -44,7 +44,7 @@ if (-not (Test-Admin)) {
 $targetPath = Join-Path $env:USERPROFILE ".openestimator"
 
 Write-Host ""
-Write-Host "Archi Savvy Studio ERP - Qdrant Defender fix" -ForegroundColor Cyan
+Write-Host "ArchiSavvyERP - Qdrant Defender fix" -ForegroundColor Cyan
 Write-Host "==========================================" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "Adding Defender exclusion for:" -ForegroundColor White

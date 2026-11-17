@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Бұл атауды жаңа анықтамалық үшін пайдалануға болмайды. Басқа атау таңдаңыз.",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "Ашық бастапқы кодты құрылыс сметасын есептеу"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Жаңарту"
   },
   "dashboard": {
-    "welcome": "Archi Savvy Studio ERP-ке қош келдіңіз",
+    "welcome": "ArchiSavvyERP-ке қош келдіңіз",
     "subtitle": "Сіздің құрылыс сметалау жұмыс кеңістігіңіз",
     "recent_projects": "Соңғы Жобалар",
     "system_status": "Жүйе Мәртебесі",

@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Acest nume nu poate fi folosit pentru un catalog nou. Alegeți alt nume.",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "Estimare de costuri în construcții open-source"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Actualizați"
   },
   "dashboard": {
-    "welcome": "Bine ați venit la Archi Savvy Studio ERP",
+    "welcome": "Bine ați venit la ArchiSavvyERP",
     "subtitle": "Spațiul dvs. de lucru pentru estimarea în construcții",
     "recent_projects": "Proiecte recente",
     "system_status": "Stare sistem",

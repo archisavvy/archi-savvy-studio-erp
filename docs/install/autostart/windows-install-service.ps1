@@ -1,11 +1,11 @@
-# Install Archi Savvy Studio ERP as a Windows service (autostart on boot).
+# Install ArchiSavvyERP as a Windows service (autostart on boot).
 # Uses Windows Task Scheduler - no extra tools required (NSSM optional).
 #
 # Run this script ONCE as Administrator:
 #   powershell -ExecutionPolicy Bypass -File windows-install-service.ps1
 #
 # To remove later:
-#   schtasks /Delete /TN "Archi Savvy Studio ERP" /F
+#   schtasks /Delete /TN "ArchiSavvyERP" /F
 
 $ErrorActionPreference = 'Stop'
 
@@ -26,7 +26,7 @@ if (-not (Test-Path $openbusinesserpPath)) {
     exit 1
 }
 
-$taskName = "Archi Savvy Studio ERP"
+$taskName = "ArchiSavvyERP"
 $action = New-ScheduledTaskAction `
     -Execute $openbusinesserpPath `
     -Argument "serve --host $bindHost --port $port" `
@@ -56,7 +56,7 @@ Register-ScheduledTask `
     -Trigger $trigger `
     -Settings $settings `
     -Principal $principal `
-    -Description "Archi Savvy Studio ERP backend on http://${bindHost}:${port}"
+    -Description "ArchiSavvyERP backend on http://${bindHost}:${port}"
 
 Start-ScheduledTask -TaskName $taskName
 

@@ -13,7 +13,7 @@ manifest = ModuleManifest(
         "options, buyer selections, freeze deadlines, handover & snagging, "
         "warranty claims"
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="business",
     depends=["oe_users", "oe_projects"],
     auto_install=True,

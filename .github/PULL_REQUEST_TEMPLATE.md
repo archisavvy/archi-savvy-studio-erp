@@ -1,4 +1,4 @@
-<!-- Thank you for contributing to Archi Savvy Studio ERP. First-time contributors: the CLA
+<!-- Thank you for contributing to ArchiSavvyERP. First-time contributors: the CLA
 Assistant bot will ask you to sign the CLA (CLA.md) once. -->
 
 ## Summary

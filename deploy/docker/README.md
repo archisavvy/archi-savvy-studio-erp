@@ -1,4 +1,4 @@
-# Running Archi Savvy Studio ERP in Docker
+# Running ArchiSavvyERP in Docker
 
 This directory ships two container layouts. Both work, so pick the one that matches how you plan to run the app and then follow just that section.
 

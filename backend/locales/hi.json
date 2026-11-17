@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "यह नाम नए कैटलॉग के लिए उपयोग नहीं किया जा सकता। कोई दूसरा नाम चुनें।",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "ओपन-सोर्स निर्माण लागत अनुमान"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "अपडेट करें"
   },
   "dashboard": {
-    "welcome": "Archi Savvy Studio ERP में आपका स्वागत है",
+    "welcome": "ArchiSavvyERP में आपका स्वागत है",
     "subtitle": "आपका निर्माण अनुमान कार्यक्षेत्र",
     "recent_projects": "हाल की परियोजनाएं",
     "system_status": "सिस्टम स्थिति",

@@ -308,7 +308,7 @@ class DwgOfflineReadinessResponse(BaseModel):
     # the browser and the server genuinely run on the same machine, so the
     # "your files never leave your computer" claim is literally true. On a
     # hosted demo this is False and the UI must show the honest "processed
-    # on your Archi Savvy Studio ERP server" copy instead. Defaults to False so
+    # on your ArchiSavvyERP server" copy instead. Defaults to False so
     # the strong claim is never shown unless explicitly earned.
     local_only: bool = False
 

@@ -1,4 +1,4 @@
-// ESLint v9 flat config for the Archi Savvy Studio ERP frontend.
+// ESLint v9 flat config for the ArchiSavvyERP frontend.
 //
 // We intentionally keep this lightweight: type-checking is already
 // covered by `tsc --noEmit` (and is enforced by `npm run typecheck`).

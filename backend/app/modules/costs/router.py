@@ -3188,7 +3188,7 @@ async def install_v3_catalogue(
             "Installing cost databases is disabled on the public demo. Each "
             "catalogue is 400+ MB and the demo runs on a small shared box. To "
             "load this region or your own cost data, download and run "
-            "Archi Savvy Studio ERP on your own machine: pip install openbusinesserp.",
+            "ArchiSavvyERP on your own machine: pip install openbusinesserp.",
         )
 
     from app.modules.costs.qdrant_adapter import describe_server_write_mismatch

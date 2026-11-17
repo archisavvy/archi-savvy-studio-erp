@@ -15,7 +15,7 @@ manifest = ModuleManifest(
         "reportlab is available, structured plain text otherwise) and "
         "single-use acknowledgement tokens for recipients."
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="core",
     depends=["oe_projects", "oe_users"],
     auto_install=True,

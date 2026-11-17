@@ -15,7 +15,7 @@ manifest = ModuleManifest(
         "configurable retention window (default 30 days) drives a nightly "
         "hard-purge job."
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="core",
     depends=["oe_projects", "oe_users"],
     auto_install=True,

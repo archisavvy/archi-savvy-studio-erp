@@ -1,6 +1,6 @@
 {
   "what": "English sentences that a locale renders more than one way, as the files contain them. Nothing here was written by this process; it is a reading.",
-  "product": "Archi Savvy Studio ERP / OpenEstimate",
+  "product": "ArchiSavvyERP / OpenEstimate",
   "holder": "DataDrivenConstruction",
   "recorded": "2026-08-08",
   "tree": "20de3d9346ca5a832f8d3b577419b870b1afbf66",
@@ -4960,17 +4960,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to Archi Savvy Studio ERP",
+        "english": "Welcome to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "مرحباً بك في Archi Savvy Studio ERP",
+            "value": "مرحباً بك في ArchiSavvyERP",
             "keys": [
               "dashboard.welcome_title"
             ]
           },
           {
-            "value": "مرحبًا بك في Archi Savvy Studio ERP",
+            "value": "مرحبًا بك في ArchiSavvyERP",
             "keys": [
               "onboarding.welcome_title"
             ]
@@ -11866,17 +11866,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to Archi Savvy Studio ERP",
+        "english": "Back to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Zpět do Archi Savvy Studio ERP",
+            "value": "Zpět do ArchiSavvyERP",
             "keys": [
               "payportal.back_to_app"
             ]
           },
           {
-            "value": "Zpět na Archi Savvy Studio ERP",
+            "value": "Zpět na ArchiSavvyERP",
             "keys": [
               "homeportal.back_to_app"
             ]
@@ -31218,17 +31218,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to Archi Savvy Studio ERP",
+        "english": "Back to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Tagasi Archi Savvy Studio ERP juurde",
+            "value": "Tagasi ArchiSavvyERP juurde",
             "keys": [
               "homeportal.back_to_app"
             ]
           },
           {
-            "value": "Tagasi Archi Savvy Studio ERP-sse",
+            "value": "Tagasi ArchiSavvyERP-sse",
             "keys": [
               "payportal.back_to_app"
             ]
@@ -33702,17 +33702,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to Archi Savvy Studio ERP",
+        "english": "Back to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Takaisin Archi Savvy Studio ERP:hen",
+            "value": "Takaisin ArchiSavvyERP:hen",
             "keys": [
               "payportal.back_to_app"
             ]
           },
           {
-            "value": "Takaisin Archi Savvy Studio ERP:ään",
+            "value": "Takaisin ArchiSavvyERP:ään",
             "keys": [
               "homeportal.back_to_app"
             ]
@@ -37522,17 +37522,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to Archi Savvy Studio ERP",
+        "english": "Welcome to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Tervetuloa Archi Savvy Studio ERP-alustaan",
+            "value": "Tervetuloa ArchiSavvyERP-alustaan",
             "keys": [
               "onboarding.welcome_title"
             ]
           },
           {
-            "value": "Tervetuloa Archi Savvy Studio ERP:iin",
+            "value": "Tervetuloa ArchiSavvyERP:iin",
             "keys": [
               "dashboard.welcome_title"
             ]
@@ -41336,17 +41336,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to Archi Savvy Studio ERP",
+        "english": "Welcome to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Bienvenue dans Archi Savvy Studio ERP",
+            "value": "Bienvenue dans ArchiSavvyERP",
             "keys": [
               "dashboard.welcome_title"
             ]
           },
           {
-            "value": "Bienvenue sur Archi Savvy Studio ERP",
+            "value": "Bienvenue sur ArchiSavvyERP",
             "keys": [
               "onboarding.welcome_title"
             ]
@@ -41809,17 +41809,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to Archi Savvy Studio ERP",
+        "english": "Back to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Archi Savvy Studio ERP पर वापस जाएँ",
+            "value": "ArchiSavvyERP पर वापस जाएँ",
             "keys": [
               "payportal.back_to_app"
             ]
           },
           {
-            "value": "Archi Savvy Studio ERP पर वापस जाएं",
+            "value": "ArchiSavvyERP पर वापस जाएं",
             "keys": [
               "homeportal.back_to_app"
             ]
@@ -58713,17 +58713,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to Archi Savvy Studio ERP",
+        "english": "Welcome to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Benvenuto in Archi Savvy Studio ERP",
+            "value": "Benvenuto in ArchiSavvyERP",
             "keys": [
               "dashboard.welcome_title"
             ]
           },
           {
-            "value": "Benvenuto su Archi Savvy Studio ERP",
+            "value": "Benvenuto su ArchiSavvyERP",
             "keys": [
               "onboarding.welcome_title"
             ]
@@ -69025,17 +69025,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to Archi Savvy Studio ERP",
+        "english": "Back to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Archi Savvy Studio ERP'ке кайтуу",
+            "value": "ArchiSavvyERP'ке кайтуу",
             "keys": [
               "payportal.back_to_app"
             ]
           },
           {
-            "value": "Archi Savvy Studio ERPге кайтуу",
+            "value": "ArchiSavvyERPге кайтуу",
             "keys": [
               "homeportal.back_to_app"
             ]
@@ -74200,17 +74200,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to Archi Savvy Studio ERP",
+        "english": "Welcome to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Archi Savvy Studio ERP'ге кош келиңиз",
+            "value": "ArchiSavvyERP'ге кош келиңиз",
             "keys": [
               "dashboard.welcome_title"
             ]
           },
           {
-            "value": "Archi Savvy Studio ERP'ке кош келиңиз",
+            "value": "ArchiSavvyERP'ке кош келиңиз",
             "keys": [
               "onboarding.welcome_title"
             ]
@@ -93137,17 +93137,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to Archi Savvy Studio ERP",
+        "english": "Welcome to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Witaj w Archi Savvy Studio ERP",
+            "value": "Witaj w ArchiSavvyERP",
             "keys": [
               "onboarding.welcome_title"
             ]
           },
           {
-            "value": "Witamy w Archi Savvy Studio ERP",
+            "value": "Witamy w ArchiSavvyERP",
             "keys": [
               "dashboard.welcome_title"
             ]
@@ -93364,17 +93364,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to Archi Savvy Studio ERP",
+        "english": "Back to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Voltar ao Archi Savvy Studio ERP",
+            "value": "Voltar ao ArchiSavvyERP",
             "keys": [
               "payportal.back_to_app"
             ]
           },
           {
-            "value": "Voltar para Archi Savvy Studio ERP",
+            "value": "Voltar para ArchiSavvyERP",
             "keys": [
               "homeportal.back_to_app"
             ]
@@ -102776,17 +102776,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to Archi Savvy Studio ERP",
+        "english": "Welcome to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Bine ați venit în Archi Savvy Studio ERP",
+            "value": "Bine ați venit în ArchiSavvyERP",
             "keys": [
               "dashboard.welcome_title"
             ]
           },
           {
-            "value": "Bun venit în Archi Savvy Studio ERP",
+            "value": "Bun venit în ArchiSavvyERP",
             "keys": [
               "onboarding.welcome_title"
             ]
@@ -103185,17 +103185,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to Archi Savvy Studio ERP",
+        "english": "Back to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Вернуться в Archi Savvy Studio ERP",
+            "value": "Вернуться в ArchiSavvyERP",
             "keys": [
               "homeportal.back_to_app"
             ]
           },
           {
-            "value": "Назад в Archi Savvy Studio ERP",
+            "value": "Назад в ArchiSavvyERP",
             "keys": [
               "payportal.back_to_app"
             ]
@@ -112274,17 +112274,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to Archi Savvy Studio ERP",
+        "english": "Back to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "กลับไปที่ Archi Savvy Studio ERP",
+            "value": "กลับไปที่ ArchiSavvyERP",
             "keys": [
               "homeportal.back_to_app"
             ]
           },
           {
-            "value": "กลับไปยัง Archi Savvy Studio ERP",
+            "value": "กลับไปยัง ArchiSavvyERP",
             "keys": [
               "payportal.back_to_app"
             ]
@@ -117791,17 +117791,17 @@
         ]
       },
       "back_to_app": {
-        "english": "Back to Archi Savvy Studio ERP",
+        "english": "Back to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Archi Savvy Studio ERP'ye dön",
+            "value": "ArchiSavvyERP'ye dön",
             "keys": [
               "payportal.back_to_app"
             ]
           },
           {
-            "value": "Archi Savvy Studio ERP'ye geri dön",
+            "value": "ArchiSavvyERP'ye geri dön",
             "keys": [
               "homeportal.back_to_app"
             ]
@@ -121904,17 +121904,17 @@
         ]
       },
       "welcome_title": {
-        "english": "Welcome to Archi Savvy Studio ERP",
+        "english": "Welcome to ArchiSavvyERP",
         "phrase": false,
         "renderings": [
           {
-            "value": "Archi Savvy Studio ERP'ya Hoş Geldiniz",
+            "value": "ArchiSavvyERP'ya Hoş Geldiniz",
             "keys": [
               "onboarding.welcome_title"
             ]
           },
           {
-            "value": "Archi Savvy Studio ERP'ye Hoş Geldiniz",
+            "value": "ArchiSavvyERP'ye Hoş Geldiniz",
             "keys": [
               "dashboard.welcome_title"
             ]

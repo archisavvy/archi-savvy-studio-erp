@@ -17,7 +17,7 @@ manifest = ModuleManifest(
         "Islamic calendar references, Ramadan adjustments, GCC VAT rates, "
         "bilingual PDF support (Arabic + English)."
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="regional",
     depends=[],
     auto_install=False,

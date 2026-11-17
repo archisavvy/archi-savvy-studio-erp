@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Nama ini tidak dapat digunakan untuk katalog baru. Pilih nama lain.",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "Estimasi biaya konstruksi sumber terbuka"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Perbarui"
   },
   "dashboard": {
-    "welcome": "Selamat datang di Archi Savvy Studio ERP",
+    "welcome": "Selamat datang di ArchiSavvyERP",
     "subtitle": "Ruang kerja estimasi konstruksi Anda",
     "recent_projects": "Proyek terbaru",
     "system_status": "Status sistem",

@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "این نام را نمی‌توان برای کاتالوگ جدید استفاده کرد. نام دیگری انتخاب کنید.",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "برآورد متن‌باز هزینه ساخت‌وساز"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "به‌روزرسانی"
   },
   "dashboard": {
-    "welcome": "به Archi Savvy Studio ERP خوش آمدید",
+    "welcome": "به ArchiSavvyERP خوش آمدید",
     "subtitle": "فضای کاری برآورد ساخت‌وساز شما",
     "recent_projects": "پروژه‌های اخیر",
     "system_status": "وضعیت سیستم",

@@ -24,7 +24,7 @@ Look for issues labelled [good first issue](https://github.com/archisavvy/archi-
 
 ```bash
 git clone https://github.com/archisavvy/archi-savvy-studio-erp.git
-cd Archi Savvy Studio ERP
+cd ArchiSavvyERP
 pip install -e "./backend[server,dev]"
 cd frontend && npm install && cd ..
 

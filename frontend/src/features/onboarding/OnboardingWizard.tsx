@@ -1133,7 +1133,7 @@ function StepWelcome({
       </Badge>
 
       <h1 className="text-2xl sm:text-3xl font-bold text-content-primary tracking-tight">
-        {t('onboarding.welcome_title', { defaultValue: 'Welcome to Archi Savvy Studio ERP' })}
+        {t('onboarding.welcome_title', { defaultValue: 'Welcome to ArchiSavvyERP' })}
       </h1>
 
       <p className="mt-2 max-w-md text-sm sm:text-base text-content-secondary leading-relaxed">
@@ -4609,7 +4609,7 @@ export function OnboardingWizard() {
   // and re-translated on a language switch in step 1.
   const brandName = useBrandingStore((s) => (s.companyName.trim() ? s.companyName.trim() : null));
   useEffect(() => {
-    document.title = `${t('onboarding.page_title', { defaultValue: 'Getting started' })} | ${brandName ?? 'Archi Savvy Studio ERP'}`;
+    document.title = `${t('onboarding.page_title', { defaultValue: 'Getting started' })} | ${brandName ?? 'ArchiSavvyERP'}`;
   }, [t, i18nInstance.language, brandName]);
   const [step, setStep] = useState(0);
   const [selectedLang, setSelectedLang] = useState(() => i18n.language?.split('-')[0] || 'en');
@@ -4620,7 +4620,7 @@ export function OnboardingWizard() {
   );
 
   /* ONBOARD-MODAL: the wizard itself had NO completed-flag guard — it
-     always rendered step 0 ("Welcome to Archi Savvy Studio ERP"). It is only
+     always rendered step 0 ("Welcome to ArchiSavvyERP"). It is only
      mounted at the /onboarding route, but anything that routes there
      (the dashboard first-run redirect, a stale bookmark, a back-button,
      QA navigation) re-showed the welcome modal even for users who already
@@ -4779,7 +4779,7 @@ export function OnboardingWizard() {
 
   // Onboarding already finished: render nothing while the effect above
   // redirects to the app. Returning null (instead of the wizard) is what
-  // actually stops the "Welcome to Archi Savvy Studio ERP" modal from
+  // actually stops the "Welcome to ArchiSavvyERP" modal from
   // flashing on top of /settings & friends. (ONBOARD-MODAL)
   if (alreadyCompleted) {
     return null;

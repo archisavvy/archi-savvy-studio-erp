@@ -13,7 +13,7 @@ manifest = ModuleManifest(
         "parties, direction, duration, a short summary, and the instruction-bearing sentences "
         "pulled out of the transcript - so a spoken instruction is on the project record"
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="core",
     depends=["oe_users", "oe_projects"],
     auto_install=True,

@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Αυτό το όνομα δεν μπορεί να χρησιμοποιηθεί για νέο κατάλογο. Επιλέξτε άλλο όνομα.",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "Εκτίμηση κόστους κατασκευής ανοιχτού κώδικα"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Ενημέρωση"
   },
   "dashboard": {
-    "welcome": "Καλώς ήρθατε στο Archi Savvy Studio ERP",
+    "welcome": "Καλώς ήρθατε στο ArchiSavvyERP",
     "subtitle": "Ο χώρος εργασίας εκτίμησης κατασκευής σας",
     "recent_projects": "Πρόσφατα Έργα",
     "system_status": "Κατάσταση Συστήματος",

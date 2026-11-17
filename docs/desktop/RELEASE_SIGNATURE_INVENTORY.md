@@ -1,6 +1,6 @@
 # Which releases are signed, and what "signed" means
 
-This page states plainly what cryptographic guarantees an Archi Savvy Studio ERP
+This page states plainly what cryptographic guarantees an ArchiSavvyERP
 download does and does not carry. It exists because "is it signed?" has four
 different answers here and they do not agree with each other, so a single yes or
 no would be misleading whichever way it went.
@@ -141,14 +141,14 @@ says nothing about the file you downloaded.
 To look at a platform signature directly, on macOS:
 
 ```
-codesign -dv --verbose=4 /Applications/ArchiSavvyStudioERP.app
-spctl --assess --type execute -vv /Applications/ArchiSavvyStudioERP.app
+codesign -dv --verbose=4 /Applications/ArchiSavvyERP.app
+spctl --assess --type execute -vv /Applications/ArchiSavvyERP.app
 ```
 
 and on Windows, with the SDK's `signtool`:
 
 ```
-signtool verify /pa /v ArchiSavvyStudioERP_x64-setup.exe
+signtool verify /pa /v ArchiSavvyERP_x64-setup.exe
 ```
 
 Today both of those report the absence described above. That is the expected

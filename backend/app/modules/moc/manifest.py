@@ -12,7 +12,7 @@ manifest = ModuleManifest(
         "Structured workflow for proposing, reviewing, approving and "
         "implementing engineering or scope changes with full audit trail."
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="project_controls",
     depends=["oe_projects", "oe_variations", "oe_changeorders"],
     auto_install=True,

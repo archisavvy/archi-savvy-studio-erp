@@ -1,5 +1,5 @@
 # DDC-CWICR-OE: DataDrivenConstruction · OpenBusinessERP
-"""Seed a fresh Archi Savvy Studio ERP install with CWICR v3 catalogues.
+"""Seed a fresh ArchiSavvyERP install with CWICR v3 catalogues.
 
 Solves the "fresh-install needs a human to visit /costs and click
 Install for every region" problem from task #39 in the 2-day match

@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in Archi Savvy Studio ERP,
+If you discover a security vulnerability in ArchiSavvyERP,
 please report it responsibly.
 
 **DO NOT** open a public GitHub issue for security vulnerabilities.
@@ -83,7 +83,7 @@ pull request; report it privately first.
 
 ## Self-Hosting Security Checklist
 
-If you deploy Archi Savvy Studio ERP on your own infrastructure:
+If you deploy ArchiSavvyERP on your own infrastructure:
 
 - [ ] Change `JWT_SECRET` from the default value
 - [ ] Use HTTPS (TLS 1.2+) in production - never expose HTTP

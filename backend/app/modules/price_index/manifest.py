@@ -13,7 +13,7 @@ manifest = ModuleManifest(
         "region using stored construction cost index series and regional "
         "factors, without rewriting the source estimate."
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="core",
     depends=["oe_costs"],
     auto_install=True,

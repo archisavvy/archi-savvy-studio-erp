@@ -1,6 +1,6 @@
 # Architecture overview
 
-Archi Savvy Studio ERP is an open, modular ERP for small and
+ArchiSavvyERP is an open, modular ERP for small and
 medium businesses, published by DataDrivenConstruction under AGPL-3.0 with a
 commercial option for enterprises. This page is the entry point to the architecture
 docs. It explains how the codebase fits together: the monorepo layout, the module

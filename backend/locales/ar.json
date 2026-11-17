@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "لا يمكن استخدام هذا الاسم لكتالوج جديد. اختر اسمًا آخر.",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "تقدير تكاليف البناء مفتوح المصدر"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "تحديث"
   },
   "dashboard": {
-    "welcome": "مرحباً بك في Archi Savvy Studio ERP",
+    "welcome": "مرحباً بك في ArchiSavvyERP",
     "subtitle": "منصة تقدير تكاليف البناء مفتوحة المصدر",
     "recent_projects": "المشاريع الأخيرة",
     "system_status": "حالة النظام",

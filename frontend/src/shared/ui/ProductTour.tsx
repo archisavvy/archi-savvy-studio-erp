@@ -1,7 +1,7 @@
 // DDC-CWICR-OE: DataDrivenConstruction · OpenBusinessERP
 // Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
 /**
- * ProductTour — first-run guided tour of Archi Savvy Studio ERP.
+ * ProductTour — first-run guided tour of ArchiSavvyERP.
  *
  * A multi-step spotlight coachmark walkthrough that introduces a new user
  * to the key surfaces of the app: sidebar navigation, project picker,

@@ -16,7 +16,7 @@ manifest = ModuleManifest(
         "Latin America construction standards: SINAPI (Brazil), NTDIF (Mexico), "
         "multi-currency support (BRL/MXN/ARS), and regional contract forms."
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="regional",
     depends=[],
     auto_install=False,

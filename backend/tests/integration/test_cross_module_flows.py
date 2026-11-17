@@ -1,4 +1,4 @@
-"""Cross-module integration tests for Archi Savvy Studio ERP.
+"""Cross-module integration tests for ArchiSavvyERP.
 
 Tests the CONNECTIONS between modules -- not individual module CRUD,
 but the workflows where one module's action triggers side-effects

@@ -61,7 +61,7 @@ const gapSizeMap = {
 /**
  * Logo + brand name. Per BRAND.md:
  * - Font: Plus Jakarta Sans 800
- * - Name: "Archi Savvy Studio ERP" (PascalCase, one word)
+ * - Name: "ArchiSavvyERP" (PascalCase, one word)
  * - Letter-spacing: -0.02em
  * - Icon is compact, name is prominent
  */
@@ -76,7 +76,7 @@ export function LogoWithText({ size = 'md', animate, showVersion = true, classNa
         )}
         style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif", letterSpacing: '-0.02em' }}
       >
-        Archi <span className="font-semibold">Savvy</span>
+        Archi<span className="font-semibold">Savvy</span>
         {showVersion && <span className="text-content-tertiary">ERP</span>}
       </span>
     </div>

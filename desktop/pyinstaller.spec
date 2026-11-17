@@ -1,5 +1,5 @@
 # -*- mode: python ; coding: utf-8 -*-
-"""PyInstaller spec for the Archi Savvy Studio ERP backend sidecar.
+"""PyInstaller spec for the ArchiSavvyERP backend sidecar.
 
 Builds the FastAPI backend into a single executable that Tauri
 launches as a sidecar process.
@@ -481,7 +481,7 @@ codesign_identity = None
 # The launcher has to resolve the same directory to sweep it and to measure the
 # free space on it, so it carries this string as EXTRACTION_ROOT_SPEC_LITERAL
 # and a test in main.rs reads this file and fails if the two stop matching.
-_WINDOWS_RUNTIME_TMPDIR = r"%LOCALAPPDATA%\ArchiSavvyStudioERP\extract"
+_WINDOWS_RUNTIME_TMPDIR = r"%LOCALAPPDATA%\ArchiSavvyERP\extract"
 
 # Build a SINGLE self-contained executable (onefile), not a onedir folder.
 # Tauri ships the sidecar as an externalBin, which must be one standalone file;

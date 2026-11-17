@@ -85,7 +85,7 @@ describe('RequestCustomModuleDialog', () => {
     // the placeholder https://github.com/archisavvy/archi-savvy-studio-erp / openestimate.io properties
     // (parked / 405 as of 2026-05-13).
     expect(link.getAttribute('href')).toMatch(
-      /ArchiSavvyStudioERP\/issues\/new\?topic=module_proposal_public/,
+      /ArchiSavvyERP\/issues\/new\?topic=module_proposal_public/,
     );
     expect(link.getAttribute('href')).toMatch(/utm_source=oe_app/);
   });

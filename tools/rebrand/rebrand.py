@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Repeatable rebrand of the upstream OpenBusinessERP tree.
 
-Archi Savvy Studio ERP is a modified version of OpenBusinessERP
+ArchiSavvyERP is a modified version of OpenBusinessERP
 (Copyright Artem Boiko / DataDrivenConstruction, AGPL-3.0-or-later).
 The upstream trademark policy requires a modified version to carry its own
 name and logo. This script applies that rename mechanically so it can be
@@ -24,8 +24,8 @@ import sys
 from pathlib import Path
 
 # ---- brand configuration -------------------------------------------------
-PRODUCT = "Archi Savvy Studio ERP"      # shown to people
-COMPACT = "ArchiSavvyStudioERP"         # file names, paths, identifiers
+PRODUCT = "ArchiSavvyERP"      # shown to people
+COMPACT = "ArchiSavvyERP"         # file names, paths, identifiers
 PUBLISHER = "Archi Savvy Studio"
 NEW_REPO = "archisavvy/archi-savvy-studio-erp"
 SIDECAR = "archisavvy-erp-server"
@@ -87,11 +87,7 @@ def transform_line(line: str) -> str:
     # Wordmarks drawn in pieces (sidebar, sign-in, registration, client portal).
     out = out.replace(
         'Open<span className="font-semibold">Business</span>',
-        'Archi <span className="font-semibold">Savvy</span>',
-    )
-    out = out.replace(
-        '<span className="text-content-quaternary">ERP</span>',
-        '<span className="text-content-quaternary"> Studio ERP</span>',
+        'Archi<span className="font-semibold">Savvy</span>',
     )
     out = re.sub(r"(?<![A-Za-z0-9_])\.openestimate\b", DATA_DIR, out)
     out = _name_sub(out)
@@ -164,8 +160,7 @@ def main() -> int:
         if ("OpenBusinessERP" not in text and "openbusinesserp" not in text
                 and ".openestimate" not in text
                 and "github.com/datadrivenconstruction/" not in text
-                and ">Business</span>" not in text
-                and '-quaternary">ERP</span>' not in text):
+                and ">Business</span>" not in text):
             continue
         new = "".join(transform_line(l) for l in text.splitlines(keepends=True))
         if new != text:

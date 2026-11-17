@@ -1,6 +1,6 @@
 # DDC-CWICR-OE: DataDrivenConstruction · OpenBusinessERP
 # Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
-"""Pluggable email service for Archi Savvy Studio ERP.
+"""Pluggable email service for ArchiSavvyERP.
 
 Public API (import from ``app.core.email``):
 

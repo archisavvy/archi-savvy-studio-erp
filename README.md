@@ -1,4 +1,4 @@
-<h1 align="center">Archi Savvy Studio ERP</h1>
+<h1 align="center">ArchiSavvyERP</h1>
 
 <p align="center">Self-hosted, open-source ERP for businesses in any country: quotes, invoices, stock, purchasing, bank reconciliation and double-entry bookkeeping, in 44 languages.</p>
 
@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/images/hero.png" alt="Archi Savvy Studio ERP dashboard with cash, receivables, payables and revenue of the demo company" width="100%">
+  <img src="docs/images/hero.png" alt="ArchiSavvyERP dashboard with cash, receivables, payables and revenue of the demo company" width="100%">
 </p>
 
 <h3 align="center">Download the desktop app</h3>
@@ -39,13 +39,13 @@
 
 ### ⭐ A star means a lot to us
 
-Archi Savvy Studio ERP is free and built by a small team at DataDrivenConstruction.<br>
+ArchiSavvyERP is free and built by a small team at DataDrivenConstruction.<br>
 Stars are how other companies find out that an open-source project is alive and worth trying.<br>
 **If the project is useful to you, please star it. It takes one click and helps us more than anything else.**
 
 **How:** sign in to GitHub → scroll to the top of this page → click **☆ Star** in the top right.
 
-<a href="https://github.com/archisavvy/archi-savvy-studio-erp/stargazers"><img src="https://img.shields.io/github/stars/archisavvy/archi-savvy-studio-erp?style=for-the-badge&logo=github&label=Star%20ArchiSavvyStudioERP&color=f5b301" alt="Star Archi Savvy Studio ERP on GitHub" height="36"></a>
+<a href="https://github.com/archisavvy/archi-savvy-studio-erp/stargazers"><img src="https://img.shields.io/github/stars/archisavvy/archi-savvy-studio-erp?style=for-the-badge&logo=github&label=Star%20ArchiSavvyERP&color=f5b301" alt="Star ArchiSavvyERP on GitHub" height="36"></a>
 
 </td></tr></table>
 
@@ -119,7 +119,7 @@ You need Docker with Compose v2, Git and `make`.
 
 ```bash
 git clone https://github.com/archisavvy/archi-savvy-studio-erp.git
-cd Archi Savvy Studio ERP
+cd ArchiSavvyERP
 echo "POSTGRES_PASSWORD=$(openssl rand -base64 24)" >  .env
 echo "JWT_SECRET=$(openssl rand -hex 32)"           >> .env
 make quickstart
@@ -168,19 +168,19 @@ Bug reports, translations and pull requests are welcome. Read [CONTRIBUTING.md](
 
 ## License
 
-Archi Savvy Studio ERP is licensed under the [GNU Affero General Public License v3.0](LICENSE). You can use, modify and self-host it freely. If you offer a modified version to users over a network, you must make its source code available to them under the same license. A commercial license is available on request. See also [NOTICE](NOTICE), [TRADEMARK.md](TRADEMARK.md) and [PRIVACY.md](PRIVACY.md).
+ArchiSavvyERP is licensed under the [GNU Affero General Public License v3.0](LICENSE). You can use, modify and self-host it freely. If you offer a modified version to users over a network, you must make its source code available to them under the same license. A commercial license is available on request. See also [NOTICE](NOTICE), [TRADEMARK.md](TRADEMARK.md) and [PRIVACY.md](PRIVACY.md).
 
 ## Disclaimer
 
-Archi Savvy Studio ERP is provided **"AS IS", without warranty of any kind**, express or implied, and without liability for damages, to the extent permitted by law (see sections 15 and 16 of the [AGPL-3.0](LICENSE)).
+ArchiSavvyERP is provided **"AS IS", without warranty of any kind**, express or implied, and without liability for damages, to the extent permitted by law (see sections 15 and 16 of the [AGPL-3.0](LICENSE)).
 
 - **Not professional advice.** Nothing in the software or its documentation is tax, legal or accounting advice. Consult a qualified adviser for your situation.
 - **You verify the rules.** Tax rates, VAT logic, e-invoice formats, statutory reports and retention rules are shipped as a starting point and change over time. You are responsible for checking them against current law and the official specifications before relying on them, and for any filing or invoice you issue.
-- **Schema-validated is not certified.** Where the software validates documents against a published schema, that confirms the structure only. No part of Archi Savvy Studio ERP is certified by a tax authority or standards body unless explicitly stated.
+- **Schema-validated is not certified.** Where the software validates documents against a published schema, that confirms the structure only. No part of ArchiSavvyERP is certified by a tax authority or standards body unless explicitly stated.
 - **Fictional demo data.** All demo companies, people, addresses, bank details and tax numbers are invented. Any resemblance to real organisations or persons is coincidental.
 
 <p align="center"><sub>Made by <a href="https://datadrivenconstruction.io">Data Driven Construction</a>.</sub></p>
 
 ---
 
-<p align="center"><b>Found Archi Savvy Studio ERP useful?</b> <a href="https://github.com/archisavvy/archi-savvy-studio-erp">⭐ Star it on GitHub</a> so more companies can find it. Thank you!</p>
+<p align="center"><b>Found ArchiSavvyERP useful?</b> <a href="https://github.com/archisavvy/archi-savvy-studio-erp">⭐ Star it on GitHub</a> so more companies can find it. Thank you!</p>

@@ -3,7 +3,7 @@
 """Microsoft Teams incoming webhook connector.
 
 Setup: User creates an Incoming Webhook in their Teams channel,
-copies the webhook URL, pastes it in Archi Savvy Studio ERP settings.
+copies the webhook URL, pastes it in ArchiSavvyERP settings.
 Legal: Uses official MS Teams webhook API. No OAuth, no app review.
 """
 

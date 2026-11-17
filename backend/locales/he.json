@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "אי אפשר להשתמש בשם זה לקטלוג חדש. בחרו שם אחר.",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "אומדן עלויות בנייה בקוד פתוח"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "עדכון"
   },
   "dashboard": {
-    "welcome": "ברוכים הבאים ל-Archi Savvy Studio ERP",
+    "welcome": "ברוכים הבאים ל-ArchiSavvyERP",
     "subtitle": "סביבת העבודה שלכם לאומדן בנייה",
     "recent_projects": "פרויקטים אחרונים",
     "system_status": "סטטוס מערכת",

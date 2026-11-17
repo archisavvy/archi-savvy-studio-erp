@@ -11,7 +11,7 @@ On start, the app brings the database schema up to date by itself. You do not ru
 ## Docker Compose, built from source
 
 ```bash
-cd Archi Savvy Studio ERP
+cd ArchiSavvyERP
 git pull
 make quickstart
 ```

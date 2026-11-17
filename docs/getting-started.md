@@ -1,6 +1,6 @@
 # Getting Started
 
-Three ways to run Archi Savvy Studio ERP. Pick whichever fits your setup.
+Three ways to run ArchiSavvyERP. Pick whichever fits your setup.
 
 ## Path A: Desktop App (easiest)
 

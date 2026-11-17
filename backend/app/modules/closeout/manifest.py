@@ -14,7 +14,7 @@ manifest = ModuleManifest(
         "evidence from punchlist/inspections/COBie, completeness tracking, "
         "idempotent ZIP build with PDF cover and machine-readable manifest"
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="core",
     depends=["oe_users", "oe_projects", "oe_documents"],
     auto_install=True,

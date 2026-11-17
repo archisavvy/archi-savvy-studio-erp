@@ -2,11 +2,11 @@
 
 Also available in [Deutsch](WINDOWS_BLOCKED.de.md) and [Русский](WINDOWS_BLOCKED.ru.md).
 
-This page is for you if Windows refuses to start Archi Savvy Studio ERP, calls it an app from an unknown or unverified publisher, or let it run once and blocks it on every start since.
+This page is for you if Windows refuses to start ArchiSavvyERP, calls it an app from an unknown or unverified publisher, or let it run once and blocks it on every start since.
 
 ## Why this happens
 
-The Windows builds of Archi Savvy Studio ERP are not code signed yet. A signature is how Windows learns who published a program, and without one Windows treats the app as coming from an unknown publisher. Two separate Windows features react to that, and they need different handling:
+The Windows builds of ArchiSavvyERP are not code signed yet. A signature is how Windows learns who published a program, and without one Windows treats the app as coming from an unknown publisher. Two separate Windows features react to that, and they need different handling:
 
 - **Microsoft Defender SmartScreen** shows a blue "Windows protected your PC" window when you start a program downloaded from the internet that Windows does not recognise yet. It warns, and it lets you continue.
 - **Smart App Control** is a stricter feature of Windows 11. When it is on, it blocks every program file that Microsoft's cloud service cannot vouch for and that carries no trusted signature, and it offers no button to continue and no per-app exception. Its message names Smart App Control and usually says that the app, or part of it, has been blocked.
@@ -23,7 +23,7 @@ The name in the notification can be confusing. The block comes from the Windows 
 
 Then check whether Smart App Control is on: in Windows Security go to **App & browser control** and open **Smart App Control settings**. It shows **On**, **Evaluation** or **Off**.
 
-To see exactly which file was refused, open **Event Viewer**, go to **Applications and Services Logs** > **Microsoft** > **Windows** > **CodeIntegrity** > **Operational**, and look for event **3077**. For the desktop app the file usually sits under `%LOCALAPPDATA%\ArchiSavvyStudioERP\extract`, where the app unpacks its helper files on every start. That block is expected for an unsigned build and does not mean the file is a virus.
+To see exactly which file was refused, open **Event Viewer**, go to **Applications and Services Logs** > **Microsoft** > **Windows** > **CodeIntegrity** > **Operational**, and look for event **3077**. For the desktop app the file usually sits under `%LOCALAPPDATA%\ArchiSavvyERP\extract`, where the app unpacks its helper files on every start. That block is expected for an unsigned build and does not mean the file is a virus.
 
 ## Step 2a: SmartScreen ("Windows protected your PC")
 
@@ -38,13 +38,13 @@ SmartScreen only asks for files downloaded from the internet. If it keeps asking
 
 There is no way to allow a single app while Smart App Control stays on. Microsoft's own advice is to turn it off or to ask the publisher to sign the app, and our Windows builds are not signed today. That leaves two honest choices.
 
-**Option 1: keep Smart App Control on and run the app another way.** This is what we recommend if you want to keep the protection. Docker and WSL both run Archi Savvy Studio ERP inside a small Linux environment, and Smart App Control does not check Linux programs. Both are described below.
+**Option 1: keep Smart App Control on and run the app another way.** This is what we recommend if you want to keep the protection. Docker and WSL both run ArchiSavvyERP inside a small Linux environment, and Smart App Control does not check Linux programs. Both are described below.
 
 **Option 2: turn Smart App Control off.** This lowers the protection of your whole PC, not only for our app, so do it only if you are comfortable with that. On current Windows 11 builds you can switch it back on later from the same page, but on older builds turning it off is permanent until you reset or reinstall Windows. If the page offers no way back on after you turn it off, you are on such a build.
 
 1. Open **Windows Security**, go to **App & browser control**, then **Smart App Control settings**.
 2. Select **Off** and confirm.
-3. Start Archi Savvy Studio ERP again.
+3. Start ArchiSavvyERP again.
 
 Microsoft Defender Antivirus and SmartScreen stay on either way.
 
@@ -53,7 +53,7 @@ If Protection history shows a Microsoft Defender Antivirus detection instead, an
 ## Run it with Docker (works with Smart App Control on)
 
 1. Install **Docker Desktop** from docker.com and start it once. Docker Desktop is free for personal use, education, and small companies; larger companies need a paid Docker subscription.
-2. Create a folder, for example `C:\ArchiSavvyStudioERP`, open **Windows PowerShell** in it, and run:
+2. Create a folder, for example `C:\ArchiSavvyERP`, open **Windows PowerShell** in it, and run:
 
 ```powershell
 curl.exe -fsSL https://raw.githubusercontent.com/archisavvy/archi-savvy-studio-erp/main/docker-compose.quickstart.yml -o docker-compose.yml
@@ -103,7 +103,7 @@ py -3.12 -m openbusinesserp
 Every release lists a `SHA256SUMS` file next to the installers. Download it into the same folder as the installer, open **Windows PowerShell** in that folder, and run:
 
 ```powershell
-$exe = Get-ChildItem ArchiSavvyStudioERP_*_x64-setup.exe | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$exe = Get-ChildItem ArchiSavvyERP_*_x64-setup.exe | Sort-Object LastWriteTime -Descending | Select-Object -First 1
 $line = Select-String -Path SHA256SUMS -Pattern $exe.Name -SimpleMatch
 (Get-FileHash $exe.FullName -Algorithm SHA256).Hash -eq $line.Line.Split(' ')[0]
 ```

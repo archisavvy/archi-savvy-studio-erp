@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Ez a név nem használható az új katalógushoz. Válasszon másik nevet.",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "Nyílt forráskódú építési költségbecslés"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Frissítés"
   },
   "dashboard": {
-    "welcome": "Üdvözöljük az Archi Savvy Studio ERP-ben",
+    "welcome": "Üdvözöljük az ArchiSavvyERP-ben",
     "subtitle": "Az Ön építési költségbecslési munkaterülete",
     "recent_projects": "Legutóbbi projektek",
     "system_status": "Rendszerállapot",

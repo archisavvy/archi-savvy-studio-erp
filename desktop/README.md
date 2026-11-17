@@ -1,6 +1,6 @@
-# Archi Savvy Studio ERP Desktop
+# ArchiSavvyERP Desktop
 
-This folder holds the desktop build of Archi Savvy Studio ERP by DataDrivenConstruction. The desktop app is a native shell built with Tauri that bundles the full backend and an embedded PostgreSQL database into a single installer. People who install it do not need Python, pip, Docker, or any database setup. They download one file, run it, and the app takes care of the rest.
+This folder holds the desktop build of ArchiSavvyERP by DataDrivenConstruction. The desktop app is a native shell built with Tauri that bundles the full backend and an embedded PostgreSQL database into a single installer. People who install it do not need Python, pip, Docker, or any database setup. They download one file, run it, and the app takes care of the rest.
 
 This README is for developers who build the installers. If you are a user looking to install and run the app, read `docs/desktop/INSTALL.md` instead.
 

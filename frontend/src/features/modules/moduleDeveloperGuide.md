@@ -1,6 +1,6 @@
 # Build your own module
 
-Archi Savvy Studio ERP is built entirely from modules. Every business feature you see (BOQ, BIM Hub, Schedule, CDE, regional packs, AI tooling) is a self-contained module that the platform discovers, loads and mounts on its own. This guide is a practical, ten-minute walkthrough for adding your own.
+ArchiSavvyERP is built entirely from modules. Every business feature you see (BOQ, BIM Hub, Schedule, CDE, regional packs, AI tooling) is a self-contained module that the platform discovers, loads and mounts on its own. This guide is a practical, ten-minute walkthrough for adding your own.
 
 There are two ways to extend the platform. A **partner pack** is a code-free preset bundle (branding, locale, currency, which modules to show) that anyone can build and share. A **module** is real code: new screens, endpoints, tables, validation rules. Start with the part you need.
 
@@ -114,7 +114,7 @@ Have these ready before starting. If you can run the app locally, you already ha
 
 ```bash
 git clone https://github.com/archisavvy/archi-savvy-studio-erp.git
-cd Archi Savvy Studio ERP
+cd ArchiSavvyERP
 # Backend
 cd backend && pip install -e ".[dev]"
 uvicorn app.main:create_app --factory --reload --port 8000

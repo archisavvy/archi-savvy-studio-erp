@@ -1,6 +1,6 @@
-# Archi Savvy Studio ERP
+# ArchiSavvyERP
 
-Archi Savvy Studio ERP is a free ERP system that you run yourself. It covers quotes and invoices, customers, stock, purchasing, bank reconciliation and double-entry accounting. It is licensed under the AGPL-3.0.
+ArchiSavvyERP is a free ERP system that you run yourself. It covers quotes and invoices, customers, stock, purchasing, bank reconciliation and double-entry accounting. It is licensed under the AGPL-3.0.
 
 This manual is for the owner of a small business and for the accountant who works with them. It explains tasks, one at a time, using screens from the bundled demo company.
 

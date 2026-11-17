@@ -102,9 +102,9 @@ def test_resolve_data_dir_dist_packages_also_persistent(tmp_path, monkeypatch) -
 def test_resolve_data_dir_source_checkout_keeps_repo_data(tmp_path, monkeypatch) -> None:
     """A git/source checkout (the demo VPS) keeps the persistent ``<repo>/data``."""
     _clear_data_env(monkeypatch)
-    fake = tmp_path / "Archi Savvy Studio ERP" / "backend" / "app" / "core" / "storage.py"
+    fake = tmp_path / "ArchiSavvyERP" / "backend" / "app" / "core" / "storage.py"
     monkeypatch.setattr(storage_mod, "__file__", str(fake))
-    assert resolve_data_dir() == (tmp_path / "Archi Savvy Studio ERP" / "data").resolve()
+    assert resolve_data_dir() == (tmp_path / "ArchiSavvyERP" / "data").resolve()
 
 
 def test_default_local_base_dir_is_alias(tmp_path, monkeypatch) -> None:

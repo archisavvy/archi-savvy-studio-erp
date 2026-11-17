@@ -12,7 +12,7 @@ manifest = ModuleManifest(
         "Double-entry accounting core: chart of accounts (IFRS, DE SKR03, DE SKR04, AT EKR, CH KMU templates), fiscal years "
         "and periods, immutable posted journal entries with reversal, trial balance and statements"
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="core",
     depends=[],
     auto_install=True,

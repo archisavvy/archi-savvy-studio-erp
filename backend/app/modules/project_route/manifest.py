@@ -16,7 +16,7 @@ manifest = ModuleManifest(
         "required. The decision tree is jurisdiction-neutral data that regional "
         "packs override; a confirmed route gates the project before it proceeds."
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="core",
     depends=["oe_users", "oe_projects"],
     auto_install=True,

@@ -1,4 +1,4 @@
-"""Custom hatchling build hook for Archi Savvy Studio ERP backend.
+"""Custom hatchling build hook for ArchiSavvyERP backend.
 
 Solves a long-standing fresh-install paper-cut: the wheel target uses
 ``[tool.hatch.build.targets.wheel.force-include]`` to bundle the pre-built

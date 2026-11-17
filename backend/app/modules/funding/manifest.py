@@ -13,7 +13,7 @@ manifest = ModuleManifest(
         "disbursement -> proof of use, with the deadlines and eligible-cost "
         "rules each programme imposes"
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="business",
     # oe_projects: an application is always for one project, and the award
     # period is checked against the project's own dates.

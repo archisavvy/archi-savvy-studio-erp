@@ -17,7 +17,7 @@ manifest = ModuleManifest(
         "recovery and activity records; its only table is a small admin-tunable "
         "lookup of the hours-saved minute factors (oe_value_time_factor)"
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="controls",
     depends=[
         "oe_users",

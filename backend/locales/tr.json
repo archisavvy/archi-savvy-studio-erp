@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Bu ad yeni bir katalog için kullanılamaz. Başka bir ad seçin.",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "Açık kaynak inşaat maliyet tahmini"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Güncelle"
   },
   "dashboard": {
-    "welcome": "Archi Savvy Studio ERP'ye hoş geldiniz",
+    "welcome": "ArchiSavvyERP'ye hoş geldiniz",
     "subtitle": "Açık kaynak inşaat maliyet tahmini platformu",
     "recent_projects": "Son projeler",
     "system_status": "Sistem durumu",

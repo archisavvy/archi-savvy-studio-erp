@@ -1,4 +1,4 @@
-# Archi Savvy Studio ERP - DigitalOcean Terraform Deployment
+# ArchiSavvyERP - DigitalOcean Terraform Deployment
 #
 # Usage:
 #   cd deploy/terraform/digitalocean
@@ -7,7 +7,7 @@
 #
 # Creates:
 #   - 1x Droplet (s-2vcpu-4gb)
-#   - Docker Compose with PostgreSQL + Archi Savvy Studio ERP
+#   - Docker Compose with PostgreSQL + ArchiSavvyERP
 #     (published image from ghcr.io, no source build on the droplet)
 #   - Firewall (80, 443, 22, 8080)
 #
@@ -40,7 +40,7 @@ variable "ssh_key_id" {
 }
 
 variable "app_image" {
-  description = "Archi Savvy Studio ERP container image to deploy"
+  description = "ArchiSavvyERP container image to deploy"
   type        = string
   default     = "ghcr.io/datadrivenconstruction/openbusinesserp:latest"
 }
@@ -132,7 +132,7 @@ resource "digitalocean_droplet" "openbusinesserp" {
     # Start services
     docker compose up -d
 
-    echo "Archi Savvy Studio ERP installed at $PUBLIC_IP:8080"
+    echo "ArchiSavvyERP installed at $PUBLIC_IP:8080"
   CLOUDINIT
 
   tags = ["openbusinesserp"]
@@ -181,10 +181,10 @@ resource "digitalocean_firewall" "openbusinesserp" {
 
 output "ip_address" {
   value       = digitalocean_droplet.openbusinesserp.ipv4_address
-  description = "Archi Savvy Studio ERP server IP"
+  description = "ArchiSavvyERP server IP"
 }
 
 output "url" {
   value       = "http://${digitalocean_droplet.openbusinesserp.ipv4_address}:8080"
-  description = "Archi Savvy Studio ERP URL"
+  description = "ArchiSavvyERP URL"
 }

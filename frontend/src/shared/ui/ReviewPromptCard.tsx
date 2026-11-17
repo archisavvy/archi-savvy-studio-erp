@@ -30,7 +30,7 @@ import { useReviewPromptStore } from '@/stores/useReviewPromptStore';
 const REPO_URL = 'https://github.com/archisavvy/archi-savvy-studio-erp';
 
 const SHARE_TEXT =
-  'Archi Savvy Studio ERP - free open-source construction cost estimation platform (BOQ, BIM takeoff, AI). Self-hosted. AGPL-3.0.';
+  'ArchiSavvyERP - free open-source construction cost estimation platform (BOQ, BIM takeoff, AI). Self-hosted. AGPL-3.0.';
 
 const LINKEDIN_URL = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
   REPO_URL,
@@ -86,7 +86,7 @@ export function ReviewPromptCard() {
   return (
     <div
       role="region"
-      aria-label={t('review_ask.aria_label', { defaultValue: 'Rate Archi Savvy Studio ERP' })}
+      aria-label={t('review_ask.aria_label', { defaultValue: 'Rate ArchiSavvyERP' })}
       data-testid="review-prompt-card"
       className={clsx(
         'oe-dock-aware fixed bottom-4 right-4 z-[60] w-[min(22rem,calc(100vw-2rem))]',
@@ -110,7 +110,7 @@ export function ReviewPromptCard() {
         </div>
         <div className="min-w-0 flex-1">
           <p className="text-sm font-semibold text-content-primary">
-            {t('review_ask.title', { defaultValue: 'Enjoying Archi Savvy Studio ERP?' })}
+            {t('review_ask.title', { defaultValue: 'Enjoying ArchiSavvyERP?' })}
           </p>
           <p className="mt-1 text-xs leading-relaxed text-content-secondary">
             {t('review_ask.body', {

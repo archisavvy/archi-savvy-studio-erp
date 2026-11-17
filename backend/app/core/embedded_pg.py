@@ -1487,7 +1487,7 @@ def windows_path_limit_problem(pgdata: Path | str) -> PathTooLong | None:
         "The folder the local database lives in sits too deep in the filesystem for Windows to "
         "let PostgreSQL open the files inside it.",
         "Start the application with a shorter data directory, for example "
-        "openbusinesserp serve --data-dir C:\\ArchiSavvyStudioERP\\data, or set the "
+        "openbusinesserp serve --data-dir C:\\ArchiSavvyERP\\data, or set the "
         "OE_DATA_DIR environment variable to that path.",
     )
 
@@ -1498,7 +1498,7 @@ def windows_path_limit_problem(pgdata: Path | str) -> PathTooLong | None:
             _PGINSTALL_LONGEST_RELATIVE,
             "The PostgreSQL that ships with this application sits too deep in the filesystem "
             "for Windows to let it open its own files.",
-            "Install Archi Savvy Studio ERP somewhere shorter, for example C:\\ArchiSavvyStudioERP, and this goes away.",
+            "Install ArchiSavvyERP somewhere shorter, for example C:\\ArchiSavvyERP, and this goes away.",
         )
         if install_problem is not None:
             if data_problem is None:
@@ -1733,8 +1733,8 @@ def _clear_incomplete_cluster(pgdata: Path) -> None:
 
 #: Delimits the settings this module owns inside ``postgresql.conf``, so the
 #: block can be rewritten in place instead of appended to on every boot.
-_SETTINGS_BEGIN = "# BEGIN Archi Savvy Studio ERP settings (managed, do not edit)"
-_SETTINGS_END = "# END Archi Savvy Studio ERP settings"
+_SETTINGS_BEGIN = "# BEGIN ArchiSavvyERP settings (managed, do not edit)"
+_SETTINGS_END = "# END ArchiSavvyERP settings"
 
 #: Lock slots are a shared pool sized ``max_locks_per_transaction`` times
 #: ``max_connections``, not a per-transaction allowance. The platform's schema
