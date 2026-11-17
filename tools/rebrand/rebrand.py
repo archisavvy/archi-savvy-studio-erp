@@ -89,10 +89,6 @@ def transform_line(line: str) -> str:
         'Open<span className="font-semibold">Business</span>',
         'Archi<span className="font-semibold">Savvy</span>',
     )
-    out = out.replace(
-        '<span className="text-content-quaternary">ERP</span>',
-        '<span className="text-content-quaternary">ERP</span>',
-    )
     out = re.sub(r"(?<![A-Za-z0-9_])\.openestimate\b", DATA_DIR, out)
     out = _name_sub(out)
     return out
@@ -164,8 +160,7 @@ def main() -> int:
         if ("OpenBusinessERP" not in text and "openbusinesserp" not in text
                 and ".openestimate" not in text
                 and "github.com/datadrivenconstruction/" not in text
-                and ">Business</span>" not in text
-                and '-quaternary">ERP</span>' not in text):
+                and ">Business</span>" not in text):
             continue
         new = "".join(transform_line(l) for l in text.splitlines(keepends=True))
         if new != text:
