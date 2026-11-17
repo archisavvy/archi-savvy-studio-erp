@@ -1,10 +1,10 @@
 <p align="center"><img src="frontend/public/brand/archi-savvy-logo.webp" alt="Archi Savvy" width="420"></p>
 
-<h1 align="center">Archi Savvy Studio ERP</h1>
+<h1 align="center">ArchiSavvyERP</h1>
 
 <p align="center">Practice management and ERP for architecture and design studios, as a Windows desktop application.</p>
 
-Archi Savvy Studio ERP is a modified version of OpenBusinessERP by Artem Boiko / DataDrivenConstruction. <!-- rebrand:keep -->
+ArchiSavvyERP is a modified version of OpenBusinessERP by Artem Boiko / DataDrivenConstruction. <!-- rebrand:keep -->
 It is licensed under the GNU Affero General Public License v3.0 or later, the same licence as the original.
 It is not affiliated with, endorsed by or supported by the original authors. See [MODIFICATIONS.md](MODIFICATIONS.md).
 

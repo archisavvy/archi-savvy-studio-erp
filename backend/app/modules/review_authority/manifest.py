@@ -19,7 +19,7 @@ manifest = ModuleManifest(
         "Jurisdiction-neutral: it models the cycle and its evidence, never a "
         "country's rulebook; regional packs supply the authority vocabularies."
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="core",
     depends=["oe_users", "oe_projects"],
     auto_install=True,

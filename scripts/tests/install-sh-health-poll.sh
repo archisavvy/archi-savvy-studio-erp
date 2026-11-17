@@ -165,7 +165,7 @@ while IFS='|' read -r name body want; do
     fi
     stop_stub
 done <<'CASES'
-a healthy install|{"status":"healthy","database":"ok"}|Archi Savvy Studio ERP is running
+a healthy install|{"status":"healthy","database":"ok"}|ArchiSavvyERP is running
 a degraded install whose database is reachable|{"status":"degraded","database":"ok"}|not every enabled module loaded
 a degraded install that cannot reach its database|{"status":"degraded","database":"error"}|cannot reach its database
 CASES

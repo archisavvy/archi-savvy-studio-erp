@@ -20,7 +20,7 @@ manifest = ModuleManifest(
         "ISO 19650 filename validation + generic cross-entity references "
         "linking files to RFIs, issues, tasks, and submittals."
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="core",
     depends=["oe_projects", "oe_users"],
     auto_install=True,

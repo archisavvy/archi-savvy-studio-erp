@@ -224,7 +224,7 @@ async def send_test_mail(body: MailTestRequest) -> MailTestResult:
     result = await svc.send(
         EmailMessage(
             to=body.to.strip(),
-            subject="Archi Savvy Studio ERP test e-mail",
+            subject="ArchiSavvyERP test e-mail",
             html_body=wrap("Test e-mail", "<p>Your outbound mail settings work.</p>"),
             tags=["mail_test"],
         )

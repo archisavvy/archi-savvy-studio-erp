@@ -93,7 +93,7 @@ async def test_case_and_padding_do_not_get_a_message_past_the_guard() -> None:
     backend = MemoryEmailBackend()
     service = EmailService(backend)
 
-    result = await service.send(_message("  Demo@ArchiSavvyStudioERP.com  "))
+    result = await service.send(_message("  Demo@ArchiSavvyERP.com  "))
 
     assert result.ok is False
     assert backend.sent == []

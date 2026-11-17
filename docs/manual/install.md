@@ -1,6 +1,6 @@
 # Install
 
-There are three ways to run Archi Savvy Studio ERP. Pick one.
+There are three ways to run ArchiSavvyERP. Pick one.
 
 | Way | Good for | Status |
 |---|---|---|
@@ -14,7 +14,7 @@ You need Docker with Compose v2, Git and `make`.
 
 ```bash
 git clone https://github.com/archisavvy/archi-savvy-studio-erp.git
-cd Archi Savvy Studio ERP
+cd ArchiSavvyERP
 echo "POSTGRES_PASSWORD=$(openssl rand -base64 24)" >  .env
 echo "JWT_SECRET=$(openssl rand -hex 32)"           >> .env
 make quickstart
@@ -67,7 +67,7 @@ Until then, install from the source tree:
 
 ```bash
 git clone https://github.com/archisavvy/archi-savvy-studio-erp.git
-cd Archi Savvy Studio ERP
+cd ArchiSavvyERP
 pip install -e "./backend[server]"
 openbusinesserp serve --embedded-pg --port 8080
 ```

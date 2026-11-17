@@ -1,5 +1,5 @@
 """‌⁠‍
-i18n coverage audit for Archi Savvy Studio ERP.
+i18n coverage audit for ArchiSavvyERP.
 
 Reads frontend/src/app/locales/*.ts and reports:
   - missing keys (present in en.ts but answered by neither the locale nor,
@@ -105,7 +105,7 @@ ACRONYMS = {
     "CRUD",
 }
 BRANDS = {
-    "Archi Savvy Studio ERP",
+    "ArchiSavvyERP",
     "DDC",
     "GitHub",
     "Slack",

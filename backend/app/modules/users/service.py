@@ -1269,7 +1269,7 @@ class UserService:
     ) -> User:
         """Administrator corrects another user's sign-in address.
 
-        Added in Archi Savvy Studio ERP. The address is the login name, so:
+        Added in ArchiSavvyERP. The address is the login name, so:
 
         * it is stored lower-case, like every other address;
         * it must not belong to another account (409);

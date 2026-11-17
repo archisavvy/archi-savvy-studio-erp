@@ -287,7 +287,7 @@ class ComponentEntry:
                 f"{platform_key!r}. Available platforms: {available}. "
                 f"Please file an issue at "
                 f"https://github.com/datadrivenconstruction/"
-                f"ArchiSavvyStudioERP/issues if you need this platform."
+                f"ArchiSavvyERP/issues if you need this platform."
             )
         return entry
 
@@ -375,7 +375,7 @@ def _fetch_bytes(url: str, max_bytes: int) -> bytes:
     """
     req = urllib.request.Request(
         url,
-        headers={"User-Agent": "Archi Savvy Studio ERP-manifest-verifier"},
+        headers={"User-Agent": "ArchiSavvyERP-manifest-verifier"},
     )
     try:
         with urllib.request.urlopen(req, timeout=_FETCH_TIMEOUT_S) as resp:

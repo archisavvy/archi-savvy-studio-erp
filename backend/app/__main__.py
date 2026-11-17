@@ -13,7 +13,7 @@ import sys
 
 
 def main() -> None:
-    """Start the Archi Savvy Studio ERP backend server."""
+    """Start the ArchiSavvyERP backend server."""
     import uvicorn
 
     # Parse CLI args: --host X --port Y
@@ -39,7 +39,7 @@ def main() -> None:
         os.environ.setdefault("APP_ENV", "production")
         os.environ.setdefault("APP_DEBUG", "false")
 
-    print(f"Starting Archi Savvy Studio ERP on http://{host}:{port}")
+    print(f"Starting ArchiSavvyERP on http://{host}:{port}")
 
     # Use direct app import for PyInstaller compatibility
     from app.core.server_loop import uvicorn_loop_option

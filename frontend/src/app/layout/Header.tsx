@@ -759,7 +759,7 @@ export function BugReportMenu() {
     setOpen(false);
     setDescription('');
     const { body, title } = buildBugReportUrl(trimmedDescription);
-    const subject = `Archi Savvy Studio ERP Issue - ${title}`;
+    const subject = `ArchiSavvyERP Issue - ${title}`;
     // mailto bodies are also length-limited (~2000 chars in Chrome),
     // so we trim aggressively. The downloaded log JSON is the long form.
     const safeBody = body.length > 1500 ? `${body.slice(0, 1500)}\n\n_[truncated - attach the JSON log if needed]_` : body;
@@ -1201,7 +1201,7 @@ function HelpMenu() {
               gives bug reporting a single, obvious home. */}
           <a
             role="menuitem"
-            href="mailto:info@datadrivenconstruction.io?subject=Archi Savvy Studio ERP%20Issue%20Report"
+            href="mailto:info@datadrivenconstruction.io?subject=ArchiSavvyERP%20Issue%20Report"
             onClick={() => setOpen(false)}
             className="flex w-full items-center gap-2.5 px-3 py-2 text-sm text-content-primary hover:bg-surface-secondary transition-colors"
           >

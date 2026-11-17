@@ -1,4 +1,4 @@
-// Archi Savvy Studio ERP - lets an administrator correct a user's sign-in address.
+// ArchiSavvyERP - lets an administrator correct a user's sign-in address.
 // AGPL-3.0-or-later. New file in this fork; not part of the original project.
 import { useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';

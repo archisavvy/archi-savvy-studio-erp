@@ -517,7 +517,7 @@ async def build_backup(
                 "app": APP_ID,
                 "app_version": get_settings().app_version,
                 "format_version": BACKUP_FORMAT_VERSION,
-                "provenance": ("Archi Savvy Studio ERP · DataDrivenConstruction · " + _bk_xtok),
+                "provenance": ("ArchiSavvyERP · DataDrivenConstruction · " + _bk_xtok),
                 "created_at": now.isoformat(),
                 "created_by": str(user_id),
                 "modules": sorted(record_counts.keys()),

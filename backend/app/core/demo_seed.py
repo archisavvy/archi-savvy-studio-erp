@@ -116,7 +116,7 @@ def seed_demo_enabled() -> bool:
     choice = read_demo_seed_choice()
     if choice is not None:
         return choice
-    # Archi Savvy Studio ERP: a practice's own install starts empty. Sample
+    # ArchiSavvyERP: a practice's own install starts empty. Sample
     # accounts and showcase projects appear only when someone asks for them
     # (SEED_DEMO=true, or the saved choice).
     return False

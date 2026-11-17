@@ -1,4 +1,4 @@
-"""Archi Savvy Studio ERP - what a brand-new user starts with.
+"""ArchiSavvyERP - what a brand-new user starts with.
 
 New file in this edition (AGPL-3.0-or-later); not part of the original project.
 

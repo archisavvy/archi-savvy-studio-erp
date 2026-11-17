@@ -15,7 +15,7 @@ manifest = ModuleManifest(
         "library to render persisted invoices; this module exposes the same "
         "capabilities as a standalone API for integrations and dry-run validation."
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="core",
     depends=[],  # pure library; finance depends on us, not the other way
     auto_install=True,

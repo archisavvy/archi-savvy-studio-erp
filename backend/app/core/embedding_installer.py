@@ -374,7 +374,7 @@ def _resolve_file_list(repo_id: str) -> list[str]:
         url,
         headers={
             "Accept": "application/json",
-            "User-Agent": "Archi Savvy Studio ERP-model-installer",
+            "User-Agent": "ArchiSavvyERP-model-installer",
         },
     )
     try:
@@ -471,7 +471,7 @@ def _download_one(url: str, dest: Path, *, on_bytes: Any = None) -> None:
     dest.parent.mkdir(parents=True, exist_ok=True)
 
     have = part.stat().st_size if part.is_file() else 0
-    headers = {"User-Agent": "Archi Savvy Studio ERP-model-installer"}
+    headers = {"User-Agent": "ArchiSavvyERP-model-installer"}
     if have:
         headers["Range"] = f"bytes={have}-"
 

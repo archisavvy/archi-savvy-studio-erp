@@ -1,6 +1,6 @@
-# Archi Savvy Studio ERP documentation
+# ArchiSavvyERP documentation
 
-Archi Savvy Studio ERP is an open, self-hosted ERP for small and medium businesses: sales and CRM, products and stock, purchasing, accounting and VAT, bank reconciliation, receivables and dunning, appointments and online booking, data import and industry packs. It is modular, so you enable only the parts you need.
+ArchiSavvyERP is an open, self-hosted ERP for small and medium businesses: sales and CRM, products and stock, purchasing, accounting and VAT, bank reconciliation, receivables and dunning, appointments and online booking, data import and industry packs. It is modular, so you enable only the parts you need.
 
 ## Install and run
 

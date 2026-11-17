@@ -34,7 +34,7 @@ def isolated_data_dir(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
 
 
 def test_defaults_to_disabled_when_nothing_is_set(isolated_data_dir: Path) -> None:
-    # Archi Savvy Studio ERP: an install starts empty unless sample data is asked for.
+    # ArchiSavvyERP: an install starts empty unless sample data is asked for.
     assert read_demo_seed_choice() is None
     assert seed_demo_enabled() is False
 

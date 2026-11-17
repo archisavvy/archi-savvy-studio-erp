@@ -1,4 +1,4 @@
-# Archi Savvy Studio ERP Desktop, build and release.
+# ArchiSavvyERP Desktop, build and release.
 #
 # Triggered on version tag push (e.g., v6.7.0).
 # Builds desktop installers for Windows, macOS, and Linux.
@@ -360,7 +360,7 @@ jobs:
             exit 1
           fi
           case "$out" in
-            *"Archi Savvy Studio ERP v"*)
+            *"ArchiSavvyERP v"*)
               echo "OK: the sidecar starts and reports its version." ;;
             *)
               echo "::error title=The desktop sidecar started but said nothing recognisable::Exit was 0 but the output does not carry a version line, so the interpreter may have started without the app package."
@@ -376,7 +376,7 @@ jobs:
           # sidecar would be green everywhere.
           #
           # Safe to gate on, measured rather than assumed: the frozen sidecar
-          # printed "Archi Savvy Studio ERP v15.0.0" on all three platforms in the
+          # printed "ArchiSavvyERP v15.0.0" on all three platforms in the
           # v15.0.0 run (32222276138), so the version resolves inside a bundle
           # where importlib.metadata does not answer.
           #
@@ -385,7 +385,7 @@ jobs:
           ref="${RELEASE_REF:-}"
           case "$ref" in
             v[0-9]*)
-              want="Archi Savvy Studio ERP v${ref#v}"
+              want="ArchiSavvyERP v${ref#v}"
               case "$out" in
                 *"$want"*)
                   echo "OK: the sidecar reports ${ref#v}, which is the version being released." ;;
@@ -1372,7 +1372,7 @@ jobs:
           $tmpZip = Join-Path $env:RUNNER_TEMP 'ddc_ifc.zip'
           $tmpDir = Join-Path $env:RUNNER_TEMP 'ddc_ifc_extract'
           # GITHUB_TOKEN lifts the unauthenticated API rate limit on the runner.
-          $headers = @{ 'User-Agent' = 'Archi Savvy Studio ERP-desktop-build' }
+          $headers = @{ 'User-Agent' = 'ArchiSavvyERP-desktop-build' }
           if ($env:GH_TOKEN) { $headers['Authorization'] = "Bearer $($env:GH_TOKEN)" }
 
           # Resilient download with a few retries on transient network errors.
@@ -1514,7 +1514,7 @@ jobs:
           exit 1
 
       # tauri-action 1.x also names the macOS archive with the version,
-      # ArchiSavvyStudioERP_<version>_aarch64.app.tar.gz where 0.x left the
+      # ArchiSavvyERP_<version>_aarch64.app.tar.gz where 0.x left the
       # version out. Every reader of that file, here, in the app's update
       # notice and on the download page, matches the suffix, so nothing cares.
       # Fail before tauri-action can upload an unnotarized installer.

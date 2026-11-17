@@ -226,7 +226,7 @@ def test_no_call_can_wait_forever(hook_text: str) -> None:
     The uninstaller waits for nsExec and, on an upgrade, the installer waits for
     the uninstaller, so an unbounded call here is an unbounded upgrade. A user
     reported exactly that: the uninstaller stopped on "Closing
-    Archi Savvy Studio ERP..." and never moved again, with the task manager the
+    ArchiSavvyERP..." and never moved again, with the task manager the
     only way out.
 
     On expiry nsExec pushes the string "timeout" instead of an exit code, which

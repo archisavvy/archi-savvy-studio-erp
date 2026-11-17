@@ -2,13 +2,13 @@
 
 Auch auf [English](WINDOWS_BLOCKED.md) und [Русский](WINDOWS_BLOCKED.ru.md).
 
-Diese Seite ist für Sie, wenn Windows Archi Savvy Studio ERP nicht starten lässt, die App als Programm eines unbekannten oder nicht verifizierten Herausgebers bezeichnet, oder sie einmal laufen ließ und seitdem bei jedem Start blockiert.
+Diese Seite ist für Sie, wenn Windows ArchiSavvyERP nicht starten lässt, die App als Programm eines unbekannten oder nicht verifizierten Herausgebers bezeichnet, oder sie einmal laufen ließ und seitdem bei jedem Start blockiert.
 
 Die Bezeichnungen der Windows-Oberfläche stehen hier so, wie ein deutsches Windows 11 sie zeigt, mit dem englischen Namen in Klammern. Je nach Windows-Version kann der deutsche Wortlaut leicht abweichen.
 
 ## Warum das passiert
 
-Die Windows-Builds von Archi Savvy Studio ERP sind noch nicht code-signiert. Über die Signatur erfährt Windows, wer ein Programm veröffentlicht hat. Ohne sie gilt die App als Programm eines unbekannten Herausgebers. Darauf reagieren zwei getrennte Windows-Funktionen, und sie brauchen unterschiedliche Schritte:
+Die Windows-Builds von ArchiSavvyERP sind noch nicht code-signiert. Über die Signatur erfährt Windows, wer ein Programm veröffentlicht hat. Ohne sie gilt die App als Programm eines unbekannten Herausgebers. Darauf reagieren zwei getrennte Windows-Funktionen, und sie brauchen unterschiedliche Schritte:
 
 - **Microsoft Defender SmartScreen** zeigt ein blaues Fenster "Der Computer wurde durch Windows geschützt" (Windows protected your PC), wenn Sie ein aus dem Internet geladenes Programm starten, das Windows noch nicht kennt. SmartScreen warnt und lässt Sie fortfahren.
 - **Smart App Control** ist eine strengere Funktion von Windows 11. Wenn sie eingeschaltet ist, blockiert sie jede Programmdatei, für die der Cloud-Dienst von Microsoft nicht bürgen kann und die keine vertrauenswürdige Signatur trägt. Sie bietet keine Schaltfläche zum Fortfahren und keine Ausnahme für einzelne Apps. Ihre Meldung nennt Smart App Control und sagt meist, dass die App oder ein Teil davon blockiert wurde.
@@ -25,7 +25,7 @@ Der Name in der Benachrichtigung kann irreführen. Die Sperre kommt aus der App 
 
 Prüfen Sie dann, ob Smart App Control eingeschaltet ist: In Windows-Sicherheit unter **App- & Browsersteuerung** (App & browser control) die **Smart App Control-Einstellungen** öffnen. Dort steht **Ein**, **Bewertung** oder **Aus**.
 
-Welche Datei genau abgewiesen wurde, sehen Sie in der **Ereignisanzeige** (Event Viewer) unter **Anwendungs- und Dienstprotokolle** > **Microsoft** > **Windows** > **CodeIntegrity** > **Operational**, Ereignis **3077**. Bei der Desktop-App liegt die Datei meist unter `%LOCALAPPDATA%\ArchiSavvyStudioERP\extract`, wo die App bei jedem Start ihre Hilfsdateien entpackt. Diese Sperre ist bei einem unsignierten Build zu erwarten und bedeutet nicht, dass die Datei ein Virus ist.
+Welche Datei genau abgewiesen wurde, sehen Sie in der **Ereignisanzeige** (Event Viewer) unter **Anwendungs- und Dienstprotokolle** > **Microsoft** > **Windows** > **CodeIntegrity** > **Operational**, Ereignis **3077**. Bei der Desktop-App liegt die Datei meist unter `%LOCALAPPDATA%\ArchiSavvyERP\extract`, wo die App bei jedem Start ihre Hilfsdateien entpackt. Diese Sperre ist bei einem unsignierten Build zu erwarten und bedeutet nicht, dass die Datei ein Virus ist.
 
 ## Schritt 2a: SmartScreen ("Der Computer wurde durch Windows geschützt")
 
@@ -40,13 +40,13 @@ SmartScreen fragt nur bei Dateien, die aus dem Internet geladen wurden. Fragt es
 
 Solange Smart App Control eingeschaltet ist, lässt sich keine einzelne App freigeben. Microsoft selbst rät, die Funktion auszuschalten oder den Herausgeber um eine Signatur zu bitten, und unsere Windows-Builds sind derzeit nicht signiert. Damit bleiben zwei ehrliche Möglichkeiten.
 
-**Möglichkeit 1: Smart App Control eingeschaltet lassen und die App anders starten.** Das empfehlen wir, wenn Sie den Schutz behalten möchten. Docker und WSL führen Archi Savvy Studio ERP in einer kleinen Linux-Umgebung aus, und Linux-Programme prüft Smart App Control nicht. Beide Wege sind unten beschrieben.
+**Möglichkeit 1: Smart App Control eingeschaltet lassen und die App anders starten.** Das empfehlen wir, wenn Sie den Schutz behalten möchten. Docker und WSL führen ArchiSavvyERP in einer kleinen Linux-Umgebung aus, und Linux-Programme prüft Smart App Control nicht. Beide Wege sind unten beschrieben.
 
 **Möglichkeit 2: Smart App Control ausschalten.** Das senkt den Schutz Ihres ganzen PCs, nicht nur für unsere App. Tun Sie es nur, wenn Sie damit einverstanden sind. Auf aktuellen Builds von Windows 11 können Sie Smart App Control später auf derselben Seite wieder einschalten, auf älteren Builds ist das Ausschalten dagegen endgültig, bis Windows zurückgesetzt oder neu installiert wird. Bietet die Seite nach dem Ausschalten keinen Weg zurück, haben Sie einen solchen Build.
 
 1. Öffnen Sie **Windows-Sicherheit**, dann **App- & Browsersteuerung** und die **Smart App Control-Einstellungen**.
 2. Wählen Sie **Aus** und bestätigen Sie.
-3. Starten Sie Archi Savvy Studio ERP erneut.
+3. Starten Sie ArchiSavvyERP erneut.
 
 Microsoft Defender Antivirus und SmartScreen bleiben in jedem Fall aktiv.
 
@@ -55,7 +55,7 @@ Zeigt der Schutzverlauf stattdessen eine Erkennung durch Microsoft Defender Anti
 ## Mit Docker starten (funktioniert mit eingeschalteter Smart App Control)
 
 1. Installieren Sie **Docker Desktop** von docker.com und starten Sie es einmal. Docker Desktop ist kostenlos für private Nutzung, Bildung und kleine Unternehmen; größere Unternehmen brauchen ein kostenpflichtiges Docker-Abonnement.
-2. Legen Sie einen Ordner an, zum Beispiel `C:\ArchiSavvyStudioERP`, öffnen Sie darin **Windows PowerShell** und führen Sie aus:
+2. Legen Sie einen Ordner an, zum Beispiel `C:\ArchiSavvyERP`, öffnen Sie darin **Windows PowerShell** und führen Sie aus:
 
 ```powershell
 curl.exe -fsSL https://raw.githubusercontent.com/archisavvy/archi-savvy-studio-erp/main/docker-compose.quickstart.yml -o docker-compose.yml
@@ -105,7 +105,7 @@ py -3.12 -m openbusinesserp
 Jedes Release enthält neben den Installern eine Datei `SHA256SUMS`. Laden Sie sie in denselben Ordner wie den Installer, öffnen Sie dort **Windows PowerShell** und führen Sie aus:
 
 ```powershell
-$exe = Get-ChildItem ArchiSavvyStudioERP_*_x64-setup.exe | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$exe = Get-ChildItem ArchiSavvyERP_*_x64-setup.exe | Sort-Object LastWriteTime -Descending | Select-Object -First 1
 $line = Select-String -Path SHA256SUMS -Pattern $exe.Name -SimpleMatch
 (Get-FileHash $exe.FullName -Algorithm SHA256).Hash -eq $line.Line.Split(' ')[0]
 ```

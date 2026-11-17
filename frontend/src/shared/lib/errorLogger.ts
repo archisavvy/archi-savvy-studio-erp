@@ -1,7 +1,7 @@
 // DDC-CWICR-OE: DataDrivenConstruction · OpenBusinessERP
 // Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
 /**
- * Anonymized error logging system for Archi Savvy Studio ERP.
+ * Anonymized error logging system for ArchiSavvyERP.
  *
  * Captures JS errors, unhandled promise rejections, React Error Boundary errors,
  * and API errors. All data is anonymized before storage. Errors are kept in a

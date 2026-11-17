@@ -4,20 +4,20 @@
 //
 // Renders the user's company logo / name when they have customised
 // the platform via the edit modal; otherwise renders the default
-// Archi Savvy Studio ERP wordmark. Clicking the brand area (or the
+// ArchiSavvyERP wordmark. Clicking the brand area (or the
 // "Customise" pencil that appears on hover) opens the editor.
 //
 // Layout rules:
-//   * No customisation → full Archi Savvy Studio ERP logo+wordmark, as
+//   * No customisation → full ArchiSavvyERP logo+wordmark, as
 //     before (visual parity with v3.0.5).
 //   * Logo set        → user's logo fills the header width;
-//                       "Archi Savvy Studio ERP" subtitle is rendered at
+//                       "ArchiSavvyERP" subtitle is rendered at
 //                       roughly 1/3 of the original size beneath it
 //                       as a "powered by" attribution (required by
 //                       the AGPL-3.0 licence).
 //   * Name only       → company name in Plus Jakarta Sans 800, sized
 //                       to match the default wordmark; same small
-//                       Archi Savvy Studio ERP subtitle below.
+//                       ArchiSavvyERP subtitle below.
 //
 // The editor is a lightweight inline form (not WideModal) so the
 // sidebar can keep working on narrow viewports. The logo upload
@@ -123,7 +123,7 @@ export function CustomBranding({ iconified }: CustomBrandingProps) {
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-80 transition-opacity"
-        title="Archi Savvy Studio ERP"
+        title="ArchiSavvyERP"
       >
         <Logo size="sm" />
       </a>
@@ -170,7 +170,7 @@ export function CustomBranding({ iconified }: CustomBrandingProps) {
                   {companyName}
                 </span>
               )}
-              {/* "by Archi Savvy Studio ERP" — minimal subordinate attribution
+              {/* "by ArchiSavvyERP" — minimal subordinate attribution
                   under the user's brand. AGPL-3.0 attribution requirement
                   is satisfied while the user's logo stays the dominant
                   visual; font is small + muted on purpose. */}
@@ -183,8 +183,8 @@ export function CustomBranding({ iconified }: CustomBrandingProps) {
               >
                 by{' '}
                 <span className="font-semibold tracking-tight">
-                  Archi <span className="font-semibold">Savvy</span>
-                  <span className="text-content-quaternary"> Studio ERP</span>
+                  Archi<span className="font-semibold">Savvy</span>
+                  <span className="text-content-quaternary">ERP</span>
                 </span>
               </span>
             </button>
@@ -194,7 +194,7 @@ export function CustomBranding({ iconified }: CustomBrandingProps) {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 hover:opacity-80 transition-opacity"
-              title="Archi Savvy Studio ERP"
+              title="ArchiSavvyERP"
             >
               {/* Compact wordmark — 13px text + smaller gap to fit
                   the 248px sidebar minus the 32px edit button without
@@ -208,8 +208,8 @@ export function CustomBranding({ iconified }: CustomBrandingProps) {
                   letterSpacing: '-0.02em',
                 }}
               >
-                Archi <span className="font-semibold">Savvy</span>
-                <span className="text-content-quaternary"> Studio ERP</span>
+                Archi<span className="font-semibold">Savvy</span>
+                <span className="text-content-quaternary">ERP</span>
               </span>
             </a>
           )}

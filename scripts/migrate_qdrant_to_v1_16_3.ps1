@@ -1,4 +1,4 @@
-# Archi Savvy Studio ERP - migrate from Qdrant 1.18.0 to 1.16.3 (Windows).
+# ArchiSavvyERP - migrate from Qdrant 1.18.0 to 1.16.3 (Windows).
 #
 # Why this exists:
 # Qdrant 1.17+ writes a WAL clock file (newest_clocks.json) during snapshot
@@ -9,7 +9,7 @@
 # Defender exclusion needed.
 #
 # What this does:
-# 1. Stop the running qdrant.exe (the Archi Savvy Studio ERP backend will
+# 1. Stop the running qdrant.exe (the ArchiSavvyERP backend will
 #    auto-respawn it on the first request after migration).
 # 2. Move the existing storage/ aside to storage.1.18.bak.<timestamp>.
 #    Qdrant does not support downgrade, so the new 1.16.3 needs a fresh
@@ -31,7 +31,7 @@ $pinnedTag = "v1.16.3"
 $downloadUrl = "https://github.com/qdrant/qdrant/releases/download/$pinnedTag/qdrant-x86_64-pc-windows-msvc.zip"
 
 Write-Host ""
-Write-Host "Archi Savvy Studio ERP - Qdrant migration to 1.16.3" -ForegroundColor Cyan
+Write-Host "ArchiSavvyERP - Qdrant migration to 1.16.3" -ForegroundColor Cyan
 Write-Host "=================================================" -ForegroundColor Cyan
 Write-Host ""
 

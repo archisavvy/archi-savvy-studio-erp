@@ -93,7 +93,7 @@ class UserRepository:
 
     async def create(self, user: User) -> User:
         """Insert a new user."""
-        # Archi Savvy Studio ERP: a new user starts on the practice profile.
+        # ArchiSavvyERP: a new user starts on the practice profile.
         from app.core.archisavvy_defaults import with_default_profile
 
         user.metadata_ = with_default_profile(user.metadata_)

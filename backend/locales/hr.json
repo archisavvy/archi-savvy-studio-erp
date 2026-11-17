@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Ovaj naziv ne može se koristiti za novi katalog. Odaberite drugi naziv.",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "Open-source procjena građevinskih troškova"
   },
   "assemblies": {
@@ -199,7 +199,7 @@
     "system_status": "Status sustava",
     "total_value": "Ukupna vrijednost",
     "validation_rules": "Pravila provjere",
-    "welcome": "Dobrodošli u Archi Savvy Studio ERP"
+    "welcome": "Dobrodošli u ArchiSavvyERP"
   },
   "finance": {
     "actual": "Stvarno",

@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Это имя нельзя использовать для нового каталога. Выберите другое имя.",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "Open-source сметное дело"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Обновить"
   },
   "dashboard": {
-    "welcome": "Добро пожаловать в Archi Savvy Studio ERP",
+    "welcome": "Добро пожаловать в ArchiSavvyERP",
     "subtitle": "Ваше рабочее пространство сметного дела",
     "recent_projects": "Последние проекты",
     "system_status": "Состояние системы",

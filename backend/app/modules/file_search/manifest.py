@@ -13,7 +13,7 @@ manifest = ModuleManifest(
         "sheets, markups and reports. PyMuPDF + Tesseract extractors, "
         "Postgres tsvector / SQLite LIKE fallback."
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="core",
     depends=["oe_projects", "oe_documents"],
     auto_install=True,

@@ -319,7 +319,7 @@ class UserAdminUpdate(BaseModel):
     full_name: str | None = Field(default=None, min_length=1, max_length=255)
     role: str | None = Field(default=None, pattern=r"^(admin|manager|editor|viewer)$")
     is_active: bool | None = None
-    # Archi Savvy Studio ERP: an administrator can correct a mistyped address.
+    # ArchiSavvyERP: an administrator can correct a mistyped address.
     email: EmailStr | None = Field(default=None, description="New sign-in address for this user")
     locale: str | None = Field(default=None, max_length=10)
 

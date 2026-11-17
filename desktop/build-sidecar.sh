@@ -43,7 +43,7 @@ detect_target() {
 }
 
 TARGET="${1:-$(detect_target)}"
-echo "=== Building Archi Savvy Studio ERP sidecar for $TARGET ==="
+echo "=== Building ArchiSavvyERP sidecar for $TARGET ==="
 
 # Step 1: Build frontend
 echo "[1/3] Building frontend..."

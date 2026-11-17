@@ -50,7 +50,7 @@ export function AppLayout({ title, children }: AppLayoutProps) {
 
   // When the user has white-labelled the workspace with their own company
   // name, the browser tab follows the same brand as the sidebar so the whole
-  // experience reads as "their" tool. Falls back to Archi Savvy Studio ERP.
+  // experience reads as "their" tool. Falls back to ArchiSavvyERP.
   const brandName = useBrandingStore((s) => (s.companyName.trim() ? s.companyName.trim() : null));
 
   // Count today towards "distinct days the app was opened". This has to run
@@ -70,7 +70,7 @@ export function AppLayout({ title, children }: AppLayoutProps) {
     // page heading uses, so the tab also follows the active language.
     const key = resolvePageTitleKey(title);
     const translated = title ? (key ? t(key, { defaultValue: title }) : title) : null;
-    const suffix = brandName ?? 'Archi Savvy Studio ERP';
+    const suffix = brandName ?? 'ArchiSavvyERP';
     document.title = translated ? `${translated} | ${suffix}` : suffix;
     // i18n.language in deps so the tab re-translates on a language switch.
   }, [title, t, i18n.language, brandName]);

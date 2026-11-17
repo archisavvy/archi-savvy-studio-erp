@@ -54,7 +54,7 @@ jobs:
             type=edge,branch=main
             type=sha,format=short,enable=${{ github.event_name == 'workflow_dispatch' }}
           labels: |
-            org.opencontainers.image.title=Archi Savvy Studio ERP
+            org.opencontainers.image.title=ArchiSavvyERP
             org.opencontainers.image.description=Open-source ERP for small businesses: sales, purchasing, inventory, accounting
             org.opencontainers.image.vendor=DataDrivenConstruction
             org.opencontainers.image.licenses=AGPL-3.0-or-later

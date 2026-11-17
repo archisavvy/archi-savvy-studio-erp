@@ -1,6 +1,6 @@
-# Contributing to Archi Savvy Studio ERP
+# Contributing to ArchiSavvyERP
 
-Thank you for your interest. Archi Savvy Studio ERP is an open-source ERP for small and
+Thank you for your interest. ArchiSavvyERP is an open-source ERP for small and
 mid-sized businesses: invoicing, accounting, CRM, inventory, procurement, HR,
 appointments and more, with country packs for tax and e-invoicing. Pull requests,
 bug reports, translations and country-specific knowledge are all welcome.
@@ -30,7 +30,7 @@ including how to brief an AI coding assistant on it.
 ```bash
 # 1. Clone
 git clone https://github.com/archisavvy/archi-savvy-studio-erp.git
-cd Archi Savvy Studio ERP
+cd ArchiSavvyERP
 
 # 2. Start dev environment
 docker compose up -d   # PostgreSQL + Redis
@@ -170,7 +170,7 @@ Before we can merge your first pull request you need to accept the
 [Contributor License Agreement](CLA.md). Companies contributing through their
 employees also sign Part B of the same document.
 
-**Why.** Archi Savvy Studio ERP is offered under AGPL-3.0-or-later and, for organisations
+**Why.** ArchiSavvyERP is offered under AGPL-3.0-or-later and, for organisations
 that cannot meet the AGPL's terms, under a commercial licence. The CLA lets the
 maintainer offer both. You keep the copyright in your work, and the CLA commits
 that every release containing your contribution stays available under an open-source
@@ -190,7 +190,7 @@ lines are not required (they are harmless if your tooling adds them).
 
 ## Licensing
 
-Archi Savvy Studio ERP is licensed under the GNU Affero General Public License v3.0 or later
+ArchiSavvyERP is licensed under the GNU Affero General Public License v3.0 or later
 (see [LICENSE](LICENSE)); a commercial licence is available from
 info@datadrivenconstruction.io. Do not include code you cannot license under the CLA,
 and name any third-party material, with its licence, in your PR description.

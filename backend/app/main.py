@@ -807,7 +807,7 @@ def _start_embedding_pool_warmup():
 def _init_vector_db() -> None:
     """Initialize vector database on startup (non-blocking, never fatal).
 
-    Vector search is an important feature of Archi Savvy Studio ERP -
+    Vector search is an important feature of ArchiSavvyERP -
     it powers semantic cost-item matching, BOQ auto-classification,
     and assembly suggestions. We support two backends:
 
@@ -1809,7 +1809,7 @@ def create_app() -> FastAPI:
         version=settings.app_version,
         description="Open-source modular platform for construction cost estimation",
         contact={
-            "name": "DataDrivenConstruction · Archi Savvy Studio ERP",
+            "name": "DataDrivenConstruction · ArchiSavvyERP",
             "url": "https://github.com/archisavvy/archi-savvy-studio-erp",
             "email": "info@datadrivenconstruction.io",
         },
@@ -2082,7 +2082,7 @@ def create_app() -> FastAPI:
                 b ^ 0x55 for b in b"\x11\x11\x16\x78\x16\x02\x1c\x16\x07\x78\x1a\x10\x78\x67\x65\x67\x63"
             ).decode("ascii")
             schema.setdefault("info", {})
-            schema["info"]["x-ddc-origin"] = "Archi Savvy Studio ERP · DataDrivenConstruction · " + _oa_tok
+            schema["info"]["x-ddc-origin"] = "ArchiSavvyERP · DataDrivenConstruction · " + _oa_tok
             schema["info"]["x-ddc-author"] = "Artem Boiko <info@datadrivenconstruction.io>"
             app.openapi_schema = schema
             app._openapi_routes_version = version
@@ -3583,7 +3583,7 @@ def create_app() -> FastAPI:
 
         We shell out to the **same** interpreter that's serving the API so
         the upgrade lands in the right venv (Issue #96 - Windows launcher
-        uses ``%LOCALAPPDATA%/ArchiSavvyStudioERP/venv``, not the user's
+        uses ``%LOCALAPPDATA%/ArchiSavvyERP/venv``, not the user's
         global Python).
 
         **Important - the running process keeps the OLD wheel in memory.**
@@ -4176,7 +4176,7 @@ def create_app() -> FastAPI:
             raise
 
     async def _startup_impl() -> None:
-        _section("Archi Savvy Studio ERP")
+        _section("ArchiSavvyERP")
         logger.info(
             "Starting %s v%s (env=%s)",
             settings.app_name,
@@ -5372,7 +5372,7 @@ def create_app() -> FastAPI:
         _cli_data_dir = os.environ.get("OE_CLI_DATA_DIR")
         if _cli_host and _cli_port:
             _url = f"http://{_cli_host}:{_cli_port}"
-            logger.info("Archi Savvy Studio ERP is ready at %s", _url)
+            logger.info("ArchiSavvyERP is ready at %s", _url)
             # Demo passwords are now per-installation (BUG-D01 fix). The
             # actual values were either supplied via DEMO_*_PASSWORD env
             # vars or generated in ``_seed_demo_account`` and persisted to

@@ -2,7 +2,7 @@
 # Copyright (c) 2026 Artem Boiko / DataDrivenConstruction
 """Project-bundle export (Issue #109).
 
-Generates a ``.ocep`` zip - *Archi Savvy Studio ERP Project* - for a single
+Generates a ``.ocep`` zip - *ArchiSavvyERP Project* - for a single
 project. Supports split-scope bundles so users with large BIM/DWG attachments
 can email the metadata-only zip while sharing geometry separately:
 
@@ -848,7 +848,7 @@ async def preview_bundle(
 def _readme_md(manifest: BundleManifest, attachment_count: int) -> str:
     """Plain-text README packed inside the bundle for the recipient."""
     lines = [
-        "# Archi Savvy Studio ERP Project Bundle",
+        "# ArchiSavvyERP Project Bundle",
         "",
         f"Project: **{manifest.project_name}**",
         f"Scope: **{manifest.scope}**",
@@ -860,7 +860,7 @@ def _readme_md(manifest: BundleManifest, attachment_count: int) -> str:
         "",
         "## How to open",
         "",
-        "1. Install Archi Savvy Studio ERP - `pip install openbusinesserp` or download from https://github.com/archisavvy/archi-savvy-studio-erp.",
+        "1. Install ArchiSavvyERP - `pip install openbusinesserp` or download from https://github.com/archisavvy/archi-savvy-studio-erp.",
         "2. Run `openbusinesserp serve` and sign in.",
         "3. Use **Files → Import project bundle** and select this `.ocep` file.",
         "",

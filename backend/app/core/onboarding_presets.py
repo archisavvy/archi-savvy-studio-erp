@@ -210,7 +210,7 @@ class CompanyPreset:
 
 
 # ── Business (non-construction) industries ───────────────────────────────────
-# Archi Savvy Studio ERP profiles. Every company sells, books and files, so the base is
+# ArchiSavvyERP profiles. Every company sells, books and files, so the base is
 # on everywhere; each industry adds what its day-to-day work needs (recommended)
 # and offers the rest as add-ons (optional). sales depends on gl.
 _BUSINESS_BASE = [
@@ -618,7 +618,7 @@ COMPANY_PRESETS: dict[str, CompanyPreset] = {
             "procurement",  # supplier_catalogs depends on it
         ],
     ),
-    # Archi Savvy Studio ERP: the default profile of this edition. Construction
+    # ArchiSavvyERP: the default profile of this edition. Construction
     # pack (projects, drawings, take-off) plus the business side a practice
     # needs to win work, bill it and see whether a job made money.
     "architecture_practice": CompanyPreset(

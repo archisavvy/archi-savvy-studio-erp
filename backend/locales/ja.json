@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "この名前は新しいカタログに使用できません。別の名前を選んでください。",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "オープンソース建設コスト見積"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "更新"
   },
   "dashboard": {
-    "welcome": "Archi Savvy Studio ERP へようこそ",
+    "welcome": "ArchiSavvyERP へようこそ",
     "subtitle": "オープンソース建設コスト見積プラットフォーム",
     "recent_projects": "最近のプロジェクト",
     "system_status": "システム状態",

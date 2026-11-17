@@ -1,4 +1,4 @@
-# Archi Savvy Studio ERP
+# ArchiSavvyERP
 
 Open-source construction cost estimation: BOQ, cost matching, CAD/BIM takeoff.
 

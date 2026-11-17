@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Este nombre no se puede usar para un nuevo catálogo. Elige otro nombre.",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "Presupuesto de construcción de código abierto"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Actualizar"
   },
   "dashboard": {
-    "welcome": "Bienvenido a Archi Savvy Studio ERP",
+    "welcome": "Bienvenido a ArchiSavvyERP",
     "subtitle": "Plataforma de presupuestos de construcción de código abierto",
     "recent_projects": "Proyectos recientes",
     "system_status": "Estado del sistema",

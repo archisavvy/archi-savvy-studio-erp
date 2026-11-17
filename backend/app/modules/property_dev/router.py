@@ -4593,7 +4593,7 @@ async def email_propdev_document(
     email_service = get_email_service()
     result = await email_service.send_document(
         recipient,
-        subject=f"{document_name} - Archi Savvy Studio ERP",
+        subject=f"{document_name} - ArchiSavvyERP",
         document_name=document_name,
         attachment=EmailAttachment(
             filename=filename,

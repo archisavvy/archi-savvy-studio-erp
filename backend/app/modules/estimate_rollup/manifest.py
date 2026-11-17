@@ -16,7 +16,7 @@ manifest = ModuleManifest(
         "without double-counting, with a line-item breakdown a UI can render as "
         "'BOQ base + Preliminaries + Contingency = Estimate total'."
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="business",
     # Read-only composition over the BOQ totals, the preliminaries register and
     # the allowances register; verifies project access. No models of its own, so

@@ -21,7 +21,7 @@ export const ACADEMY_CATALOG: AcademyCatalog = {
     },
     {
       "id": "landshut-de",
-      "title": "Archi Savvy Studio ERP auf Deutsch: Lernprojekt Landshut",
+      "title": "ArchiSavvyERP auf Deutsch: Lernprojekt Landshut",
       "language": "de",
       "market": "DE",
       "channel": "academy"
@@ -86,8 +86,8 @@ export const ACADEMY_CATALOG: AcademyCatalog = {
         "/daily-diary",
         "/closeout"
       ],
-      "title": "How to Install Archi Savvy Studio ERP | Windows Setup & First Project",
-      "description": "Install Archi Savvy Studio ERP on Windows and set up your first construction project. This beginner's guide covers the desktop app, installation with Python/pip, workspace settings and team access.",
+      "title": "How to Install ArchiSavvyERP | Windows Setup & First Project",
+      "description": "Install ArchiSavvyERP on Windows and set up your first construction project. This beginner's guide covers the desktop app, installation with Python/pip, workspace settings and team access.",
       "recordedOn": "17.7",
       "duration": 281,
       "cover": "https://i.ytimg.com/vi/WjDK-uk9b1w/maxresdefault.jpg",
@@ -98,7 +98,7 @@ export const ACADEMY_CATALOG: AcademyCatalog = {
         },
         {
           "t": 24,
-          "title": "What Archi Savvy Studio ERP does"
+          "title": "What ArchiSavvyERP does"
         },
         {
           "t": 51,
@@ -2131,7 +2131,7 @@ export const ACADEMY_CATALOG: AcademyCatalog = {
         "/estimate-basis",
         "/reports"
       ],
-      "title": "Démarrer avec Archi Savvy Studio ERP en français",
+      "title": "Démarrer avec ArchiSavvyERP en français",
       "example": {
         "place": "Québec",
         "country": "CA"
@@ -2450,7 +2450,7 @@ export const ACADEMY_CATALOG: AcademyCatalog = {
       ],
       "result": "cost",
       "title": "Budget de chantier : justifier chaque coût",
-      "description": "240 000 USD de budget : pouvez-vous expliquer chaque poste ? Ce tutoriel montre comment relier les quantités, les prix et leurs sources dans Archi Savvy Studio ERP.",
+      "description": "240 000 USD de budget : pouvez-vous expliquer chaque poste ? Ce tutoriel montre comment relier les quantités, les prix et leurs sources dans ArchiSavvyERP.",
       "duration": 306,
       "cover": "https://i.ytimg.com/vi/L1DUikMF04Y/maxresdefault.jpg",
       "chapters": [
@@ -2500,7 +2500,7 @@ export const ACADEMY_CATALOG: AcademyCatalog = {
       ],
       "result": "order",
       "title": "Achats et stock : suivre les quantités",
-      "description": "1 000 sacs de ciment commandés, 600 encore en stock : comment expliquer l’écart ? Suivez une commande, une réception et une consommation dans Archi Savvy Studio ERP.",
+      "description": "1 000 sacs de ciment commandés, 600 encore en stock : comment expliquer l’écart ? Suivez une commande, une réception et une consommation dans ArchiSavvyERP.",
       "duration": 277,
       "cover": "https://i.ytimg.com/vi/ZXbWsG_Syuo/maxresdefault.jpg",
       "chapters": [
@@ -2562,7 +2562,7 @@ export const ACADEMY_CATALOG: AcademyCatalog = {
       ],
       "result": "site",
       "title": "Chantier : suivre les heures et le matériel",
-      "description": "64 heures-personnes : quel travail a été réalisé ? Ce tutoriel relie le pointage de l’équipe, un volume mesuré séparément et l’utilisation du matériel dans Archi Savvy Studio ERP.",
+      "description": "64 heures-personnes : quel travail a été réalisé ? Ce tutoriel relie le pointage de l’équipe, un volume mesuré séparément et l’utilisation du matériel dans ArchiSavvyERP.",
       "duration": 323,
       "cover": "https://i.ytimg.com/vi/5utorRM1fhY/maxresdefault.jpg",
       "chapters": [
@@ -2617,7 +2617,7 @@ export const ACADEMY_CATALOG: AcademyCatalog = {
       ],
       "result": "invoice",
       "title": "Facture et paiement : comprendre le solde",
-      "description": "30 000 USD facturés, 18 000 USD reçus : pourquoi reste-t-il 12 000 USD à recevoir ? Suivez les étapes du contrat au règlement dans Archi Savvy Studio ERP.",
+      "description": "30 000 USD facturés, 18 000 USD reçus : pourquoi reste-t-il 12 000 USD à recevoir ? Suivez les étapes du contrat au règlement dans ArchiSavvyERP.",
       "duration": 339,
       "cover": "https://i.ytimg.com/vi/ViuB-ONl5Lk/maxresdefault.jpg",
       "chapters": [

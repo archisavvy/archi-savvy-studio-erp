@@ -260,7 +260,7 @@ class TestEmailService:
         service = EmailService(mem)
         result = await service.send_document(
             "buyer@example.com",
-            subject="Handover Certificate - Archi Savvy Studio ERP",
+            subject="Handover Certificate - ArchiSavvyERP",
             document_name="Handover Certificate",
             attachment=EmailAttachment(
                 filename="handover-certificate.pdf",
@@ -419,7 +419,7 @@ class TestTemplates:
     def test_wrap_contains_boilerplate(self):
         html = wrap("Title", "<p>Body</p>")
         assert "<!DOCTYPE html>" in html
-        assert "Archi Savvy Studio ERP" in html
+        assert "ArchiSavvyERP" in html
         assert "Title" in html
         assert "<p>Body</p>" in html
 
@@ -434,7 +434,7 @@ class TestTemplates:
             reset_url="https://x.y/r?token=T",
             token_lifetime_minutes=45,
         )
-        assert "Reset your Archi Savvy Studio ERP password" in subject
+        assert "Reset your ArchiSavvyERP password" in subject
         assert "Alice" in html
         assert "https://x.y/r?token=T" in html
         assert "45 minutes" in html

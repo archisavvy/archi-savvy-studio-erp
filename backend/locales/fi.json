@@ -1,7 +1,7 @@
 {
   "costs.catalog_name_unavailable": "Tätä nimeä ei voi käyttää uudelle luettelolle. Valitse toinen nimi.",
   "app": {
-    "name": "Archi Savvy Studio ERP",
+    "name": "ArchiSavvyERP",
     "tagline": "Avoimen lähdekoodin rakennuskustannuslaskenta"
   },
   "nav": {
@@ -175,7 +175,7 @@
     "update": "Päivitä"
   },
   "dashboard": {
-    "welcome": "Tervetuloa Archi Savvy Studio ERP-järjestelmään",
+    "welcome": "Tervetuloa ArchiSavvyERP-järjestelmään",
     "subtitle": "Avoimen lähdekoodin rakennuskustannuslaskenta-alusta",
     "recent_projects": "Viimeisimmät projektit",
     "system_status": "Järjestelmän tila",

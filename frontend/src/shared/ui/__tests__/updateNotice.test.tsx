@@ -483,12 +483,12 @@ describe('the download offered is the one this machine can run', () => {
    *  be type checked: `versionCheck` takes loose overrides, and an asset list
    *  built inside that call arrives as an array of nothing in particular. */
   const ALL_ASSETS = [
-    { name: 'ArchiSavvyStudioERP_15.1.0_aarch64.app.tar.gz', url: 'https://x.test/mac-updater', size: 700 },
-    { name: 'ArchiSavvyStudioERP_15.1.0_aarch64.dmg', url: 'https://x.test/mac-dmg', size: 734003200 },
-    { name: 'ArchiSavvyStudioERP_15.1.0_x64-setup.exe.sig', url: 'https://x.test/win-sig', size: 500 },
-    { name: 'ArchiSavvyStudioERP_15.1.0_x64-setup.exe', url: 'https://x.test/win-exe', size: 629145600 },
+    { name: 'ArchiSavvyERP_15.1.0_aarch64.app.tar.gz', url: 'https://x.test/mac-updater', size: 700 },
+    { name: 'ArchiSavvyERP_15.1.0_aarch64.dmg', url: 'https://x.test/mac-dmg', size: 734003200 },
+    { name: 'ArchiSavvyERP_15.1.0_x64-setup.exe.sig', url: 'https://x.test/win-sig', size: 500 },
+    { name: 'ArchiSavvyERP_15.1.0_x64-setup.exe', url: 'https://x.test/win-exe', size: 629145600 },
     { name: 'open-business-erp_15.1.0_amd64.deb', url: 'https://x.test/linux-deb', size: 650000000 },
-    { name: 'ArchiSavvyStudioERP_15.1.0_amd64.AppImage', url: 'https://x.test/linux-appimage', size: 660000000 },
+    { name: 'ArchiSavvyERP_15.1.0_amd64.AppImage', url: 'https://x.test/linux-appimage', size: 660000000 },
     { name: 'open-business-erp-15.1.0.x86_64.rpm', url: 'https://x.test/linux-rpm', size: 655000000 },
   ];
 

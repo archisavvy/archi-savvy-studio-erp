@@ -3,7 +3,7 @@
 """Project Intelligence module.
 
 AI-powered project completion analysis, scoring, gap detection,
-and guided recommendations for Archi Savvy Studio ERP.
+and guided recommendations for ArchiSavvyERP.
 """
 
 MODULE_METADATA = {

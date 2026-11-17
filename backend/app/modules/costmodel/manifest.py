@@ -11,7 +11,7 @@ manifest = ModuleManifest(
     description=(
         "5D cost management - S-curves, cash flow projections, earned value analysis (EVM), and budget tracking"
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="core",
     depends=["oe_projects", "oe_boq"],
     auto_install=True,

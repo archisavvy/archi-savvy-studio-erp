@@ -1,4 +1,4 @@
-"""Archi Savvy Studio ERP - the default profile a new user starts with."""
+"""ArchiSavvyERP - the default profile a new user starts with."""
 
 from app.core import onboarding_presets as presets
 from app.core.archisavvy_defaults import (

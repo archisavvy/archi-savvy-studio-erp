@@ -20,7 +20,7 @@ manifest = ModuleManifest(
         "format-agnostic model linking and a failed check automatically raising "
         "a non-conformance report."
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="core",
     depends=["oe_users", "oe_projects", "oe_ncr"],
     optional_depends=["oe_approval_routes", "oe_closeout"],

@@ -1,5 +1,5 @@
 [Unit]
-Description=Archi Savvy Studio ERP - open-source construction cost estimation
+Description=ArchiSavvyERP - open-source construction cost estimation
 After=network.target
 
 [Service]

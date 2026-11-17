@@ -12,7 +12,7 @@ manifest = ModuleManifest(
         "suppliers/building users) with magic-link auth, RLS, notifications, "
         "audit log"
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="business",
     depends=["oe_users", "oe_projects"],
     auto_install=True,

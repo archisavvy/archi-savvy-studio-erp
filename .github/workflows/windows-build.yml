@@ -1,4 +1,4 @@
-# Archi Savvy Studio ERP - automated Windows installer build.
+# ArchiSavvyERP - automated Windows installer build.
 #
 # Starts the Windows-only mode of desktop-release.yml whenever application code
 # lands on main, or on demand. That mode builds the backend sidecar and the NSIS

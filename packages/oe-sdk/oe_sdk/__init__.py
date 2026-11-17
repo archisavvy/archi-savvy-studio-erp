@@ -1,4 +1,4 @@
-"""Archi Savvy Studio ERP module SDK.
+"""ArchiSavvyERP module SDK.
 
 One clean import surface for building a module on the platform. Everything here
 is a faithful re-export of the stable core primitives, plus a few thin helpers

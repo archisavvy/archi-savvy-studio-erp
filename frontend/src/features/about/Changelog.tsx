@@ -77,7 +77,7 @@ const CHANGELOG: ChangelogEntry[] = [
     date: '2026-11-02',
     tag: 'NEW',
     summary:
-      'First release as Archi Savvy Studio ERP. A setup wizard for new workspaces, DIN 5008 PDF templates, a full DATEV Buchungsstapel, Stripe and Mollie payment links with the provider fee booked, foreign currency revaluation, business roles with an audit trail, a Docker image on ghcr.io and a locale-aware date field.',
+      'First release as ArchiSavvyERP. A setup wizard for new workspaces, DIN 5008 PDF templates, a full DATEV Buchungsstapel, Stripe and Mollie payment links with the provider fee booked, foreign currency revaluation, business roles with an audit trail, a Docker image on ghcr.io and a locale-aware date field.',
   },
   {
     version: '18.4.0',

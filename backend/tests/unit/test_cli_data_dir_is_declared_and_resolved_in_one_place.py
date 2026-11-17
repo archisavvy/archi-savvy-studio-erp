@@ -76,7 +76,7 @@ def anchored(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> Path:
     """
     data_dir = tmp_path / "data"
     data_dir.mkdir()
-    started_from = tmp_path / "program files" / "Archi Savvy Studio ERP"
+    started_from = tmp_path / "program files" / "ArchiSavvyERP"
     started_from.mkdir(parents=True)
     monkeypatch.setattr(cli, "DEFAULT_DATA_DIR", data_dir)
     monkeypatch.chdir(started_from)

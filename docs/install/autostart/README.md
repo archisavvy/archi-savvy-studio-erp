@@ -1,4 +1,4 @@
-# Autostart Archi Savvy Studio ERP on system boot
+# Autostart ArchiSavvyERP on system boot
 
 Three ready-to-use templates for the three major OSes. Pick yours.
 
@@ -87,18 +87,18 @@ those before running if you used a non-default install location.
 
 Verify:
 ```powershell
-schtasks /Query /TN Archi Savvy Studio ERP
+schtasks /Query /TN ArchiSavvyERP
 curl http://localhost:8000/api/health
 ```
 
 To remove:
 ```powershell
-schtasks /Delete /TN Archi Savvy Studio ERP /F
+schtasks /Delete /TN ArchiSavvyERP /F
 ```
 
 For LAN access on Windows, also open the firewall:
 ```powershell
-New-NetFirewallRule -DisplayName "Archi Savvy Studio ERP 8000" -Direction Inbound -Protocol TCP -LocalPort 8000 -Action Allow
+New-NetFirewallRule -DisplayName "ArchiSavvyERP 8000" -Direction Inbound -Protocol TCP -LocalPort 8000 -Action Allow
 ```
 
 ---

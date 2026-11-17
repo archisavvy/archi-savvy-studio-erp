@@ -43,7 +43,7 @@ def svg_wrap(img: Image.Image) -> str:
     w, h = img.size
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}">'
-        f"<title>Archi Savvy Studio ERP</title>"
+        f"<title>ArchiSavvyERP</title>"
         f'<image width="{w}" height="{h}" href="data:image/png;base64,{data}"/></svg>\n'
     )
 

@@ -1,6 +1,6 @@
-# Archi Savvy Studio ERP Frontend
+# ArchiSavvyERP Frontend
 
-This is the web client for Archi Savvy Studio ERP, the open construction estimating and construction management platform by DataDrivenConstruction. It is a single-page application that talks to the FastAPI backend over its REST API under `/api/v1`.
+This is the web client for ArchiSavvyERP, the open construction estimating and construction management platform by DataDrivenConstruction. It is a single-page application that talks to the FastAPI backend over its REST API under `/api/v1`.
 
 ## Tech stack
 

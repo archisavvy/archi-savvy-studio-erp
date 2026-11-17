@@ -1,9 +1,9 @@
-// Archi Savvy Studio ERP - fork configuration.
+// ArchiSavvyERP - fork configuration.
 // This product is a modified version of the open-source project named below,
 // licensed under AGPL-3.0-or-later. Keep the attribution; change the rest freely.
 
 /** Name shown to people. */
-export const BRAND_NAME = 'Archi Savvy Studio ERP';
+export const BRAND_NAME = 'ArchiSavvyERP';
 export const BRAND_PUBLISHER = 'Archi Savvy Studio';
 export const BRAND_TAGLINE = 'Where Architecture Meets AI';
 

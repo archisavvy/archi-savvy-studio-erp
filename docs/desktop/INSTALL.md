@@ -1,6 +1,6 @@
-# Install Archi Savvy Studio ERP
+# Install ArchiSavvyERP
 
-Archi Savvy Studio ERP by DataDrivenConstruction is an open-source ERP for small and medium businesses: sales and CRM, stock, purchasing, accounting and VAT, banking and more. The desktop app puts the whole thing on your computer. You download one installer and run it. There is no Python, no pip, no Docker, and no database to set up. Everything it needs is already inside.
+ArchiSavvyERP by DataDrivenConstruction is an open-source ERP for small and medium businesses: sales and CRM, stock, purchasing, accounting and VAT, banking and more. The desktop app puts the whole thing on your computer. You download one installer and run it. There is no Python, no pip, no Docker, and no database to set up. Everything it needs is already inside.
 
 This guide walks you through installing it and signing in for the first time.
 
@@ -12,35 +12,35 @@ The installers live on the project's GitHub Releases page. Open the latest relea
 
 ### Windows
 
-Each release attaches one Windows installer, an `.exe`. It installs for all users of the machine, into `C:\Program Files\ArchiSavvyStudioERP`, so Windows asks for administrator permission before it continues. Releases up to 15.1.0 also carried an `.msi`. It installed the same application to the same place but kept its own record of having done so, which is why two installers for one program was a trap rather than a choice, and from 15.2.0 it is gone. If the copy you have came from the `.msi`, uninstall that entry before you run the `.exe`, otherwise the machine lists the app twice. Your data is not in the installed folder and an uninstall does not touch it.
+Each release attaches one Windows installer, an `.exe`. It installs for all users of the machine, into `C:\Program Files\ArchiSavvyERP`, so Windows asks for administrator permission before it continues. Releases up to 15.1.0 also carried an `.msi`. It installed the same application to the same place but kept its own record of having done so, which is why two installers for one program was a trap rather than a choice, and from 15.2.0 it is gone. If the copy you have came from the `.msi`, uninstall that entry before you run the `.exe`, otherwise the machine lists the app twice. Your data is not in the installed folder and an uninstall does not touch it.
 
 The app needs Microsoft's WebView2 runtime. If your machine does not already have it the installer fetches it during installation, so there is nothing extra to install by hand, but it does mean that a first install on a machine without WebView2 needs a working internet connection. Without one the installer stops and reports that WebView2 could not be installed. Once WebView2 is present, installing and running the app work offline.
 
-When it finishes you will find Archi Savvy Studio ERP in the Start Menu and as a shortcut, both named "Archi Savvy Studio ERP". Click either one to launch it.
+When it finishes you will find ArchiSavvyERP in the Start Menu and as a shortcut, both named "ArchiSavvyERP". Click either one to launch it.
 
 The Windows installer is not code signed yet, so Windows warns that it comes from an unknown publisher. If it shows "Windows protected your PC", or if Smart App Control blocks the app, even after it ran once, follow [Windows blocks the app](WINDOWS_BLOCKED.md).
 
 ### macOS
 
-Download the `.dmg`, open it, and drag Archi Savvy Studio ERP into your Applications folder. You need a Mac with Apple Silicon, since the `.dmg` will not start on an Intel Mac.
+Download the `.dmg`, open it, and drag ArchiSavvyERP into your Applications folder. You need a Mac with Apple Silicon, since the `.dmg` will not start on an Intel Mac.
 
 This build is ad-hoc signed but not yet notarized by Apple, so the first time you open it macOS may say it "is damaged and can't be opened" or otherwise block it. The app is not damaged. macOS quarantines anything downloaded from the web, and an app that Apple has not notarized trips that check. To clear it, open Terminal and run this once, then open the app normally:
 
 ```
-xattr -dr com.apple.quarantine /Applications/ArchiSavvyStudioERP.app
+xattr -dr com.apple.quarantine /Applications/ArchiSavvyERP.app
 ```
 
 On older macOS you can instead right-click the app and choose Open. On macOS Sequoia you may also need to approve it once under System Settings, in Privacy and Security, where macOS shows a button to open the app anyway. You only need to do this once.
 
 ### Linux
 
-On Debian or Ubuntu, download the `.deb` and install it with your package manager. It depends on `libwebkit2gtk-4.1-0`, which your system will pull in if it is not already present. After that, launch Archi Savvy Studio ERP from your applications menu.
+On Debian or Ubuntu, download the `.deb` and install it with your package manager. It depends on `libwebkit2gtk-4.1-0`, which your system will pull in if it is not already present. After that, launch ArchiSavvyERP from your applications menu.
 
 If you prefer something portable, download the `.AppImage` instead, make it executable, and run it. From a terminal that is:
 
 ```
-chmod +x Archi Savvy Studio ERP*.AppImage
-./ArchiSavvyStudioERP*.AppImage
+chmod +x ArchiSavvyERP*.AppImage
+./ArchiSavvyERP*.AppImage
 ```
 
 ## First launch
@@ -76,7 +76,7 @@ Installing an older version over a newer one is only possible if you let the ins
 
 ## Uninstalling
 
-Remove Archi Savvy Studio ERP the way you remove any other program, from Windows Settings under installed apps, by dragging it out of Applications on macOS, or with your package manager on Linux. Close the app first so that nothing of it is still running.
+Remove ArchiSavvyERP the way you remove any other program, from Windows Settings under installed apps, by dragging it out of Applications on macOS, or with your package manager on Linux. Close the app first so that nothing of it is still running.
 
 Uninstalling removes the program and leaves your data where it is. The `.archisavvy-erp` folder survives with the database and every uploaded file in it, which is what you want when you are reinstalling or moving to a newer version, and it is also why reinstalling is not a way to start over. If you installed with the `.exe`, its uninstaller offers a checkbox called "Delete the application data", and despite the name it does not touch `.archisavvy-erp` either. All it targets is the small folder the app keeps for its built-in browser view, which holds the sign-in session and the window state and nothing of your projects.
 

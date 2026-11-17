@@ -1,4 +1,4 @@
-// Archi Savvy Studio ERP Desktop, launcher-side update check.
+// ArchiSavvyERP Desktop, launcher-side update check.
 //
 // Why this exists, and why it lives in the launcher rather than in the app.
 //
@@ -52,7 +52,7 @@ const REPO: &str = "archisavvy/archi-savvy-studio-erp";
 /// Bare product token. GitHub answers 403 to a request that carries no
 /// user-agent at all, so one is required; it deliberately carries no version,
 /// no machine name and nothing else that would report anything outward.
-const USER_AGENT: &str = "Archi Savvy Studio ERP-Desktop";
+const USER_AGENT: &str = "ArchiSavvyERP-Desktop";
 
 /// Short on purpose. This runs beside startup and must never be the reason
 /// anything waits, so a proxy that accepts a connection and then says nothing
@@ -271,7 +271,7 @@ pub fn set_enabled(enabled: bool) -> Result<(), String> {
         }
         std::fs::write(
             &path,
-            b"Archi Savvy Studio ERP does not check for a newer version while this file exists.\n",
+            b"ArchiSavvyERP does not check for a newer version while this file exists.\n",
         )
         .map_err(|e| e.to_string())
     }
@@ -389,7 +389,7 @@ fn notice_script(update: &AvailableUpdate, current: &str, after_failure: bool) -
     let get_label = js_escape(&format!("Get version {}", update.version));
     let later_label = js_escape("Not now");
     let privacy_js = js_escape(
-        "To find this, Archi Savvy Studio ERP asked github.com which version is the latest. \
+        "To find this, ArchiSavvyERP asked github.com which version is the latest. \
 Nothing about you or this computer was sent.",
     );
     let off_label = js_escape("Turn off update checks");

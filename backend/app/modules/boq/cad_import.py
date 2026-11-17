@@ -116,7 +116,7 @@ CONVERTER_SEARCH_PATHS: list[Path] = [
     Path("converters/bin"),
     Path.home() / ".openestimator" / "converters",
     Path("/opt/openestimator/converters"),
-    Path("C:/ProgramData/ArchiSavvyStudioERP/converters"),
+    Path("C:/ProgramData/ArchiSavvyERP/converters"),
 ]
 
 
@@ -592,7 +592,7 @@ def ensure_converter(fmt: str) -> Path:
     if sys.platform == "darwin":
         raise ConverterUnavailableError(
             f"There is no native macOS build of the .{fmt.upper()} converter. "
-            f"Run Archi Savvy Studio ERP in Docker (Linux container - the converter "
+            f"Run ArchiSavvyERP in Docker (Linux container - the converter "
             f"is downloaded automatically there) or on a Linux host, or convert "
             f"the file to IFC first (IFC also has a built-in text fallback parser "
             f"that works on macOS)."

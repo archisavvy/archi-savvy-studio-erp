@@ -1,5 +1,5 @@
 #!/bin/bash
-# Archi Savvy Studio ERP - One-Line Installer for Linux / macOS
+# ArchiSavvyERP - One-Line Installer for Linux / macOS
 #
 # Usage:
 #   curl -fsSL https://raw.githubusercontent.com/archisavvy/archi-savvy-studio-erp/main/scripts/install.sh | bash
@@ -209,7 +209,7 @@ install_docker() {
     info "Pulling the published image..."
     docker compose pull app
 
-    info "Starting Archi Savvy Studio ERP..."
+    info "Starting ArchiSavvyERP..."
     docker compose up -d
 
     # Wait for the application to answer, rather than announcing that it runs
@@ -254,18 +254,18 @@ install_docker() {
 
     case "$health" in
         *'"status":"healthy"'*)
-            ok "Archi Savvy Studio ERP is running at http://localhost:${OE_PORT}"
+            ok "ArchiSavvyERP is running at http://localhost:${OE_PORT}"
             ;;
         *'"status":"degraded"'*)
             # The same word covers a missing module, where the product works,
             # and a database the process cannot reach, where it does not.
             if printf '%s' "$health" | grep -q '"database":"ok"'; then
-                ok "Archi Savvy Studio ERP is running at http://localhost:${OE_PORT}"
+                ok "ArchiSavvyERP is running at http://localhost:${OE_PORT}"
                 warn "Reporting degraded: not every enabled module loaded"
                 echo "  The application is usable. A restart usually loads the rest."
                 echo "  Which module is missing is in the log: cd ${OE_INSTALL_DIR} && docker compose logs -f"
             else
-                warn "Archi Savvy Studio ERP started but cannot reach its database"
+                warn "ArchiSavvyERP started but cannot reach its database"
                 echo "  Check logs: cd ${OE_INSTALL_DIR} && docker compose logs -f"
             fi
             ;;
@@ -291,14 +291,14 @@ install_uv() {
         export PATH="$HOME/.local/bin:$PATH"
     fi
 
-    # Install Archi Savvy Studio ERP (PyPI package name — see pyproject.toml).
+    # Install ArchiSavvyERP (PyPI package name — see pyproject.toml).
     # Honour OE_VERSION env var (advertised in file header).
     if [ "$OE_VERSION" = "latest" ]; then
         uv tool install openbusinesserp
     else
         uv tool install "openbusinesserp==$OE_VERSION"
     fi
-    ok "Archi Savvy Studio ERP installed!"
+    ok "ArchiSavvyERP installed!"
 
     # Create systemd service if on Linux
     if [ "$(uname -s)" = "Linux" ] && command -v systemctl &>/dev/null; then
@@ -352,7 +352,7 @@ install_pip() {
         pip install --upgrade "openbusinesserp==$OE_VERSION"
     fi
 
-    ok "Archi Savvy Studio ERP installed in $OE_INSTALL_DIR/venv"
+    ok "ArchiSavvyERP installed in $OE_INSTALL_DIR/venv"
 
     # Convenience launcher.
     cat > "$OE_INSTALL_DIR/start.sh" << 'SCRIPT'
@@ -369,7 +369,7 @@ SCRIPT
 
     echo ""
     echo "  +-------------------------------------------------+"
-    echo "  |  Archi Savvy Studio ERP is installed               |"
+    echo "  |  ArchiSavvyERP is installed               |"
     echo "  +-------------------------------------------------+"
     echo ""
     if echo "$PATH" | tr ':' '\n' | grep -qx "$HOME/.local/bin"; then
@@ -397,7 +397,7 @@ create_systemd_service() {
 
     cat > "$service_file" << EOF
 [Unit]
-Description=Archi Savvy Studio ERP Server
+Description=ArchiSavvyERP Server
 After=network.target
 
 [Service]
@@ -418,7 +418,7 @@ EOF
 main() {
     echo ""
     echo "  ╔═══════════════════════════════════════════════╗"
-    echo "  ║      Archi Savvy Studio ERP Installer            ║"
+    echo "  ║      ArchiSavvyERP Installer            ║"
     echo "  ║      Construction Cost Estimation Platform    ║"
     echo "  ╚═══════════════════════════════════════════════╝"
     echo ""

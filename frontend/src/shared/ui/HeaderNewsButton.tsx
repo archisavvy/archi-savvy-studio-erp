@@ -186,7 +186,7 @@ export function HeaderNewsButton({ className }: { className?: string }) {
                 <p className="text-sm text-content-secondary">
                   {t('header.news.body', {
                     defaultValue:
-                      'Read the latest Archi Savvy Studio ERP release news on our site.',
+                      'Read the latest ArchiSavvyERP release news on our site.',
                   })}
                 </p>
                 <p className="text-xs leading-relaxed text-content-tertiary">

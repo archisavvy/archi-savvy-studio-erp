@@ -20,7 +20,7 @@ manifest = ModuleManifest(
         "when it is valid; regional packs supply the country-specific "
         "vocabularies."
     ),
-    author="Archi Savvy Studio ERP Core Team",
+    author="ArchiSavvyERP Core Team",
     category="core",
     depends=["oe_users", "oe_projects"],
     auto_install=True,
