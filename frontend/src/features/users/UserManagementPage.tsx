@@ -26,7 +26,6 @@ import {
   Search,
   Check,
   X,
-  Mail,
   Clock,
   Crown,
   Eye,
@@ -43,6 +42,7 @@ import { PageHeader } from '@/shared/ui/PageHeader';
 import { NoAccessState } from '@/shared/ui/NoAccessState';
 import { useHasPermission } from '@/shared/lib/permissionGates';
 import { usersGuide } from './usersGuide';
+import { EditableEmail } from './EditEmailButton';
 import { useConfirm } from '@/shared/hooks/useConfirm';
 import { useAuthStore } from '@/stores/useAuthStore';
 import { useToastStore } from '@/stores/useToastStore';
@@ -1102,10 +1102,7 @@ export function UserManagementPage() {
                       </div>
                     </td>
                     <td className="px-4 py-2.5 text-content-secondary">
-                      <div className="flex items-center gap-1.5">
-                        <Mail size={12} className="text-content-quaternary" />
-                        {user.email}
-                      </div>
+                      <EditableEmail user={user} canEdit={isAdmin} />
                     </td>
                     <td className="px-4 py-2.5">
                       <RoleDropdown

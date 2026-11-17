@@ -1682,7 +1682,11 @@ async def update_user(
 ) -> UserResponse:
     """Update user (admin only). The echoed record is redacted in demo mode."""
     fields = data.model_dump(exclude_unset=True)
-    user = await service.update_profile(user_id, **fields)
+    new_email = fields.pop("email", None)
+    if new_email is not None:
+        user = await service.admin_change_email(user_id, str(new_email), actor_id=viewer_id)
+    if fields or new_email is None:
+        user = await service.update_profile(user_id, **fields)
     return redact_model(UserResponse.model_validate(user), subject_id=user.id, viewer_id=viewer_id)
 
 

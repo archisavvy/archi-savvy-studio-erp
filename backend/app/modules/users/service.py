@@ -1260,6 +1260,80 @@ class UserService:
 
         return user
 
+    async def admin_change_email(
+        self,
+        user_id: uuid.UUID,
+        new_email: str,
+        *,
+        actor_id: uuid.UUID | str | None = None,
+    ) -> User:
+        """Administrator corrects another user's sign-in address.
+
+        Added in Archi Savvy Studio ERP. The address is the login name, so:
+
+        * it is stored lower-case, like every other address;
+        * it must not belong to another account (409);
+        * the built-in desktop owner and the seeded sample accounts keep their
+          fixed addresses, because the app finds them by address (400);
+        * nobody can be moved onto one of those reserved addresses (400).
+
+        The password and every open session stay as they are: sessions are
+        tied to the user id, not the address. The change is written to the
+        audit log with the old and new address.
+        """
+        from app.core.demo_accounts import DEMO_ACCOUNT_EMAILS
+
+        email = new_email.strip().lower()
+        reserved = {LOCAL_DESKTOP_OWNER_EMAIL, *(e.lower() for e in DEMO_ACCOUNT_EMAILS)}
+
+        user = await self.user_repo.get_by_id(user_id)
+        if user is None or user.deleted_at is not None:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+
+        old_email = (user.email or "").lower()
+        if email == old_email:
+            return user
+        if old_email in reserved:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="This built-in account keeps its address. Create a new user instead.",
+            )
+        if email in reserved:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="That address is reserved by the application. Choose another one.",
+            )
+        other = await self.user_repo.get_by_email(email)
+        if other is not None and other.id != user.id:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail="Another user already has that email address.",
+            )
+
+        await self.user_repo.update_fields(user_id, email=email)
+        updated = await self.user_repo.get_by_id(user_id)
+        if updated is None:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+
+        try:
+            from app.core.audit_log import log_activity as _log_activity
+
+            await _log_activity(
+                self.session,
+                actor_id=None,  # context dep fills this from ContextVar
+                entity_type="user",
+                entity_id=str(user_id),
+                action="email_changed",
+                module="users",
+                before_state={"email": old_email},
+                after_state={"email": email},
+            )
+        except Exception:  # noqa: BLE001
+            logger.debug("audit log skipped for email_changed (non-fatal)")
+
+        logger.info("Admin %s changed the email of user %s", actor_id, user_id)
+        return updated
+
     async def update_preferences(
         self,
         user_id: uuid.UUID,

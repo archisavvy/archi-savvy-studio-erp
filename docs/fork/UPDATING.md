@@ -48,3 +48,5 @@ Then push `main` and let the Windows build run before installing anything.
 - `frontend/src/features/dashboard/DashboardPage.tsx`
 - `frontend/src/features/about/AboutPage.tsx`
 - `frontend/src/shared/ui/ReviewPromptCard.test.tsx`
+- `backend/app/modules/users/schemas.py`, `router.py`, `service.py` (email change for administrators)
+- `frontend/src/features/users/UserManagementPage.tsx`, `api.ts`

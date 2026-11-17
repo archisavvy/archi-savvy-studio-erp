@@ -23,6 +23,8 @@ export interface User {
 }
 
 export interface UserAdminUpdate {
+  /** Archi Savvy Studio ERP: an administrator can correct a mistyped address. */
+  email?: string;
   full_name?: string;
   role?: UserRole;
   is_active?: boolean;
