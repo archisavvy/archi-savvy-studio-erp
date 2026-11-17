@@ -10,9 +10,9 @@ It is not affiliated with, endorsed by or supported by the original authors. See
 
 ## Status
 
-Stage 1: rebranded application and Windows installer build. The installer has not yet been built or tested on Windows.
+The Windows installer builds on GitHub Actions and has been installed on Windows 10. New users start on the Architecture & Design Practice profile, with contractor modules off.
 
-Planned next: an architecture-practice profile (contractor modules off by default), then RIBA Plan of Work stages, fee tracking, staff timesheets and profitability, resource planning and drawing registers.
+Planned next: RIBA Plan of Work stages, fee tracking, staff timesheets and profitability, resource planning and drawing registers.
 
 ## What is in the box
 

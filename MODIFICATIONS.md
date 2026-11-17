@@ -23,5 +23,6 @@ ArchiSavvyERP is a modified version of OpenBusinessERP.
 | 2026-11-17 | Users: an administrator can correct a user's email address (`admin_change_email` in the users service, `EditEmailButton.tsx` on the Users page). Built-in and sample accounts keep their fixed addresses. |
 | 2026-11-17 | New company profile "Architecture & Design Practice" (`architecture_practice` in `backend/app/core/onboarding_presets.py`): construction-pack menus with the practice's business modules on and contractor modules off. New users start on it (`backend/app/core/archisavvy_defaults.py`, hooked in the users repository). |
 | 2026-11-17 | Sample accounts and showcase projects are no longer created unless asked for (`seed_demo_enabled` defaults to off). |
+| 2026-11-17 | Product renamed from "Archi Savvy Studio ERP" to "ArchiSavvyERP" (shorter). The publisher is still Archi Savvy Studio; the application identifier and data folder are unchanged, so existing data carries over. |
 
 The full, line-by-line record is the git history of this repository.
